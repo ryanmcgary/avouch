@@ -1,0 +1,30 @@
+run initial migration:
+  x recording
+  x remoteurl
+  x site 
+  - users
+update models:
+  x recording
+  x remoteurl
+  x site
+  - users
+update controllers:
+  x recording
+  x remoteurl
+  x site
+  x lanyards
+  users
+create views:
+  x recording
+  x lanyards
+  x remoteurl
+  site
+update routes 
+
+authentication model w/ devise
+auto generate password: https://github.com/plataformatec/devise/wiki/How-To:-Automatically-generate-password-for-users-(simpler-registration)
+redirect to specific page after login: https://github.com/plataformatec/devise/wiki/How-To:-Redirect-to-a-specific-page-on-successful-sign-in
+direct auto login url:
+http://zyphmartin.com/blog/simple-auth-token-example-with-devise 
+
+TODO: use session helper on remoteurl/show to redirect back to originating url including variables

@@ -2,12 +2,12 @@ source 'http://rubygems.org'
 
 gem 'rails', '3.0.9'
 
-# gem 'devise' 
+gem 'devise' 
+gem 'omniauth'  
 gem 'twiliolib'
 gem 'jquery-rails'  
-# gem 'omniauth', '0.2.1'     
 gem 'taps' 
-gem 'compass', '>= 0.11.3'
+gem 'compass', '>= 0.11.5'
 gem 'compass-960-plugin'
 
 # Bundle edge Rails instead:

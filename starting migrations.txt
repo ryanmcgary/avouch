@@ -1,0 +1,19 @@
+rails generate model Recording remoteurl_id:integer user_id:integer audio_file:string call_id:string synopsis:text transcription:text call_completed:boolean 
+
+rails generate model Remoteurl site_id:integer permalink:string content:string  
+
+rails generate model Site user_id:integer url:string permalink:string 
+
+rails generate model User profile_pic:string company:string phone_number:integer title:string description:text location:string full_name:string
+
+site_id/remoteurl/id?layout
+
+https://twitter.com/oauth/authenticate?oauth_signature_method=HMAC-SHA1&oauth_signature=NkrotBWHS%2BLrS3CRCwwy0tdnQhc%3D&oauth_token=QhVTMBDnaC572TSftvkbCBl7GTsGQHSBr35x72FNpA&oauth_callback=http%3A%2F%2Fdisqus.com%2F_ax%2Ftwitter%2Fcomplete%2F  
+
+
+avouch/x/auth/twitter
+  sets session/page to x/auth/twitter
+  redirects to auth/twitter
+callback to auth/twitter/callback
+  redirects to x/auth/twitter
+  closes page

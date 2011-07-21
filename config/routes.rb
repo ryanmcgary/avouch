@@ -1,5 +1,32 @@
 Avouch::Application.routes.draw do
-  get "test/index"
+  devise_for :users
+
+  get "dashboard/install"
+
+  get "dashboard/moderation"
+
+  get "dashboard/administration"
+
+  get "home/index"
+  
+  match '/auth/:provider/callback' => 'authentications#create'
+  match '/recordings/editrecording' => 'recordings#editrecording' 
+  match '/recordings/trunk'         => 'recordings#trunk'
+  match '/recordings/makecall'      => 'recordings#makecall'
+  match '/recordings/record'        => 'recordings#record'
+  match '/recordings/hangup'        => 'recordings#hangup'
+  
+  resources :sites do
+    resources :remoteurls do
+      resources :recordings
+    end                     
+    resource :lanyard do
+      member do
+        get :full_lanyard
+        get :embed
+      end
+    end
+  end
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
@@ -50,7 +77,7 @@ Avouch::Application.routes.draw do
 
   # You can have the root of your site routed with "root"
   # just remember to delete public/index.html.
-  # root :to => "welcome#index"
+   root :to => "home#index"
 
   # See how all your routes lay out with "rake routes"
 

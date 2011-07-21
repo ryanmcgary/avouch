@@ -1,0 +1,66 @@
+<% if user_signed_in? %>
+<table>
+  <tr>
+    <td id="profile-container" width="50" style="vertical-align: top;">
+      <img class="profile_pic" src="<%= current_user.profile_pic.nil? ? "/images/blankprofilepic.png" : current_user.profile_pic %>" width="50" height="50">
+      <div class="left-bar">
+        <% if user_signed_in? %> 
+        <%= link_to "Settings", "#{edit_user_registration_path}?layout=embed", :rel => "window800", :class => "auth_popup" %>
+    		<%= link_to "Logout", "#{destroy_user_session_path}?layout=embed", :rel => "window800", :class => "auth_popup" %>
+        <% end %>
+      </div>  
+    </td>
+    <td class="table-rightside">
+      <p><%= current_user.full_name %> / <%= current_user.title %> @ <%= current_user.company %></p>
+      <!-- <p>John Carter / President @ Planet Mars</p>                         -->
+      
+      <div class="optional-text">
+        <% form_for("recording", :url => recordings_makecall_path, :html => { :class => "edit_user" } ) do |f| -%>
+        	<%= f.hidden_field :remoteurl_id, :value => @remoteurl.id  %>
+        <div class="text-area">
+        	<%= f.text_area :synopsis, :class => "short-text" %>
+
+        </div>
+        <div class="expand-bottom">
+          <%= link_to "How to leave the perfect review", "/example-review.html", :class => "link auth_popup" %>
+           <%= f.submit "Call Now!", :class => "vouch-button" %>	
+        </div>
+        <% end -%>          
+      </div>
+  </tr>
+</table>
+
+
+
+<% else %>
+<table>
+  <tr>
+    <td id="profile-container" width="50">
+      <img class="profile_pic" src="/images/blankprofilepic.png" width="50" height="50" alt="Linkedin">
+  
+    </td>
+    <td class="table-rightside">
+      <p style="text-decoration: underline;">Login to leave a review</p>
+      <!-- <p>John Carter / President @ Planet Mars</p>                         -->
+      
+      <div class="optional-text">
+        <div class="text-area">
+         <textarea name="Name" class="short-text"></textarea>  
+        </div>
+        <div class="expand-bottom">
+          <a href="#" class="link">How to leave the perfect review</a>
+          <input class="vouch-button" type="submit" value="Start Call!">
+        </div>        
+      </div>
+  </tr>
+</table>
+<% end %>
+<!-- <p>
+  <b>Content:</b>
+  <#%= @remoteurl.content %> | 
+  <#%= link_to "Reviews", site_remoteurl_reviews_path(@remoteurl.site_id, @remoteurl.id) %>
+</p>
+<#%= link_to 'Edit', edit_site_remoteurl_path(@site) %> |
+<#%= link_to 'Back', site_remoteurls_path %>  -->        
+
+
