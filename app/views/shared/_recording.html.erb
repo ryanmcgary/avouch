@@ -2,8 +2,8 @@
   <div class="comments-each">
     <table class="review-container">
       <tr>
-        <td width="64 !important">
-          <img class="profile_pic" src="<%= recording.user.profile_pic %>" width="54 !important" height="54 !important"> 
+        <td width="64 !important">       <%# # TODO: delete this line and handle in DB  %>
+          <img class="profile_pic" src="<%= recording.user.profile_pic.nil? ? "/images/blankprofilepic.png" : recording.user.profile_pic %>" width="54 !important" height="54 !important"> 
         </td>
         <td class="table-rightside">
           <p><%= recording.user.full_name %> / <%= recording.user.title %>  @ <%= recording.user.company %> </p>                        

@@ -5,8 +5,8 @@
       <img class="profile_pic" src="<%= current_user.profile_pic.nil? ? "/images/blankprofilepic.png" : current_user.profile_pic %>" width="50" height="50">
       <div class="left-bar">
         <% if user_signed_in? %> 
-        <%= link_to "Settings", "#{edit_user_registration_path}?layout=embed", :rel => "window800", :class => "auth_popup" %>
-    		<%= link_to "Logout", "#{destroy_user_session_path}?layout=embed", :rel => "window800", :class => "auth_popup" %>
+        <%= link_to "Settings", "#{edit_user_registration_path}", :rel => "window800", :class => "auth_popup" %>
+    		<%= link_to "Logout", destroy_user_session_path, :method => :delete %>
         <% end %>
       </div>  
     </td>

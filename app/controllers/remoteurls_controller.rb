@@ -1,6 +1,6 @@
 class RemoteurlsController < ApplicationController                                                     
   before_filter :authenticate_user!, :except => [:index, :new, :create, :edit, :destroy, :update, :show]
-  
+  layout 'remotelayout'
   # GET /remoteurls
   # GET /remoteurls.xml
   def index

@@ -64,7 +64,7 @@ Devise.setup do |config|
   config.stretches = 10
 
   # Setup a pepper to generate the encrypted password.
-  # config.pepper = "a06a697c2a5ac88e320a03628c0fb7e97bfb64a5aab151c5a01a75c21f3cd60c19b9ccfbb7ac44a98e8e0751a18b23704be9441238ace68320362ec2f08d6c8f"
+  # config.pepper = "561bb4f45b9ebc8eec273b2b4d55e2275356d41d5609cb2db26dfc61ec8a8232b64fe11897b49fd51833e00aea47cb7ce793dadb4e0f70ab8c82a731c4f12f63"
 
   # ==> Configuration for :confirmable
   # The time you want to give your user to confirm his account. During this time
@@ -190,7 +190,8 @@ Devise.setup do |config|
   # ==> OmniAuth
   # Add a new OmniAuth provider. Check the wiki for more information on setting
   # up on your models and hooks.
-  # config.omniauth :github, 'APP_ID', 'APP_SECRET', :scope => 'user,public_repo'
+  config.omniauth :twitter, 'lWhC1EGhIfKBvoq2UF8NYA', 'wIKOVMZx9GhRGZ6Cq5JNAXSGhoJ80yVTaBlL6rt9kvI'
+  config.omniauth :facebook, '191045274269033', 'db353dc235f31970c72e3df132f61993'
 
   # ==> Warden configuration
   # If you want to use other strategies, that are not supported by Devise, or

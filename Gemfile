@@ -2,8 +2,9 @@ source 'http://rubygems.org'
 
 gem 'rails', '3.0.9'
 
-gem 'devise' 
-gem 'omniauth'  
+#gem 'nifty-generators'
+gem 'devise'
+gem 'omniauth'
 gem 'twiliolib'
 gem 'jquery-rails'  
 gem 'taps' 
