@@ -10,12 +10,13 @@ class RemoteurlsController < ApplicationController
 
   def show
     @site = Site.find_by_permalink(params[:site_id])
+    session[:return_to] = params
     if @site.remoteurls.find_by_permalink(params[:id]).nil? 
       @remoteurl = @site.remoteurls.build(params[:remoteurl])
       @remoteurl.content = (params[:id])
       respond_to do |format|
         if @remoteurl.save
-          format.html { redirect_to "/sites/#{@site.permalink}/remoteurls/#{@remoteurl.permalink}?layout=embed"}
+          format.html { redirect_to "/sites/#{@site.permalink}/remoteurls/#{@remoteurl.permalink}"}
           format.xml  { render :xml => @site, :status => :created, :location => @remoteurl }
         else
           format.html { render :action => "new" }

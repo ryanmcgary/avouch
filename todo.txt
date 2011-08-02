@@ -1,25 +1,38 @@
-run initial migration:
+x run initial migration:
   x recording
   x remoteurl
   x site 
-  - users
-update models:
+  x users
+x update models:
   x recording
   x remoteurl
   x site
-  - users
-update controllers:
+  x users
+x update controllers:
   x recording
   x remoteurl
   x site
   x lanyards
-  users
-create views:
+  x users
+x create views:
   x recording
   x lanyards
   x remoteurl
-  site
-update routes 
+  x site
+x update routes 
+
+- aim for unified css and html structure for embeds
+  ! unified clear files
+  ! shared html structure
+  - create banner style embed
+  - Use javascript to let user add iteration number to each embed
+- create devise layout / css
+- create dashboard section
+
+
+
+
+
 
 authentication model w/ devise
 auto generate password: https://github.com/plataformatec/devise/wiki/How-To:-Automatically-generate-password-for-users-(simpler-registration)

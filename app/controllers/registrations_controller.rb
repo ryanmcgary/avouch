@@ -1,4 +1,5 @@
 class RegistrationsController < Devise::RegistrationsController
+  layout 'devise'
   
   def create
     super
@@ -21,9 +22,18 @@ class RegistrationsController < Devise::RegistrationsController
   end
   
   protected
+  
+  # def return_to_referrer
+  #   session[:return_to] = request.referrer    
+  # end    
+  # in a helper if remoteurl save request.referrer
 
   def after_sign_up_path_for(resource_or_scope)
-      authentications_closewindow_path 
+    if !session[:return_to].nil?
+      authentications_closewindow_path
+    else   
+      dashboard_moderation_path
+    end      
   end
   
   private

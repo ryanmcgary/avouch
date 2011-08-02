@@ -1,59 +1,76 @@
-/* Welcome to Compass.
- * In this file you should write your main styles. (or centralize your imports)
- * Import this file using the following HTML or equivalent:
- * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
-/* line 17, ../../../../.rvm/gems/ruby-1.9.2-p290/gems/compass-0.11.5/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed,
-figure, figcaption, footer, header, hgroup,
-menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
-  margin: 0;
-  padding: 0;
-  border: 0;
-  font-size: 100%;
-  font: inherit;
-  vertical-align: baseline; }
+/*
+Syntax error: Invalid CSS after "...ort "960/grid";": expected selector or at-rule, was "/System/Library..."
+        on line 9 of /Users/ryanmcgary/rails_projects/avouch/app/stylesheets/screen.scss
 
-/* line 20, ../../../../.rvm/gems/ruby-1.9.2-p290/gems/compass-0.11.5/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
-body {
-  line-height: 1; }
+4:  * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
+5: 
+6: @import "compass/reset";
+7: @import "960/grid";
+8: 
+9: /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/rubygems/custom_require.rb:31:in /bin/bash: -c: line 0: unexpected EOF while looking for matching `''
+10: /bin/bash: -c: line 2: syntax error: unexpected end of filerequire'
+11: 	from /Users/ryanmcgary/Library/Application Support/TextMate/Bundles/SCSS.tmbundle/Support/bin/command.rb:18
+12: 	from /tmp/temp_textmate.J79a29:3:in 
+13: 	puts RUBY_DESCRIPTION
+14: 	require 'nokogiri'
 
-/* line 22, ../../../../.rvm/gems/ruby-1.9.2-p290/gems/compass-0.11.5/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
-ol, ul {
-  list-style: none; }
-
-/* line 24, ../../../../.rvm/gems/ruby-1.9.2-p290/gems/compass-0.11.5/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
-table {
-  border-collapse: collapse;
-  border-spacing: 0; }
-
-/* line 26, ../../../../.rvm/gems/ruby-1.9.2-p290/gems/compass-0.11.5/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
-caption, th, td {
-  text-align: left;
-  font-weight: normal;
-  vertical-align: middle; }
-
-/* line 28, ../../../../.rvm/gems/ruby-1.9.2-p290/gems/compass-0.11.5/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
-q, blockquote {
-  quotes: none; }
-  /* line 101, ../../../../.rvm/gems/ruby-1.9.2-p290/gems/compass-0.11.5/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
-  q:before, q:after, blockquote:before, blockquote:after {
-    content: "";
-    content: none; }
-
-/* line 30, ../../../../.rvm/gems/ruby-1.9.2-p290/gems/compass-0.11.5/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
-a img {
-  border: none; }
-
-/* line 114, ../../../../.rvm/gems/ruby-1.9.2-p290/gems/compass-0.11.5/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
-article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary {
-  display: block; }
+Backtrace:
+/Users/ryanmcgary/rails_projects/avouch/app/stylesheets/screen.scss:9
+/Users/ryanmcgary/.rvm/gems/ruby-1.9.2-p290/gems/sass-3.1.4/lib/sass/scss/parser.rb:898:in `expected'
+/Users/ryanmcgary/.rvm/gems/ruby-1.9.2-p290/gems/sass-3.1.4/lib/sass/scss/parser.rb:841:in `expected'
+/Users/ryanmcgary/.rvm/gems/ruby-1.9.2-p290/gems/sass-3.1.4/lib/sass/scss/parser.rb:27:in `parse'
+/Users/ryanmcgary/.rvm/gems/ruby-1.9.2-p290/gems/sass-3.1.4/lib/sass/engine.rb:319:in `_to_tree'
+/Users/ryanmcgary/.rvm/gems/ruby-1.9.2-p290/gems/sass-3.1.4/lib/sass/engine.rb:291:in `_render'
+/Users/ryanmcgary/.rvm/gems/ruby-1.9.2-p290/gems/sass-3.1.4/lib/sass/engine.rb:239:in `block in render'
+/Users/ryanmcgary/.rvm/gems/ruby-1.9.2-p290/gems/sass-3.1.4/lib/sass/util.rb:297:in `silence_sass_warnings'
+/Users/ryanmcgary/.rvm/gems/ruby-1.9.2-p290/gems/sass-3.1.4/lib/sass/engine.rb:239:in `render'
+/Users/ryanmcgary/.rvm/gems/ruby-1.9.2-p290/gems/sass-3.1.4/lib/sass/plugin/compiler.rb:319:in `update_stylesheet'
+/Users/ryanmcgary/.rvm/gems/ruby-1.9.2-p290/gems/sass-3.1.4/lib/sass/plugin/compiler.rb:181:in `block (2 levels) in update_stylesheets'
+/Users/ryanmcgary/.rvm/gems/ruby-1.9.2-p290/gems/sass-3.1.4/lib/sass/plugin/compiler.rb:175:in `each'
+/Users/ryanmcgary/.rvm/gems/ruby-1.9.2-p290/gems/sass-3.1.4/lib/sass/plugin/compiler.rb:175:in `block in update_stylesheets'
+/Users/ryanmcgary/.rvm/gems/ruby-1.9.2-p290/gems/sass-3.1.4/lib/sass/plugin/compiler.rb:173:in `each'
+/Users/ryanmcgary/.rvm/gems/ruby-1.9.2-p290/gems/sass-3.1.4/lib/sass/plugin/compiler.rb:173:in `update_stylesheets'
+/Users/ryanmcgary/.rvm/gems/ruby-1.9.2-p290/gems/sass-3.1.4/lib/sass/plugin.rb:81:in `update_stylesheets'
+/Users/ryanmcgary/.rvm/gems/ruby-1.9.2-p290/gems/sass-3.1.4/lib/sass/plugin.rb:54:in `check_for_updates'
+/Users/ryanmcgary/.rvm/gems/ruby-1.9.2-p290/gems/sass-3.1.4/lib/sass/plugin/rack.rb:51:in `call'
+/Users/ryanmcgary/.rvm/gems/ruby-1.9.2-p290/gems/warden-1.0.4/lib/warden/manager.rb:35:in `block in call'
+/Users/ryanmcgary/.rvm/gems/ruby-1.9.2-p290/gems/warden-1.0.4/lib/warden/manager.rb:34:in `catch'
+/Users/ryanmcgary/.rvm/gems/ruby-1.9.2-p290/gems/warden-1.0.4/lib/warden/manager.rb:34:in `call'
+/Users/ryanmcgary/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.0.9/lib/action_dispatch/middleware/best_standards_support.rb:17:in `call'
+/Users/ryanmcgary/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.0.9/lib/action_dispatch/middleware/head.rb:14:in `call'
+/Users/ryanmcgary/.rvm/gems/ruby-1.9.2-p290/gems/rack-1.2.3/lib/rack/methodoverride.rb:24:in `call'
+/Users/ryanmcgary/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.0.9/lib/action_dispatch/middleware/params_parser.rb:21:in `call'
+/Users/ryanmcgary/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.0.9/lib/action_dispatch/middleware/flash.rb:182:in `call'
+/Users/ryanmcgary/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.0.9/lib/action_dispatch/middleware/session/abstract_store.rb:149:in `call'
+/Users/ryanmcgary/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.0.9/lib/action_dispatch/middleware/cookies.rb:302:in `call'
+/Users/ryanmcgary/.rvm/gems/ruby-1.9.2-p290/gems/activerecord-3.0.9/lib/active_record/query_cache.rb:32:in `block in call'
+/Users/ryanmcgary/.rvm/gems/ruby-1.9.2-p290/gems/activerecord-3.0.9/lib/active_record/connection_adapters/abstract/query_cache.rb:28:in `cache'
+/Users/ryanmcgary/.rvm/gems/ruby-1.9.2-p290/gems/activerecord-3.0.9/lib/active_record/query_cache.rb:12:in `cache'
+/Users/ryanmcgary/.rvm/gems/ruby-1.9.2-p290/gems/activerecord-3.0.9/lib/active_record/query_cache.rb:31:in `call'
+/Users/ryanmcgary/.rvm/gems/ruby-1.9.2-p290/gems/activerecord-3.0.9/lib/active_record/connection_adapters/abstract/connection_pool.rb:354:in `call'
+/Users/ryanmcgary/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.0.9/lib/action_dispatch/middleware/callbacks.rb:46:in `block in call'
+/Users/ryanmcgary/.rvm/gems/ruby-1.9.2-p290/gems/activesupport-3.0.9/lib/active_support/callbacks.rb:416:in `_run_call_callbacks'
+/Users/ryanmcgary/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.0.9/lib/action_dispatch/middleware/callbacks.rb:44:in `call'
+/Users/ryanmcgary/.rvm/gems/ruby-1.9.2-p290/gems/rack-1.2.3/lib/rack/sendfile.rb:107:in `call'
+/Users/ryanmcgary/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.0.9/lib/action_dispatch/middleware/remote_ip.rb:48:in `call'
+/Users/ryanmcgary/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.0.9/lib/action_dispatch/middleware/show_exceptions.rb:47:in `call'
+/Users/ryanmcgary/.rvm/gems/ruby-1.9.2-p290/gems/railties-3.0.9/lib/rails/rack/logger.rb:13:in `call'
+/Users/ryanmcgary/.rvm/gems/ruby-1.9.2-p290/gems/rack-1.2.3/lib/rack/runtime.rb:17:in `call'
+/Users/ryanmcgary/.rvm/gems/ruby-1.9.2-p290/gems/activesupport-3.0.9/lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+/Users/ryanmcgary/.rvm/gems/ruby-1.9.2-p290/gems/rack-1.2.3/lib/rack/lock.rb:11:in `block in call'
+<internal:prelude>:10:in `synchronize'
+/Users/ryanmcgary/.rvm/gems/ruby-1.9.2-p290/gems/rack-1.2.3/lib/rack/lock.rb:11:in `call'
+/Users/ryanmcgary/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.0.9/lib/action_dispatch/middleware/static.rb:30:in `call'
+/Users/ryanmcgary/.rvm/gems/ruby-1.9.2-p290/gems/railties-3.0.9/lib/rails/application.rb:168:in `call'
+/Users/ryanmcgary/.rvm/gems/ruby-1.9.2-p290/gems/railties-3.0.9/lib/rails/application.rb:77:in `method_missing'
+/Users/ryanmcgary/.rvm/gems/ruby-1.9.2-p290/gems/railties-3.0.9/lib/rails/rack/log_tailer.rb:14:in `call'
+/Users/ryanmcgary/.rvm/gems/ruby-1.9.2-p290/gems/rack-1.2.3/lib/rack/content_length.rb:13:in `call'
+/Users/ryanmcgary/.rvm/gems/ruby-1.9.2-p290/gems/rack-1.2.3/lib/rack/handler/webrick.rb:52:in `service'
+/Users/ryanmcgary/.rvm/rubies/ruby-1.9.2-p290/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
+/Users/ryanmcgary/.rvm/rubies/ruby-1.9.2-p290/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
+/Users/ryanmcgary/.rvm/rubies/ruby-1.9.2-p290/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
+*/
+body:before {
+  white-space: pre;
+  font-family: monospace;
+  content: "Syntax error: Invalid CSS after \"...ort \"960/grid\";\": expected selector or at-rule, was \"/System/Library...\"\A         on line 9 of /Users/ryanmcgary/rails_projects/avouch/app/stylesheets/screen.scss\A \A 4:  * <link href=\"/stylesheets/screen.css\" media=\"screen, projection\" rel=\"stylesheet\" type=\"text/css\" /> */\A 5: \A 6: @import \"compass/reset\";\A 7: @import \"960/grid\";\A 8: \A 9: /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/rubygems/custom_require.rb:31:in /bin/bash: -c: line 0: unexpected EOF while looking for matching `''\A 10: /bin/bash: -c: line 2: syntax error: unexpected end of filerequire'\A 11: 	from /Users/ryanmcgary/Library/Application Support/TextMate/Bundles/SCSS.tmbundle/Support/bin/command.rb:18\A 12: 	from /tmp/temp_textmate.J79a29:3:in \A 13: 	puts RUBY_DESCRIPTION\A 14: 	require 'nokogiri'"; }

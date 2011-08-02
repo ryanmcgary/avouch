@@ -1,4 +1,3 @@
-<% session.delete(:return_to) %>  
 <!DOCTYPE html>
 <html>
 <head>
@@ -7,7 +6,8 @@
   <%= stylesheet_link_tag 'embed/reset.css' %>
   <%= stylesheet_link_tag 'embed/custom.css' %>  
   <%= stylesheet_link_tag 'embed/text.css' %> 
-    
+
+  
    
   <%= javascript_include_tag :defaults, 'jquery.popupwindow' %>
   
@@ -19,14 +19,6 @@
   <%= csrf_meta_tag %>
 </head>
 <body>
-  <% if user_signed_in? %>
-    <%= current_user.email %>
-    <%= link_to "Sign out", destroy_user_session_path, :method => :delete %>
-  <% else %>
-    <%= link_to "Sign in", dashboard_install_path %>
-    <%= link_to "Sign in with Facebook", user_omniauth_authorize_path(:facebook) %>
-    <%= link_to "Sign in with Twitter", user_omniauth_authorize_path(:twitter) %>
-  <% end %>
   <p class="notice"><%= notice %></p>
   <p class="alert"><%= alert %></p>
 
