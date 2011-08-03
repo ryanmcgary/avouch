@@ -73,7 +73,7 @@ class RemoteurlsController < ApplicationController
       end
     end
   end
-
+  
   # DELETE /remoteurls/1
   # DELETE /remoteurls/1.xml
   def destroy
