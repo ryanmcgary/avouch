@@ -24,11 +24,40 @@ x update routes
 - aim for unified css and html structure for embeds
   ! unified clear files
   ! shared html structure
+		! not a good idea
+		
+ifrm.id = "coolframe"
+iavouch_content_<%= params[:v] %>
+iavouch_<%= params[:v] %>
+iavouch_content_3
+$('.audiojs').width(widget_width - 78);  
+      $('.audiojs .loaded').width(widget_width - 232); 
+      $('.audiojs .scrubber').width(widget_width - 232);
+.toggle-button
+$('.toggle-synopsis').click(function() {
+	$('.bold').removeClass('toggle');
+	$('.trans').hide('fast'); 
+	$(this).toggleClass('toggle-synopsis').toggleClass('toggle-synopsis-off');
+	return false;
+});
+$('.bold').click(function() {
+	$('.review-each div:hover .bold').toggleClass('toggle');
+	$('.comments-each div:hover .trans').slideToggle('fast');
+$('.iavouch_3').width(widget_width);
+$('.comments').width(widget_width);
+$('.comments .comments-header').width(widget_width);
+$('.comments .review-each').width(widget_width - 78);
+
+#sw_<%= v %> .toggle-popup{text-decoration: underline;}   
+#sw_<%= v %> {overflow: visible;height: auto;background-color: white}
+		
+		- determine master syntax
+		- apply master syntax to HTML file
+
   - create banner style embed
-  - Use javascript to let user add iteration number to each embed
 - create devise layout / css
 - create dashboard section
-
+! single link to longin use ?key=value string to /closewindow to invoke login through chosen provider
 
 
 
@@ -41,3 +70,36 @@ direct auto login url:
 http://zyphmartin.com/blog/simple-auth-token-example-with-devise 
 
 TODO: use session helper on remoteurl/show to redirect back to originating url including variables
+
+- Use javascript to let user add iteration number to each embed
+
+multi version / embed iteration
+embed-banner.js
+if multi-version-n = 1
+	if var multi-version-iteration defined set at 1
+		cancel
+	else
+		$('div[id="test"]').not(':eq(0)').each(function(i){
+		    var $that = $(this),
+		        newID = $that.attr('id') + (i + 1)
+
+		    $that.attr('id', newID).text(newID)
+		})
+		change above to check for banner & blog and render on each instance
+		insert css w/ id changed dynamically directly from embed.js
+		set var multi-version-iteration at 1
+if var = banner
+	render partial: lanyard-banner
+if var = blog
+	render partial: lanyard-blog
+		
+	
+
+#avouch-embed-blog.avouch-reset
+	@reset-mix-in(blog)
+	#avouch-blog-container
+
+	
+#avouch-embed-banner.avouch-reset
+	@reset-mix-in(banner)
+	#avouch-banner-container

@@ -1,0 +1,355 @@
+@charset "UTF-8";
+/* http://meyerweb.com/eric/tools/css/reset/ */
+/* v1.0 | 20080212 */
+/* line 13, ../../../app/stylesheets/embeds/embed-clear.scss */
+.iavouch_3_reset div, .iavouch_3_reset span, .iavouch_3_reset applet, .iavouch_3_reset object, .iavouch_3_reset iframe, .iavouch_3_reset
+h1, .iavouch_3_reset h2, .iavouch_3_reset h3, .iavouch_3_reset h4, .iavouch_3_reset h5, .iavouch_3_reset h6, .iavouch_3_reset p, .iavouch_3_reset blockquote, .iavouch_3_reset pre, .iavouch_3_reset
+a, .iavouch_3_reset abbr, .iavouch_3_reset acronym, .iavouch_3_reset address, .iavouch_3_reset big, .iavouch_3_reset cite, .iavouch_3_reset code, .iavouch_3_reset
+del, .iavouch_3_reset dfn, .iavouch_3_reset em, .iavouch_3_reset font, .iavouch_3_reset img, .iavouch_3_reset ins, .iavouch_3_reset kbd, .iavouch_3_reset q, .iavouch_3_reset s, .iavouch_3_reset samp, .iavouch_3_reset
+small, .iavouch_3_reset strike, .iavouch_3_reset strong, .iavouch_3_reset sub, .iavouch_3_reset sup, .iavouch_3_reset tt, .iavouch_3_reset var, .iavouch_3_reset
+b, .iavouch_3_reset u, .iavouch_3_reset i, .iavouch_3_reset center, .iavouch_3_reset
+dl, .iavouch_3_reset dt, .iavouch_3_reset dd, .iavouch_3_reset ol, .iavouch_3_reset ul, .iavouch_3_reset li, .iavouch_3_reset
+fieldset, .iavouch_3_reset form, .iavouch_3_reset label, .iavouch_3_reset legend, .iavouch_3_reset
+table, .iavouch_3_reset caption, .iavouch_3_reset tbody, .iavouch_3_reset tfoot, .iavouch_3_reset thead, .iavouch_3_reset tr, .iavouch_3_reset th, .iavouch_3_reset td {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  vertical-align: baseline;
+  background: transparent;
+  font: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; }
+
+/* line 24, ../../../app/stylesheets/embeds/embed-clear.scss */
+.iavouch_3_reset div, .iavouch_3_reset p {
+  color: black; }
+
+/* line 25, ../../../app/stylesheets/embeds/embed-clear.scss */
+.iavouch_3_reset {
+  line-height: 1; }
+
+/* line 27, ../../../app/stylesheets/embeds/embed-clear.scss */
+.iavouch_3_reset ol, .iavouch_3_reset ul {
+  list-style: none; }
+
+/* line 28, ../../../app/stylesheets/embeds/embed-clear.scss */
+.iavouch_3_reset blockquote, .iavouch_3_reset q {
+  quotes: none; }
+
+/* line 30, ../../../app/stylesheets/embeds/embed-clear.scss */
+.iavouch_3_reset blockquote:before, .iavouch_3_reset blockquote:after, .iavouch_3_reset
+q:before, .iavouch_3_reset q:after {
+  content: '';
+  content: none; }
+
+/* remember to define focus styles! */
+/* line 36, ../../../app/stylesheets/embeds/embed-clear.scss */
+.iavouch_3_reset :focus {
+  outline: 0; }
+
+/* remember to highlight inserts somehow! */
+/* line 39, ../../../app/stylesheets/embeds/embed-clear.scss */
+.iavouch_3_reset ins {
+  text-decoration: none; }
+
+/* line 40, ../../../app/stylesheets/embeds/embed-clear.scss */
+.iavouch_3_reset del {
+  text-decoration: line-through; }
+
+/* tables still need 'cellspacing="0"' in the markup */
+/* line 43, ../../../app/stylesheets/embeds/embed-clear.scss */
+.iavouch_3_reset table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+/*
+	960 Grid System ~ Text CSS.
+	Learn more ~ http://960.gs/
+
+	Licensed under GPL and MIT.
+*/
+/* =Basic HTML
+--------------------------------------------------------------------------------*/
+/* line 57, ../../../app/stylesheets/embeds/embed-clear.scss */
+.iavouch_3_reset .iavouch_mast {
+  font: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+  font-weight: normal;
+  font-size: 1em;
+  font-weight: normal;
+  font-size: 15px; }
+
+/* line 67, ../../../app/stylesheets/embeds/embed-clear.scss */
+.iavouch_3_reset a:focus {
+  outline: 1px dotted invert; }
+
+/* line 71, ../../../app/stylesheets/embeds/embed-clear.scss */
+.iavouch_3_reset hr {
+  border-color: #ccc;
+  border-style: solid;
+  border-width: 1px 0 0;
+  clear: both;
+  height: 0; }
+
+/* =Headings
+--------------------------------------------------------------------------------*/
+/* line 82, ../../../app/stylesheets/embeds/embed-clear.scss */
+.iavouch_3_reset h1 {
+  font-size: 25px; }
+
+/* line 83, ../../../app/stylesheets/embeds/embed-clear.scss */
+.iavouch_3_reset h2 {
+  font-size: 23px; }
+
+/* line 84, ../../../app/stylesheets/embeds/embed-clear.scss */
+.iavouch_3_reset h3 {
+  font-size: 21px; }
+
+/* line 85, ../../../app/stylesheets/embeds/embed-clear.scss */
+.iavouch_3_reset h4 {
+  font-size: 19px; }
+
+/* line 86, ../../../app/stylesheets/embeds/embed-clear.scss */
+.iavouch_3_reset h5 {
+  font-size: 17px; }
+
+/* line 87, ../../../app/stylesheets/embeds/embed-clear.scss */
+.iavouch_3_reset h6 {
+  font-size: 15px; }
+
+/* =Spacing
+--------------------------------------------------------------------------------*/
+/* line 92, ../../../app/stylesheets/embeds/embed-clear.scss */
+.iavouch_3_reset ol {
+  list-style: decimal; }
+
+/* line 94, ../../../app/stylesheets/embeds/embed-clear.scss */
+.iavouch_3_reset ul {
+  list-style: square; }
+
+/* line 96, ../../../app/stylesheets/embeds/embed-clear.scss */
+.iavouch_3_reset li {
+  margin-left: 30px; }
+
+/* line 112, ../../../app/stylesheets/embeds/embed-clear.scss */
+.iavouch_3_reset p,
+.iavouch_3_reset dl,
+.iavouch_3_reset hr,
+.iavouch_3_reset h1,
+.iavouch_3_reset h2,
+.iavouch_3_reset h3,
+.iavouch_3_reset h4,
+.iavouch_3_reset h5,
+.iavouch_3_reset h6,
+.iavouch_3_reset ol,
+.iavouch_3_reset ul,
+.iavouch_3_reset pre,
+.iavouch_3_reset table,
+.iavouch_3_reset address,
+.iavouch_3_reset fieldset {
+  margin-bottom: 20px; }
+
+/* line 121, ../../../app/stylesheets/embeds/embed-clear.scss */
+#iavouch_3 * span.clear,
+#iavouch_3 * div.clear,
+#iavouch_3 * li.clear,
+#iavouch_3 * dd.clear {
+  background: none;
+  border: 0;
+  clear: both;
+  display: block;
+  float: none;
+  font-size: 0;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  visibility: hidden;
+  width: 0;
+  height: 0; }
+
+/* http://www.positioniseverything.net/easyclearing.html */
+/* line 139, ../../../app/stylesheets/embeds/embed-clear.scss */
+#iavouch_3 .clearfix:after {
+  clear: both;
+  content: '.';
+  display: block;
+  visibility: hidden;
+  height: 0; }
+
+/* line 147, ../../../app/stylesheets/embeds/embed-clear.scss */
+#iavouch_3 .clearfix {
+  display: inline-block; }
+
+/* line 151, ../../../app/stylesheets/embeds/embed-clear.scss */
+#iavouch_3 * .clearfix {
+  height: 1%; }
+
+/* line 155, ../../../app/stylesheets/embeds/embed-clear.scss */
+#iavouch_3 .clearfix {
+  display: block; }
+
+/* line 4, ../../../app/stylesheets/embeds/blog-embed.scss */
+#iavouch_3 .comments .comments-each table.review-container {
+  width: 100%; }
+/* line 5, ../../../app/stylesheets/embeds/blog-embed.scss */
+#iavouch_3 .bold {
+  font-weight: 400; }
+/* line 6, ../../../app/stylesheets/embeds/blog-embed.scss */
+#iavouch_3 .toggle {
+  font-weight: bold;
+  background-color: lightgrey;
+  padding-bottom: 2px;
+  line-height: 20px; }
+/* line 12, ../../../app/stylesheets/embeds/blog-embed.scss */
+#iavouch_3 .comments-header {
+  padding-bottom: 40px; }
+/* line 13, ../../../app/stylesheets/embeds/blog-embed.scss */
+#iavouch_3 .toggle-synopsis {
+  float: right;
+  margin: 0px 2% 0px 0px;
+  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+  font-weight: 600;
+  font-size: 1em; }
+/* line 20, ../../../app/stylesheets/embeds/blog-embed.scss */
+#iavouch_3 .toggle-synopsis-off {
+  float: right;
+  margin: 0px 2% 0px 0px;
+  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+  font-weight: 600;
+  font-size: 1em; }
+/* line 27, ../../../app/stylesheets/embeds/blog-embed.scss */
+#iavouch_3 .grid_6 {
+  float: left;
+  margin: 0px 0px 0px 0px;
+  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+  font-weight: 600;
+  font-size: 1em; }
+/* line 34, ../../../app/stylesheets/embeds/blog-embed.scss */
+#iavouch_3 .comments-each {
+  margin-bottom: 20px; }
+/* line 35, ../../../app/stylesheets/embeds/blog-embed.scss */
+#iavouch_3 .comments {
+  margin-top: 10px;
+  width: 580px; }
+/* line 39, ../../../app/stylesheets/embeds/blog-embed.scss */
+#iavouch_3 .review-container td {
+  vertical-align: top; }
+/* line 40, ../../../app/stylesheets/embeds/blog-embed.scss */
+#iavouch_3 .profile_pic {
+  overflow: hidden;
+  border: 1px solid #c1c1c1;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+  -webkit-box-shadow: inset 0 1px 4px rgba(0, 0, 0, 0.16);
+  -moz-box-shadow: inset 0 1px 4px rgba(0, 0, 0, 0.16);
+  box-shadow: inset 0 1px 4px rgba(0, 0, 0, 0.16); }
+/* line 50, ../../../app/stylesheets/embeds/blog-embed.scss */
+#iavouch_3 .table-rightside {
+  vertical-align: top;
+  padding-left: 4px; }
+  /* line 53, ../../../app/stylesheets/embeds/blog-embed.scss */
+  #iavouch_3 .table-rightside p {
+    margin: -2px 0px 1px 0px;
+    font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+    font-weight: 500;
+    font-size: 1.1em; }
+/* line 59, ../../../app/stylesheets/embeds/blog-embed.scss */
+#iavouch_3 .review-each {
+  width: 500px; }
+/* line 61, ../../../app/stylesheets/embeds/blog-embed.scss */
+#iavouch_3 .audiojs {
+  width: 500px;
+  height: 22px;
+  background: #404040;
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #444444), color-stop(0.5, #555555), color-stop(0.51, #444444), color-stop(1, #444444));
+  background-image: -moz-linear-gradient(center top, #444444 0%, #555555 50%, #444444 51%, #444444 100%);
+  -webkit-box-shadow: 1px 1px 8px rgba(0, 0, 0, 0.3);
+  -moz-box-shadow: 1px 1px 8px rgba(0, 0, 0, 0.3);
+  -o-box-shadow: 1px 1px 8px rgba(0, 0, 0, 0.3);
+  box-shadow: 1px 1px 8px rgba(0, 0, 0, 0.3); }
+  /* line 67, ../../../app/stylesheets/embeds/blog-embed.scss */
+  #iavouch_3 .audiojs .play-pause {
+    width: 15px;
+    height: 20px;
+    padding: 0px 8px 0px 0px; }
+  /* line 68, ../../../app/stylesheets/embeds/blog-embed.scss */
+  #iavouch_3 .audiojs p {
+    width: 25px;
+    height: 20px;
+    margin: -3px 0px 0px -1px; }
+  /* line 69, ../../../app/stylesheets/embeds/blog-embed.scss */
+  #iavouch_3 .audiojs .scrubber {
+    width: 350px;
+    background: #5a5a5a;
+    height: 10px;
+    margin: 5px; }
+  /* line 70, ../../../app/stylesheets/embeds/blog-embed.scss */
+  #iavouch_3 .audiojs .progress {
+    height: 10px;
+    width: 0px;
+    background: #ccc;
+    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #cccccc), color-stop(0.5, #dddddd), color-stop(0.51, #cccccc), color-stop(1, #cccccc));
+    background-image: -moz-linear-gradient(center top, #cccccc 0%, #dddddd 50%, #cccccc 51%, #cccccc 100%); }
+  /* line 74, ../../../app/stylesheets/embeds/blog-embed.scss */
+  #iavouch_3 .audiojs .loaded {
+    width: 350;
+    height: 10px;
+    background: #000;
+    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #222222), color-stop(0.5, #333333), color-stop(0.51, #222222), color-stop(1, #222222));
+    background-image: -moz-linear-gradient(center top, #222222 0%, #333333 50%, #222222 51%, #222222 100%); }
+  /* line 77, ../../../app/stylesheets/embeds/blog-embed.scss */
+  #iavouch_3 .audiojs .time {
+    float: left;
+    height: 25px;
+    line-height: 25px; }
+  /* line 78, ../../../app/stylesheets/embeds/blog-embed.scss */
+  #iavouch_3 .audiojs .error-message {
+    height: 24px;
+    line-height: 24px; }
+/* line 80, ../../../app/stylesheets/embeds/blog-embed.scss */
+#iavouch_3 .track-details {
+  clear: both;
+  height: 20px;
+  width: 448px;
+  padding: 1px 6px;
+  background: #eee;
+  color: #222;
+  font-family: monospace;
+  font-size: 11px;
+  line-height: 20px;
+  -webkit-box-shadow: inset 1px 1px 5px rgba(0, 0, 0, 0.15);
+  -moz-box-shadow: inset 1px 1px 5px rgba(0, 0, 0, 0.15); }
+/* line 84, ../../../app/stylesheets/embeds/blog-embed.scss */
+#iavouch_3 .track-details:before {
+  content: '♬ '; }
+/* line 85, ../../../app/stylesheets/embeds/blog-embed.scss */
+#iavouch_3 .track-details em {
+  font-style: normal;
+  color: #999; }
+/* line 87, ../../../app/stylesheets/embeds/blog-embed.scss */
+#iavouch_3 .review-left {
+  float: left; }
+/* line 88, ../../../app/stylesheets/embeds/blog-embed.scss */
+#iavouch_3 .review-right {
+  float: right; }
+/* line 89, ../../../app/stylesheets/embeds/blog-embed.scss */
+#iavouch_3 .trans {
+  background-color: lightgrey; }
+
+/* #iavouch 3*/
+/* #iavouch content 3*/
+/* .iavouch mast*/
+/* .iavouch lanyard wrapper */
+/* .comments*/
+/* .comments_header*/
+/* .comments_each */
+/* table */
+/* tr */
+/* td */
+/* img .profile_pic */
+/* td */
+/* table .right-side*/
+/* Start embed header */
+/* start comments header*/

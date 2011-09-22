@@ -5,61 +5,132 @@
 
 @import "compass/reset";
 @import "960/grid";
-//
-//	<div id="iavouch_content_3">
-//	  <div class="iavouch_mast">
-//	    <div class="iavouch_lanyard_wrapper"> 
-//	      <div style="width: 450px;" class="comments">
-//	        <div style="width: 450px;" class="comments-header">
-//	          <div class="grid_6">Showing 2 reviews</div>
-//	          <div class="toggle-synopsis-off">hide transcripts</div>
-//	        </div>
-//	        <div class="clear"></div>          
-//		      <div class="comments-each">
-//	          <table class="review-container">
-//	            <tbody>
-//	              <tr>
-//	                <td width="64 !important">       
-//	                  <img class="profile_pic" src="http://a0.twimg.com/profile_images/1159303481/Sloths_normal.jpg" height="54 !important" width="54 !important"> 
-//	                </td>
-//	                <td class="table-rightside">
-//	                  <p>Ryan McGary / Ceo  @ Fresh Water </p>                        
-//	                  <div style="width: 372px;" class="review-each">
-//	                    <div style="width: 372px;" id="audiojs_wrapper0" classname="audiojs" class="audiojs ">      
-//	                      <object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" id="audiojs0" name="audiojs0" style="position: absolute; left: -1px;" height="1" width="1">         
-//	                        <param name="movie" value="http://localhost:3000/audiojs/audiojs.swf?playerInstance=audiojs.instances['audiojs0']&amp;datetime=1311908606758.71">         
-//	                        <param name="allowscriptaccess" value="always">         
-//	                        <embed name="audiojs0" src="http://localhost:3000/audiojs/audiojs.swf?playerInstance=audiojs.instances[%27audiojs0%27]&amp;datetime=1311908606758.71" allowscriptaccess="always" height="1" width="1">       
-//	                      </object>
-//	                      <audio src="http://s3.amazonaws.com/audiojs/02-juicy-r.mp3" preload="none"></audio>            
-//	                      <div class="play-pause">             
-//	                        <p class="play"></p>             
-//	                        <p class="pause"></p>             
-//	                        <p class="loading"></p>             
-//	                        <p class="error"></p>           
-//	                      </div>
-//	                      <div style="width: 218px;" class="scrubber">             
-//	                        <div style="width: 48px;" class="progress"></div>             
-//	                        <div style="width: 218px;" class="loaded"></div>           
-//	                      </div>
-//	                      <div class="time">             
-//	                        <em class="played">00:45</em>
-//	                        <strong class="duration">03:56</strong>           
-//	                      </div>
-//	                      <div class="error-message"></div>
-//	                      <table></table>
-//	                    </div>                
-//	                    <div class="review-left">posted 3 months ago.</div>
-//	                    <div class="review-right">share / like / <b class="bold">synopsis</b></div>
-//	                    <div class="clear"></div>
-//	                    <div style="display: none;" class="trans">Well, I think things turned out better than expected.</div>
-//	                  </div>
-//	                </td>
-//	              </tr>
-//	            </tbody>
-//	          </table>  
-//	        </div>
-//	    </div>  
-//	  <div style="clear:both"></div>
-//	</div>
-//	
+
+div#iavouch_content_3.iavouch_3_reset {
+  iframe#coolframe {
+  }
+  a.auth_popup {
+  }
+  p.notice {
+  }
+  p.alert {
+  }
+  table {
+    tbody {
+      tr {
+        td#profile-container {
+          img.profile_pic {
+          }
+        }
+        td.table-rightside {
+          p {
+            text-decoration: underline;
+          }
+          div.optional-text {
+            div.text-area {
+              textarea.short-text {
+              }
+            }
+            div.expand-bottom {
+              a.link {
+              }
+              input.vouch-button {
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  div.iavouch_mast {
+    div.iavouch_lanyard_wrapper {
+      div.comments {
+        width: 450px;
+        div.comments-header {
+          width: 450px;
+          div.grid_6 {
+          }
+          div.toggle-synopsis-off {
+          }
+        }
+        div.clear {
+        }
+        div.comments-each {
+          table.review-container {
+            tbody {
+              tr {
+                td {
+                  img.profile_pic {
+                  }
+                }
+                td.table-rightside {
+                  p {
+                  }
+                  div.review-each {
+                    width: 372px;
+                    div#audiojs_wrapper0.audiojs {
+                      width: 372px;
+                      object#audiojs0 {
+                        position: absolute;
+                        left: -1px;
+                        param {
+                        }
+                        embed {
+                        }
+                      }
+                      audio {
+                      }
+                      div.play-pause {
+                        p.play {
+                        }
+                        p.pause {
+                        }
+                        p.loading {
+                        }
+                        p.error {
+                        }
+                      }
+                      div.scrubber {
+                        width: 218px;
+                        div.progress {
+                          width: 48px;
+                        }
+                        div.loaded {
+                          width: 218px;
+                        }
+                      }
+                      div.time {
+                        em.played {
+                        }
+                        strong.duration {
+                        }
+                      }
+                      div.error-message {
+                      }
+                      table {
+                      }
+                    }
+                    div.review-left {
+                    }
+                    div.review-right {
+                      b.bold {
+                      }
+                    }
+                    div.clear {
+                    }
+                    div.trans {
+                      display: none;
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+      div {
+        clear:both;
+      }
+    }
+  }
+}

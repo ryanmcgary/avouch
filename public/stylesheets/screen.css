@@ -1,76 +1,94 @@
-/*
-Syntax error: Invalid CSS after "...ort "960/grid";": expected selector or at-rule, was "<div id="iavouc..."
-        on line 9 of /Users/rahm/rails/avouch/app/stylesheets/screen.scss
+/* Welcome to Compass.
+ * In this file you should write your main styles. (or centralize your imports)
+ * Import this file using the following HTML or equivalent:
+ * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
+/* line 17, ../../../../.rvm/gems/ruby-1.9.2-p290/gems/compass-0.11.5/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline; }
 
-4:  * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
-5: 
-6: @import "compass/reset";
-7: @import "960/grid";
-8: 
-9: 	<div id="iavouch_content_3">
-10: 	  <div class="iavouch_mast">
-11: 	    <div class="iavouch_lanyard_wrapper"> 
-12: 	      <div style="width: 450px;" class="comments">
-13: 	        <div style="width: 450px;" class="comments-header">
-14: 	          <div class="grid_6">Showing 2 reviews</div>
+/* line 20, ../../../../.rvm/gems/ruby-1.9.2-p290/gems/compass-0.11.5/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+body {
+  line-height: 1; }
 
-Backtrace:
-/Users/rahm/rails/avouch/app/stylesheets/screen.scss:9
-/Users/rahm/.rvm/gems/ruby-1.9.2-p290/gems/sass-3.1.4/lib/sass/scss/parser.rb:898:in `expected'
-/Users/rahm/.rvm/gems/ruby-1.9.2-p290/gems/sass-3.1.4/lib/sass/scss/parser.rb:841:in `expected'
-/Users/rahm/.rvm/gems/ruby-1.9.2-p290/gems/sass-3.1.4/lib/sass/scss/parser.rb:27:in `parse'
-/Users/rahm/.rvm/gems/ruby-1.9.2-p290/gems/sass-3.1.4/lib/sass/engine.rb:319:in `_to_tree'
-/Users/rahm/.rvm/gems/ruby-1.9.2-p290/gems/sass-3.1.4/lib/sass/engine.rb:291:in `_render'
-/Users/rahm/.rvm/gems/ruby-1.9.2-p290/gems/sass-3.1.4/lib/sass/engine.rb:239:in `block in render'
-/Users/rahm/.rvm/gems/ruby-1.9.2-p290/gems/sass-3.1.4/lib/sass/util.rb:297:in `silence_sass_warnings'
-/Users/rahm/.rvm/gems/ruby-1.9.2-p290/gems/sass-3.1.4/lib/sass/engine.rb:239:in `render'
-/Users/rahm/.rvm/gems/ruby-1.9.2-p290/gems/sass-3.1.4/lib/sass/plugin/compiler.rb:319:in `update_stylesheet'
-/Users/rahm/.rvm/gems/ruby-1.9.2-p290/gems/sass-3.1.4/lib/sass/plugin/compiler.rb:181:in `block (2 levels) in update_stylesheets'
-/Users/rahm/.rvm/gems/ruby-1.9.2-p290/gems/sass-3.1.4/lib/sass/plugin/compiler.rb:175:in `each'
-/Users/rahm/.rvm/gems/ruby-1.9.2-p290/gems/sass-3.1.4/lib/sass/plugin/compiler.rb:175:in `block in update_stylesheets'
-/Users/rahm/.rvm/gems/ruby-1.9.2-p290/gems/sass-3.1.4/lib/sass/plugin/compiler.rb:173:in `each'
-/Users/rahm/.rvm/gems/ruby-1.9.2-p290/gems/sass-3.1.4/lib/sass/plugin/compiler.rb:173:in `update_stylesheets'
-/Users/rahm/.rvm/gems/ruby-1.9.2-p290/gems/sass-3.1.4/lib/sass/plugin.rb:81:in `update_stylesheets'
-/Users/rahm/.rvm/gems/ruby-1.9.2-p290/gems/sass-3.1.4/lib/sass/plugin.rb:54:in `check_for_updates'
-/Users/rahm/.rvm/gems/ruby-1.9.2-p290/gems/sass-3.1.4/lib/sass/plugin/rack.rb:51:in `call'
-/Users/rahm/.rvm/gems/ruby-1.9.2-p290/gems/warden-1.0.4/lib/warden/manager.rb:35:in `block in call'
-/Users/rahm/.rvm/gems/ruby-1.9.2-p290/gems/warden-1.0.4/lib/warden/manager.rb:34:in `catch'
-/Users/rahm/.rvm/gems/ruby-1.9.2-p290/gems/warden-1.0.4/lib/warden/manager.rb:34:in `call'
-/Users/rahm/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.0.9/lib/action_dispatch/middleware/best_standards_support.rb:17:in `call'
-/Users/rahm/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.0.9/lib/action_dispatch/middleware/head.rb:14:in `call'
-/Users/rahm/.rvm/gems/ruby-1.9.2-p290/gems/rack-1.2.3/lib/rack/methodoverride.rb:24:in `call'
-/Users/rahm/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.0.9/lib/action_dispatch/middleware/params_parser.rb:21:in `call'
-/Users/rahm/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.0.9/lib/action_dispatch/middleware/flash.rb:182:in `call'
-/Users/rahm/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.0.9/lib/action_dispatch/middleware/session/abstract_store.rb:149:in `call'
-/Users/rahm/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.0.9/lib/action_dispatch/middleware/cookies.rb:302:in `call'
-/Users/rahm/.rvm/gems/ruby-1.9.2-p290/gems/activerecord-3.0.9/lib/active_record/query_cache.rb:32:in `block in call'
-/Users/rahm/.rvm/gems/ruby-1.9.2-p290/gems/activerecord-3.0.9/lib/active_record/connection_adapters/abstract/query_cache.rb:28:in `cache'
-/Users/rahm/.rvm/gems/ruby-1.9.2-p290/gems/activerecord-3.0.9/lib/active_record/query_cache.rb:12:in `cache'
-/Users/rahm/.rvm/gems/ruby-1.9.2-p290/gems/activerecord-3.0.9/lib/active_record/query_cache.rb:31:in `call'
-/Users/rahm/.rvm/gems/ruby-1.9.2-p290/gems/activerecord-3.0.9/lib/active_record/connection_adapters/abstract/connection_pool.rb:354:in `call'
-/Users/rahm/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.0.9/lib/action_dispatch/middleware/callbacks.rb:46:in `block in call'
-/Users/rahm/.rvm/gems/ruby-1.9.2-p290/gems/activesupport-3.0.9/lib/active_support/callbacks.rb:416:in `_run_call_callbacks'
-/Users/rahm/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.0.9/lib/action_dispatch/middleware/callbacks.rb:44:in `call'
-/Users/rahm/.rvm/gems/ruby-1.9.2-p290/gems/rack-1.2.3/lib/rack/sendfile.rb:107:in `call'
-/Users/rahm/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.0.9/lib/action_dispatch/middleware/remote_ip.rb:48:in `call'
-/Users/rahm/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.0.9/lib/action_dispatch/middleware/show_exceptions.rb:47:in `call'
-/Users/rahm/.rvm/gems/ruby-1.9.2-p290/gems/railties-3.0.9/lib/rails/rack/logger.rb:13:in `call'
-/Users/rahm/.rvm/gems/ruby-1.9.2-p290/gems/rack-1.2.3/lib/rack/runtime.rb:17:in `call'
-/Users/rahm/.rvm/gems/ruby-1.9.2-p290/gems/activesupport-3.0.9/lib/active_support/cache/strategy/local_cache.rb:72:in `call'
-/Users/rahm/.rvm/gems/ruby-1.9.2-p290/gems/rack-1.2.3/lib/rack/lock.rb:11:in `block in call'
-<internal:prelude>:10:in `synchronize'
-/Users/rahm/.rvm/gems/ruby-1.9.2-p290/gems/rack-1.2.3/lib/rack/lock.rb:11:in `call'
-/Users/rahm/.rvm/gems/ruby-1.9.2-p290/gems/actionpack-3.0.9/lib/action_dispatch/middleware/static.rb:30:in `call'
-/Users/rahm/.rvm/gems/ruby-1.9.2-p290/gems/railties-3.0.9/lib/rails/application.rb:168:in `call'
-/Users/rahm/.rvm/gems/ruby-1.9.2-p290/gems/railties-3.0.9/lib/rails/application.rb:77:in `method_missing'
-/Users/rahm/.rvm/gems/ruby-1.9.2-p290/gems/railties-3.0.9/lib/rails/rack/log_tailer.rb:14:in `call'
-/Users/rahm/.rvm/gems/ruby-1.9.2-p290/gems/rack-1.2.3/lib/rack/content_length.rb:13:in `call'
-/Users/rahm/.rvm/gems/ruby-1.9.2-p290/gems/rack-1.2.3/lib/rack/handler/webrick.rb:52:in `service'
-/Users/rahm/.rvm/rubies/ruby-1.9.2-p290/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
-/Users/rahm/.rvm/rubies/ruby-1.9.2-p290/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
-/Users/rahm/.rvm/rubies/ruby-1.9.2-p290/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
-*/
-body:before {
-  white-space: pre;
-  font-family: monospace;
-  content: "Syntax error: Invalid CSS after \"...ort \"960/grid\";\": expected selector or at-rule, was \"<div id=\"iavouc...\"\A         on line 9 of /Users/rahm/rails/avouch/app/stylesheets/screen.scss\A \A 4:  * <link href=\"/stylesheets/screen.css\" media=\"screen, projection\" rel=\"stylesheet\" type=\"text/css\" /> */\A 5: \A 6: @import \"compass/reset\";\A 7: @import \"960/grid\";\A 8: \A 9: 	<div id=\"iavouch_content_3\">\A 10: 	  <div class=\"iavouch_mast\">\A 11: 	    <div class=\"iavouch_lanyard_wrapper\"> \A 12: 	      <div style=\"width: 450px;\" class=\"comments\">\A 13: 	        <div style=\"width: 450px;\" class=\"comments-header\">\A 14: 	          <div class=\"grid_6\">Showing 2 reviews</div>"; }
+/* line 22, ../../../../.rvm/gems/ruby-1.9.2-p290/gems/compass-0.11.5/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+ol, ul {
+  list-style: none; }
+
+/* line 24, ../../../../.rvm/gems/ruby-1.9.2-p290/gems/compass-0.11.5/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+/* line 26, ../../../../.rvm/gems/ruby-1.9.2-p290/gems/compass-0.11.5/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+caption, th, td {
+  text-align: left;
+  font-weight: normal;
+  vertical-align: middle; }
+
+/* line 28, ../../../../.rvm/gems/ruby-1.9.2-p290/gems/compass-0.11.5/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+q, blockquote {
+  quotes: none; }
+  /* line 101, ../../../../.rvm/gems/ruby-1.9.2-p290/gems/compass-0.11.5/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+  q:before, q:after, blockquote:before, blockquote:after {
+    content: "";
+    content: none; }
+
+/* line 30, ../../../../.rvm/gems/ruby-1.9.2-p290/gems/compass-0.11.5/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+a img {
+  border: none; }
+
+/* line 114, ../../../../.rvm/gems/ruby-1.9.2-p290/gems/compass-0.11.5/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary {
+  display: block; }
+
+/* line 26, ../../app/stylesheets/screen.scss */
+div#iavouch_content_3.iavouch_3_reset table tbody tr td.table-rightside p {
+  text-decoration: underline; }
+/* line 47, ../../app/stylesheets/screen.scss */
+div#iavouch_content_3.iavouch_3_reset div.iavouch_mast div.iavouch_lanyard_wrapper div.comments {
+  width: 450px; }
+  /* line 49, ../../app/stylesheets/screen.scss */
+  div#iavouch_content_3.iavouch_3_reset div.iavouch_mast div.iavouch_lanyard_wrapper div.comments div.comments-header {
+    width: 450px; }
+  /* line 69, ../../app/stylesheets/screen.scss */
+  div#iavouch_content_3.iavouch_3_reset div.iavouch_mast div.iavouch_lanyard_wrapper div.comments div.comments-each table.review-container tbody tr td.table-rightside div.review-each {
+    width: 372px; }
+    /* line 71, ../../app/stylesheets/screen.scss */
+    div#iavouch_content_3.iavouch_3_reset div.iavouch_mast div.iavouch_lanyard_wrapper div.comments div.comments-each table.review-container tbody tr td.table-rightside div.review-each div#audiojs_wrapper0.audiojs {
+      width: 372px; }
+      /* line 73, ../../app/stylesheets/screen.scss */
+      div#iavouch_content_3.iavouch_3_reset div.iavouch_mast div.iavouch_lanyard_wrapper div.comments div.comments-each table.review-container tbody tr td.table-rightside div.review-each div#audiojs_wrapper0.audiojs object#audiojs0 {
+        position: absolute;
+        left: -1px; }
+      /* line 93, ../../app/stylesheets/screen.scss */
+      div#iavouch_content_3.iavouch_3_reset div.iavouch_mast div.iavouch_lanyard_wrapper div.comments div.comments-each table.review-container tbody tr td.table-rightside div.review-each div#audiojs_wrapper0.audiojs div.scrubber {
+        width: 218px; }
+        /* line 95, ../../app/stylesheets/screen.scss */
+        div#iavouch_content_3.iavouch_3_reset div.iavouch_mast div.iavouch_lanyard_wrapper div.comments div.comments-each table.review-container tbody tr td.table-rightside div.review-each div#audiojs_wrapper0.audiojs div.scrubber div.progress {
+          width: 48px; }
+        /* line 98, ../../app/stylesheets/screen.scss */
+        div#iavouch_content_3.iavouch_3_reset div.iavouch_mast div.iavouch_lanyard_wrapper div.comments div.comments-each table.review-container tbody tr td.table-rightside div.review-each div#audiojs_wrapper0.audiojs div.scrubber div.loaded {
+          width: 218px; }
+    /* line 121, ../../app/stylesheets/screen.scss */
+    div#iavouch_content_3.iavouch_3_reset div.iavouch_mast div.iavouch_lanyard_wrapper div.comments div.comments-each table.review-container tbody tr td.table-rightside div.review-each div.trans {
+      display: none; }
+/* line 131, ../../app/stylesheets/screen.scss */
+div#iavouch_content_3.iavouch_3_reset div.iavouch_mast div.iavouch_lanyard_wrapper div {
+  clear: both; }

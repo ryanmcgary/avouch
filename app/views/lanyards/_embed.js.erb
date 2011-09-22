@@ -39,7 +39,7 @@ function include(file)
     script.src  = file;
     script.type = 'text/javascript';
 // below line defers running code .script until javascript is ready    
-		script.defer = true;
+	script.defer = true;
 // this line runs everything contained within afer script.onload 
     script.onload = function(){$(document).ready(function() { 
       // gets window popup plugin 1. sets window settings, 2. links class name, 3. setunload callback
