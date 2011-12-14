@@ -12,12 +12,14 @@ class User < ActiveRecord::Base
   attr_accessible :email, :password, :password_confirmation, :phone_number, :remember_me, 
                   :title, :company, :description, :location, :full_name 
 
-  validates_presence_of :company, :on => :save, :message => "can't be blank"
-  validates_presence_of :title, :on => :save, :message => "can't be blank"
-  validates_presence_of :full_name, :on => :save, :message => "can't be blank"
-  validates_presence_of :phone_number, :on => :save, :message => "can't be blank"
-  validates_length_of :phone_number, :within => 10..10, :on => :save, :message => "must be 10 digits"
-  validates_format_of :phone_number, :with => /^[\d]+$/, :on => :save, :message => "must be digits only" 
+  validates_presence_of :company, :message => "can't be blank"
+  validates_presence_of :title, :message => "can't be blank"
+  validates_presence_of :email, :message => "can't be blank"
+  
+  validates_presence_of :full_name, :message => "can't be blank"
+  validates_presence_of :phone_number, :message => "can't be blank"
+  validates_length_of :phone_number, :within => 10..10, :message => "must be 10 digits"
+  validates_format_of :phone_number, :with => /^[\d]+$/, :message => "must be digits only" 
   
   def apply_omniauth(omniauth)
     # TODO: set a default profile pic if user_info.image doesn't exist

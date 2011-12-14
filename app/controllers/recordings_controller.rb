@@ -38,8 +38,6 @@ class RecordingsController < ApplicationController
     
     def show
       @recording = Recording.find(params[:id])  
-
-     
       
       respond_to do |format|
         format.html # show.html.erb

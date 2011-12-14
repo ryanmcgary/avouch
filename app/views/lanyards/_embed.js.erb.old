@@ -1,0 +1,105 @@
+<% if !params[:v].nil? %>
+
+// makes embed content visible 
+
+document.getElementById('iavouch_<%= params[:v] %>').style.width = widget_width;   
+document.getElementById('iavouch_content_<%= params[:v] %>').style.visibility = 'visible';
+
+// create iframe for adding new review
+var ifrm = document.createElement("IFRAME");
+ifrm.setAttribute('src', 'http://localhost:3000/sites/' + site_id + '/remoteurls/'+ remoteurl_id +'?' + layout_type);
+ifrm.style.width = 100+"%";   
+ifrm.style.width = widget_width + "px";   
+ifrm.style.height = "183px";
+ifrm.style.border ="0";  
+ifrm.id = "coolframe"
+
+
+// Puts ADD NEW REVIEW IFRAME ON TOP OF OR BELOW REVIEWS
+if (typeof add_review_bottom === 'undefined') {
+		document.getElementById('iavouch_<%= params[:v] %>').insertBefore(ifrm, iavouch_content_<%= params[:v] %>);  
+	}
+else
+	{
+		document.getElementById('iavouch_<%= params[:v] %>').insertBefore(ifrm, null); 		
+	}
+
+// creates var sw_3 or sw_2 and fills it with content from lanyard/lanyards, also escapse javascript
+var iavouch_<%= params[:v] %> = "<%= escape_javascript(render :partial => "lanyards/full_lanyard", :locals => {:v => params[:v]}) %>"; 
+document.getElementById('iavouch_content_<%= params[:v] %>').innerHTML=iavouch_<%= params[:v] %>;          
+
+
+// this creates rules for include(file-name) 
+function include(file)
+{
+// this creates var script element + <script> tage
+    var script  = document.createElement('script');
+// this sets src as file listed by include file
+    script.src  = file;
+    script.type = 'text/javascript';
+// below line defers running code .script until javascript is ready    
+	script.defer = true;
+// this line runs everything contained within afer script.onload 
+    script.onload = function(){$(document).ready(function() { 
+      // gets window popup plugin 1. sets window settings, 2. links class name, 3. setunload callback
+
+			
+			// $.get('http://localhost:3000/sites/' + site_id + '/remoteurls/'+ remoteurl_id +'/reviews?' + layout_type, function(data) {
+			// $('#sw_content_3').html(data);
+			// // alert('Load was performed.' + data);
+			// });         
+
+
+			$.getScript('http://localhost:3000/audiojs/audio.js', function() 
+			{
+			  var as = audiojs.createAll();
+			  $('.audiojs').width(widget_width - 78);  
+				      $('.audiojs .loaded').width(widget_width - 232); 
+				      $('.audiojs .scrubber').width(widget_width - 232);
+			});   
+			
+			
+			$.getScript('http://localhost:3000/javascripts/jquery.popupwindow.js', function() 
+			{
+				var profiles = {window800:{height:400,width:400,center:1,status:1,onUnload:unloadcallback}};
+				$(function(){$(".toggle-button").popupwindow(profiles);});
+				function unloadcallback(){
+					alert("Time to check if your loggedin or not, if so, change dom, if not don't");
+					};
+			});
+
+			//  toggle synopsis
+			$('.toggle-synopsis').click(function() {
+				$('.bold').removeClass('toggle');
+				$('.trans').hide('fast'); 
+				$(this).toggleClass('toggle-synopsis').toggleClass('toggle-synopsis-off');
+				return false;
+			});
+			      
+			$('.bold').click(function() {
+				$('.review-each div:hover .bold').toggleClass('toggle');
+				$('.comments-each div:hover .trans').slideToggle('fast');  
+				return false;
+			});                  
+			
+// TODO: make resizing work
+			$('.iavouch_3').width(widget_width);
+			$('.comments').width(widget_width);
+			$('.comments .comments-header').width(widget_width);
+			$('.comments .review-each').width(widget_width - 78);
+
+// TODO: UNCOMENT FOR PRODUCTION RELOCATE MAKE ENTIRE DOCUMENT VISIBLE
+			// document.getElementById('iavouch_content_<%= params[:v] %>').style.visibility = 'visible';
+			
+    })}
+    document.getElementsByTagName('head').item(0).appendChild(script);
+
+}
+//add jQuery
+include('http://code.jquery.com/jquery-1.5.js');
+  
+
+
+
+<% else %>
+<% end %>

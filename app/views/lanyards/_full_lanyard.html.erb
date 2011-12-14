@@ -1,37 +1,83 @@
-<div class="iavouch_mast">
+<% if params[:v] == "1" %>
+	<div id="iavouch_mast">
 
-<!-- <a href="#" class="toggle-button">click to toggle</a>   --> 
-<div class="iavouch_lanyard_wrapper"> 
-   
+  	<!-- <a href="#" class="toggle-button">click to toggle</a>   --> 
+  	<div class="iavouch_lanyard_wrapper"> 
+  	   
+  	<% if !@remoteurl.nil? %>   
+  	  <div class="comments">
+  	    <div class="comments-header">
+  	    											<!-- TODO: Move this to controller -->
+  	        <div class="grid_6">Showing <%= @remoteurl.recordings.where(:call_completed => "1").count %> <%= ("review").pluralize %></div>
+  	        <div class="toggle-synopsis">hide <%= ("transcript").pluralize %></div>
+  	    </div>
+  	    <div class="clear"></div>          
+    	<!-- start each recording -->
+
+    	<% if @remoteurl.recordings.present? %> 
+    		<%= render :partial => 'shared/recording', :collection => @remoteurl.recordings %>
+    	<% end -%>
+
+  	<% end %> 
+
+
+  	         
+  	<!-- end each recording     -->
+  	  </div>  
+  	  <div style="clear:both"></div>
+  	</div>
+
+  	<!-- <#% if user_signed_in? %>
+  	<#%= render :text => request.env["HTTP_REFERER"] %>
+  	<#% end %>     -->
+  	  
+  	<style type="text/css" media="screen" id="sw_css_<%= v %>">
+  	#sw_<%= v %> .toggle-popup{text-decoration: underline;}   
+  	#sw_<%= v %> {overflow: visible;height: auto;background-color: white}  
+  	</style>             
+  	<%= render 'shared/everything_css' %>    
+	</div> 
+
+<% elsif params[:v] == "2" %>
+<div id="iavouch-container" class="iavouch-clear-format">
+
+  <p class="avouchlogo"><%= link_to "Powered by Avouch", logout_url, :class => "vouch-popup", :rel => "window800" %></p>
+  <!-- element with overflow applied -->
+  <div class="iavouch-scroll-container">
+    <!-- the element that will be scrolled during the effect -->
+    <div class="iavouch-scroll-scroller">
+      <!-- our individual panels -->
 <% if !@remoteurl.nil? %>   
-  <div class="comments">
-    <div class="comments-header">
-        <div class="grid_6">Showing <%= @remoteurl.recordings.where(:call_completed => "1").count %> <%= ("review").pluralize %></div>
-        <div class="toggle-synopsis">hide <%= ("transcript").pluralize %></div>
+    <% if @remoteurl.recordings.present? %> 
+      <%= render :partial => 'shared/recording', :collection => @remoteurl.recordings %>
+    <% end -%>    
+<% end %>
+       
+      <div class="iavouch-comment-container" id="leavereview">    
+      </div>     
+      
+    </div>  <!-- scrollContainer -->
+  </div>   <!-- scroll --> 
+
+<% if !@remoteurl.nil? %>  
+  <% if @remoteurl.recordings.present? %>   
+    <div class="iavouch-scroll-navigation">
+     <a class="iavouch-nav-prev" href="#">Previous</a>   
+       <ul class="iavouch-navigation-list">
+
+        <% @recording.each_with_index do |c, i| %>
+            <li><a href="#<%= c.created_at.to_i %>"><%= i + 1 %></a></li>
+        <% end %>
+
+           <div id="navtoreview"><a href="#leavereview">[Leave a review]</a></div>
+      </ul>  
+     <a class="iavouch-nav-next" href="#">Next</a>   
+
     </div>
-    <div class="clear"></div>          
-<!-- start each recording -->
-
-<% unless @remoteurl.recordings.empty? %> 
-	<%= render :partial => 'shared/recording', :collection => @remoteurl.recordings %>
-<% end -%>
-
-<% end %> 
-
-
-         
-<!-- end each recording     -->
-  </div>  
-  <div style="clear:both"></div>
-</div>
-
-<!-- <#% if user_signed_in? %>
-<#%= render :text => request.env["HTTP_REFERER"] %>
-<#% end %>     -->
-  
-<style type="text/css" media="screen" id="sw_css_<%= v %>">
-#sw_<%= v %> .toggle-popup{text-decoration: underline;}   
-#sw_<%= v %> {overflow: visible;height: auto;background-color: white}  
-</style>             
+      
+  <% end %>
+<% end %>
+</div>  <!-- slider --> 
 <%= render 'shared/everything_css' %>    
-</div> 
+
+<% end %>

@@ -1,41 +1,110 @@
 <% (what = session[:omniauth] && session[:omniauth]['user_info']).nil? ? nil : '' %>      
-<div id="name">
-<h2>Sign up</h2> 
-</div>
+<% if request.referrer.include? "remoteurls" or params['layout'] == 'embed' %>
+  <div class="devise_form" id="stylized">
+  <%= image_tag (what.nil? ? "" : what['image']), :title => "title", :class => "profile_pic" %>      
+  <h1>Sign up</h1>
+  <p>Complete account creation</p> 
 
-<div class="devise_form"> 
-<%= form_for(resource, :as => resource_name, :url => registration_path(resource_name)) do |f| %>
-  
-  <%= f.label :full_name %>
-  <%= f.text_field :full_name, :value => (what.nil? ? "" : what['name']) %>
-  
-  <%= f.label :email %> 
-  <%= f.text_field :email, :value => (what.nil? ? "" : what['email']) %>            
-  
-  <%= f.label :company %>
-  <%= f.text_field :company %>
-                                  
-  <%= f.label :title %>
-  <%= f.text_field :title %>
+  <%= form_for(resource, :as => resource_name, :url => registration_path(resource_name)) do |f| %>
+    <div id="first">
+    <%= f.label :email, raw("Corporate E-mail<span class=\"small\">Work e-mail preferred for verification</span>") %>
+    <%= f.text_field :email, :value => (what.nil? ? "" : what['email']) %>   
    
-  <%= f.label :phone_number %>
-  <%= f.text_field :phone_number, :value => (what.nil? ? "" : what['phone']) %>
-  
-  <%= image_tag (what.nil? ? "" : what['image']), :title => "title", :class => "class" %>  
-<% if @user.password_required? %>
-  <p><%= f.label :password %><br />
-  <%= f.password_field :password %></p>
+    <%= f.label :phone_number, raw("Phone number<span class=\"small\">Personal cell number</span>") %>
+    <%= f.text_field :phone_number, :value => (what.nil? ? "" : what['phone']) %>
 
-  <p><%= f.label :password_confirmation %><br />
-  <%= f.password_field :password_confirmation %></p>
-<% end %>
-  
-  <p><%= f.submit "Sign up" %></p>
-<% end %>
+    <%= f.label :full_name, raw("Full name<span class=\"small\">Your full name</span>") %>
+    <%= f.text_field :full_name, :value => (what.nil? ? "" : what['name']) %>
+           
+    <%= f.label :company, raw("Company<span class=\"small\">Name of Employer</span>")  %>
+    <%= f.text_field :company %>
 
-<%= render :partial => "devise/shared/links" %>
-</div> 
+    <%= f.label :title, raw("Title<span class=\"small\">Title of your position</span>")  %>
+    <%= f.text_field :title %>
+    
+  <% if @user.password_required? %>
+    <p><%= f.label :password %><br />
+    <%= f.password_field :password %></p>
 
-<div class="devise_errors">
-  <%= devise_error_messages! %>   
-</div>
+    <p><%= f.label :password_confirmation %><br />
+    <%= f.password_field :password_confirmation %></p>
+  <% end %>
+    
+    <%= f.submit "Sign up" %>
+    </div>
+  <% end %>
+
+  <!-- <%#= render :partial => "devise/shared/links" %> -->
+  </div> 
+<% else %>
+  <div class="devise_form" id="stylized">
+  <%= image_tag (what.nil? ? "" : what['image']), :title => "title", :class => "profile_pic" %>      
+  <h1>Sign up</h1>
+  <p>Complete account creation</p> 
+
+  <%= form_for(resource, :as => resource_name, :url => registration_path(resource_name)) do |f| %>
+    
+    <%= f.label :email, raw("Corporate E-mail<span class=\"small\">Work e-mail preferred for verification</span>") %>
+    <%= f.text_field :email %>   
+    <% if resource.errors[:email].present? %>
+      <div class="error">
+        <% resource.errors[:email].each do |msg| %>    
+          <%= msg %><br />
+        <% end %>
+      </div>
+    <% end %> 
+   
+    <%= f.label :phone_number, raw("Phone number<span class=\"small\">Personal cell number</span>") %>
+    <%= f.text_field :phone_number %>
+    <% if resource.errors[:phone_number].present? %>
+      <div class="error">
+        <% resource.errors[:phone_number].each do |msg| %>    
+          <%= msg %><br />
+        <% end %>
+      </div>
+    <% end %>
+
+    <%= f.label :full_name, raw("Full name<span class=\"small\">Your full name</span>") %>
+    <%= f.text_field :full_name %>
+    <% if resource.errors[:full_name].present? %>
+      <div class="error">
+        <% resource.errors[:full_name].each do |msg| %>    
+          <%= msg %><br />
+        <% end %>
+      </div>
+    <% end %>             
+
+    <%= f.label :company, raw("Company<span class=\"small\">Name of Employer</span>")  %>
+    <%= f.text_field :company %>
+    <% if resource.errors[:company].present? %>
+      <div class="error">
+        <% resource.errors[:company].each do |msg| %>    
+          <%= msg %><br />
+        <% end %>
+      </div>
+    <% end %>
+
+    <%= f.label :title, raw("Title<span class=\"small\">Title of your position</span>")  %>
+    <%= f.text_field :title %>
+    <% if resource.errors[:title].present? %>
+      <div class="error">
+        <% resource.errors[:title].each do |msg| %>    
+          <%= msg %><br />
+        <% end %>
+      </div>
+    <% end %>
+    
+  <% if @user.password_required? %>
+    <p><%= f.label :password %><br />
+    <%= f.password_field :password %></p>
+
+    <p><%= f.label :password_confirmation %><br />
+    <%= f.password_field :password_confirmation %></p>
+  <% end %>
+    
+    <%= f.submit "Sign up" %>
+  <% end %>
+
+  <!-- <%#= render :partial => "devise/shared/links" %> -->
+  </div> 
+<% end %> 

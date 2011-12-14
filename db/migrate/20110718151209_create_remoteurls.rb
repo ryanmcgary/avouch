@@ -3,7 +3,7 @@ class CreateRemoteurls < ActiveRecord::Migration
     create_table :remoteurls do |t|
       t.integer :site_id
       t.string :permalink
-      t.string :content
+      t.string :name
 
       t.timestamps
     end

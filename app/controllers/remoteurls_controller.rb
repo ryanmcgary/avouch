@@ -1,11 +1,17 @@
-class RemoteurlsController < ApplicationController                                                     
+class RemoteurlsController < ApplicationController
   before_filter :authenticate_user!, :except => [:index, :new, :create, :edit, :destroy, :update, :show]
+
   layout 'remotelayout'
-  # GET /remoteurls
-  # GET /remoteurls.xml
-  def index
+  
+
+  
+  def index # GET /remoteurls # GET /remoteurls.xml
     @site = Site.find_by_permalink(params[:site_id]) 
-    @remoteurls = @site.remoteurls
+    @recordings = @site.recordings #show all recordings for site
+
+    # @remoteurl = Remoteurl.find_by_permalink(params[:remoteurl])
+    # @recording = @remoteurl.recordings.where(:call_completed => "1")  
+
   end
 
   def show
@@ -13,10 +19,10 @@ class RemoteurlsController < ApplicationController
     session[:return_to] = params
     if @site.remoteurls.find_by_permalink(params[:id]).nil? 
       @remoteurl = @site.remoteurls.build(params[:remoteurl])
-      @remoteurl.content = (params[:id])
+      @remoteurl.name = (params[:id])
       respond_to do |format|
         if @remoteurl.save
-          format.html { redirect_to "/sites/#{@site.permalink}/remoteurls/#{@remoteurl.permalink}"}
+          format.html { redirect_to "/sites/#{@site.permalink}/remoteurls/#{@remoteurl.permalink}?layout=#{params[:layout]}"}
           format.xml  { render :xml => @site, :status => :created, :location => @remoteurl }
         else
           format.html { render :action => "new" }
@@ -34,15 +40,14 @@ class RemoteurlsController < ApplicationController
     @remoteurl = @site.remoteurls.build
   end
 
-  # GET /remoteurls/1/edit
-  def edit
+  
+  def edit # GET /remoteurls/1/edit
     @site = Site.find_by_permalink(params[:site_id])  
     @remoteurl = @site.remoteurls.find_by_permalink(params[:id])
   end
 
-  # POST /remoteurls
-  # POST /remoteurls.xml
-  def create
+  
+  def create # POST /remoteurls # POST /remoteurls.xml
     @site = Site.find_by_permalink(params[:site_id])  
     @remoteurl = @site.remoteurls.build(params[:remoteurl])
 
@@ -57,9 +62,8 @@ class RemoteurlsController < ApplicationController
     end
   end
 
-  # PUT /remoteurls/1
-  # PUT /remoteurls/1.xml
-  def update
+  
+  def update # PUT /remoteurls/1 # PUT /remoteurls/1.xml
     @site = Site.find_by_permalink(params[:site_id])   
     @remoteurl = @site.remoteurls.find_by_permalink(params[:id])
 
@@ -74,9 +78,8 @@ class RemoteurlsController < ApplicationController
     end
   end
   
-  # DELETE /remoteurls/1
-  # DELETE /remoteurls/1.xml
-  def destroy
+  
+  def destroy # DELETE /remoteurls/1 # DELETE /remoteurls/1.xml
     @site = Site.find_by_permalink(params[:site_id])   
     @remoteurl = @site.remoteurls.find_by_permalink(params[:id])
     @remoteurl.destroy

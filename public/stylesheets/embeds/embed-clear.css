@@ -1,6 +1,6 @@
 /* http://meyerweb.com/eric/tools/css/reset/ */
 /* v1.0 | 20080212 */
-/* line 13, ../../../app/stylesheets/embeds/embed-clear.scss */
+/* line 12, ../../../app/stylesheets/embeds/embed-clear.scss */
 .iavouch_3_reset div, .iavouch_3_reset span, .iavouch_3_reset applet, .iavouch_3_reset object, .iavouch_3_reset iframe, .iavouch_3_reset
 h1, .iavouch_3_reset h2, .iavouch_3_reset h3, .iavouch_3_reset h4, .iavouch_3_reset h5, .iavouch_3_reset h6, .iavouch_3_reset p, .iavouch_3_reset blockquote, .iavouch_3_reset pre, .iavouch_3_reset
 a, .iavouch_3_reset abbr, .iavouch_3_reset acronym, .iavouch_3_reset address, .iavouch_3_reset big, .iavouch_3_reset cite, .iavouch_3_reset code, .iavouch_3_reset
@@ -19,44 +19,44 @@ table, .iavouch_3_reset caption, .iavouch_3_reset tbody, .iavouch_3_reset tfoot,
   font: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
   font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; }
 
-/* line 24, ../../../app/stylesheets/embeds/embed-clear.scss */
+/* line 23, ../../../app/stylesheets/embeds/embed-clear.scss */
 .iavouch_3_reset div, .iavouch_3_reset p {
   color: black; }
 
-/* line 25, ../../../app/stylesheets/embeds/embed-clear.scss */
+/* line 24, ../../../app/stylesheets/embeds/embed-clear.scss */
 .iavouch_3_reset {
   line-height: 1; }
 
-/* line 27, ../../../app/stylesheets/embeds/embed-clear.scss */
+/* line 26, ../../../app/stylesheets/embeds/embed-clear.scss */
 .iavouch_3_reset ol, .iavouch_3_reset ul {
   list-style: none; }
 
-/* line 28, ../../../app/stylesheets/embeds/embed-clear.scss */
+/* line 27, ../../../app/stylesheets/embeds/embed-clear.scss */
 .iavouch_3_reset blockquote, .iavouch_3_reset q {
   quotes: none; }
 
-/* line 30, ../../../app/stylesheets/embeds/embed-clear.scss */
+/* line 29, ../../../app/stylesheets/embeds/embed-clear.scss */
 .iavouch_3_reset blockquote:before, .iavouch_3_reset blockquote:after, .iavouch_3_reset
 q:before, .iavouch_3_reset q:after {
   content: '';
   content: none; }
 
 /* remember to define focus styles! */
-/* line 36, ../../../app/stylesheets/embeds/embed-clear.scss */
+/* line 35, ../../../app/stylesheets/embeds/embed-clear.scss */
 .iavouch_3_reset :focus {
   outline: 0; }
 
 /* remember to highlight inserts somehow! */
-/* line 39, ../../../app/stylesheets/embeds/embed-clear.scss */
+/* line 38, ../../../app/stylesheets/embeds/embed-clear.scss */
 .iavouch_3_reset ins {
   text-decoration: none; }
 
-/* line 40, ../../../app/stylesheets/embeds/embed-clear.scss */
+/* line 39, ../../../app/stylesheets/embeds/embed-clear.scss */
 .iavouch_3_reset del {
   text-decoration: line-through; }
 
 /* tables still need 'cellspacing="0"' in the markup */
-/* line 43, ../../../app/stylesheets/embeds/embed-clear.scss */
+/* line 42, ../../../app/stylesheets/embeds/embed-clear.scss */
 .iavouch_3_reset table {
   border-collapse: collapse;
   border-spacing: 0; }
@@ -69,8 +69,8 @@ q:before, .iavouch_3_reset q:after {
 */
 /* =Basic HTML
 --------------------------------------------------------------------------------*/
-/* line 57, ../../../app/stylesheets/embeds/embed-clear.scss */
-.iavouch_3_reset .iavouch_mast {
+/* line 56, ../../../app/stylesheets/embeds/embed-clear.scss */
+.iavouch_3_reset #iavouch_mast {
   font: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
   font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
   font-weight: normal;
@@ -78,11 +78,11 @@ q:before, .iavouch_3_reset q:after {
   font-weight: normal;
   font-size: 15px; }
 
-/* line 67, ../../../app/stylesheets/embeds/embed-clear.scss */
+/* line 66, ../../../app/stylesheets/embeds/embed-clear.scss */
 .iavouch_3_reset a:focus {
   outline: 1px dotted invert; }
 
-/* line 71, ../../../app/stylesheets/embeds/embed-clear.scss */
+/* line 70, ../../../app/stylesheets/embeds/embed-clear.scss */
 .iavouch_3_reset hr {
   border-color: #ccc;
   border-style: solid;
@@ -92,45 +92,45 @@ q:before, .iavouch_3_reset q:after {
 
 /* =Headings
 --------------------------------------------------------------------------------*/
-/* line 82, ../../../app/stylesheets/embeds/embed-clear.scss */
+/* line 81, ../../../app/stylesheets/embeds/embed-clear.scss */
 .iavouch_3_reset h1 {
   font-size: 25px; }
 
-/* line 83, ../../../app/stylesheets/embeds/embed-clear.scss */
+/* line 82, ../../../app/stylesheets/embeds/embed-clear.scss */
 .iavouch_3_reset h2 {
   font-size: 23px; }
 
-/* line 84, ../../../app/stylesheets/embeds/embed-clear.scss */
+/* line 83, ../../../app/stylesheets/embeds/embed-clear.scss */
 .iavouch_3_reset h3 {
   font-size: 21px; }
 
-/* line 85, ../../../app/stylesheets/embeds/embed-clear.scss */
+/* line 84, ../../../app/stylesheets/embeds/embed-clear.scss */
 .iavouch_3_reset h4 {
   font-size: 19px; }
 
-/* line 86, ../../../app/stylesheets/embeds/embed-clear.scss */
+/* line 85, ../../../app/stylesheets/embeds/embed-clear.scss */
 .iavouch_3_reset h5 {
   font-size: 17px; }
 
-/* line 87, ../../../app/stylesheets/embeds/embed-clear.scss */
+/* line 86, ../../../app/stylesheets/embeds/embed-clear.scss */
 .iavouch_3_reset h6 {
   font-size: 15px; }
 
 /* =Spacing
 --------------------------------------------------------------------------------*/
-/* line 92, ../../../app/stylesheets/embeds/embed-clear.scss */
+/* line 91, ../../../app/stylesheets/embeds/embed-clear.scss */
 .iavouch_3_reset ol {
   list-style: decimal; }
 
-/* line 94, ../../../app/stylesheets/embeds/embed-clear.scss */
+/* line 93, ../../../app/stylesheets/embeds/embed-clear.scss */
 .iavouch_3_reset ul {
   list-style: square; }
 
-/* line 96, ../../../app/stylesheets/embeds/embed-clear.scss */
+/* line 95, ../../../app/stylesheets/embeds/embed-clear.scss */
 .iavouch_3_reset li {
   margin-left: 30px; }
 
-/* line 112, ../../../app/stylesheets/embeds/embed-clear.scss */
+/* line 111, ../../../app/stylesheets/embeds/embed-clear.scss */
 .iavouch_3_reset p,
 .iavouch_3_reset dl,
 .iavouch_3_reset hr,
@@ -148,7 +148,7 @@ q:before, .iavouch_3_reset q:after {
 .iavouch_3_reset fieldset {
   margin-bottom: 20px; }
 
-/* line 121, ../../../app/stylesheets/embeds/embed-clear.scss */
+/* line 120, ../../../app/stylesheets/embeds/embed-clear.scss */
 #iavouch_3 * span.clear,
 #iavouch_3 * div.clear,
 #iavouch_3 * li.clear,
@@ -168,7 +168,7 @@ q:before, .iavouch_3_reset q:after {
   height: 0; }
 
 /* http://www.positioniseverything.net/easyclearing.html */
-/* line 139, ../../../app/stylesheets/embeds/embed-clear.scss */
+/* line 138, ../../../app/stylesheets/embeds/embed-clear.scss */
 #iavouch_3 .clearfix:after {
   clear: both;
   content: '.';
@@ -176,14 +176,118 @@ q:before, .iavouch_3_reset q:after {
   visibility: hidden;
   height: 0; }
 
-/* line 147, ../../../app/stylesheets/embeds/embed-clear.scss */
+/* line 146, ../../../app/stylesheets/embeds/embed-clear.scss */
 #iavouch_3 .clearfix {
   display: inline-block; }
 
-/* line 151, ../../../app/stylesheets/embeds/embed-clear.scss */
+/* line 150, ../../../app/stylesheets/embeds/embed-clear.scss */
 #iavouch_3 * .clearfix {
   height: 1%; }
 
-/* line 155, ../../../app/stylesheets/embeds/embed-clear.scss */
+/* line 154, ../../../app/stylesheets/embeds/embed-clear.scss */
 #iavouch_3 .clearfix {
+  display: block; }
+
+/* http://meyerweb.com/eric/tools/css/reset/ */
+/* v1.0 | 20080212 */
+/* line 181, ../../../app/stylesheets/embeds/embed-clear.scss */
+.iavouch-clear-format div,
+.iavouch-clear-format span,
+.iavouch-clear-format iframe,
+.iavouch-clear-format p,
+.iavouch-clear-format a,
+.iavouch-clear-format font,
+.iavouch-clear-format img,
+.iavouch-clear-format center,
+.iavouch-clear-format ol,
+.iavouch-clear-format ul,
+.iavouch-clear-format li,
+.iavouch-clear-format fieldset,
+.iavouch-clear-format form,
+.iavouch-clear-format label,
+.iavouch-clear-format table,
+.iavouch-clear-format tbody,
+.iavouch-clear-format tr,
+.iavouch-clear-format th,
+.iavouch-clear-format td {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent; }
+
+/* line 190, ../../../app/stylesheets/embeds/embed-clear.scss */
+.iavouch-clear-format {
+  line-height: 1; }
+
+/* line 194, ../../../app/stylesheets/embeds/embed-clear.scss */
+.iavouch-clear-format ol,
+.iavouch-clear-format ul {
+  list-style: none; }
+
+/* remember to define focus styles! */
+/* line 199, ../../../app/stylesheets/embeds/embed-clear.scss */
+.iavouch-clear-format :focus {
+  outline: 0; }
+
+/* tables still need 'cellspacing="0"' in the markup */
+/* line 204, ../../../app/stylesheets/embeds/embed-clear.scss */
+.iavouch-clear-format table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+/*
+	960 Grid System ~ Text CSS.
+	Learn more ~ http://960.gs/
+
+	Licensed under GPL and MIT.
+*/
+/* =Basic HTML
+--------------------------------------------------------------------------------*/
+/* line 219, ../../../app/stylesheets/embeds/embed-clear.scss */
+.iavouch-clear-format a:focus {
+  outline: 1px dotted invert; }
+
+/* =Clear Floated Elements
+--------------------------------------------------------------------------------*/
+/* http://sonspring.com/journal/clearing-floats */
+/* line 232, ../../../app/stylesheets/embeds/embed-clear.scss */
+html body * span.clear,
+html body * div.clear,
+html body * li.clear,
+html body * dd.clear {
+  background: none;
+  border: 0;
+  clear: both;
+  display: block;
+  float: none;
+  font-size: 0;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  visibility: hidden;
+  width: 0;
+  height: 0; }
+
+/* line 249, ../../../app/stylesheets/embeds/embed-clear.scss */
+.clearfix:after {
+  clear: both;
+  content: '.';
+  display: block;
+  visibility: hidden;
+  height: 0; }
+
+/* line 258, ../../../app/stylesheets/embeds/embed-clear.scss */
+.clearfix {
+  display: inline-block; }
+
+/* line 263, ../../../app/stylesheets/embeds/embed-clear.scss */
+* html .clearfix {
+  height: 1%; }
+
+/* line 268, ../../../app/stylesheets/embeds/embed-clear.scss */
+.clearfix {
   display: block; }

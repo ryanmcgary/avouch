@@ -20,58 +20,123 @@ x create views:
   x remoteurl
   x site
 x update routes 
+create variable vouch.content1 if content1 already exists iterate until undefined
+	create vouch.content1.layout_n
+						  ifrm
+						  iavouch2 // or 3 from lanyard	
+create vouch.content2
+	create vouch.content2.
+						  layout_n
+						  ifrm
+						  iavouch2 // or 3 from lanyard
+						  width
+							Jquery alter content width		
+	
 
-- aim for unified css and html structure for embeds
-  ! unified clear files
-  ! shared html structure
-		! not a good idea
-		
-ifrm.id = "coolframe"
-iavouch_content_<%= params[:v] %>
-iavouch_<%= params[:v] %>
-iavouch_content_3
-$('.audiojs').width(widget_width - 78);  
-      $('.audiojs .loaded').width(widget_width - 232); 
-      $('.audiojs .scrubber').width(widget_width - 232);
-.toggle-button
-$('.toggle-synopsis').click(function() {
-	$('.bold').removeClass('toggle');
-	$('.trans').hide('fast'); 
-	$(this).toggleClass('toggle-synopsis').toggleClass('toggle-synopsis-off');
-	return false;
-});
-$('.bold').click(function() {
-	$('.review-each div:hover .bold').toggleClass('toggle');
-	$('.comments-each div:hover .trans').slideToggle('fast');
-$('.iavouch_3').width(widget_width);
-$('.comments').width(widget_width);
-$('.comments .comments-header').width(widget_width);
-$('.comments .review-each').width(widget_width - 78);
+% Get slider working
+	x Import HTML from slider.html into full_lanyard
+	x easy/quick solution: Create same or seperate embed.js, link different _full_lanyard(or if/else) with alt SCSS layout
+	x Integrate Slider JS files into _embed.js
+	x	reference parent div from JAVASCRIPT tag. To prevent having to reference tagID when hiding.
 
-#sw_<%= v %> .toggle-popup{text-decoration: underline;}   
-#sw_<%= v %> {overflow: visible;height: auto;background-color: white}
-		
-		- determine master syntax
-		- apply master syntax to HTML file
+	x Add Formatting CSS to blog-embed.scss
+	x Make sure embed-clear.scss clears slider correctly
+	x Create remoteurl/show that works correctly with banner version
+	x single link to login use ?key=value string to /closewindow to invoke login through chosen provider
+	x unified clear file
+	x width for slider currently requires var widget_width & div manual width to be set. fix this.
+	x finish slider, add markup to pull from DB
+		? it would be better if creation of remoteurl occurs in embed before JS is called.
+		x Make sure new remoteurl doesn't break banner version, also redirect of iframe needs to link to correct url
+	
 
-  - create banner style embed
-- create devise layout / css
-- create dashboard section
-! single link to longin use ?key=value string to /closewindow to invoke login through chosen provider
+x make remoteurl/show to only show login links/popups if not loggedin
+	x Mostly there. Add support for blog style and make multiple buttons
+		x seperate layout for blog vs banner login buttons
+		x finish PSD
+		? make larger buttons for wide embeds
+		x Avouch identifier/link in top right
 
 
+x create devise layout / css
+	x edit settings form
+	x new user form
+	? authentications in edit "settings"
+- create dashboard
+	- create link from home (that requires login)
+	- create install page
+		- list sites
+	- moderation
+		- view all recordings by site/remoteurl
+		- publish/unpublish recordings
+		- create virtual remoteurls (tag based)
+	- admin
+		- update profile
+		- upgrade account
+		- add direct call
+
+- create homepage
+
+? create drop down menu from "powered by iAvouch"
+? Jquery loading
+	- http://stackoverflow.com/questions/5187451/how-to-determine-if-jquery-is-running-on-a-page-even-if-jquery-is-after-the-d
+
+Launch! (keep caching issues in mind)
+or 
+Revamp these:
+	- lanyard_controller/embed checks for nil remoteurl, serves content accordingly
+	- remoteurl/show no longer creates DB on show
+		- on creation of review check for remoteurl and creates it
+	- load css into head using _embed.js instead of rendering _everything_css from _lanyard
+
+Maybe's & Possible required fixes
+? replacing Jquery / compatibility mode
+? Shared html structure
+? use delegate on _recording?
+? <%= render :partial => "link_area", :layout => "graybar" %>?
+? todo: Use session helper on remoteurl/show to redirect back to originating url including variables
 
 
+Investigate crossdomain goodies
+Avouch 2.0
+	- Use javascript to let user add iteration number to each embed
+	! go ahead and allow people to review/call users on this system
+	! Users given their own free profile page
+	! after first phone call change recording system to allow review from computer
+	! ? multi part/question review script instead of freeform text box
 
-authentication model w/ devise
-auto generate password: https://github.com/plataformatec/devise/wiki/How-To:-Automatically-generate-password-for-users-(simpler-registration)
-redirect to specific page after login: https://github.com/plataformatec/devise/wiki/How-To:-Redirect-to-a-specific-page-on-successful-sign-in
-direct auto login url:
-http://zyphmartin.com/blog/simple-auth-token-example-with-devise 
+SCRATCH PAD
+--------------------
 
-TODO: use session helper on remoteurl/show to redirect back to originating url including variables
+? redirect to specific page after login: https://github.com/plataformatec/devise/wiki/How-To:-Redirect-to-a-specific-page-on-successful-sign-in
+? auto generate password: https://github.com/plataformatec/devise/wiki/How-To:-Automatically-generate-password-for-users-(simpler-registration)
+? direct auto login url: http://zyphmartin.com/blog/simple-auth-token-example-with-devise 
 
-- Use javascript to let user add iteration number to each embed
+Make Sure Javascript ID's correct html structure 
+		ifrm.id = "coolframe"
+		iavouch_content_<%= params[:v] %>
+		iavouch_<%= params[:v] %>
+		iavouch_content_3
+		$('.audiojs').width(widget_width - 78);  
+		      $('.audiojs .loaded').width(widget_width - 232); 
+		      $('.audiojs .scrubber').width(widget_width - 232);
+		.toggle-button
+		$('.toggle-synopsis').click(function() {
+			$('.bold').removeClass('toggle');
+			$('.trans').hide('fast'); 
+			$(this).toggleClass('toggle-synopsis').toggleClass('toggle-synopsis-off');
+			return false;
+		});
+		$('.bold').click(function() {
+			$('.review-each div:hover .bold').toggleClass('toggle');
+			$('.comments-each div:hover .trans').slideToggle('fast');
+		$('.iavouch_3').width(widget_width);
+		$('.comments').width(widget_width);
+		$('.comments .comments-header').width(widget_width);
+		$('.comments .review-each').width(widget_width - 78);
+		#sw_<%= v %> .toggle-popup{text-decoration: underline;}   
+		#sw_<%= v %> {overflow: visible;height: auto;background-color: white}
+
 
 multi version / embed iteration
 embed-banner.js

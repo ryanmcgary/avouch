@@ -6,7 +6,7 @@ $(document).ready(function() {
  $( function() {
 	 $(".auth_popup").popupwindow(profiles); 
  });
-
+ // callback for above function
  function unloadcallback(){
 	location.reload();
 	document.getElementById('coolframe').contentWindow.history.back(-1);

@@ -1,0 +1,297 @@
+// A cross-browser javascript shim for html5 audio
+(function(audiojs, audiojsInstance, container) {
+
+  // ##The audiojs interface
+  // This is the global object which provides an interface for creating new `audiojs` instances.
+  // It also stores all of the construction helper methods and variables.
+  container[audiojs] = {
+    instanceCount: 0,
+    instances: {},
+    flashSource: '',
+    settings: {
+      autoplay: false,
+      loop: false,
+      preload: true,
+      imageLocation: 'http://localhost:3000/audiojs/player-graphics.gif',
+      swfLocation: 'http://localhost:3000/audiojs/audiojs.swf',
+      useFlash: (function() {
+        var a = document.createElement('audio');
+        return !(a.canPlayType && a.canPlayType('audio/mpeg;').replace(/no/, ''));
+      })(),
+      hasFlash: '',
+      // The default markup and classes for creating the player:
+      createPlayer: {
+        markup: '',
+        playPauseClass: '',
+        scrubberClass: '',
+        progressClass: '',
+        loaderClass: '',
+        timeClass: '',
+        durationClass: '',
+        playedClass: '',
+        errorMessageClass: '',
+        playingClass: '',
+        loadingClass: '',
+        errorClass: ''
+      },
+      // The css used by the default player. This is is dynamically injected into a `<style>` tag in the top of the head.
+      css: '',
+      // The default event callbacks:
+      trackEnded: function() {},
+      flashError: function() {
+        var player = this.settings.createPlayer,
+            errorMessage = getByClass(player.errorMessageClass, this.wrapper),
+            html = 'Missing <a href="http://get.adobe.com/flashplayer/">flash player</a> plugin.';
+        if (this.mp3) html += ' <a href="'+this.mp3+'">Download audio file</a>.';
+        container[audiojs].helpers.removeClass(this.wrapper, player.loadingClass);
+        container[audiojs].helpers.addClass(this.wrapper, player.errorClass);
+        errorMessage.innerHTML = html;},
+      loadError: function(e) {
+        var player = this.settings.createPlayer,
+            errorMessage = getByClass(player.errorMessageClass, this.wrapper);
+        container[audiojs].helpers.removeClass(this.wrapper, player.loadingClass);
+        container[audiojs].helpers.addClass(this.wrapper, player.errorClass);
+        errorMessage.innerHTML = 'Error loading: "'+this.mp3+'"';},
+      init: function() {
+        var player = this.settings.createPlayer;
+        container[audiojs].helpers.addClass(this.wrapper, player.loadingClass);},
+      loadStarted: function() {
+        var player = this.settings.createPlayer,
+            duration = getByClass(player.durationClass, this.wrapper),
+            m = Math.floor(this.duration / 60),
+            s = Math.floor(this.duration % 60);
+        container[audiojs].helpers.removeClass(this.wrapper, player.loadingClass);
+        duration.innerHTML = ((m<10?'0':'')+m+':'+(s<10?'0':'')+s);},
+      loadProgress: function(percent) {
+        var player = this.settings.createPlayer,
+            scrubber = getByClass(player.scrubberClass, this.wrapper),
+            loaded = getByClass(player.loaderClass, this.wrapper);
+        loaded.style.width = (scrubber.offsetWidth * percent) + 'px';},
+      playPause: function() {
+        if (this.playing) this.settings.play();
+        else this.settings.pause();},
+      play: function() {
+        var player = this.settings.createPlayer;
+        container[audiojs].helpers.addClass(this.wrapper, player.playingClass);},
+      pause: function() {
+        var player = this.settings.createPlayer;
+        container[audiojs].helpers.removeClass(this.wrapper, player.playingClass);},
+      updatePlayhead: function(percent) {
+        var player = this.settings.createPlayer,
+            scrubber = getByClass(player.scrubberClass, this.wrapper),
+            progress = getByClass(player.progressClass, this.wrapper);
+        progress.style.width = (scrubber.offsetWidth * percent) + 'px';
+
+        var played = getByClass(player.playedClass, this.wrapper),
+            p = this.duration * percent,
+            m = Math.floor(p / 60),
+            s = Math.floor(p % 60);
+        played.innerHTML = ((m<10?'0':'')+m+':'+(s<10?'0':'')+s);}},
+
+    // ### Contructor functions
+
+    // `create()`  
+    // Used to create a single `audiojs` instance.  
+    // If an array is passed then it calls back to `createAll()`.  
+    // Otherwise, it creates a single instance and returns it.  
+    create: function(element, options) {
+      var options = options || {}
+      if (element.length) {
+        return this.createAll(options, element);
+      } else {
+        return this.newInstance(element, options);
+      }
+    },
+
+    // `createAll()`  
+    // Creates multiple `audiojs` instances.  
+    // If `elements` is `null`, then automatically find any `<audio>` tags on the page and create `audiojs` instances for them.
+    createAll: function(options, elements) {
+      var audioElements = elements || document.getElementsByTagName('audio'),
+          instances = []
+          options = options || {};
+      for (var i = 0, ii = audioElements.length; i < ii; i++) {
+        instances.push(this.newInstance(audioElements[i], options));
+      }
+      return instances;
+    },
+
+    // ### Creating and returning a new instance
+    // This goes through all the steps required to build out a usable `audiojs` instance.
+    newInstance: function(element, options) {
+      var element = element,
+          s = this.helpers.clone(this.settings),
+          id = 'audiojs'+this.instanceCount,
+          wrapperId = 'audiojs_wrapper'+this.instanceCount,
+          instanceCount = this.instanceCount++;
+
+      // Check for `autoplay`, `loop` and `preload` attributes and write them into the settings.
+      if (element.getAttribute('autoplay') != null) s.autoplay = true;
+      if (element.getAttribute('loop') != null) s.loop = true;
+      if (element.getAttribute('preload') == 'none') s.preload = false;
+      // Merge the default settings with the user-defined `options`.
+      if (options) this.helpers.merge(s, options);
+
+      // Inject the player html if required.
+      if (s.createPlayer.markup) element = this.createPlayer(element, s.createPlayer, wrapperId);
+      else element.parentNode.setAttribute('id', wrapperId);
+
+      // Return a new `audiojs` instance.
+      var audio = new container[audiojsInstance](element, s);
+
+      // If css has been passed in, dynamically inject it into the `<head>`.
+      if (s.css) this.helpers.injectCss(audio, s.css);
+
+      // If `<audio>` or mp3 playback isn't supported, insert the swf & attach the required events for it.
+      if (s.useFlash && s.hasFlash) {
+        this.injectFlash(audio, id);
+        this.attachFlashEvents(audio.wrapper, audio);
+      } else if (s.useFlash && !s.hasFlash) {
+        this.settings.flashError.apply(audio);
+      }
+
+      // Attach event callbacks to the new audiojs instance.
+      if (!s.useFlash || (s.useFlash && s.hasFlash)) this.attachEvents(audio.wrapper, audio);
+
+      // Store the newly-created `audiojs` instance.
+      this.instances[id] = audio;
+      return audio;
+    },
+
+    // ### Helper methods for constructing a working player
+    // Inject a wrapping div and the markup for the html player.
+    createPlayer: function(element, player, id) {
+      var wrapper = document.createElement('div'),
+          newElement = element.cloneNode(true);
+      wrapper.setAttribute('class', 'audiojs');
+      wrapper.setAttribute('className', 'audiojs');
+      wrapper.setAttribute('id', id);
+
+      // Fix IE's broken implementation of `innerHTML` & `cloneNode` for HTML5 elements.
+      if (newElement.outerHTML && ~newElement.outerHTML.indexOf('<:audio')) {
+        newElement = this.helpers.cloneHtml5Node(element);
+        wrapper.innerHTML = player.markup;
+        wrapper.appendChild(newElement);
+        element.outerHTML = wrapper.outerHTML;
+        wrapper = document.getElementById(id);
+      } else {
+        wrapper.appendChild(newElement);
+        wrapper.innerHTML = wrapper.innerHTML + player.markup;
+        element.parentNode.replaceChild(wrapper, element);
+      }
+      return wrapper.getElementsByTagName('audio')[0];
+    },
+
+    // Attaches useful event callbacks to an `audiojs` instance.
+    },
+
+   
+  // ## The audiojs class
+  // We create one of these per `<audio>` and then push them into `audiojs['instances']`.
+  container[audiojsInstance] = function(element, settings) {
+    // Each audio instance returns an object which contains an API back into the `<audio>` element.
+    this.element = element;
+    this.wrapper = element.parentNode;
+    this.source = element.getElementsByTagName('source')[0] || element;
+    // First check the `<audio>` element directly for a src and if one is not found, look for a `<source>` element.
+    this.mp3 = (function(element) {
+      var source = element.getElementsByTagName('source')[0];
+      return element.getAttribute('src') || (source ? source.getAttribute('src') : null);
+    })(element);
+    this.settings = settings;
+    this.loadStartedCalled = false;
+    this.loadedPercent = 0;
+    this.duration = 1;
+    this.playing = false;
+  }
+
+  container[audiojsInstance].prototype = {
+    // API access events:
+    // Each of these do what they need do and then call the matching methods defined in the settings object.
+    updatePlayhead: function() {
+      var percent = this.element.currentTime / this.duration;
+      this.settings.updatePlayhead.apply(this, [percent]);},
+    skipTo: function(percent) {
+      if (percent > this.loadedPercent) return;
+      this.element.currentTime = this.duration * percent;
+      this.updatePlayhead();},
+    load: function(mp3) {
+      this.loadStartedCalled = false;
+      this.source.setAttribute('src', mp3);
+      // The now outdated `load()` method is required for Safari 4
+      this.element.load();
+      this.mp3 = mp3;
+      container[audiojs].events.trackLoadProgress(this);},
+    loadError: function() {
+      this.settings.loadError.apply(this);},
+    init: function() {
+      this.settings.init.apply(this);},
+    loadStarted: function() {
+      // Wait until `element.duration` exists before setting up the audio player.
+      if (!this.element.duration) return false;
+
+      this.duration = this.element.duration;
+      this.updatePlayhead();
+      this.settings.loadStarted.apply(this);},
+    loadProgress: function() {
+      if (this.element.buffered != null && this.element.buffered.length) {
+        // Ensure `loadStarted()` is only called once.
+        if (!this.loadStartedCalled) {
+          this.loadStartedCalled = this.loadStarted();
+        }
+        var durationLoaded = this.element.buffered.end(this.element.buffered.length - 1);
+        this.loadedPercent = durationLoaded / this.duration;
+
+        this.settings.loadProgress.apply(this, [this.loadedPercent]);
+      }},
+    playPause: function() {
+      if (this.playing) this.pause();
+      else this.play();},
+    play: function() {
+      var ios = (/(ipod|iphone|ipad)/i).test(navigator.userAgent);
+      // On iOS this interaction will trigger loading the mp3, so run `init()`.
+      if (ios && this.element.readyState == 0) this.init.apply(this);
+      // If the audio hasn't started preloading, then start it now.  
+      // Then set `preload` to `true`, so that any tracks loaded in subsequently are loaded straight away.
+      if (!this.settings.preload) {
+        this.settings.preload = true;
+        this.element.setAttribute('preload', 'auto');
+        container[audiojs].events.trackLoadProgress(this);
+      }
+      this.playing = true;
+      this.element.play();
+      this.settings.play.apply(this);},
+    pause: function() {
+      this.playing = false;
+      this.element.pause();
+      this.settings.pause.apply(this);},
+    trackEnded: function(e) {
+      this.skipTo.apply(this, [0]);
+      if (!this.settings.loop) this.pause.apply(this);
+      this.settings.trackEnded.apply(this);}
+  }
+
+  // **getElementsByClassName**  
+  // Having to rely on `getElementsByTagName` is pretty inflexible internally, so a modified version of Dustin Diaz's `getElementsByClassName` has been included.
+  // This version cleans things up and prefers the native DOM method if it's available.
+  var getByClass = function(searchClass, node, tag) {
+    var matches = [];
+    if (document.getElementsByClassName) {
+      matches = node.getElementsByClassName(searchClass);
+    } else {
+      var node = node || document,
+          tag = tag || '*',
+          els = node.getElementsByTagName(tag),
+          pattern = new RegExp("(^|\\s)"+searchClass+"(\\s|$)");
+
+      for (i = 0, j = 0, l = els.length; i < l; i++) {
+        if (pattern.test(els[i].className)) {
+          matches[j] = els[i];
+          j++;
+        }
+      }
+    }
+    return matches.length > 1 ? matches : matches[0];
+  }
+// The global variable names are passed in here and can be changed if they conflict with anything else.
+})('audiojs', 'audiojsInstance', this);

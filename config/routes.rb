@@ -1,12 +1,16 @@
 Avouch::Application.routes.draw do
 
-  get "dashboard/install"
+  resource :dashboard do
+    member do
+      get :install
+      get :moderation
+      get :administration
+    end
+  end
 
-  get "dashboard/moderation"
-
-  get "dashboard/administration"
-
-  get "home/index"
+  # namespace :admin do |admin|
+  #   resources :sites
+  # end
   
   match '/users/auth/:provider/callback'  =>  'authentications#create'
   match 'authentications/closewindow' => 'authentications#closewindow' 
@@ -18,7 +22,8 @@ Avouch::Application.routes.draw do
   match '/recordings/hangup'        => 'recordings#hangup'
   
   devise_for :users, :controllers => { :registrations => 'registrations' }
-  
+  devise_for :users do get 'logout' => 'devise/sessions#destroy' end  
+
   resources :authentications # do
   #     member do
   #       resource :facebook
@@ -34,6 +39,7 @@ Avouch::Application.routes.draw do
       member do
         get :full_lanyard
         get :embed
+        get :embed2
       end
     end
   end

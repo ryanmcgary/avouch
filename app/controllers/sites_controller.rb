@@ -3,11 +3,12 @@ class SitesController < ApplicationController
   # GET /sites
   # GET /sites.xml
   def index
-    # if current_user.nil? # .id == 21  
+    # todo: change before deployement
+    if current_user.nil? # .id == 21  
       @sites = Site.all
-    # else
-    #   @sites = current_user.sites.all
-    # end  
+    else
+      @sites = current_user.sites.all
+    end  
     
     respond_to do |format|
       format.html # index.html.erb

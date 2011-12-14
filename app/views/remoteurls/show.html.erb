@@ -1,5 +1,5 @@
 <% if user_signed_in? %>
-<table>
+<table class="embed<%= params[:layout] == "2" ? "-banner" : "" %>">
   <tr>
     <td id="profile-container" width="50" style="vertical-align: top;">
       <img class="profile_pic" src="<%= current_user.profile_pic.nil? ? "/images/blankprofilepic.png" : current_user.profile_pic %>" width="50" height="50">
@@ -15,16 +15,19 @@
       <!-- <p>John Carter / President @ Planet Mars</p>                         -->
       
       <div class="optional-text">
-        <% form_for("recording", :url => recordings_makecall_path, :html => { :class => "edit_user" } ) do |f| -%>
-        	<%= f.hidden_field :remoteurl_id, :value => @remoteurl.id  %>
-        <div class="text-area">
-        	<%= f.text_area :synopsis, :class => "short-text" %>
-
-        </div>
-        <div class="expand-bottom">
-          <%= link_to "How to leave the perfect review", "/example-review.html", :class => "link auth_popup" %>
-           <%= f.submit "Call Now!", :class => "vouch-button" %>	
-        </div>
+          <% form_for("recording", :url => recordings_makecall_path, :html => { :class => "edit_user" } ) do |f| -%>
+          	<%= f.hidden_field :remoteurl_id, :value => @remoteurl.id  %>
+            <div class="text-area">
+            	<%= f.text_area :synopsis, :class => "short-text" %>
+              <!-- insert submit button here if layout is 2 -->
+              <%= params[:layout] == "2" ? (f.submit "Call Now!", :class => "vouch-button"): "" %>
+              
+            </div>
+            <div class="expand-bottom">
+              <%= link_to "How to leave the perfect review", "/example-review.html", :class => "link auth_popup" %>
+              <!-- insert submit button here if layout != 2 -->
+              <%= params[:layout] != "2" ? (f.submit "Call Now!", :class => "vouch-button"): "" %>
+            </div>
         <% end -%>          
       </div>
   </tr>
@@ -33,24 +36,40 @@
 
 
 <% else %>
-<table>
+<div class="social-login">
+  <p>Login with Social Media</p>
+  <ul>
+    <li><%= link_to "", authentications_closewindowprotected_path, :rel => "window800", :class => "auth_popup", :id => "sign-in" %></li>
+    <li><%= link_to "", user_omniauth_authorize_path(:facebook), :rel => "window800", :class => "auth_popup", :id => "facebook" %></li> 
+    <li><%= link_to "", user_omniauth_authorize_path(:twitter), :rel => "window800", :class => "auth_popup", :id => "twitter" %></li> 
+  </ul>
+</div>
+<table id="sucker" class="embed<%= params[:layout] == "2" ? "-banner" : "" %>">
   <tr>
-    <td id="profile-container" width="50">
-      <img class="profile_pic" src="/images/blankprofilepic.png" width="50" height="50" alt="Linkedin">
-  
+    <td id="profile-container" width="50" style="vertical-align: top;">
+      <img class="profile_pic" src="/images/blankprofilepic.png" width="50" height="50">
+      <div class="left-bar">
+      </div>  
     </td>
     <td class="table-rightside">
-      <p style="text-decoration: underline;">Login to leave a review</p>
+      <p>Login to leave your review</p>
       <!-- <p>John Carter / President @ Planet Mars</p>                         -->
       
       <div class="optional-text">
-        <div class="text-area">
-         <textarea name="Name" class="short-text"></textarea>  
-        </div>
-        <div class="expand-bottom">
-          <a href="#" class="link">How to leave the perfect review</a>
-          <input class="vouch-button" type="submit" value="Start Call!">
-        </div>        
+          <% form_for("recording", :url => recordings_makecall_path, :html => { :class => "edit_user" } ) do |f| -%>
+            <%= f.hidden_field :remoteurl_id, :value => @remoteurl.id  %>
+            <div class="text-area">
+              <%= f.text_area :synopsis, :class => "short-text" %>
+              <!-- insert submit button here if layout is 2 -->
+              <%= params[:layout] == "2" ? (f.submit "Call Now!", :class => "vouch-button"): "" %>
+              
+            </div>
+            <div class="expand-bottom">
+              <%= link_to "How to leave the perfect review", "/example-review.html", :class => "link auth_popup" %>
+              <!-- insert submit button here if layout != 2 -->
+              <%= params[:layout] != "2" ? (f.submit "Call Now!", :class => "vouch-button"): "" %>
+            </div>
+        <% end -%>          
       </div>
   </tr>
 </table>

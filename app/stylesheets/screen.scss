@@ -3,134 +3,474 @@
  * Import this file using the following HTML or equivalent:
  * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
 
-@import "compass/reset";
+@import "imports/universal-clear";
 @import "960/grid";
+@import "compass/css3";
 
-div#iavouch_content_3.iavouch_3_reset {
-  iframe#coolframe {
-  }
-  a.auth_popup {
-  }
-  p.notice {
-  }
-  p.alert {
-  }
-  table {
-    tbody {
-      tr {
-        td#profile-container {
-          img.profile_pic {
-          }
-        }
-        td.table-rightside {
-          p {
-            text-decoration: underline;
-          }
-          div.optional-text {
-            div.text-area {
-              textarea.short-text {
-              }
-            }
-            div.expand-bottom {
-              a.link {
-              }
-              input.vouch-button {
-              }
-            }
-          }
-        }
-      }
-    }
-  }
-  div.iavouch_mast {
-    div.iavouch_lanyard_wrapper {
-      div.comments {
-        width: 450px;
-        div.comments-header {
-          width: 450px;
-          div.grid_6 {
-          }
-          div.toggle-synopsis-off {
-          }
-        }
-        div.clear {
-        }
-        div.comments-each {
-          table.review-container {
-            tbody {
-              tr {
-                td {
-                  img.profile_pic {
-                  }
-                }
-                td.table-rightside {
-                  p {
-                  }
-                  div.review-each {
-                    width: 372px;
-                    div#audiojs_wrapper0.audiojs {
-                      width: 372px;
-                      object#audiojs0 {
-                        position: absolute;
-                        left: -1px;
-                        param {
-                        }
-                        embed {
-                        }
-                      }
-                      audio {
-                      }
-                      div.play-pause {
-                        p.play {
-                        }
-                        p.pause {
-                        }
-                        p.loading {
-                        }
-                        p.error {
-                        }
-                      }
-                      div.scrubber {
-                        width: 218px;
-                        div.progress {
-                          width: 48px;
-                        }
-                        div.loaded {
-                          width: 218px;
-                        }
-                      }
-                      div.time {
-                        em.played {
-                        }
-                        strong.duration {
-                        }
-                      }
-                      div.error-message {
-                      }
-                      table {
-                      }
-                    }
-                    div.review-left {
-                    }
-                    div.review-right {
-                      b.bold {
-                      }
-                    }
-                    div.clear {
-                    }
-                    div.trans {
-                      display: none;
-                    }
-                  }
-                }
-              }
-            }
-          }
-        }
-      }
-      div {
-        clear:both;
-      }
-    }
-  }
+html,body{
+	height:100%;
+	font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+	overflow: hidden;
+	
 }
+
+// devise login/edit pages/forms
+.devise{
+	background:#ebf4fb;
+	/* ----------- My Form ----------- */
+	.devise_form{
+		.spacer{clear:both; height:1px;}
+		p, h1, form, button{border:0; margin:0; padding:0;}
+		margin:0 auto;
+		width:400px;
+		padding:14px;
+		img.profile_pic{
+			float:left;
+			margin:0px 10px 0 0;
+			max-height:50px;
+			max-width:50px;
+			height:35px;
+			width:35px;
+		}
+	}
+
+	/* ----------- stylized ----------- */
+	#stylized{
+		.error{
+			margin-left:151px;
+			margin-bottom:20px;
+			width:200px;
+		}
+		background:#ebf4fb;
+		overflow:hidden;
+		div.field_with_errors{color:#8B0000;}
+	}
+	#stylized h1 {
+	font-size:14px;
+	font-weight:bold;
+	margin-bottom:8px;
+	}
+	#stylized p{
+	font-size:11px;
+	color:#666666;
+	margin-bottom:20px;
+	border-bottom:solid 1px #b7ddf2;
+	padding-bottom:10px;
+	}
+	#stylized label{
+	display:block;
+	font-weight:bold;
+	text-align:right;
+	width:140px;
+	float:left;
+	}
+	#stylized .small{
+	color:#666666;
+	display:block;
+	font-size:11px;
+	font-weight:normal;
+	text-align:right;
+	width:140px;
+	}
+	#stylized input{
+	float:left;
+	font-size:12px;
+	padding:4px 2px;
+	border:solid 1px #aacfe4;
+	width:200px;
+	margin:2px 0 20px 10px;
+	}
+	#stylized div.field_with_errors input{
+		margin:2px 0 0px 10px;
+		border:solid 2px #CD5C5C;
+	}
+	#stylized div#first div.field_with_errors input{
+		margin:2px 0 20px 10px;
+		border:solid 1px #aacfe4;
+	}
+	#stylized #user_submit{
+	clear:both;
+	margin-left:150px;
+	width:125px;
+	height:31px;
+	background:#666666 url(img/button.png) no-repeat;
+	text-align:center;
+	line-height:15px;
+	color:#FFFFFF;
+	font-size:11px;
+	font-weight:bold;
+	}
+}
+
+
+// remoteurl/show/not logged in/_form
+	.actions {margin-bottom: 10px;}
+	#sucker{
+		width: 98%;
+		position: absolute;
+		top:4px;
+		left:4px;
+		p{
+			text-decoration:underline;
+			padding-bottom:3px;
+		}
+	}
+	.social-login{
+		display:table;
+		position: relative;
+		z-index: 10;
+		height:100%;
+		width:100%;
+		overflow:hidden;
+		text-align: center;
+		p{  
+			visibility: hidden;
+			position:fixed;
+			margin-top: 3px;
+			margin-left: 3px;
+			color:white;
+		}
+		&:hover p{visibility:visible;}
+		ul{
+			display:table-cell;
+			vertical-align:middle;
+		}
+		li{padding-top:15px;display:inline-block;}
+		&:hover{
+		    /* Fallback for web browsers that doesn't support RGBa */
+			background: rgb(0, 0, 0) transparent;
+			/* RGBa with 0.6 opacity */
+			background: rgba(0, 0, 0, 0.8);
+			/* For IE 5.5 - 7*/
+			filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#99000000, endColorstr=#99000000);
+			/* For IE 8*/
+			-ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#99000000, endColorstr=#99000000)";
+		}
+		// everything to the right is for auto expanding login buttons based on embed width // &:hover absolute positioning// .spacer{// 	float:left;// 	padding-top:60px;// 	width:1px;// 	background-color:transparent;// }// &:hover .middle{// 	margin:0px auto;// 	display:table;// 	a#sign-in2{// 		position:absolute;// 		margin:0px auto;// 		margin-left:-107px;// 		background: url("../images/authbuttons/auth-login.png") no-repeat 0 0;// 		width: 52px;// 		height: 39px;// 		display: block;// 		&:hover{background-position: 0 -40px;}// 		&:active{background-position: 0 -80px;}// 	}// 	a#facebook2{// 		position:absolute;// 		margin:0px auto;// 		margin-left:-24px;// 		background: url("../images/authbuttons/auth-login.png") no-repeat 0 0;// 		width: 52px;// 		height: 39px;// 		display: block;// 		&:hover{background-position: 0 -40px;}// 		&:active{background-position: 0 -80px;}// 	}				// 	a#twitter2{// 		position:absolute;// 		margin:0px auto;// 		margin-left: 60px;// 		background: url("../images/authbuttons/auth-login.png") no-repeat 0 0;// 		width: 52px;// 		height: 39px;// 		display: block;// 		&:hover{background-position: 0 -40px;}// 		&:active{background-position: 0 -80px;}// 	}		// }
+		&:hover a.auth_popup{
+			position:relative;
+			margin:0px auto;
+			width: 110px;
+			height: 30px;
+			display: block;
+			text-indent: -9999px;
+			-webkit-box-shadow: 1px 1px 8px rgba(0, 0, 0, 0.3); -moz-box-shadow: 1px 1px 8px rgba(0, 0, 0, 0.3);
+			-o-box-shadow: 1px 1px 8px rgba(0, 0, 0, 0.3); box-shadow: 1px 1px 8px rgba(0, 0, 0, 0.3); 
+		}
+		a#sign-in{
+			background: url("../images/authbuttons/login-buttons.png") no-repeat 0 -2px;
+			&:hover{background-position: 0px -33px;}
+			&:active{background-position: 0px -64px;}
+		}
+		a#facebook{
+			background: url("../images/authbuttons/login-buttons.png") no-repeat -111px -2px;	
+			&:hover{background-position: -111px -33px;}
+			&:active{background-position: -111px -64px;}
+		}
+		a#twitter{
+			background: url("../images/authbuttons/login-buttons.png") no-repeat -222px -2px;			
+			&:hover{background-position: -222px -33px;}
+			&:active{background-position: -222px -64px;}
+		}
+	}
+
+// authentications/index.html
+	.authentications {
+	  margin-bottom: 30px;
+	}
+
+	.authentication {
+	  width: 130px;
+	  float: left;
+	  background-color: #EEE;
+	  border: solid 1px #999;
+	  padding: 5px 10px;
+	  -moz-border-radius: 8px;
+	  -webkit-border-radius: 8px;
+	  position: relative;
+	  margin-right: 10px;
+	}
+
+	.authentication .remove {
+	  text-decoration: none;
+	  position: absolute;
+	  top: 3px;
+	  right: 3px;
+	  color: #333;
+	  padding: 2px 4px;
+	  font-size: 10px;
+	}
+
+	.authentication .remove:hover {
+	  color: #CCC;
+	  background-color: #777;
+	  -moz-border-radius: 6px;
+	  -webkit-border-radius: 6px;
+	}
+
+	.authentication img {
+	  float: left;
+	  margin-right: 10px;
+	}
+
+	.authentication .provider {
+	  font-weight: bold;
+	}
+
+	.authentication .uid {
+	  color: #666;
+	  font-size: 11px;
+	}
+
+// authentications/index & sessions/new
+	.auth_provider img {
+	  display: block;
+	}
+
+	.auth_provider {
+	  float: left;
+	  text-decoration: none;
+	  margin-right: 20px;
+	  text-align: center;
+	  margin-bottom: 10px;
+	}
+
+// CSS for form submit embed from remoteurls/show.html
+.embed { // for blog-style
+	margin:0px 0px;
+	width:100%;
+	overflow:hidden;
+	.profile_pic { 
+		overflow:hidden;
+	    border: 1px solid #c1c1c1;
+	    -webkit-border-radius: 4px;
+	    -moz-border-radius: 4px;
+	    border-radius: 4px;
+	    -webkit-box-shadow: inset 0 1px 4px rgba(0,0,0, .16);
+	    -moz-box-shadow: inset 0 1px 4px rgba(0,0,0, .16);
+	    box-shadow: inset 0 1px 4px rgba(0,0,0, .16);
+	}
+	.left-bar {
+		margin:-4px 0px 0px 6px;
+		color:grey;
+		font-size: 0.9em;
+	}
+	.table-rightside {
+		vertical-align:top;
+		padding-left:4px;
+		p {
+			margin: -2px 0px 1px 0px;
+			font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+			font-weight: 500;
+			font-size:1.2em;
+		}
+	}
+	.optional-text {
+		overflow:hidden;
+		background: #fff url("/images/backgrounds-sprite.png") 0 -480px repeat-x;
+		width: 98%;
+		border: 1px solid #c1c1c1;
+		-webkit-border-radius: 4px;
+		-moz-border-radius: 4px;
+		border-radius: 4px;
+		-webkit-box-shadow: inset 0 1px 4px rgba(0,0,0, .16);
+		-moz-box-shadow: inset 0 1px 4px rgba(0,0,0, .16);
+		box-shadow: inset 0 1px 4px rgba(0,0,0, .16);
+	}
+	textarea {
+		width:99.2%;
+		height:6em;
+		margin:4px 0px -2px 2px;
+		border:none;
+		background: transparent;
+		overflow:hidden;
+		resize: none;
+		&:focus {
+			outline: 0;
+		}
+	}
+	.text-area {
+	}
+	.expand-bottom {
+		border-top:dotted;
+		border-width: 1px;
+		border-color: grey;
+		display:none;
+	}  
+	.link {
+		margin-left: 2px;
+		font-size: 12px;
+		line-height: 32px;
+		vertical-align: sub;
+	}
+	.vouch-button {
+		float:right;
+		margin: -1px -1px -1px 0px;
+		padding: 8px 20px;
+		font-size: 12px;
+		line-height: 14px;
+		color: #585c60;
+		background: url("/images/backgrounds-sprite.png") 0 -250px repeat-x;
+		border: 1px solid #acb2b8;
+		text-shadow: 0 1px 0 rgba(255,255,255, .9);
+		-webkit-border-radius: 0 0 4px 0;
+		-moz-border-radius: 0 0 4px 0;
+		border-radius: 0 0 4px 0;
+		-webkit-box-shadow: inset 1px 1px 0 rgba(255,255,255, .4), inset -1px 0 0 rgba(255,255,255, .4) ,0 1px 2px rgba(72,76,80, .25);
+		-moz-box-shadow: 0 1px 2px rgba(72,76,80, .25);
+		box-shadow: 0 1px 2px rgba(72,76,80, .25);
+		font-weight: 600;
+		right: -1px;
+		top: -1px;
+		z-index: 2;
+		height: 34px;
+		&:hover { background: url("/images/backgrounds-sprite.png") 0 -310px repeat-x; }
+		&:active { 
+			background: url("/images/backgrounds-sprite.png") 0 -370px repeat-x;
+			-webkit-box-shadow: 0 1px 0 rgba(255,255,255, .8);
+			-moz-box-shadow: 0 1px 0 rgba(255,255,255, .8);
+			box-shadow: 0 1px 0 rgba(255,255,255, .8);
+			padding-top: 9px;
+			padding-bottom: 7px;
+		}
+	}
+}
+// embed banner stylesheet layout=2
+.embed-banner{
+	overflow:hidden;
+	font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+	table{       
+		margin:0px 0px;
+		width:100%;
+		overflow:hidden;
+	}
+
+	.profile_pic {
+		margin-top:4px; 
+		margin-left:5px;
+		overflow:hidden;
+	    border: 1px solid #c1c1c1;
+	    -webkit-border-radius: 4px;
+	    -moz-border-radius: 4px;
+	    border-radius: 4px;
+	    -webkit-box-shadow: inset 0 1px 4px rgba(0,0,0, .16);
+	    -moz-box-shadow: inset 0 1px 4px rgba(0,0,0, .16);
+	    box-shadow: inset 0 1px 4px rgba(0,0,0, .16);
+	}
+
+	.left-bar{
+		margin:-4px 0px 0px 6px;
+		color:grey;
+		font-size: 0.9em;
+	}
+
+	.table-rightside{
+		padding-top:4px; 
+		vertical-align:top;
+		padding-left:4px;
+		width:100%;
+		p{
+			margin: -2px 4px 1px 0px;
+			font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+			font-weight: 500;
+			font-size:0.9em;
+		}
+	}
+	
+	.optional-text {
+		overflow:hidden;
+	  	background: #fff url("/images/backgrounds-sprite.png") 0 -480px repeat-x;  
+		/* TODO: Required to change width */   
+		margin-right:9px;
+		/*    width: 93%;*/
+	    border: 1px solid #c1c1c1;
+	    -webkit-border-radius: 4px;
+	    -moz-border-radius: 4px;
+	    border-radius: 4px;
+	    -webkit-box-shadow: inset 0 1px 4px rgba(0,0,0, .16);
+	    -moz-box-shadow: inset 0 1px 4px rgba(0,0,0, .16);
+	    box-shadow: inset 0 1px 4px rgba(0,0,0, .16);
+	} 
+	
+	.text-area{
+		height:34px;
+		textarea {
+			background: transparent;
+			border:none;
+			overflow:hidden;
+			resize: none;
+			&:focus {
+				outline: 0;
+			}
+		}		
+	}
+	
+	.short-text{ 
+		/* TODO: Required to change width */  
+		width:67%;
+		/*	width:80%;  */
+		height:2em;
+		margin:4px -5px 3px 2px;
+		border:none;
+		overflow:none;
+		resize: none;
+	}			
+
+	.vouch-button {
+		width:30%;
+		float:right;
+	    margin: -1px -1px -1px 0px;
+	    padding: 6px 10px;
+	    font-size: 14px;
+	    line-height: 14px;
+	    color: #585c60;
+	    background: url("/images/backgrounds-sprite.png") 0 -250px repeat-x;
+	    border: 1px solid #acb2b8;
+	    text-shadow: 0 1px 0 rgba(255,255,255, .9);
+
+	    -webkit-border-radius: 0 0 4px 0;
+	    -moz-border-radius: 0 0 4px 0;
+	    border-radius: 0 0 4px 0;
+
+	    -webkit-box-shadow: inset 1px 1px 0 rgba(255,255,255, .4), inset -1px 0 0 rgba(255,255,255, .4) ,0 1px 2px rgba(72,76,80, .25);
+	    -moz-box-shadow: 0 1px 2px rgba(72,76,80, .25);
+	    box-shadow: 0 1px 2px rgba(72,76,80, .25);
+	    
+	    font-weight: 300;
+	    z-index: 2;
+	    height: 35px;
+
+	    &:hover {
+	    	background: url("/images/backgrounds-sprite.png") 0 -310px repeat-x;
+		}
+		&:active {
+		    background: url("/images/backgrounds-sprite.png") 0 -370px repeat-x;
+		    -webkit-box-shadow: 0 1px 0 rgba(255,255,255, .8);
+		    -moz-box-shadow: 0 1px 0 rgba(255,255,255, .8);
+		    box-shadow: 0 1px 0 rgba(255,255,255, .8);
+		    padding-top: 9px;
+		    padding-bottom: 7px;
+		}
+	}
+
+	.expand-bottom{
+		border-top:dotted;
+		border-width: 1px;
+		border-color: grey;
+		display:none;
+		a{
+			margin-left: 2px;
+			font-size: 12px;
+			line-height: 12px;
+		}
+	}	
+
+}
+
+//  dashboard css
+
+.bold{
+	font-weight: bold;
+}
+
+

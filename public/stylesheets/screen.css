@@ -2,93 +2,534 @@
  * In this file you should write your main styles. (or centralize your imports)
  * Import this file using the following HTML or equivalent:
  * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
-/* line 17, ../../../../.rvm/gems/ruby-1.9.2-p290/gems/compass-0.11.5/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+/* http://meyerweb.com/eric/tools/css/reset/ */
+/* v1.0 | 20080212 */
+/* line 12, ../../app/stylesheets/imports/universal-clear.scss */
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
+del, dfn, em, font, img, ins, kbd, q, s, samp,
 small, strike, strong, sub, sup, tt, var,
 b, u, i, center,
 dl, dt, dd, ol, ul, li,
 fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed,
-figure, figcaption, footer, header, hgroup,
-menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
+table, caption, tbody, tfoot, thead, tr, th, td {
   margin: 0;
   padding: 0;
   border: 0;
+  outline: 0;
   font-size: 100%;
-  font: inherit;
-  vertical-align: baseline; }
+  vertical-align: baseline;
+  background: transparent; }
 
-/* line 20, ../../../../.rvm/gems/ruby-1.9.2-p290/gems/compass-0.11.5/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+/* line 21, ../../app/stylesheets/imports/universal-clear.scss */
 body {
   line-height: 1; }
 
-/* line 22, ../../../../.rvm/gems/ruby-1.9.2-p290/gems/compass-0.11.5/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+/* line 24, ../../app/stylesheets/imports/universal-clear.scss */
 ol, ul {
   list-style: none; }
 
-/* line 24, ../../../../.rvm/gems/ruby-1.9.2-p290/gems/compass-0.11.5/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+/* line 27, ../../app/stylesheets/imports/universal-clear.scss */
+blockquote, q {
+  quotes: none; }
+
+/* line 31, ../../app/stylesheets/imports/universal-clear.scss */
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none; }
+
+/* remember to define focus styles! */
+/* line 37, ../../app/stylesheets/imports/universal-clear.scss */
+:focus {
+  outline: 0; }
+
+/* remember to highlight inserts somehow! */
+/* line 42, ../../app/stylesheets/imports/universal-clear.scss */
+ins {
+  text-decoration: none; }
+
+/* line 45, ../../app/stylesheets/imports/universal-clear.scss */
+del {
+  text-decoration: line-through; }
+
+/* tables still need 'cellspacing="0"' in the markup */
+/* line 50, ../../app/stylesheets/imports/universal-clear.scss */
 table {
   border-collapse: collapse;
   border-spacing: 0; }
 
-/* line 26, ../../../../.rvm/gems/ruby-1.9.2-p290/gems/compass-0.11.5/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
-caption, th, td {
-  text-align: left;
-  font-weight: normal;
-  vertical-align: middle; }
+/* line 10, ../../app/stylesheets/screen.scss */
+html, body {
+  height: 100%;
+  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+  overflow: hidden; }
 
-/* line 28, ../../../../.rvm/gems/ruby-1.9.2-p290/gems/compass-0.11.5/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
-q, blockquote {
-  quotes: none; }
-  /* line 101, ../../../../.rvm/gems/ruby-1.9.2-p290/gems/compass-0.11.5/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
-  q:before, q:after, blockquote:before, blockquote:after {
-    content: "";
-    content: none; }
+/* line 18, ../../app/stylesheets/screen.scss */
+.devise {
+  background: #ebf4fb;
+  /* ----------- My Form ----------- */
+  /* ----------- stylized ----------- */ }
+  /* line 21, ../../app/stylesheets/screen.scss */
+  .devise .devise_form {
+    margin: 0 auto;
+    width: 400px;
+    padding: 14px; }
+    /* line 22, ../../app/stylesheets/screen.scss */
+    .devise .devise_form .spacer {
+      clear: both;
+      height: 1px; }
+    /* line 23, ../../app/stylesheets/screen.scss */
+    .devise .devise_form p, .devise .devise_form h1, .devise .devise_form form, .devise .devise_form button {
+      border: 0;
+      margin: 0;
+      padding: 0; }
+    /* line 27, ../../app/stylesheets/screen.scss */
+    .devise .devise_form img.profile_pic {
+      float: left;
+      margin: 0px 10px 0 0;
+      max-height: 50px;
+      max-width: 50px;
+      height: 35px;
+      width: 35px; }
+  /* line 38, ../../app/stylesheets/screen.scss */
+  .devise #stylized {
+    background: #ebf4fb;
+    overflow: hidden; }
+    /* line 39, ../../app/stylesheets/screen.scss */
+    .devise #stylized .error {
+      margin-left: 151px;
+      margin-bottom: 20px;
+      width: 200px; }
+    /* line 46, ../../app/stylesheets/screen.scss */
+    .devise #stylized div.field_with_errors {
+      color: #8B0000; }
+  /* line 48, ../../app/stylesheets/screen.scss */
+  .devise #stylized h1 {
+    font-size: 14px;
+    font-weight: bold;
+    margin-bottom: 8px; }
+  /* line 53, ../../app/stylesheets/screen.scss */
+  .devise #stylized p {
+    font-size: 11px;
+    color: #666666;
+    margin-bottom: 20px;
+    border-bottom: solid 1px #b7ddf2;
+    padding-bottom: 10px; }
+  /* line 60, ../../app/stylesheets/screen.scss */
+  .devise #stylized label {
+    display: block;
+    font-weight: bold;
+    text-align: right;
+    width: 140px;
+    float: left; }
+  /* line 67, ../../app/stylesheets/screen.scss */
+  .devise #stylized .small {
+    color: #666666;
+    display: block;
+    font-size: 11px;
+    font-weight: normal;
+    text-align: right;
+    width: 140px; }
+  /* line 75, ../../app/stylesheets/screen.scss */
+  .devise #stylized input {
+    float: left;
+    font-size: 12px;
+    padding: 4px 2px;
+    border: solid 1px #aacfe4;
+    width: 200px;
+    margin: 2px 0 20px 10px; }
+  /* line 83, ../../app/stylesheets/screen.scss */
+  .devise #stylized div.field_with_errors input {
+    margin: 2px 0 0px 10px;
+    border: solid 2px #CD5C5C; }
+  /* line 87, ../../app/stylesheets/screen.scss */
+  .devise #stylized div#first div.field_with_errors input {
+    margin: 2px 0 20px 10px;
+    border: solid 1px #aacfe4; }
+  /* line 91, ../../app/stylesheets/screen.scss */
+  .devise #stylized #user_submit {
+    clear: both;
+    margin-left: 150px;
+    width: 125px;
+    height: 31px;
+    background: #666666 url(img/button.png) no-repeat;
+    text-align: center;
+    line-height: 15px;
+    color: #FFFFFF;
+    font-size: 11px;
+    font-weight: bold; }
 
-/* line 30, ../../../../.rvm/gems/ruby-1.9.2-p290/gems/compass-0.11.5/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
-a img {
-  border: none; }
+/* line 107, ../../app/stylesheets/screen.scss */
+.actions {
+  margin-bottom: 10px; }
 
-/* line 114, ../../../../.rvm/gems/ruby-1.9.2-p290/gems/compass-0.11.5/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
-article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary {
+/* line 108, ../../app/stylesheets/screen.scss */
+#sucker {
+  width: 98%;
+  position: absolute;
+  top: 4px;
+  left: 4px; }
+  /* line 113, ../../app/stylesheets/screen.scss */
+  #sucker p {
+    text-decoration: underline;
+    padding-bottom: 3px; }
+
+/* line 118, ../../app/stylesheets/screen.scss */
+.social-login {
+  display: table;
+  position: relative;
+  z-index: 10;
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+  text-align: center; }
+  /* line 126, ../../app/stylesheets/screen.scss */
+  .social-login p {
+    visibility: hidden;
+    position: fixed;
+    margin-top: 3px;
+    margin-left: 3px;
+    color: white; }
+  /* line 133, ../../app/stylesheets/screen.scss */
+  .social-login:hover p {
+    visibility: visible; }
+  /* line 134, ../../app/stylesheets/screen.scss */
+  .social-login ul {
+    display: table-cell;
+    vertical-align: middle; }
+  /* line 138, ../../app/stylesheets/screen.scss */
+  .social-login li {
+    padding-top: 15px;
+    display: inline-block; }
+  /* line 139, ../../app/stylesheets/screen.scss */
+  .social-login:hover {
+    /* Fallback for web browsers that doesn't support RGBa */
+    background: black transparent;
+    /* RGBa with 0.6 opacity */
+    background: rgba(0, 0, 0, 0.8);
+    /* For IE 5.5 - 7*/
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#99000000, endColorstr=#99000000);
+    /* For IE 8*/
+    -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#99000000, endColorstr=#99000000)"; }
+  /* line 150, ../../app/stylesheets/screen.scss */
+  .social-login:hover a.auth_popup {
+    position: relative;
+    margin: 0px auto;
+    width: 110px;
+    height: 30px;
+    display: block;
+    text-indent: -9999px;
+    -webkit-box-shadow: 1px 1px 8px rgba(0, 0, 0, 0.3);
+    -moz-box-shadow: 1px 1px 8px rgba(0, 0, 0, 0.3);
+    -o-box-shadow: 1px 1px 8px rgba(0, 0, 0, 0.3);
+    box-shadow: 1px 1px 8px rgba(0, 0, 0, 0.3); }
+  /* line 160, ../../app/stylesheets/screen.scss */
+  .social-login a#sign-in {
+    background: url("../images/authbuttons/login-buttons.png") no-repeat 0 -2px; }
+    /* line 162, ../../app/stylesheets/screen.scss */
+    .social-login a#sign-in:hover {
+      background-position: 0px -33px; }
+    /* line 163, ../../app/stylesheets/screen.scss */
+    .social-login a#sign-in:active {
+      background-position: 0px -64px; }
+  /* line 165, ../../app/stylesheets/screen.scss */
+  .social-login a#facebook {
+    background: url("../images/authbuttons/login-buttons.png") no-repeat -111px -2px; }
+    /* line 167, ../../app/stylesheets/screen.scss */
+    .social-login a#facebook:hover {
+      background-position: -111px -33px; }
+    /* line 168, ../../app/stylesheets/screen.scss */
+    .social-login a#facebook:active {
+      background-position: -111px -64px; }
+  /* line 170, ../../app/stylesheets/screen.scss */
+  .social-login a#twitter {
+    background: url("../images/authbuttons/login-buttons.png") no-repeat -222px -2px; }
+    /* line 172, ../../app/stylesheets/screen.scss */
+    .social-login a#twitter:hover {
+      background-position: -222px -33px; }
+    /* line 173, ../../app/stylesheets/screen.scss */
+    .social-login a#twitter:active {
+      background-position: -222px -64px; }
+
+/* line 178, ../../app/stylesheets/screen.scss */
+.authentications {
+  margin-bottom: 30px; }
+
+/* line 182, ../../app/stylesheets/screen.scss */
+.authentication {
+  width: 130px;
+  float: left;
+  background-color: #EEE;
+  border: solid 1px #999;
+  padding: 5px 10px;
+  -moz-border-radius: 8px;
+  -webkit-border-radius: 8px;
+  position: relative;
+  margin-right: 10px; }
+
+/* line 194, ../../app/stylesheets/screen.scss */
+.authentication .remove {
+  text-decoration: none;
+  position: absolute;
+  top: 3px;
+  right: 3px;
+  color: #333;
+  padding: 2px 4px;
+  font-size: 10px; }
+
+/* line 204, ../../app/stylesheets/screen.scss */
+.authentication .remove:hover {
+  color: #CCC;
+  background-color: #777;
+  -moz-border-radius: 6px;
+  -webkit-border-radius: 6px; }
+
+/* line 211, ../../app/stylesheets/screen.scss */
+.authentication img {
+  float: left;
+  margin-right: 10px; }
+
+/* line 216, ../../app/stylesheets/screen.scss */
+.authentication .provider {
+  font-weight: bold; }
+
+/* line 220, ../../app/stylesheets/screen.scss */
+.authentication .uid {
+  color: #666;
+  font-size: 11px; }
+
+/* line 226, ../../app/stylesheets/screen.scss */
+.auth_provider img {
   display: block; }
 
-/* line 26, ../../app/stylesheets/screen.scss */
-div#iavouch_content_3.iavouch_3_reset table tbody tr td.table-rightside p {
-  text-decoration: underline; }
-/* line 47, ../../app/stylesheets/screen.scss */
-div#iavouch_content_3.iavouch_3_reset div.iavouch_mast div.iavouch_lanyard_wrapper div.comments {
-  width: 450px; }
-  /* line 49, ../../app/stylesheets/screen.scss */
-  div#iavouch_content_3.iavouch_3_reset div.iavouch_mast div.iavouch_lanyard_wrapper div.comments div.comments-header {
-    width: 450px; }
-  /* line 69, ../../app/stylesheets/screen.scss */
-  div#iavouch_content_3.iavouch_3_reset div.iavouch_mast div.iavouch_lanyard_wrapper div.comments div.comments-each table.review-container tbody tr td.table-rightside div.review-each {
-    width: 372px; }
-    /* line 71, ../../app/stylesheets/screen.scss */
-    div#iavouch_content_3.iavouch_3_reset div.iavouch_mast div.iavouch_lanyard_wrapper div.comments div.comments-each table.review-container tbody tr td.table-rightside div.review-each div#audiojs_wrapper0.audiojs {
-      width: 372px; }
-      /* line 73, ../../app/stylesheets/screen.scss */
-      div#iavouch_content_3.iavouch_3_reset div.iavouch_mast div.iavouch_lanyard_wrapper div.comments div.comments-each table.review-container tbody tr td.table-rightside div.review-each div#audiojs_wrapper0.audiojs object#audiojs0 {
-        position: absolute;
-        left: -1px; }
-      /* line 93, ../../app/stylesheets/screen.scss */
-      div#iavouch_content_3.iavouch_3_reset div.iavouch_mast div.iavouch_lanyard_wrapper div.comments div.comments-each table.review-container tbody tr td.table-rightside div.review-each div#audiojs_wrapper0.audiojs div.scrubber {
-        width: 218px; }
-        /* line 95, ../../app/stylesheets/screen.scss */
-        div#iavouch_content_3.iavouch_3_reset div.iavouch_mast div.iavouch_lanyard_wrapper div.comments div.comments-each table.review-container tbody tr td.table-rightside div.review-each div#audiojs_wrapper0.audiojs div.scrubber div.progress {
-          width: 48px; }
-        /* line 98, ../../app/stylesheets/screen.scss */
-        div#iavouch_content_3.iavouch_3_reset div.iavouch_mast div.iavouch_lanyard_wrapper div.comments div.comments-each table.review-container tbody tr td.table-rightside div.review-each div#audiojs_wrapper0.audiojs div.scrubber div.loaded {
-          width: 218px; }
-    /* line 121, ../../app/stylesheets/screen.scss */
-    div#iavouch_content_3.iavouch_3_reset div.iavouch_mast div.iavouch_lanyard_wrapper div.comments div.comments-each table.review-container tbody tr td.table-rightside div.review-each div.trans {
-      display: none; }
-/* line 131, ../../app/stylesheets/screen.scss */
-div#iavouch_content_3.iavouch_3_reset div.iavouch_mast div.iavouch_lanyard_wrapper div {
-  clear: both; }
+/* line 230, ../../app/stylesheets/screen.scss */
+.auth_provider {
+  float: left;
+  text-decoration: none;
+  margin-right: 20px;
+  text-align: center;
+  margin-bottom: 10px; }
+
+/* line 239, ../../app/stylesheets/screen.scss */
+.embed {
+  margin: 0px 0px;
+  width: 100%;
+  overflow: hidden; }
+  /* line 243, ../../app/stylesheets/screen.scss */
+  .embed .profile_pic {
+    overflow: hidden;
+    border: 1px solid #c1c1c1;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+    -webkit-box-shadow: inset 0 1px 4px rgba(0, 0, 0, 0.16);
+    -moz-box-shadow: inset 0 1px 4px rgba(0, 0, 0, 0.16);
+    box-shadow: inset 0 1px 4px rgba(0, 0, 0, 0.16); }
+  /* line 253, ../../app/stylesheets/screen.scss */
+  .embed .left-bar {
+    margin: -4px 0px 0px 6px;
+    color: grey;
+    font-size: 0.9em; }
+  /* line 258, ../../app/stylesheets/screen.scss */
+  .embed .table-rightside {
+    vertical-align: top;
+    padding-left: 4px; }
+    /* line 261, ../../app/stylesheets/screen.scss */
+    .embed .table-rightside p {
+      margin: -2px 0px 1px 0px;
+      font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+      font-weight: 500;
+      font-size: 1.2em; }
+  /* line 268, ../../app/stylesheets/screen.scss */
+  .embed .optional-text {
+    overflow: hidden;
+    background: white url("/images/backgrounds-sprite.png") 0 -480px repeat-x;
+    width: 98%;
+    border: 1px solid #c1c1c1;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+    -webkit-box-shadow: inset 0 1px 4px rgba(0, 0, 0, 0.16);
+    -moz-box-shadow: inset 0 1px 4px rgba(0, 0, 0, 0.16);
+    box-shadow: inset 0 1px 4px rgba(0, 0, 0, 0.16); }
+  /* line 280, ../../app/stylesheets/screen.scss */
+  .embed textarea {
+    width: 99.2%;
+    height: 6em;
+    margin: 4px 0px -2px 2px;
+    border: none;
+    background: transparent;
+    overflow: hidden;
+    resize: none; }
+    /* line 288, ../../app/stylesheets/screen.scss */
+    .embed textarea:focus {
+      outline: 0; }
+  /* line 294, ../../app/stylesheets/screen.scss */
+  .embed .expand-bottom {
+    border-top: dotted;
+    border-width: 1px;
+    border-color: grey;
+    display: none; }
+  /* line 300, ../../app/stylesheets/screen.scss */
+  .embed .link {
+    margin-left: 2px;
+    font-size: 12px;
+    line-height: 32px;
+    vertical-align: sub; }
+  /* line 306, ../../app/stylesheets/screen.scss */
+  .embed .vouch-button {
+    float: right;
+    margin: -1px -1px -1px 0px;
+    padding: 8px 20px;
+    font-size: 12px;
+    line-height: 14px;
+    color: #585c60;
+    background: url("/images/backgrounds-sprite.png") 0 -250px repeat-x;
+    border: 1px solid #acb2b8;
+    text-shadow: 0 1px 0 rgba(255, 255, 255, 0.9);
+    -webkit-border-radius: 0 0 4px 0;
+    -moz-border-radius: 0 0 4px 0;
+    border-radius: 0 0 4px 0;
+    -webkit-box-shadow: inset 1px 1px 0 rgba(255, 255, 255, 0.4), inset -1px 0 0 rgba(255, 255, 255, 0.4), 0 1px 2px rgba(72, 76, 80, 0.25);
+    -moz-box-shadow: 0 1px 2px rgba(72, 76, 80, 0.25);
+    box-shadow: 0 1px 2px rgba(72, 76, 80, 0.25);
+    font-weight: 600;
+    right: -1px;
+    top: -1px;
+    z-index: 2;
+    height: 34px; }
+    /* line 327, ../../app/stylesheets/screen.scss */
+    .embed .vouch-button:hover {
+      background: url("/images/backgrounds-sprite.png") 0 -310px repeat-x; }
+    /* line 328, ../../app/stylesheets/screen.scss */
+    .embed .vouch-button:active {
+      background: url("/images/backgrounds-sprite.png") 0 -370px repeat-x;
+      -webkit-box-shadow: 0 1px 0 rgba(255, 255, 255, 0.8);
+      -moz-box-shadow: 0 1px 0 rgba(255, 255, 255, 0.8);
+      box-shadow: 0 1px 0 rgba(255, 255, 255, 0.8);
+      padding-top: 9px;
+      padding-bottom: 7px; }
+
+/* line 339, ../../app/stylesheets/screen.scss */
+.embed-banner {
+  overflow: hidden;
+  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; }
+  /* line 342, ../../app/stylesheets/screen.scss */
+  .embed-banner table {
+    margin: 0px 0px;
+    width: 100%;
+    overflow: hidden; }
+  /* line 348, ../../app/stylesheets/screen.scss */
+  .embed-banner .profile_pic {
+    margin-top: 4px;
+    margin-left: 5px;
+    overflow: hidden;
+    border: 1px solid #c1c1c1;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+    -webkit-box-shadow: inset 0 1px 4px rgba(0, 0, 0, 0.16);
+    -moz-box-shadow: inset 0 1px 4px rgba(0, 0, 0, 0.16);
+    box-shadow: inset 0 1px 4px rgba(0, 0, 0, 0.16); }
+  /* line 361, ../../app/stylesheets/screen.scss */
+  .embed-banner .left-bar {
+    margin: -4px 0px 0px 6px;
+    color: grey;
+    font-size: 0.9em; }
+  /* line 367, ../../app/stylesheets/screen.scss */
+  .embed-banner .table-rightside {
+    padding-top: 4px;
+    vertical-align: top;
+    padding-left: 4px;
+    width: 100%; }
+    /* line 372, ../../app/stylesheets/screen.scss */
+    .embed-banner .table-rightside p {
+      margin: -2px 4px 1px 0px;
+      font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+      font-weight: 500;
+      font-size: 0.9em; }
+  /* line 380, ../../app/stylesheets/screen.scss */
+  .embed-banner .optional-text {
+    overflow: hidden;
+    background: white url("/images/backgrounds-sprite.png") 0 -480px repeat-x;
+    /* TODO: Required to change width */
+    margin-right: 9px;
+    /*    width: 93%;*/
+    border: 1px solid #c1c1c1;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+    -webkit-box-shadow: inset 0 1px 4px rgba(0, 0, 0, 0.16);
+    -moz-box-shadow: inset 0 1px 4px rgba(0, 0, 0, 0.16);
+    box-shadow: inset 0 1px 4px rgba(0, 0, 0, 0.16); }
+  /* line 395, ../../app/stylesheets/screen.scss */
+  .embed-banner .text-area {
+    height: 34px; }
+    /* line 397, ../../app/stylesheets/screen.scss */
+    .embed-banner .text-area textarea {
+      background: transparent;
+      border: none;
+      overflow: hidden;
+      resize: none; }
+      /* line 402, ../../app/stylesheets/screen.scss */
+      .embed-banner .text-area textarea:focus {
+        outline: 0; }
+  /* line 408, ../../app/stylesheets/screen.scss */
+  .embed-banner .short-text {
+    /* TODO: Required to change width */
+    width: 67%;
+    /*	width:80%;  */
+    height: 2em;
+    margin: 4px -5px 3px 2px;
+    border: none;
+    overflow: none;
+    resize: none; }
+  /* line 419, ../../app/stylesheets/screen.scss */
+  .embed-banner .vouch-button {
+    width: 30%;
+    float: right;
+    margin: -1px -1px -1px 0px;
+    padding: 6px 10px;
+    font-size: 14px;
+    line-height: 14px;
+    color: #585c60;
+    background: url("/images/backgrounds-sprite.png") 0 -250px repeat-x;
+    border: 1px solid #acb2b8;
+    text-shadow: 0 1px 0 rgba(255, 255, 255, 0.9);
+    -webkit-border-radius: 0 0 4px 0;
+    -moz-border-radius: 0 0 4px 0;
+    border-radius: 0 0 4px 0;
+    -webkit-box-shadow: inset 1px 1px 0 rgba(255, 255, 255, 0.4), inset -1px 0 0 rgba(255, 255, 255, 0.4), 0 1px 2px rgba(72, 76, 80, 0.25);
+    -moz-box-shadow: 0 1px 2px rgba(72, 76, 80, 0.25);
+    box-shadow: 0 1px 2px rgba(72, 76, 80, 0.25);
+    font-weight: 300;
+    z-index: 2;
+    height: 35px; }
+    /* line 443, ../../app/stylesheets/screen.scss */
+    .embed-banner .vouch-button:hover {
+      background: url("/images/backgrounds-sprite.png") 0 -310px repeat-x; }
+    /* line 446, ../../app/stylesheets/screen.scss */
+    .embed-banner .vouch-button:active {
+      background: url("/images/backgrounds-sprite.png") 0 -370px repeat-x;
+      -webkit-box-shadow: 0 1px 0 rgba(255, 255, 255, 0.8);
+      -moz-box-shadow: 0 1px 0 rgba(255, 255, 255, 0.8);
+      box-shadow: 0 1px 0 rgba(255, 255, 255, 0.8);
+      padding-top: 9px;
+      padding-bottom: 7px; }
+  /* line 456, ../../app/stylesheets/screen.scss */
+  .embed-banner .expand-bottom {
+    border-top: dotted;
+    border-width: 1px;
+    border-color: grey;
+    display: none; }
+    /* line 461, ../../app/stylesheets/screen.scss */
+    .embed-banner .expand-bottom a {
+      margin-left: 2px;
+      font-size: 12px;
+      line-height: 12px; }
+
+/* line 472, ../../app/stylesheets/screen.scss */
+.bold {
+  font-weight: bold; }

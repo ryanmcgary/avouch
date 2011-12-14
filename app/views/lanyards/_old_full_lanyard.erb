@@ -1,0 +1,72 @@
+<% if params[:v] == "3" %>
+<div class="iavouch_mast">
+
+<!-- <a href="#" class="toggle-button">click to toggle</a>   --> 
+<div class="iavouch_lanyard_wrapper"> 
+   
+<% if !@remoteurl.nil? %>   
+  <div class="comments">
+    <div class="comments-header">
+        <div class="grid_6">Showing <%= @remoteurl.recordings.where(:call_completed => "1").count %> <%= ("review").pluralize %></div>
+        <div class="toggle-synopsis">hide <%= ("transcript").pluralize %></div>
+    </div>
+    <div class="clear"></div>          
+<!-- start each recording -->
+
+<% unless @remoteurl.recordings.empty? %> 
+	<%= render :partial => 'shared/recording', :collection => @remoteurl.recordings %>
+<% end -%>
+
+<% end %> 
+
+
+         
+<!-- end each recording     -->
+  </div>  
+  <div style="clear:both"></div>
+</div>
+
+<!-- <#% if user_signed_in? %>
+<#%= render :text => request.env["HTTP_REFERER"] %>
+<#% end %>     -->
+  
+<style type="text/css" media="screen" id="sw_css_<%= v %>">
+#sw_<%= v %> .toggle-popup{text-decoration: underline;}   
+#sw_<%= v %> {overflow: visible;height: auto;background-color: white}  
+</style>             
+<%= render 'shared/everything_css' %>    
+</div> 
+<% elsif params[:v] == "2" %>
+
+<div id="iavouch-container" class="iavouch-clear-format" style="width:450px;">
+	<!-- element with overflow applied -->
+	<div class="iavouch-scroll-container">
+		<!-- the element that will be scrolled during the effect -->
+		<div class="iavouch-scroll-scroller">
+
+			<% unless @remoteurl.recordings.empty? %> 
+				<%= render :partial => 'shared/recording', :collection => @remoteurl.recordings %>
+			<% end -%>			
+
+			<div class="iavouch-comment-container" id="leavereview">    
+				<iframe src="sliderframe.html" title="sliderframe" id="leaveareview-frame" style="width:100%;height:93px;border:0px;"></iframe>      
+			</div>     
+			
+		</div>  <!-- scrollContainer -->
+	</div>   <!-- scroll --> 
+
+	<div class="iavouch-scroll-navigation">
+		<a class="iavouch-nav-prev" href="#">Previous</a>   
+			<ul class="iavouch-navigation-list">
+				<li><a href="#files">1</a></li>
+				<li><a href="#sites">2</a></li>
+				<li><a href="#floors">3</a></li>
+				<li><a href="#leavereview">4</a></li>     
+		 </ul>  
+		<a class="iavouch-nav-next" href="#">Next</a>   
+	</div>
+
+</div>  <!-- slider -->
+
+
+<% end %>
