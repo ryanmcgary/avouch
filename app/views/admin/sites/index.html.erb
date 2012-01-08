@@ -1,0 +1,35 @@
+<div class="showborder" id="main-content">
+  <div id="embed-container">
+    <div class="blog-style-embed">
+      <span class="banner">Moderate</span>
+      <% form_tag admin_sites_path, :id => "site-select-dropdown", :method => :get, :remote => true do %>
+          <%= collection_select :site, :site_id, @recordings.uniq, :site_id, :site_permalink, {:include_blank => "All Sites"}, {:onchange => ("$('#site-select-dropdown').submit()")} %>
+      <% end %>
+      <!-- container to match embed css -->
+      <div id='iavouch' class="iavouch_3_reset" style="color:black;">
+        <div id="iavouch_mast">
+          <div class="iavouch_lanyard_wrapper"> 
+            <div class="comments">
+                        
+
+              <%= render :partial => 'shared/recording', :collection => @recordings %> 
+                   
+              
+            </div>  
+            <div style="clear:both"></div>
+          </div>
+        </div> 
+      </div>
+    </div>
+  </div>
+</div>
+
+      <!-- <#%= render :text => @getrecord.to_yaml%> -->
+      
+
+      <!-- <#% @recordings.each do |b| %>
+        <b><#%= b.user_id %> </b>
+        <br/>
+        <#%= b.call_id %>
+        <br/>
+      <#% end %> -->

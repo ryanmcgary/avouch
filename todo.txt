@@ -62,21 +62,36 @@ x create devise layout / css
 	x edit settings form
 	x new user form
 	? authentications in edit "settings"
+x namespace:admin just start with site
+	x admin/sites#index = moderation > @current_user.sites.recordings each do
+		x list site
+		x show recording
+		x SORT by site
+		x publish/unpublish
+		
+	x admin/site/thelma/install = install
+
+	! admin/user/edit = administration
+		in view also have form linking
+	
+	get banner/blog embed working
+		
 - create dashboard
-	- create link from home (that requires login)
-	- create install page
-		- list sites
+	- create install page / install
+		- copy css
+		- copy html
 	- moderation
 		- view all recordings by site/remoteurl
 		- publish/unpublish recordings
 		- create virtual remoteurls (tag based)
+		- list sites
 	- admin
 		- update profile
 		- upgrade account
 		- add direct call
-
+	- create link from home (that requires login)
 - create homepage
-
+- Make sure that uniqueness (sitename,user,etc.)is set on DB
 ? create drop down menu from "powered by iAvouch"
 ? Jquery loading
 	- http://stackoverflow.com/questions/5187451/how-to-determine-if-jquery-is-running-on-a-page-even-if-jquery-is-after-the-d

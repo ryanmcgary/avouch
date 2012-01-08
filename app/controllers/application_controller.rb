@@ -18,7 +18,7 @@ class ApplicationController < ActionController::Base
     if params[:layout] == "embed"
       authentications_closewindowprotected_path
     else
-      dashboard_install_path 
+      install_dashboard_path 
     end 
   end
   
@@ -26,7 +26,7 @@ class ApplicationController < ActionController::Base
     if request.referrer.include? "remoteurls"
       authentications_closewindow_path
     else
-      dashboard_install_path 
+      install_dashboard_path 
     end
   end
   

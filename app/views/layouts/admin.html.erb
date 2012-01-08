@@ -1,0 +1,106 @@
+<% session.delete(:return_to) %>  
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Avouch</title>
+  <%= stylesheet_link_tag :all %>
+  <%= stylesheet_link_tag "embeds/blog-embed" %>
+  
+  <%= javascript_include_tag :defaults, 'jquery.popupwindow', 'iphone-style-checkboxes', 'install-page.js', 'http://localhost:3000/audiojs/audio.js' %>
+
+  <script type="text/javascript">
+      $(document).ready(function() {
+        $('.comment-style :checkbox').iphoneStyle({ checkedLabel: 'Blog', uncheckedLabel: 'Banner' });
+        $('.comment-location :checkbox').iphoneStyle({ checkedLabel: 'Top', uncheckedLabel: 'Bottom' });   
+      });
+  </script>
+
+  <%= csrf_meta_tag %>
+</head>
+
+<body>
+  <!-- top spacer -->
+  <div class="top-spacer"></div>
+  <!-- main container -->
+  <div class="columns"> 
+    <!-- header -->
+    <div class="showborder" id="header">
+      <p class="showborder" id="logo">Avouch</p> 
+    </div>
+    <!-- sidebar -->
+    <div class="showborder" id="sidebar">
+      <ul class="showborder" id="sidebar-menu">
+        <li class="showborder">
+          <%= current_page?(administration_dashboard_path) ? link_to("Administration", administration_dashboard_path, :class => "bold") : link_to("Administration", administration_dashboard_path) %>
+        </li>          
+        <li class="showborder">
+          <%= current_page?(admin_sites_path) ? link_to("Moderation", admin_sites_path, :class => "bold") : link_to("Moderation", admin_sites_path) %>
+        </li>
+        <li class="showborder">
+          <%= (current_page?(install_dashboard_path) || controller.action_name == "install") ? link_to("Install", install_dashboard_path, :class => "bold") : link_to("Install", install_dashboard_path) %>
+          <div class="site-list">
+            <% if user_signed_in? %>
+              <% current_user.sites.each do |sites|  %>
+                <%= link_to_unless_current sites.name, admin_site_install_path(sites.permalink) do |name|
+                    content_tag(:p, "#{name}")
+                    end
+                %>
+              <% end %>
+              <%= link_to "New", new_site_path %>
+            <% end %>
+          </div>
+        </li>
+      </ul>
+    </div>
+    
+    <!-- content -->
+    <%= yield %>
+    
+    <div id="footer">
+      
+    </div>
+  </div>
+    
+  <div class="clear"></div>
+  <div class="footer-bottom">
+    <div id="footer">
+       sdfsd
+    </div>
+  </div>   
+  <div class="footer-bottom-bottom"></div>
+
+
+
+  <% if user_signed_in? %>
+    <%= current_user.email %>
+    <%= link_to "Sign out", destroy_user_session_path, :method => :delete %>
+  <% else %>
+    <%= link_to "Sign in", install_dashboard_path %>
+    <%= link_to "Sign in with Facebook", user_omniauth_authorize_path(:facebook) %>
+    <%= link_to "Sign in with Twitter", user_omniauth_authorize_path(:twitter) %>
+  <% end %>
+  <p class="notice"><%= notice %></p>
+  <p class="alert"><%= alert %></p>
+
+  <ul>
+    <li><%= current_page?(administration_dashboard_path) ? link_to("Administration", administration_dashboard_path, :class => "bold") : link_to("Administration", administration_dashboard_path) %></li>
+    <li><%= current_page?(moderation_dashboard_path) ? link_to("Moderation", moderation_dashboard_path, :class => "bold") : link_to("Moderation", moderation_dashboard_path) %></li>
+    <li>
+      <%= (current_page?(install_dashboard_path) || controller.controller_name == "sites") ? link_to("Install", install_dashboard_path, :class => "bold") : link_to("Install", install_dashboard_path) %></li>
+      <div id="sites">
+        <% if user_signed_in? %>
+          <% current_user.sites.each do |sites|  %>
+            <%= link_to_unless_current sites.name, site_path(sites.permalink) %>
+          <% end %>
+          <%= link_to "New", new_site_path %>
+        <% end %>
+      </div>
+
+    </li>
+  </ul>
+
+
+</body>
+</html>
+
+

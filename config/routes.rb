@@ -8,9 +8,13 @@ Avouch::Application.routes.draw do
     end
   end
 
-  # namespace :admin do |admin|
-  #   resources :sites
-  # end
+  namespace :admin do |admin|
+    resources :sites do
+        get 'toggle_approve', :on => :member 
+        get :install
+    end
+    resources :users
+  end
   
   match '/users/auth/:provider/callback'  =>  'authentications#create'
   match 'authentications/closewindow' => 'authentications#closewindow' 
@@ -44,7 +48,8 @@ Avouch::Application.routes.draw do
     end
   end
   
-
+  get ':site_id/:id/', :to => "remoteurls#show", :as => 'site_board', :constraints => {:subdomain => "api"}
+  
   root :to => "home#index" 
 
   # The priority is based upon order of creation:

@@ -18,7 +18,7 @@
     <%= current_user.email %>
     <%= link_to "Sign out", destroy_user_session_path, :method => :delete %>
   <% else %>
-    <%= link_to "Sign in", dashboard_install_path %>
+    <%= link_to "Sign in", install_dashboard_path %>
     <%= link_to "Sign in with Facebook", user_omniauth_authorize_path(:facebook) %>
     <%= link_to "Sign in with Twitter", user_omniauth_authorize_path(:twitter) %>
   <% end %>
@@ -31,15 +31,17 @@
     <li>
       <%= (current_page?(install_dashboard_path) || controller.controller_name == "sites") ? link_to("Install", install_dashboard_path, :class => "bold") : link_to("Install", install_dashboard_path) %></li>
       <div id="sites">
-        <% current_user.sites.each do |sites|  %>
-          <%= current_page?(site_path(sites.permalink)) ? link_to(sites.name, [sites,@remoteurl], :class => "bold") : link_to(sites.name, [sites,@remoteurl]) %>
-        
+        <% if user_signed_in? %>
+          <% current_user.sites.each do |sites|  %>
+            <%= link_to_unless_current sites.name, site_path(sites.permalink) %>
+          <% end %>
+          <%= link_to "New", new_site_path %>
         <% end %>
       </div>
 
     </li>
   </ul>
-<%= render :text =>  controller.controller_name %>
+
 <%= yield %>
 
 </body>

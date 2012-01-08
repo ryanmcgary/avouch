@@ -61,11 +61,11 @@
 	.review-each{ width:500px; }
 	//	begin audiojs related styles
 	.audiojs{
-		width: 500px; height: 22px; background: #404040;
+		width: 500px; height: 22px; background: #404040; overflow:hidden; font-size: 12px;
 		background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #444), color-stop(0.5, #555), color-stop(0.51, #444), color-stop(1, #444));
 		background-image: -moz-linear-gradient(center top, #444 0%, #555 50%, #444 51%, #444 100%);
 		-webkit-box-shadow: 1px 1px 8px rgba(0, 0, 0, 0.3); -moz-box-shadow: 1px 1px 8px rgba(0, 0, 0, 0.3);
-		-o-box-shadow: 1px 1px 8px rgba(0, 0, 0, 0.3); box-shadow: 1px 1px 8px rgba(0, 0, 0, 0.3);
+		-o-box-shadow: 1px 1px 8px rgba(0, 0, 0, 0.3); box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.3);
 		.play-pause{ width: 15px; height: 20px; padding: 0px 8px 0px 0px; }
 		p{ width: 25px; height: 20px; margin: -3px 0px 0px -1px; }
 		.scrubber{ width: 350px; background: #5a5a5a; height: 10px; margin: 5px; }
@@ -76,7 +76,7 @@
 		.loaded{ width: 350; height: 10px; background: #000;
 			background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #222), color-stop(0.5, #333), color-stop(0.51, #222), color-stop(1, #222));
 			background-image: -moz-linear-gradient(center top, #222 0%, #333 50%, #222 51%, #222 100%); }
-		.time{ float: left; height: 25px; line-height: 25px; }
+		.time{ float: left; height: 22px; line-height: 22px; }
 		.error-message{ height: 24px;line-height: 24px; }
 	}
 	.track-details{ 

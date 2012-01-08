@@ -63,8 +63,7 @@ table {
 /* line 10, ../../app/stylesheets/screen.scss */
 html, body {
   height: 100%;
-  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
-  overflow: hidden; }
+  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; }
 
 /* line 18, ../../app/stylesheets/screen.scss */
 .devise {

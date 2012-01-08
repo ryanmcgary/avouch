@@ -2,6 +2,9 @@ class User < ActiveRecord::Base
   has_many :authentications, :foreign_key => "user_id", :dependent => :destroy
   has_many :recordings
   has_many :sites
+  has_many :remoteurls, :through => :sites
+  # has_many :arecordings, :through => :remoteurls, :source => :recordings
+                                
   
   # Include default devise modules. Others available are:
   # :token_authenticatable, :encryptable, :confirmable, :lockable, :timeoutable and :omniauthable

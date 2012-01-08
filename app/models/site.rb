@@ -1,7 +1,7 @@
 class Site < ActiveRecord::Base
   has_many :remoteurls
   belongs_to :user
-  has_many :recordings, :through => :remoteurls
+  has_many :recordings, :through => :remoteurls, :order => 'created_at DESC'
   
   before_validation :create_permalink
   

@@ -10,8 +10,8 @@
 html,body{
 	height:100%;
 	font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
-	overflow: hidden;
-	
+	// overflow: hidden;
+	// TODO: See if the above being switched to hidden breaks embed pages
 }
 
 // devise login/edit pages/forms

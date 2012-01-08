@@ -367,12 +367,14 @@ html body * dd.clear {
   width: 500px;
   height: 22px;
   background: #404040;
+  overflow: hidden;
+  font-size: 12px;
   background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #444444), color-stop(0.5, #555555), color-stop(0.51, #444444), color-stop(1, #444444));
   background-image: -moz-linear-gradient(center top, #444444 0%, #555555 50%, #444444 51%, #444444 100%);
   -webkit-box-shadow: 1px 1px 8px rgba(0, 0, 0, 0.3);
   -moz-box-shadow: 1px 1px 8px rgba(0, 0, 0, 0.3);
   -o-box-shadow: 1px 1px 8px rgba(0, 0, 0, 0.3);
-  box-shadow: 1px 1px 8px rgba(0, 0, 0, 0.3); }
+  box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.3); }
   /* line 69, ../../../app/stylesheets/embeds/blog-embed.scss */
   #iavouch_mast .audiojs .play-pause {
     width: 15px;
@@ -406,8 +408,8 @@ html body * dd.clear {
   /* line 79, ../../../app/stylesheets/embeds/blog-embed.scss */
   #iavouch_mast .audiojs .time {
     float: left;
-    height: 25px;
-    line-height: 25px; }
+    height: 22px;
+    line-height: 22px; }
   /* line 80, ../../../app/stylesheets/embeds/blog-embed.scss */
   #iavouch_mast .audiojs .error-message {
     height: 24px;
