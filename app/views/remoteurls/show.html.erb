@@ -1,4 +1,7 @@
 <% if user_signed_in? %>
+<% content_for :body do %>
+  <body id='embeded'>
+<% end %>
 <table class="embed<%= params[:layout] == "2" ? "-banner" : "" %>">
   <tr>
     <td id="profile-container" width="50" style="vertical-align: top;">
@@ -33,9 +36,10 @@
   </tr>
 </table>
 
-<%= render :text => params.to_yaml %>
-
 <% else %>
+<% content_for :body do %>
+  <body id='embeded'>
+<% end %>
 <div class="social-login">
   <p>Login with Social Media</p>
   <ul>

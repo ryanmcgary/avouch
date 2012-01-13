@@ -21,18 +21,36 @@ $ninesixty-columns: 24;  //controls the default number of grid columns
 body{background-color:$grid-color;}
 body#splash{background-color:$grid-color;}
 
-.top-spacer{height:0.6em;background-color:darken($sidebar-color, 70%);}  
+.top-spacer{
+  height:1.2em;
+  background-color:darken($sidebar-color, 70%);
+  color:#FFFFFF;
+  div{
+    height:1.2em;
+    width:960px;
+    margin-left:auto;
+    margin-right:auto;
+    p{
+      margin-right:10px;
+      margin-left:10px;
+      float:right;
+      color:#FFFFFF;
+      a{color:inherit;}
+    }  
+  }
+}  
 
 .columns {
 	h2{font-size:2em;margin-bottom:30px;} 
-	background-color:$grid-color;      
-  	@include grid-container;
-    #home-splash{
-	@include grid(18);
-	@include grid-prefix(3,24);
-	@include grid-suffix(3,24);
+	background-color:$grid-color;    
+  @include grid-container;
+  // this is just for homepage
+  #home-splash{
+  	@include grid(18);
+  	@include grid-prefix(3,24);
+  	@include grid-suffix(3,24);
 		#home-box{
-		  	background-color:$grid-color; 
+		  background-color:$grid-color; 
 			height:400px;
 			margin-top:100px;
 			@include box-shadow(darken($sidebar-color, 10%) 0px 0px 10px);
@@ -69,102 +87,110 @@ body#splash{background-color:$grid-color;}
 			font-size:1.5em;
 		}
 	}
-    #sidebar {
-      @include grid(6);
-      	#sidebar-menu{
-      		@include grid(6); 
-      	  	@include border-radius(5px);
-      		@include alpha;
-      		background-color:$sidebar-color;
-            .selected{font-weight:bold;}
-      		.showborder{
-      			@include border-radius(5px);   
-      			//				border: {top:1px solid $sidebar-color;bottom:1px solid $sidebar-color;}
-      			//				&:first-child{border-top:1px solid darken($sidebar-color, 4%);}
-      			&:last-child{padding-bottom:20px;}
-      			&:hover{background-color:darken($sidebar-color, 3%);@include box-shadow(darken($sidebar-color, 10%) 0px 0px 5px);}     
-      		}
-      		a{
-      		    text-decoration:none;
-      		    color: #000;
-      		    text-shadow: #fff 0 1px;   
-      		    padding: 23px 25px 23px 25px;
-      		    font-size: 16px;
-      		    line-height:16px;
-      		    display: block;   
-      		}
-      		.site-list{
-      			margin:-15px 0 0 0;
-      			p{  
-                    text-decoration:none;
-                    color: #000;
-                    text-shadow: #fff 0 1px;                     
-                    font-weight: bold;
-                    font-size: 10px;
-                    line-height:10px;
-                    font-size:12px;
-                    text-decoration:none;
-                    margin: 0px 0px 0px 30px;
-                    padding: 10px 10px 10px 10px;
-                    &:hover{background-color:darken($sidebar-color, 9%);}}
-                a{
-                    font-weight: normal;
-      				font-size: 10px;
-                    line-height:10px;
-      				font-size:12px;
-      				text-decoration:none;
-      				margin: 0px 0px 0px 30px;
-      				padding: 10px 10px 10px 10px;
-      				&:hover{background-color:darken($sidebar-color, 9%);}
-      			}
-      		}
+  #sidebar {
+    padding-bottom:20px;
+    @include grid(6);
+  	#sidebar-menu{
+  		@include grid(6); 
+  	  @include border-radius(5px);
+  		@include alpha;
+  		background-color:$sidebar-color;
+      .selected{font-weight:bold;}
+  		.showborder{
+  			@include border-radius(5px);   
+  			//				border: {top:1px solid $sidebar-color;bottom:1px solid $sidebar-color;}
+  			//				&:first-child{border-top:1px solid darken($sidebar-color, 4%);}
+  			&:last-child{padding-bottom:20px;}
+  			&:hover{background-color:darken($sidebar-color, 3%);@include box-shadow(darken($sidebar-color, 10%) 0px 0px 5px);}     
+  		}
+  		a{
+  		    text-decoration:none;
+  		    color: #000;
+  		    text-shadow: #fff 0 1px;   
+  		    padding: 23px 25px 23px 25px;
+  		    font-size: 16px;
+  		    line-height:16px;
+  		    display: block;   
+  		}
+  		.site-list{
+  			margin:-15px 0 0 0;
+  			p{  
+          text-decoration:none;
+          color: #000;
+          text-shadow: #fff 0 1px;                     
+          font-weight: bold;
+          font-size: 10px;
+          line-height:10px;
+          font-size:12px;
+          text-decoration:none;
+          margin: 0px 0px 0px 30px;
+          padding: 10px 10px 10px 10px;
+          &:hover{background-color:darken($sidebar-color, 9%);}
+        }
+        a{
+          font-weight: normal;
+  				font-size: 10px;
+          line-height:10px;
+  				font-size:12px;
+  				text-decoration:none;
+  				margin: 0px 0px 0px 30px;
+  				padding: 10px 10px 10px 10px;
+  				&:hover{background-color:darken($sidebar-color, 9%);}
+  			}
+  		}
+    }
+  }  
+  #main-content {
+    @include grid(18);
+  	#update-profile{height:300px;border:3px solid darken($sidebar-color, 5%);@include box-shadow(darken($sidebar-color, 40%) 1px 1px 8px);}
+  	h3{margin:10px 0 10px 0;}
+  	//  step 1 related 		
+  	.banner-style-embed{display:none;} 
+  	// 	Options section
+  	@include iphone-style-defaults;
+  	th label{margin:0 10px 0 10px;}
+  	input#pixel-width{font-size:0.9em;font-weight:bold;text-align:right;}
+  	#px{vertical-align:text-bottom;}
+    //  step 2 related 	 
+  	// TODO: make this resize when #px changes
+  	#embed-container{
+      background-color:lighten($sidebar-color, 2.9%);
+      margin:10px;
+      padding:10px 10px 0 10px;
+      overflow-x:auto;
+      overflow-y:hidden;
+      border:1px solid lightblue;
+      @include border-radius(2px); 
+    }
+  	//  step 3 related
+  	div#embed-code-container{margin:10px;overflow:auto;background-color:lighten($sidebar-color, 2.9%);border:1px solid lightblue;@include border-radius(2px);
+  		pre#embed-code{font-size:0.8em;margin:30px;overflow:visible;}  
+  	}
     
-      	}
+    // related to admin/sites AKA moderation
     
-      }  
-    #main-content {
-      @include grid(18);
-      	#update-profile{height:300px;border:3px solid darken($sidebar-color, 5%);@include box-shadow(darken($sidebar-color, 40%) 1px 1px 8px);}
-      	h3{margin:10px 0 10px 0;}
-      	//  step 1 related 		
-      	.banner-style-embed{display:none;} 
-      	// 	Options section
-      	@include iphone-style-defaults;
-      	th label{margin:0 10px 0 10px;}
-      	input#pixel-width{font-size:0.9em;font-weight:bold;text-align:right;}
-      	#px{vertical-align:text-bottom;}
-        //  step 2 related 	 
-      	// TODO: make this resize when #px changes
-      	#embed-container{background-color:lighten($sidebar-color, 2.9%);margin:10px;padding:10px 10px 0 10px;overflow:auto;border:1px solid lightblue;@include border-radius(2px); }
-      	//  step 3 related
-      	div#embed-code-container{margin:10px;overflow:auto;background-color:lighten($sidebar-color, 2.9%);border:1px solid lightblue;@include border-radius(2px);
-      		pre#embed-code{font-size:0.8em;margin:30px;overflow:visible;}  
-      	}
-        
-        // related to admin/sites AKA moderation
-        
-        .banner{}
-        
-        #site-select-dropdown{float:right;margin-right:82px;margin-bottom:15px;margin-top: -3px;}
-        .approve-toggle-link{position: absolute;margin-left:580px;padding-top:20px;}
-        .recording-divider{
-          margin-left: -10px;
-          padding-top:20px;
-          padding-bottom:1px;
-          padding-left:15px;
-          width:663px;
-          border-bottom: 1px solid $sidebar-color;
-          &:hover{
-            background-color:darken($sidebar-color, 2.9%);
-          }
-        } 
+    .banner{}
 
-      //  		#footer {
-      //  			@include grid(24);
-      //  			margin-top:20px; 
-      //  	    background-color:darken($sidebar-color, 20%);
-      //  		}	  
+    #site-select-dropdown{float:right;margin-right:123px;margin-bottom:15px;margin-top: -3px;}
+    .approve-toggle-link{position: absolute;margin-left:580px;padding-top:20px;}
+    .recording-divider{
+      margin-left: -10px;
+      padding-top:20px;
+      padding-bottom:1px;
+      padding-left:15px;
+      width:663px;
+      border-bottom: 1px solid $sidebar-color;
+      &:hover{
+        background-color:darken($sidebar-color, 2.9%);
       }
+    } 
+
+  //  		#footer {
+  //  			@include grid(24);
+  //  			margin-top:20px; 
+  //  	    background-color:darken($sidebar-color, 20%);
+  //  		}	  
+  }
 
 } //end 
 
@@ -187,11 +213,13 @@ body#splash{background-color:$grid-color;}
 
 .footer-bottom{
 	height:20px;
-	background-color:darken($sidebar-color, 40%);
-	#footer {
-		@include grid(24);
-		margin-left:34px;
-    background-color:darken($sidebar-color, 20%);
+	background-color:darken($sidebar-color, 40%);    
+  div{
+    @include grid-container;
+    #footer {
+      @include grid(24);
+      background-color:darken($sidebar-color, 20%);
+    }
 	}
 }
 .footer-bottom-bottom{

@@ -17,7 +17,8 @@ class User < ActiveRecord::Base
 
   validates_presence_of :company, :message => "can't be blank"
   validates_presence_of :title, :message => "can't be blank"
-  validates_presence_of :email, :message => "can't be blank"
+  # below validation commented out dince validateable already takes care of "email" field
+  # validates_presence_of :email, :message => "can't be blank"
   
   validates_presence_of :full_name, :message => "can't be blank"
   validates_presence_of :phone_number, :message => "can't be blank"

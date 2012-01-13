@@ -13,7 +13,7 @@ Avouch::Application.routes.draw do
         get 'toggle_approve', :on => :member 
         get :install
     end
-    resources :users
+    resources :registrations
   end
   
   match '/users/auth/:provider/callback'  =>  'authentications#create'
@@ -25,8 +25,13 @@ Avouch::Application.routes.draw do
   match '/recordings/record'        => 'recordings#record'
   match '/recordings/hangup'        => 'recordings#hangup'
   
+  # devise_scope :user do 
+  #   match "/admin/edit" => "registrations#edit" 
+  # end
+  
   devise_for :users, :controllers => { :registrations => 'registrations' }
   devise_for :users do get 'logout' => 'devise/sessions#destroy' end  
+
 
   resources :authentications # do
   #     member do
@@ -43,7 +48,6 @@ Avouch::Application.routes.draw do
       member do
         get :full_lanyard
         get :embed
-        get :embed2
       end
     end
   end

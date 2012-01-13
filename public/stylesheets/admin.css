@@ -68,20 +68,36 @@ body#splash {
 
 /* line 24, ../../app/stylesheets/admin.scss */
 .top-spacer {
-  height: 0.6em;
-  background-color: #043177; }
+  height: 1.2em;
+  background-color: #043177;
+  color: #FFFFFF; }
+  /* line 28, ../../app/stylesheets/admin.scss */
+  .top-spacer div {
+    height: 1.2em;
+    width: 960px;
+    margin-left: auto;
+    margin-right: auto; }
+    /* line 33, ../../app/stylesheets/admin.scss */
+    .top-spacer div p {
+      margin-right: 10px;
+      margin-left: 10px;
+      float: right;
+      color: #FFFFFF; }
+      /* line 38, ../../app/stylesheets/admin.scss */
+      .top-spacer div p a {
+        color: inherit; }
 
-/* line 26, ../../app/stylesheets/admin.scss */
+/* line 43, ../../app/stylesheets/admin.scss */
 .columns {
   background-color: white;
   margin-left: auto;
   margin-right: auto;
   width: 960px; }
-  /* line 27, ../../app/stylesheets/admin.scss */
+  /* line 44, ../../app/stylesheets/admin.scss */
   .columns h2 {
     font-size: 2em;
     margin-bottom: 30px; }
-  /* line 30, ../../app/stylesheets/admin.scss */
+  /* line 48, ../../app/stylesheets/admin.scss */
   .columns #home-splash {
     display: inline;
     float: left;
@@ -90,7 +106,7 @@ body#splash {
     width: 700px;
     padding-left: 120px;
     padding-right: 120px; }
-    /* line 34, ../../app/stylesheets/admin.scss */
+    /* line 52, ../../app/stylesheets/admin.scss */
     .columns #home-splash #home-box {
       background-color: white;
       height: 400px;
@@ -99,10 +115,10 @@ body#splash {
       -webkit-box-shadow: #b1cefc 0px 0px 10px;
       -o-box-shadow: #b1cefc 0px 0px 10px;
       box-shadow: #b1cefc 0px 0px 10px; }
-      /* line 39, ../../app/stylesheets/admin.scss */
+      /* line 57, ../../app/stylesheets/admin.scss */
       .columns #home-splash #home-box div {
         text-align: center; }
-      /* line 40, ../../app/stylesheets/admin.scss */
+      /* line 58, ../../app/stylesheets/admin.scss */
       .columns #home-splash #home-box #splash-content {
         font-family: "Cochin";
         display: inline;
@@ -112,17 +128,17 @@ body#splash {
         width: 700px;
         margin-left: 0;
         margin-right: 0; }
-        /* line 41, ../../app/stylesheets/admin.scss */
+        /* line 59, ../../app/stylesheets/admin.scss */
         .columns #home-splash #home-box #splash-content #logo {
           font-size: 3em;
           font-weight: bold;
           text-decoration: none;
           color: #000;
           padding: 23px 25px 23px 25px; }
-          /* line 47, ../../app/stylesheets/admin.scss */
+          /* line 65, ../../app/stylesheets/admin.scss */
           .columns #home-splash #home-box #splash-content #logo:first-letter {
             color: #075ada; }
-        /* line 49, ../../app/stylesheets/admin.scss */
+        /* line 67, ../../app/stylesheets/admin.scss */
         .columns #home-splash #home-box #splash-content form {
           margin: 0 180px 50px 180px;
           height: 3em;
@@ -137,7 +153,7 @@ body#splash {
           -webkit-box-shadow: #b1cefc 0px 0px 5px;
           -o-box-shadow: #b1cefc 0px 0px 5px;
           box-shadow: #b1cefc 0px 0px 5px; }
-        /* line 50, ../../app/stylesheets/admin.scss */
+        /* line 68, ../../app/stylesheets/admin.scss */
         .columns #home-splash #home-box #splash-content input#email-text {
           width: 250px;
           margin-top: 15px;
@@ -149,21 +165,21 @@ body#splash {
           -webkit-box-shadow: #b1cefc 0px 0px 5px;
           -o-box-shadow: #b1cefc 0px 0px 5px;
           box-shadow: #b1cefc 0px 0px 5px; }
-        /* line 51, ../../app/stylesheets/admin.scss */
+        /* line 69, ../../app/stylesheets/admin.scss */
         .columns #home-splash #home-box #splash-content input#email-invite {
           margin-left: 5px; }
-        /* line 53, ../../app/stylesheets/admin.scss */
+        /* line 71, ../../app/stylesheets/admin.scss */
         .columns #home-splash #home-box #splash-content p {
           font-size: 1em; }
-        /* line 54, ../../app/stylesheets/admin.scss */
+        /* line 72, ../../app/stylesheets/admin.scss */
         .columns #home-splash #home-box #splash-content .splash-login {
           font-size: 1.5em;
           font-weight: bold; }
-          /* line 55, ../../app/stylesheets/admin.scss */
+          /* line 73, ../../app/stylesheets/admin.scss */
           .columns #home-splash #home-box #splash-content .splash-login a {
             text-decoration: none;
             color: black; }
-  /* line 63, ../../app/stylesheets/admin.scss */
+  /* line 81, ../../app/stylesheets/admin.scss */
   .columns #header {
     display: inline;
     float: left;
@@ -171,7 +187,7 @@ body#splash {
     margin-right: 10px;
     width: 940px;
     margin-bottom: 20px; }
-    /* line 66, ../../app/stylesheets/admin.scss */
+    /* line 84, ../../app/stylesheets/admin.scss */
     .columns #header #logo {
       display: inline;
       float: left;
@@ -180,14 +196,15 @@ body#splash {
       width: 140px;
       margin: 20px 0 0px 0px;
       font-size: 1.5em; }
-  /* line 72, ../../app/stylesheets/admin.scss */
+  /* line 90, ../../app/stylesheets/admin.scss */
   .columns #sidebar {
+    padding-bottom: 20px;
     display: inline;
     float: left;
     margin-left: 10px;
     margin-right: 10px;
     width: 220px; }
-    /* line 74, ../../app/stylesheets/admin.scss */
+    /* line 93, ../../app/stylesheets/admin.scss */
     .columns #sidebar #sidebar-menu {
       display: inline;
       float: left;
@@ -202,10 +219,10 @@ body#splash {
       border-radius: 5px;
       margin-left: 0;
       background-color: #e2edfe; }
-      /* line 79, ../../app/stylesheets/admin.scss */
+      /* line 98, ../../app/stylesheets/admin.scss */
       .columns #sidebar #sidebar-menu .selected {
         font-weight: bold; }
-      /* line 80, ../../app/stylesheets/admin.scss */
+      /* line 99, ../../app/stylesheets/admin.scss */
       .columns #sidebar #sidebar-menu .showborder {
         -moz-border-radius: 5px;
         -webkit-border-radius: 5px;
@@ -213,17 +230,17 @@ body#splash {
         -ms-border-radius: 5px;
         -khtml-border-radius: 5px;
         border-radius: 5px; }
-        /* line 84, ../../app/stylesheets/admin.scss */
+        /* line 103, ../../app/stylesheets/admin.scss */
         .columns #sidebar #sidebar-menu .showborder:last-child {
           padding-bottom: 20px; }
-        /* line 85, ../../app/stylesheets/admin.scss */
+        /* line 104, ../../app/stylesheets/admin.scss */
         .columns #sidebar #sidebar-menu .showborder:hover {
           background-color: #d3e4fd;
           -moz-box-shadow: #b1cefc 0px 0px 5px;
           -webkit-box-shadow: #b1cefc 0px 0px 5px;
           -o-box-shadow: #b1cefc 0px 0px 5px;
           box-shadow: #b1cefc 0px 0px 5px; }
-      /* line 87, ../../app/stylesheets/admin.scss */
+      /* line 106, ../../app/stylesheets/admin.scss */
       .columns #sidebar #sidebar-menu a {
         text-decoration: none;
         color: #000;
@@ -232,10 +249,10 @@ body#splash {
         font-size: 16px;
         line-height: 16px;
         display: block; }
-      /* line 96, ../../app/stylesheets/admin.scss */
+      /* line 115, ../../app/stylesheets/admin.scss */
       .columns #sidebar #sidebar-menu .site-list {
         margin: -15px 0 0 0; }
-        /* line 98, ../../app/stylesheets/admin.scss */
+        /* line 117, ../../app/stylesheets/admin.scss */
         .columns #sidebar #sidebar-menu .site-list p {
           text-decoration: none;
           color: #000;
@@ -247,10 +264,10 @@ body#splash {
           text-decoration: none;
           margin: 0px 0px 0px 30px;
           padding: 10px 10px 10px 10px; }
-          /* line 109, ../../app/stylesheets/admin.scss */
+          /* line 128, ../../app/stylesheets/admin.scss */
           .columns #sidebar #sidebar-menu .site-list p:hover {
             background-color: #b6d1fc; }
-        /* line 110, ../../app/stylesheets/admin.scss */
+        /* line 130, ../../app/stylesheets/admin.scss */
         .columns #sidebar #sidebar-menu .site-list a {
           font-weight: normal;
           font-size: 10px;
@@ -259,17 +276,17 @@ body#splash {
           text-decoration: none;
           margin: 0px 0px 0px 30px;
           padding: 10px 10px 10px 10px; }
-          /* line 118, ../../app/stylesheets/admin.scss */
+          /* line 138, ../../app/stylesheets/admin.scss */
           .columns #sidebar #sidebar-menu .site-list a:hover {
             background-color: #b6d1fc; }
-  /* line 125, ../../app/stylesheets/admin.scss */
+  /* line 143, ../../app/stylesheets/admin.scss */
   .columns #main-content {
     display: inline;
     float: left;
     margin-left: 10px;
     margin-right: 10px;
     width: 700px; }
-    /* line 127, ../../app/stylesheets/admin.scss */
+    /* line 145, ../../app/stylesheets/admin.scss */
     .columns #main-content #update-profile {
       height: 300px;
       border: 3px solid #c9defd;
@@ -277,10 +294,10 @@ body#splash {
       -webkit-box-shadow: #1d73f7 1px 1px 8px;
       -o-box-shadow: #1d73f7 1px 1px 8px;
       box-shadow: #1d73f7 1px 1px 8px; }
-    /* line 128, ../../app/stylesheets/admin.scss */
+    /* line 146, ../../app/stylesheets/admin.scss */
     .columns #main-content h3 {
       margin: 10px 0 10px 0; }
-    /* line 130, ../../app/stylesheets/admin.scss */
+    /* line 148, ../../app/stylesheets/admin.scss */
     .columns #main-content .banner-style-embed {
       display: none; }
     /* line 7, ../../app/stylesheets/checkboxes.scss */
@@ -363,23 +380,24 @@ body#splash {
       height: 100%;
       width: 100%;
       background: url('../images/iphone-style-checkboxes/slider_center.png?1312336984'); }
-    /* line 133, ../../app/stylesheets/admin.scss */
+    /* line 151, ../../app/stylesheets/admin.scss */
     .columns #main-content th label {
       margin: 0 10px 0 10px; }
-    /* line 134, ../../app/stylesheets/admin.scss */
+    /* line 152, ../../app/stylesheets/admin.scss */
     .columns #main-content input#pixel-width {
       font-size: 0.9em;
       font-weight: bold;
       text-align: right; }
-    /* line 135, ../../app/stylesheets/admin.scss */
+    /* line 153, ../../app/stylesheets/admin.scss */
     .columns #main-content #px {
       vertical-align: text-bottom; }
-    /* line 138, ../../app/stylesheets/admin.scss */
+    /* line 156, ../../app/stylesheets/admin.scss */
     .columns #main-content #embed-container {
       background-color: #f0f6fe;
       margin: 10px;
       padding: 10px 10px 0 10px;
-      overflow: auto;
+      overflow-x: auto;
+      overflow-y: hidden;
       border: 1px solid lightblue;
       -moz-border-radius: 2px;
       -webkit-border-radius: 2px;
@@ -387,7 +405,7 @@ body#splash {
       -ms-border-radius: 2px;
       -khtml-border-radius: 2px;
       border-radius: 2px; }
-    /* line 140, ../../app/stylesheets/admin.scss */
+    /* line 166, ../../app/stylesheets/admin.scss */
     .columns #main-content div#embed-code-container {
       margin: 10px;
       overflow: auto;
@@ -399,23 +417,23 @@ body#splash {
       -ms-border-radius: 2px;
       -khtml-border-radius: 2px;
       border-radius: 2px; }
-      /* line 141, ../../app/stylesheets/admin.scss */
+      /* line 167, ../../app/stylesheets/admin.scss */
       .columns #main-content div#embed-code-container pre#embed-code {
         font-size: 0.8em;
         margin: 30px;
         overflow: visible; }
-    /* line 148, ../../app/stylesheets/admin.scss */
+    /* line 174, ../../app/stylesheets/admin.scss */
     .columns #main-content #site-select-dropdown {
       float: right;
-      margin-right: 82px;
+      margin-right: 123px;
       margin-bottom: 15px;
       margin-top: -3px; }
-    /* line 149, ../../app/stylesheets/admin.scss */
+    /* line 175, ../../app/stylesheets/admin.scss */
     .columns #main-content .approve-toggle-link {
       position: absolute;
       margin-left: 580px;
       padding-top: 20px; }
-    /* line 150, ../../app/stylesheets/admin.scss */
+    /* line 176, ../../app/stylesheets/admin.scss */
     .columns #main-content .recording-divider {
       margin-left: -10px;
       padding-top: 20px;
@@ -423,11 +441,11 @@ body#splash {
       padding-left: 15px;
       width: 663px;
       border-bottom: 1px solid #e2edfe; }
-      /* line 157, ../../app/stylesheets/admin.scss */
+      /* line 183, ../../app/stylesheets/admin.scss */
       .columns #main-content .recording-divider:hover {
         background-color: #d4e4fe; }
 
-/* line 171, ../../app/stylesheets/admin.scss */
+/* line 197, ../../app/stylesheets/admin.scss */
 .clear {
   clear: both;
   display: block;
@@ -436,37 +454,41 @@ body#splash {
   width: 0;
   height: 0; }
 
-/* line 183, ../../app/stylesheets/admin.scss */
+/* line 209, ../../app/stylesheets/admin.scss */
 .columns {
   font-family: 'Helvetica Neu', sans-serif;
   font: 'Helvetica Neu', sans-serif;
   font-weight: 500;
   font-size: 1.2em; }
 
-/* line 184, ../../app/stylesheets/admin.scss */
+/* line 210, ../../app/stylesheets/admin.scss */
 .columns p {
   font-size: 0.8em;
   margin: 0 0 20px 10px; }
 
-/* line 185, ../../app/stylesheets/admin.scss */
+/* line 211, ../../app/stylesheets/admin.scss */
 .columns b {
   font-weight: 600; }
 
-/* line 188, ../../app/stylesheets/admin.scss */
+/* line 214, ../../app/stylesheets/admin.scss */
 .footer-bottom {
   height: 20px;
   background-color: #1d73f7; }
-  /* line 191, ../../app/stylesheets/admin.scss */
-  .footer-bottom #footer {
-    display: inline;
-    float: left;
-    margin-left: 10px;
-    margin-right: 10px;
-    width: 940px;
-    margin-left: 34px;
-    background-color: #7fb0fb; }
+  /* line 217, ../../app/stylesheets/admin.scss */
+  .footer-bottom div {
+    margin-left: auto;
+    margin-right: auto;
+    width: 960px; }
+    /* line 219, ../../app/stylesheets/admin.scss */
+    .footer-bottom div #footer {
+      display: inline;
+      float: left;
+      margin-left: 10px;
+      margin-right: 10px;
+      width: 940px;
+      background-color: #7fb0fb; }
 
-/* line 197, ../../app/stylesheets/admin.scss */
+/* line 225, ../../app/stylesheets/admin.scss */
 .footer-bottom-bottom {
   height: 20px;
   background-color: #043177; }

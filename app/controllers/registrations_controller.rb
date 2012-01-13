@@ -17,10 +17,16 @@ class RegistrationsController < Devise::RegistrationsController
       # TODO: Change redirect to force
     else
       clean_up_passwords(resource)
-      render_with_scope :edit
+      if request.referrer.include? "admin"
+      # TODO: Fix reverting back to current settings: Also this is horrible monkey patch
+        session[:wtf] = resource.errors
+        redirect_to after_update_path_for(resource)
+      else
+        render_with_scope :edit
+      end
     end
   end
-  
+
   protected
   
   # def return_to_referrer
@@ -32,7 +38,7 @@ class RegistrationsController < Devise::RegistrationsController
     if !session[:return_to].nil?
       authentications_closewindow_path
     else   
-      dashboard_moderation_path
+      admin_registration_path
     end      
   end
   

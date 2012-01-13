@@ -1,4 +1,4 @@
-<% session.delete(:return_to) %>  
+<% session.delete(:return_to) %> 
 <!DOCTYPE html>
 <html>
 <head>
@@ -18,9 +18,24 @@
   <%= csrf_meta_tag %>
 </head>
 
-<body>
+<%= content_for?(:body) ? yield(:body) : raw("<body>") %>
+
   <!-- top spacer -->
-  <div class="top-spacer"></div>
+  <div class="top-spacer">  
+    <div>
+      <p>
+        <% if user_signed_in? %>
+          <%= current_user.email %>
+          <%= link_to "Sign out", destroy_user_session_path, :method => :delete %>
+        <% else %>
+          <%= link_to "Sign in", install_dashboard_path %>
+          <%= link_to "Sign in with Facebook", user_omniauth_authorize_path(:facebook) %>
+          <%= link_to "Sign in with Twitter", user_omniauth_authorize_path(:twitter) %>
+        <% end %>
+      </p>
+    </div>
+  </div>
+
   <!-- main container -->
   <div class="columns"> 
     <!-- header -->
@@ -31,13 +46,14 @@
     <div class="showborder" id="sidebar">
       <ul class="showborder" id="sidebar-menu">
         <li class="showborder">
-          <%= current_page?(administration_dashboard_path) ? link_to("Administration", administration_dashboard_path, :class => "bold") : link_to("Administration", administration_dashboard_path) %>
+          <%= current_page?(admin_registrations_path) ? link_to("Administration", admin_registrations_path, :class => "bold") : link_to("Administration", admin_registrations_path) %>
         </li>          
         <li class="showborder">
           <%= current_page?(admin_sites_path) ? link_to("Moderation", admin_sites_path, :class => "bold") : link_to("Moderation", admin_sites_path) %>
         </li>
         <li class="showborder">
-          <%= (current_page?(install_dashboard_path) || controller.action_name == "install") ? link_to("Install", install_dashboard_path, :class => "bold") : link_to("Install", install_dashboard_path) %>
+          <%= ( controller.action_name == "show" || controller.action_name == "install") ? link_to("Install", "/admin/sites/install", :class => "bold") : link_to("Install", "/admin/sites/install") %>
+          <%# TODO: this whole thing sucks, will cause massive problems  %>
           <div class="site-list">
             <% if user_signed_in? %>
               <% current_user.sites.each do |sites|  %>
@@ -52,7 +68,7 @@
         </li>
       </ul>
     </div>
-    
+  
     <!-- content -->
     <%= yield %>
     
@@ -63,41 +79,13 @@
     
   <div class="clear"></div>
   <div class="footer-bottom">
-    <div id="footer">
-       sdfsd
+    <div>
+      <div id="footer">
+           sdfsd
+      </div>
     </div>
   </div>   
   <div class="footer-bottom-bottom"></div>
-
-
-
-  <% if user_signed_in? %>
-    <%= current_user.email %>
-    <%= link_to "Sign out", destroy_user_session_path, :method => :delete %>
-  <% else %>
-    <%= link_to "Sign in", install_dashboard_path %>
-    <%= link_to "Sign in with Facebook", user_omniauth_authorize_path(:facebook) %>
-    <%= link_to "Sign in with Twitter", user_omniauth_authorize_path(:twitter) %>
-  <% end %>
-  <p class="notice"><%= notice %></p>
-  <p class="alert"><%= alert %></p>
-
-  <ul>
-    <li><%= current_page?(administration_dashboard_path) ? link_to("Administration", administration_dashboard_path, :class => "bold") : link_to("Administration", administration_dashboard_path) %></li>
-    <li><%= current_page?(moderation_dashboard_path) ? link_to("Moderation", moderation_dashboard_path, :class => "bold") : link_to("Moderation", moderation_dashboard_path) %></li>
-    <li>
-      <%= (current_page?(install_dashboard_path) || controller.controller_name == "sites") ? link_to("Install", install_dashboard_path, :class => "bold") : link_to("Install", install_dashboard_path) %></li>
-      <div id="sites">
-        <% if user_signed_in? %>
-          <% current_user.sites.each do |sites|  %>
-            <%= link_to_unless_current sites.name, site_path(sites.permalink) %>
-          <% end %>
-          <%= link_to "New", new_site_path %>
-        <% end %>
-      </div>
-
-    </li>
-  </ul>
 
 
 </body>

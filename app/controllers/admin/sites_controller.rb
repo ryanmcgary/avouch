@@ -2,6 +2,10 @@ class Admin::SitesController < ApplicationController
 	layout 'admin'
 	respond_to :js
 		
+	def show
+		
+	end
+		
 	def index
 		#@recordings = current_user.sites
 		#@recordings = Recording.get_user_sites_recordings(current_user.id).sortdesc#.call_completed

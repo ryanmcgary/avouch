@@ -11,7 +11,7 @@
   
   <%= csrf_meta_tag %>
 </head>
-<body>
+<%= content_for?(:body) ? yield(:body) : raw("<body>") %>
   <% if user_signed_in? %>
   <% else %>
     <%#= link_to "Sign in", authentications_closewindowprotected_path, :rel => "window800", :class => "auth_popup" id %>

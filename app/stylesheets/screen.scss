@@ -10,13 +10,16 @@
 html,body{
 	height:100%;
 	font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
-	// overflow: hidden;
-	// TODO: See if the above being switched to hidden breaks embed pages
+	#embeded{
+		overflow: hidden;	
+	}
 }
 
+
 // devise login/edit pages/forms
+#devise{background:#ebf4fb;}
 .devise{
-	background:#ebf4fb;
+	// background:#ebf4fb;
 	/* ----------- My Form ----------- */
 	.devise_form{
 		.spacer{clear:both; height:1px;}
@@ -63,6 +66,7 @@ html,body{
 	text-align:right;
 	width:140px;
 	float:left;
+	font-size: 16px;
 	}
 	#stylized .small{
 	color:#666666;
@@ -251,7 +255,7 @@ html,body{
 	    box-shadow: inset 0 1px 4px rgba(0,0,0, .16);
 	}
 	.left-bar {
-		margin:-4px 0px 0px 6px;
+		margin:-4px 0px 0px 2px;
 		color:grey;
 		font-size: 0.9em;
 	}

@@ -16,9 +16,11 @@ class ApplicationController < ActionController::Base
   
   def after_update_path_for(resource)
     if params[:layout] == "embed"
-      authentications_closewindowprotected_path
+      authentications_closewindowprotected_path  
+    elsif request.referrer.include? "admin"
+      admin_registrations_path
     else
-      install_dashboard_path 
+      edit_user_registration_path
     end 
   end
   
@@ -29,5 +31,6 @@ class ApplicationController < ActionController::Base
       install_dashboard_path 
     end
   end
+
   
 end

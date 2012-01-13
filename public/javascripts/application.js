@@ -17,6 +17,8 @@ $(document).ready(function() {
 	return false;
  });
 
- var as = audiojs.createAll();
- 
+});
+
+audiojs.events.ready(function() {
+    var as = audiojs.createAll();
 });

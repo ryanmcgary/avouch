@@ -1,14 +1,33 @@
 $(document).ready(function() {  
 	// change location of comment box
+				var $tog = "1"	
   $(".comment-location :checkbox").change(function() {
-			$('.container').toggleClass('top-bottom-display');
-			$('#var-review-bottom').toggle()
-			$("#blog-frame").contents().find(".container").toggleClass("top-bottom-display");
+			
+			if (!$tog){
+				console.log($tog)
+				var $tog = "1"
+				alert("hey")
+				console.log($tog)
+			}
+			else
+			{
+				
+			}
+			
+				// var wtf = $("#blog-frame").contents().find("#iavouch_mast");
+	  			// var iavow = $("#blog-frame").contents().find("#iavouch");
+	  			// $(wtf).remove();
+				// $(wtf).clone().prependTo(iavow); //appendTo prependTo	
+				// var tog = "1";		
+
+				
+
+			
   });  
 	// toggle between banner and blog style
   $(".comment-style :checkbox").change(function() {
 			$('.blog-style-embed').toggle();  
-		  $('.banner-style-embed').toggle(); 
+			$('.banner-style-embed').toggle(); 
 			$('.comment-location').toggle();
 			$('.var-embed-type').toggle();
 			
@@ -27,7 +46,8 @@ $(document).ready(function() {
 		$("#blog-frame").contents().find('.comments').width(widget_width);
 		$("#blog-frame").contents().find('.comments .comments-header').width(widget_width);
 		$("#blog-frame").contents().find('.comments .review-each').width(widget_width - 78);
-
+		$("#blog-frame").contents().find('#coolframe').width(widget_width);
+		
 		// change banner size
 		$("#banner-frame").contents().find('.audiojs').width(widget_width - 82);  
 	  	$("#banner-frame").contents().find('.audiojs .loaded').width(widget_width - 232);  
@@ -36,9 +56,10 @@ $(document).ready(function() {
 	  	$("#banner-frame").contents().find('.iavouch-scroll-container').width(widget_width); 
 	  	$("#banner-frame").contents().find('.iavouch-scroll-container div.iavouch-comment-container').width(widget_width + 18); 
 	  	$("#banner-frame").contents().find('.short-text').width(widget_width - 167); 
+	  	$("#banner-frame").contents().find('#navtoreview').css('padding-left', widget_width - 105);
 	  	$("#banner-frame").contents().find('.iavouch-review-details').width(widget_width - 82); 
 	  	$("#banner-frame").contents().find('.optional-text').width(widget_width - 62);                                          
-		$("#banner-frame").contents().find('#leaveareview-frame').width(widget_width);
+		$("#banner-frame").contents().find('#coolframe').width(widget_width);
 	});                                                                             
 
   $(function() {
@@ -66,15 +87,15 @@ $(document).ready(function() {
               // Here, we've scrolled past the original top of the nav
               nav.css({
                   "position": "fixed",
-                  "margin-top": buffer + -78 + "px"     // need 7 px for body border-top
+                  "margin-top": buffer + -88 + "px"     // need 7 px for body border-top
               });
-              $("#main-content").css("padding-left", 240);
+              // $("#main-content").css("padding-left", 240);
           } else {
               nav.css({
                   "position": "relative",
                   "margin-top": original_margin_top
               });
-              $("#main-content").css("padding-left", 0);    
+              // $("#main-content").css("padding-left", 0);    
           }
       });
 

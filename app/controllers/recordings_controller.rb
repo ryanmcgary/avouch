@@ -113,7 +113,7 @@ class RecordingsController < ApplicationController
 
       if params[:CallStatus] == "completed" then  
         @phonecall = Recording.where(:call_id => params[:CallSid]).first
-        @phonecall.update_attributes(:callcompleted => '1') 
+        @phonecall.update_attributes(:callcompleted => true) 
         redirect_to :action => "editrecording"
       end
       

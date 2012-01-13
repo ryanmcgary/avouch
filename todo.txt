@@ -70,21 +70,31 @@ x namespace:admin just start with site
 		x publish/unpublish
 		
 	x admin/site/thelma/install = install
+? option 1:
+	? render form ?layout=admin, render back to self
+	? possibly just use a stored_location
+x option 2: ! GOT THIS WORKING, mostly
+	x get errors to work without resorting to render_with_scope
 
-	! admin/user/edit = administration
-		in view also have form linking
+	x admin/user/edit = administration
+		x in view also have form linking
 	
-	get banner/blog embed working
+	! get banner/blog embed working
+		x banner
+		- blog
+			just need top/bottom to work
+	x figure out where to link install to
 		
 - create dashboard
-	- create install page / install
-		- copy css
-		- copy html
+	x create install page / install
+		x copy css
+		x copy html
+		- get banner/blog working
 	- moderation
-		- view all recordings by site/remoteurl
-		- publish/unpublish recordings
+		x view all recordings by site/remoteurl
+		x publish/unpublish recordings
 		- create virtual remoteurls (tag based)
-		- list sites
+		x list sites
 	- admin
 		- update profile
 		- upgrade account
