@@ -43,7 +43,7 @@
 	  	</div>
 	<% end %>
 <% elsif %>
-	<% if recording.call_completed? %>
+	<% if !recording.audio_file.nil? %>
 		<div class="recording-divider">
 			<div class="clear"></div> 
 			<%= link_to approve_link_text(recording), toggle_approve_admin_site_path(recording.recordid), :remote => true, :id => "approve_link_#{recording.recordid}", :class => "approve-toggle-link" %> 
