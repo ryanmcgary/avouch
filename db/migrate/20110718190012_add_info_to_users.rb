@@ -2,7 +2,7 @@ class AddInfoToUsers < ActiveRecord::Migration
   def self.up
     add_column :users, :profile_pic, :string
     add_column :users, :company, :string
-    add_column :users, :phone_number, :integer, :limit => 10
+    add_column :users, :phone_number, :bigint
     add_column :users, :title, :string
     add_column :users, :description, :text
     add_column :users, :location, :string
