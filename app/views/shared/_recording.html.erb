@@ -43,31 +43,32 @@
 	  	</div>
 	<% end %>
 <% elsif %>
-	<div class="recording-divider">
-		<div class="clear"></div> 
-		<%= link_to approve_link_text(recording), toggle_approve_admin_site_path(recording.recordid), :remote => true, :id => "approve_link_#{recording.recordid}", :class => "approve-toggle-link" %> 
-		<div class="clear"></div> 
-	  <div class="comments-each">
-	    <table class="review-container">
-	      <tr>
-	        <td width="64 !important">       <%# # TODO: delete this line and handle in DB  %>
-	          <img class="profile_pic" src="<%= recording.profile_pic.nil? ? "/images/blankprofilepic.png" : recording.profile_pic %>" width="54 !important" height="54 !important"> 
-	        </td>
-	        <td class="table-rightside">
-	          <p><%= recording.full_name %> / <%= recording.title %>  @ <%= recording.company %> </p>                        
-	          <div class="review-each">
-	           <audio src="<%= recording.audio_file + ".mp3" %>" preload="none"></audio>                
-	           <div class="review-left">posted <%= time_ago_in_words(recording.created_at) %> ago. <%= recording.recordid %> </div>
-	           <div class="review-right"><b class="bold toggle">site:<%= recording.site_permalink %> <%= recording.site_id %> link:<%= recording.permalink %> </b></div>
-	           <div class="clear"></div>
-	           <div class="trans">   
-	           <%= recording.synopsis.empty? ? recording.transcription : recording.synopsis %>
-	           </div>
-	          </div>
-	      </tr>
-	    </table>  
-	  </div>
-	</div>
-
+	<% if recording.call_completed? %>
+		<div class="recording-divider">
+			<div class="clear"></div> 
+			<%= link_to approve_link_text(recording), toggle_approve_admin_site_path(recording.recordid), :remote => true, :id => "approve_link_#{recording.recordid}", :class => "approve-toggle-link" %> 
+			<div class="clear"></div> 
+		  <div class="comments-each">
+		    <table class="review-container">
+		      <tr>
+		        <td width="64 !important">       <%# # TODO: delete this line and handle in DB  %>
+		          <img class="profile_pic" src="<%= recording.profile_pic.nil? ? "/images/blankprofilepic.png" : recording.profile_pic %>" width="54 !important" height="54 !important"> 
+		        </td>
+		        <td class="table-rightside">
+		          <p><%= recording.full_name %> / <%= recording.title %>  @ <%= recording.company %> </p>                        
+		          <div class="review-each">
+		           <audio src="<%= recording.audio_file + ".mp3" %>" preload="none"></audio>                
+		           <div class="review-left">posted <%= time_ago_in_words(recording.created_at) %> ago. <%= recording.recordid %> </div>
+		           <div class="review-right"><b class="bold toggle">site:<%= recording.site_permalink %> <%= recording.site_id %> link:<%= recording.permalink %> </b></div>
+		           <div class="clear"></div>
+		           <div class="trans">   
+		           <%= recording.synopsis.empty? ? recording.transcription : recording.synopsis %>
+		           </div>
+		          </div>
+		      </tr>
+		    </table>  
+		  </div>
+		</div>
+	<% end %>
 	
 <% end %>
