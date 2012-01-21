@@ -97,7 +97,7 @@ class RecordingsController < ApplicationController
       @record = BASE_URL + '/record.xml' #Sets GOTO url when there is a timeout from silence  
       
       if params['Digits'] == '9'
-          redirect_to :action => 'hangup'
+          redirect_to :action => 'hangup', :format => 'xml'
           return
       end
       
@@ -113,8 +113,8 @@ class RecordingsController < ApplicationController
 
       if params[:CallStatus] == "completed" then  
         @phonecall = Recording.where(:call_id => params[:CallSid]).first
-        @phonecall.update_attributes(:callcompleted => true) 
-        redirect_to :action => "editrecording"
+        @phonecall.update_attributes(:call_completed => true) 
+        redirect_to :action => "editrecording", :format => 'xml' 
       end
       
       respond_to do |format|
