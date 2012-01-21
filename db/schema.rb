@@ -38,7 +38,7 @@ ActiveRecord::Schema.define(:version => 20110721233054) do
   create_table "remoteurls", :force => true do |t|
     t.integer  "site_id"
     t.string   "permalink"
-    t.string   "content"
+    t.string   "name"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -47,7 +47,7 @@ ActiveRecord::Schema.define(:version => 20110721233054) do
 
   create_table "sites", :force => true do |t|
     t.integer  "user_id"
-    t.string   "url"
+    t.string   "name"
     t.string   "permalink"
     t.datetime "created_at"
     t.datetime "updated_at"
@@ -76,7 +76,7 @@ ActiveRecord::Schema.define(:version => 20110721233054) do
     t.datetime "updated_at"
     t.string   "profile_pic"
     t.string   "company"
-    t.integer  "phone_number"
+    t.integer  "phone_number", :limit => 8
     t.string   "title"
     t.text     "description"
     t.string   "location"
