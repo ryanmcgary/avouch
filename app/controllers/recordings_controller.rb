@@ -9,7 +9,7 @@ ACCOUNT_TOKEN = '64e5c64955c6b9e1d68f0a9f58b0944b'
 API_VERSION = '2010-04-01'
 
 # base URL of this application
-BASE_URL = "http://growing-mist-751.heroku.com/recordings"
+BASE_URL = "http://stormy-winter-617.heroku.com/recordings"
 # BASE_URL = "http://localhost:3000/recordings"  
 
 # Outgoing Caller ID you have previously validated with Twilio
