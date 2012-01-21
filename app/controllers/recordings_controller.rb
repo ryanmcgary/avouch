@@ -88,7 +88,7 @@ class RecordingsController < ApplicationController
       if params[:RecordingUrl] != nil then  
         @phonecall = Recording.where(:call_id => params[:CallSid]).first
         @phonecall.update_attributes(:audio_file => params[:RecordingUrl]) 
-        redirect_to :action => "editrecording" 
+        redirect_to :action => "editrecording", :format => 'xml'
       end                    
     end
     
