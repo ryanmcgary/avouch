@@ -20,20 +20,9 @@ x create views:
   x remoteurl
   x site
 x update routes 
-create variable vouch.content1 if content1 already exists iterate until undefined
-	create vouch.content1.layout_n
-						  ifrm
-						  iavouch2 // or 3 from lanyard	
-create vouch.content2
-	create vouch.content2.
-						  layout_n
-						  ifrm
-						  iavouch2 // or 3 from lanyard
-						  width
-							Jquery alter content width		
 	
 
-% Get slider working
+x Get slider working
 	x Import HTML from slider.html into full_lanyard
 	x easy/quick solution: Create same or seperate embed.js, link different _full_lanyard(or if/else) with alt SCSS layout
 	x Integrate Slider JS files into _embed.js
@@ -46,7 +35,6 @@ create vouch.content2
 	x unified clear file
 	x width for slider currently requires var widget_width & div manual width to be set. fix this.
 	x finish slider, add markup to pull from DB
-		? it would be better if creation of remoteurl occurs in embed before JS is called.
 		x Make sure new remoteurl doesn't break banner version, also redirect of iframe needs to link to correct url
 	
 
@@ -54,14 +42,13 @@ x make remoteurl/show to only show login links/popups if not loggedin
 	x Mostly there. Add support for blog style and make multiple buttons
 		x seperate layout for blog vs banner login buttons
 		x finish PSD
-		? make larger buttons for wide embeds
+
 		x Avouch identifier/link in top right
 
 
 x create devise layout / css
 	x edit settings form
 	x new user form
-	? authentications in edit "settings"
 x namespace:admin just start with site
 	x admin/sites#index = moderation > @current_user.sites.recordings each do
 		x list site
@@ -70,41 +57,62 @@ x namespace:admin just start with site
 		x publish/unpublish
 		
 	x admin/site/thelma/install = install
-? option 1:
-	? render form ?layout=admin, render back to self
-	? possibly just use a stored_location
+
 x option 2: ! GOT THIS WORKING, mostly
 	x get errors to work without resorting to render_with_scope
 
 	x admin/user/edit = administration
 		x in view also have form linking
 	
-	! get banner/blog embed working
+	x get banner/blog embed working
 		x banner
-		- blog
-			just need top/bottom to work
+		x blog
+		x	just need top/bottom to work
 	x figure out where to link install to
 		
-- create dashboard
+x create dashboard
 	x create install page / install
 		x copy css
 		x copy html
-		- get banner/blog working
-	- moderation
+		x get banner/blog working
+	x moderation
 		x view all recordings by site/remoteurl
 		x publish/unpublish recordings
-		- create virtual remoteurls (tag based)
+		x create virtual remoteurls (tag based)
 		x list sites
-	- admin
-		- update profile
-		- upgrade account
-		- add direct call
-	- create link from home (that requires login)
-- create homepage
-- Make sure that uniqueness (sitename,user,etc.)is set on DB
-? create drop down menu from "powered by iAvouch"
+	x admin
+		x update profile
+
+x double check validations
+x double check login permissions (add them to admin)
+x make sure code created at install page is correct
+	x top/bottom not doing anything
+	x now using simplified embed
+	x jquery code... eh
+x Make sure you can't delete user acounts
+x view for moderation if no recordings/sites
+x Make sure that uniqueness (sitename,user,etc.)is set on DB
+x admin/site/new
+x weird error where failed site is show until refresh?
+
+! create homepage
+
+- add delete site?
+
+? make new site error form behave like user/edit form
+? Do I want to add notices to admin area?
+- For Moderation: create virtual remoteurls (adding tag based system)
+? auto iterate site name cnn.com created a second time would yield cnn.com2
+? it would be better if creation of remoteurl occurs in controller/embed before JS is called or on submit.
+? Add more / authentications in edit "settings"
+? TODO: Use session helper on remoteurl/show to redirect back to originating url including variables 
+	- I think just adding <% session.delete(:return_to) %> to the create account form should be enough. Currently this is a rare issue.
+
 ? Jquery loading
 	- http://stackoverflow.com/questions/5187451/how-to-determine-if-jquery-is-running-on-a-page-even-if-jquery-is-after-the-d
+? upgrade account
+? add direct call
+? can I do routes based on embed type as a get: member or should I stick with a partial?
 
 Launch! (keep caching issues in mind)
 or 
@@ -115,11 +123,16 @@ Revamp these:
 	- load css into head using _embed.js instead of rendering _everything_css from _lanyard
 
 Maybe's & Possible required fixes
-? replacing Jquery / compatibility mode
+? will need to add devise "soft delete"
+? replacing Jquery OR compatibility mode / Would need:
+	- resize class/id's
+	- get script
+	- popup window OR modal window
+	- toggle visibility (maybe)
+	- slider
 ? Shared html structure
-? use delegate on _recording?
 ? <%= render :partial => "link_area", :layout => "graybar" %>?
-? todo: Use session helper on remoteurl/show to redirect back to originating url including variables
+
 
 
 Investigate crossdomain goodies
@@ -129,10 +142,15 @@ Avouch 2.0
 	! Users given their own free profile page
 	! after first phone call change recording system to allow review from computer
 	! ? multi part/question review script instead of freeform text box
+		? RAILSCAST private-pub for question by question audion form
+	
+	? make larger buttons for wide embeds
 
 SCRATCH PAD
 --------------------
-
+? Way to encrypt phone numbers?
+? Validation: Strip phone number
+? create drop down menu from "powered by iAvouch"
 ? redirect to specific page after login: https://github.com/plataformatec/devise/wiki/How-To:-Redirect-to-a-specific-page-on-successful-sign-in
 ? auto generate password: https://github.com/plataformatec/devise/wiki/How-To:-Automatically-generate-password-for-users-(simpler-registration)
 ? direct auto login url: http://zyphmartin.com/blog/simple-auth-token-example-with-devise 

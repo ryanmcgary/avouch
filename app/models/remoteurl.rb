@@ -1,6 +1,6 @@
 class Remoteurl < ActiveRecord::Base
   belongs_to :site
-  has_many :recordings
+  has_many :recordings, :dependent => :destroy
   
   before_validation :create_permalink
   

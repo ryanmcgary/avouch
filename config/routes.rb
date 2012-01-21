@@ -1,15 +1,17 @@
 Avouch::Application.routes.draw do
 
-  resource :dashboard do
-    member do
-      get :install
-      get :moderation
-      get :administration
-    end
-  end
-
+  # resource :dashboard do
+  #   member do
+  #     get :install
+  #     get :moderation
+  #     get :administration
+  #   end
+  # end
+  
+  
   namespace :admin do |admin|
-    resources :sites do
+    match '/sites/install' => 'sites#show' 
+    resources :sites, :except => [:show] do
         get 'toggle_approve', :on => :member 
         get :install
     end

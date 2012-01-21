@@ -1,7 +1,7 @@
 class User < ActiveRecord::Base
   has_many :authentications, :foreign_key => "user_id", :dependent => :destroy
   has_many :recordings
-  has_many :sites
+  has_many :sites, :dependent => :destroy
   has_many :remoteurls, :through => :sites
   # has_many :arecordings, :through => :remoteurls, :source => :recordings
                                 
@@ -24,6 +24,7 @@ class User < ActiveRecord::Base
   validates_presence_of :phone_number, :message => "can't be blank"
   validates_length_of :phone_number, :within => 10..10, :message => "must be 10 digits"
   validates_format_of :phone_number, :with => /^[\d]+$/, :message => "must be digits only" 
+  validates_uniqueness_of :phone_number, :on => :create, :message => "that number already taken"
   
   def apply_omniauth(omniauth)
     # TODO: set a default profile pic if user_info.image doesn't exist

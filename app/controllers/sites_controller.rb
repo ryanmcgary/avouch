@@ -1,5 +1,5 @@
 class SitesController < ApplicationController
-  before_filter :authenticate_user!, :except => [:show, :index]
+  before_filter :authenticate_user!, :except => [:show]
   # GET /sites
   # GET /sites.xml
   def index
@@ -86,7 +86,7 @@ class SitesController < ApplicationController
     @site.destroy
 
     respond_to do |format|
-      format.html { redirect_to(sites_url) }
+      format.html { redirect_to(admin_sites_url) }
       format.xml  { head :ok }
     end
   end

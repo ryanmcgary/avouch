@@ -1,5 +1,5 @@
 class AuthenticationsController < ApplicationController
-  before_filter :authenticate_user!, :only => [:closewindowprotected]   
+  before_filter :authenticate_user!, :only => [:closewindowprotected, :index, :destroy]   
   
   def index
     @authentications = current_user.authentications if current_user

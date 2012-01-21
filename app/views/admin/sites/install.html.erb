@@ -30,28 +30,47 @@
       <p><b>Note: </b>Every remoteurl_id must be unique when before pasting this into a webpage.</p>
       <div class="showborder" id="embed-code-container">
         <pre id="embed-code">
-          &lt;div id='iavouch_3' class=&quot;iavouch_3_reset&quot; style=&quot;color:black;&quot;&gt;&lt;div id='iavouch_content_3'&gt;&lt;/div&gt;&lt;/div&gt;
-          &lt;script type='text/javascript'&gt;
+          &lt;div id='iavouch' class=&quot;iavouch_3_reset&quot; style=&quot;color:black;&quot;&gt;
+          &lt;script id=&quot;vouch-script&quot; type='text/javascript'&gt;
 
-                /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
-                var remoteurl_id = '<b style="font-weight:600;">remoteurl_id</b>'; // required: replace "remoteurl_id" with a unique identifier for each page  
-                var site_id = 'test';
-                var version_n = '3';
-                var embed_type = '<span class="var-embed-type">embed</span><span class="var-embed-type" style="display:none;">banner-embed</span>';
-                var layout_type = '&amp;layout=embed'; 
-                var widget_width = '<span id="var-review-width">450</span>';
-                <span id="var-review-bottom" style="display:none;">var add_review_bottom = '1';</span>
-                
-                 /* * * DON'T EDIT BELOW THIS LINE * * */
-                 document.getElementById('iavouch_content_3').style.visibility = 'hidden';
-                 window.onload = function()       
-                 {var s = document.createElement('script');
-                 s.type = 'text/javascript';  
-                 s.async = true; 
-                 s.src = 'http://localhost:3000/sites/7/lanyard/' + embed_type + '?v=3&amp;remoteurl='+ remoteurl_id + layout_type;
-                 var x = document.getElementsByTagName('script')[0];          
-                 x.parentNode.insertBefore(s, x);}
+          /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+          var remoteurl_id = '<b style="font-weight:600;">replace this with unique name</b>'; // required: replace "remoteurl_id" with a unique identifier for each page  
+          var site_id = '<%= params[:site_id] %>';
+          var version = '<span class="var-embed-type">1</span><span class="var-embed-type" style="display:none;">2</span>';   
+          var widget_width = '<span id="var-review-width">450</span>';
+          <span id="var-review-bottom" style="display:none;">var add_review_bottom = '1';</span>
+
+          /* * * DON'T EDIT BELOW THIS LINE * * */
+          (function() {
+          var vjq = document.createElement('script');
+          vjq.type = 'text/javascript';
+          vjq.async = false;  
+          vjq.src = 'http://localhost:3000/javascripts/jquery.js';
+          (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(vjq);
+          })();
+          var scpt = document.getElementById( "vouch-script" );
+          var vouch_content = scpt.parentNode;
+          scpt.style.visibility = 'hidden';
+          (function() {
+          var s = document.createElement('script'); 
+          s.type = 'text/javascript';
+          s.async = true; 
+          s.src = 'http://localhost:3000/sites/7/lanyard/embed?v=' + version + '&amp;remoteurl='+ remoteurl_id; 
+          (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(s);
+          })();
           &lt;/script&gt;
+          &lt;/div&gt;
       </pre>
       </div> 
+
+
+
+
+
+
+
+
+
+
+
     </div>

@@ -18,7 +18,7 @@
       <!-- <p>John Carter / President @ Planet Mars</p>                         -->
       
       <div class="optional-text">
-          <% form_for("recording", :url => recordings_makecall_path, :html => { :class => "edit_user" } ) do |f| -%>
+          <%= form_for("recording", :url => recordings_makecall_path, :html => { :class => "edit_user" } ) do |f| %>
           	<%= f.hidden_field :remoteurl_id, :value => @remoteurl.id  %>
             <div class="text-area">
             	<%= f.text_area :synopsis, :class => "short-text" %>

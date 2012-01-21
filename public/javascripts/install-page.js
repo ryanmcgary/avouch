@@ -1,36 +1,36 @@
 $(document).ready(function() {  
 	// change location of comment box
-				var $tog = "1"	
-  $(".comment-location :checkbox").change(function() {
-			
-			if (!$tog){
-				console.log($tog)
-				var $tog = "1"
-				alert("hey")
-				console.log($tog)
-			}
-			else
-			{
-				
-			}
-			
-				// var wtf = $("#blog-frame").contents().find("#iavouch_mast");
-	  			// var iavow = $("#blog-frame").contents().find("#iavouch");
-	  			// $(wtf).remove();
-				// $(wtf).clone().prependTo(iavow); //appendTo prependTo	
-				// var tog = "1";		
+	
 
-				
+// oh gosh this was a pain
+	$(".comment-location :checkbox").change(function() {
+		var jones = $(this).data('count', 1 + ( $(this).data('count') || 0 ) );
+		var wtf = $("#blog-frame").contents().find("#iavouch_mast");
+		var iavow = $("#blog-frame").contents().find("#iavouch");
+		$('#var-review-bottom').toggle();
+		if($(this).data('count') % 2 == 0){
+			$(wtf).remove();
+			$(wtf).clone().appendTo(iavow); //appendTo prependTo	
+		}
+		else{
+			$(wtf).remove();
+			$(wtf).clone().prependTo(iavow); //appendTo prependTo	
+		}
+	});  
 
-			
-  });  
 	// toggle between banner and blog style
   $(".comment-style :checkbox").change(function() {
 			$('.blog-style-embed').toggle();  
 			$('.banner-style-embed').toggle(); 
 			$('.comment-location').toggle();
 			$('.var-embed-type').toggle();
-			
+			// $('#var-review-bottom').hide();
+			if ( !$('input[id=toggle-top-bottom]').is(':checked') ) {
+				$('#toggle-top-bottom').trigger('click'); 
+			};
+			// $('#toggle-top-bottom').trigger('click');  
+			// $('input[id=toggle-top-bottom]').attr('checked', false);
+			// window.alert($('input[id=toggle-top-bottom]').is(':checked'));
   });
 	// change width of banner and blog elements
 	$("#pixel-width").focusout(function(){
