@@ -32,5 +32,15 @@ class ApplicationController < ActionController::Base
     end
   end
 
+    protected
+
+  def after_sign_up_path_for(resource)
+    if request.referrer.include? "remoteurls"
+      authentications_closewindow_path
+    else
+      admin_sites_path 
+    end
+  end
+
   
 end
