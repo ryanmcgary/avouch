@@ -4,7 +4,7 @@ class Recording < ActiveRecord::Base
   belongs_to :remoteurl
   belongs_to :user
 
-  scope :call_completed, where(:call_completed => true)
+  scope :call_completed, :conditions => [ 'audio_file != ""' ]
   scope :sortdesc, :order => "recordings.created_at DESC"
   scope :sites_id, lambda { |price| where("site_id = ?", price) }
   scope :groupen, group("site_id")
