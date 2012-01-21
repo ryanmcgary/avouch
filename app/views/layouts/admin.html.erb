@@ -55,7 +55,7 @@
           <%= ( controller.action_name == "show" || controller.action_name == "install") ? link_to("Install", "/admin/sites/install", :class => "bold") : link_to("Install", "/admin/sites/install") %>
           <%# TODO: this whole thing sucks, will cause massive problems  %>
           <div class="site-list">
-            <% if user_signed_in? %>
+            <% if user_signed_in? && !current_user.sites.nil? %>
               <% current_user.sites(:new_record => 'false').each do |sites|  %>
                 <%= link_to_unless_current sites.name, admin_site_install_path(sites.permalink) do |name|
                     content_tag(:p, "#{name}")
