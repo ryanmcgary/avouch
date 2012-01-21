@@ -7,7 +7,7 @@ document.getElementById('iavouch_content_<%= params[:v] %>').style.visibility = 
 
 // create iframe for adding new review
 var ifrm = document.createElement("IFRAME");
-ifrm.setAttribute('src', 'http://localhost:3000/sites/' + site_id + '/remoteurls/'+ remoteurl_id +'?' + layout_type);
+ifrm.setAttribute('src', 'http://stormy-winter-617.heroku.com/sites/' + site_id + '/remoteurls/'+ remoteurl_id +'?' + layout_type);
 ifrm.style.width = 100+"%";   
 ifrm.style.width = widget_width + "px";   
 ifrm.style.height = "183px";
@@ -44,13 +44,13 @@ function include(file)
       // gets window popup plugin 1. sets window settings, 2. links class name, 3. setunload callback
 
 			
-			// $.get('http://localhost:3000/sites/' + site_id + '/remoteurls/'+ remoteurl_id +'/reviews?' + layout_type, function(data) {
+			// $.get('http://stormy-winter-617.heroku.com/sites/' + site_id + '/remoteurls/'+ remoteurl_id +'/reviews?' + layout_type, function(data) {
 			// $('#sw_content_3').html(data);
 			// // alert('Load was performed.' + data);
 			// });         
 
 
-			$.getScript('http://localhost:3000/audiojs/audio.js', function() 
+			$.getScript('http://stormy-winter-617.heroku.com/audiojs/audio.js', function() 
 			{
 			  var as = audiojs.createAll();
 			  $('.audiojs').width(widget_width - 78);  
@@ -59,7 +59,7 @@ function include(file)
 			});   
 			
 			
-			$.getScript('http://localhost:3000/javascripts/jquery.popupwindow.js', function() 
+			$.getScript('http://stormy-winter-617.heroku.com/javascripts/jquery.popupwindow.js', function() 
 			{
 				var profiles = {window800:{height:400,width:400,center:1,status:1,onUnload:unloadcallback}};
 				$(function(){$(".toggle-button").popupwindow(profiles);});
