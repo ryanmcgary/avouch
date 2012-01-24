@@ -99,6 +99,10 @@ x weird error where failed site is show until refresh?
 
 ! share and like links should work
 ! Direct login links not redirecting after sign_in correctly
+javascript include tag audio/js?
+make frame and frame2 ERB
+
+https?
 - find alternative dashboard design?
 - add delete site?
 	- under admin perhapse
@@ -113,7 +117,7 @@ Add direct call
 	- payment/credit system?
 		- model: credits belongs to users add/spend
 		- model: call user controller/views
-https?
+
 
 
 
