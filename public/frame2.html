@@ -18,7 +18,7 @@
 			  	var vjq = document.createElement('script'); // creates 'var s' for addtional elements to be tagged to and creates html tag <script>
 				vjq.type = 'text/javascript';	// sets script type to javascript 
 				vjq.async = false;	// sets script as asynchrounus		
-	    		vjq.src = '<%= root_url %>javascripts/jquery.js';	// sets URL source of javascript		
+	    		vjq.src = 'http://stormy-winter-617.heroku.com/javascripts/jquery.js';	// sets URL source of javascript		
 				(document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(vjq);
 			})();
 
@@ -32,7 +32,7 @@
 			  	var s = document.createElement('script'); // creates 'var s' for addtional elements to be tagged to and creates html tag <script>
 				s.type = 'text/javascript';	// sets script type to javascript 
 				s.async = true;	// sets script as asynchrounus		
-	    		s.src = '<%= root_url %>sites/7/lanyard/embed?v=' + version + '&remoteurl='+ remoteurl_id;	// sets URL source of javascript		
+	    		s.src = 'http://stormy-winter-617.heroku.com/sites/7/lanyard/embed?v=' + version + '&remoteurl='+ remoteurl_id;	// sets URL source of javascript		
 				(document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(s);
 			})();
 		</script>
