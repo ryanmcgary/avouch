@@ -51,7 +51,7 @@
 					// });         
 
 
-					$.getScript('http://stormy-winter-617.heroku.com/audiojs/audio.js', function() 
+					$.getScript("<%= root_url %>" + 'audiojs/audio.js', function() 
 					{
 					  var as = audiojs.createAll();
 					  $('.audiojs').width(widget_width - 78);  
@@ -60,7 +60,7 @@
 					});   
 					
 					
-					$.getScript('http://stormy-winter-617.heroku.com/javascripts/jquery.popupwindow.js', function() 
+					$.getScript("<%= root_url %>" + 'javascripts/jquery.popupwindow.js', function() 
 					{
 						var profiles = {window800:{height:400,width:400,center:1,status:1,onUnload:unloadcallback}};
 						$(function(){$(".toggle-button").popupwindow(profiles);});
@@ -109,7 +109,7 @@
 	$(document).ready(function() {
 		
 		var ifrm = document.createElement("IFRAME");
-		ifrm.setAttribute('src', 'http://stormy-winter-617.heroku.com/' + site_id + '/remoteurls/'+ remoteurl_id + '?layout=' + version);
+		ifrm.setAttribute('src', "<%= sites_url %>/" + site_id + '/remoteurls/'+ remoteurl_id + '?layout=' + version);
 		ifrm.style.width = 100+"%";   
 		ifrm.style.width = widget_width + "px";   
 		ifrm.style.height = "73px";
@@ -144,7 +144,7 @@
 		};
 		
 		// call audiojs
-		$.getScript('http://stormy-winter-617.heroku.com/audiojs/audio.slider.js', function() 
+		$.getScript("<%= root_url %>" + 'audiojs/audio.slider.js', function() 
 		{
 			var as = audiojs.createAll();  
 			var mydiv = $("#iavouch-container"); 
@@ -161,7 +161,7 @@
 		});   
 		
 		// not sure if this is needed for slider, probably not 
-		$.getScript('http://stormy-winter-617.heroku.com/javascripts/jquery.popupwindow.js', function() 
+		$.getScript("<%= root_url %>" + 'javascripts/jquery.popupwindow.js', function() 
 		{
 			var profiles = {window800:{height:400,width:400,center:1,status:1,onUnload:unloadcallback}};
 			$(function(){$(".vouch-popup").popupwindow(profiles);});
@@ -171,11 +171,11 @@
 		});
 
 		//  call scripts for slider
-		$.getScript('http://stormy-winter-617.heroku.com/javascripts/jquery.scrollTo-min.js', function() 
+		$.getScript("<%= root_url %>" + 'javascripts/jquery.scrollTo-min.js', function() 
 		{
-			$.getScript('http://stormy-winter-617.heroku.com/javascripts/jquery.localscroll-min.js', function() 
+			$.getScript("<%= root_url %>" + 'javascripts/jquery.localscroll-min.js', function() 
 			{
-				$.getScript('http://stormy-winter-617.heroku.com/javascripts/jquery.serialScroll-min.js', function() 
+				$.getScript("<%= root_url %>" + 'javascripts/jquery.serialScroll-min.js', function() 
 				{
 					// when the DOM is ready...
 					$(document).ready(function () {
