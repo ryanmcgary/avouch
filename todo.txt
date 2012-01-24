@@ -97,21 +97,39 @@ x weird error where failed site is show until refresh?
 
 ! create homepage
 
-- add delete site?
+! share and like links should work
 
-? make new site error form behave like user/edit form
+- find alternative dashboard design?
+- add delete site?
+	- under admin perhapse
+Give user direct recordings
+	- add for_user column to recordings model/table	
+		- will that break thing currently displaying for sites? prob not
+	- add claimable recordings via E-mail
+	- add user recordings embed
+	- what would view look like?
+Add direct call
+	- click on user to initiate call
+	- payment/credit system?
+		- model: credits belongs to users add/spend
+		- model: call user controller/views
+https?
+
+
+
+
+
+? it would be better if creation of remoteurl occurs in controller/embed before JS is called or on submit.
 ? Do I want to add notices to admin area?
 - For Moderation: create virtual remoteurls (adding tag based system)
 ? auto iterate site name cnn.com created a second time would yield cnn.com2
-? it would be better if creation of remoteurl occurs in controller/embed before JS is called or on submit.
-? Add more / authentications in edit "settings"
-? TODO: Use session helper on remoteurl/show to redirect back to originating url including variables 
-	- I think just adding <% session.delete(:return_to) %> to the create account form should be enough. Currently this is a rare issue.
+? Add additional / authentications in edit "settings"
+
 
 ? Jquery loading
 	- http://stackoverflow.com/questions/5187451/how-to-determine-if-jquery-is-running-on-a-page-even-if-jquery-is-after-the-d
 ? upgrade account
-? add direct call
+
 ? can I do routes based on embed type as a get: member or should I stick with a partial?
 
 Launch! (keep caching issues in mind)
@@ -123,6 +141,9 @@ Revamp these:
 	- load css into head using _embed.js instead of rendering _everything_css from _lanyard
 
 Maybe's & Possible required fixes
+? TODO: Use session helper on remoteurl/show to redirect back to originating url including variables 
+	- I think just adding <% session.delete(:return_to) %> to the create account form should be enough. Currently this is a rare issue.
+? make new site error form behave like user/edit form
 ? will need to add devise "soft delete"
 ? replacing Jquery OR compatibility mode / Would need:
 	- resize class/id's
