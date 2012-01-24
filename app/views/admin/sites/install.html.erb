@@ -1,5 +1,3 @@
- <%= root_url %>
-
     <div class="showborder" id="main-content">
       <h2>Universal Install Code</h2>
       <h3>Step 1: Configure</h3>
@@ -47,7 +45,7 @@
           var vjq = document.createElement('script');
           vjq.type = 'text/javascript';
           vjq.async = false;  
-          vjq.src = 'http://stormy-winter-617.heroku.com/javascripts/jquery.js';
+          vjq.src = '<%= root_url %>javascripts/jquery.js';
           (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(vjq);
           })();
           var scpt = document.getElementById( "vouch-script" );
@@ -57,7 +55,7 @@
           var s = document.createElement('script'); 
           s.type = 'text/javascript';
           s.async = true; 
-          s.src = 'http://stormy-winter-617.heroku.com/sites/7/lanyard/embed?v=' + version + '&amp;remoteurl='+ remoteurl_id; 
+          s.src = '<%= root_url %>sites/7/lanyard/embed?v=' + version + '&amp;remoteurl='+ remoteurl_id; 
           (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(s);
           })();
           &lt;/script&gt;

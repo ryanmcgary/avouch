@@ -98,7 +98,7 @@ x weird error where failed site is show until refresh?
 ! create homepage
 
 ! share and like links should work
-
+! Direct login links not redirecting after sign_in correctly
 - find alternative dashboard design?
 - add delete site?
 	- under admin perhapse
