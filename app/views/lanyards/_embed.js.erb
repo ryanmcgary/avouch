@@ -7,7 +7,7 @@
 
 		// create iframe for adding new review
 		var ifrm = document.createElement("IFRAME");
-		ifrm.setAttribute('src', <%= sites_url %> + site_id + '/remoteurls/'+ remoteurl_id + '?layout=' + version);
+		ifrm.setAttribute('src', "<%= sites_url %>" + site_id + '/remoteurls/'+ remoteurl_id + '?layout=' + version);
 		ifrm.style.width = 100+"%";   
 		ifrm.style.width = widget_width + "px";   
 		ifrm.style.height = "150px";
