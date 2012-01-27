@@ -27,6 +27,8 @@ class ApplicationController < ActionController::Base
   def after_sign_in_path_for(resource_or_scope)
     if !session[:return_to].nil? # || request.referrer.include? "remoteurls"
       authentications_closewindow_path
+    elsif request.referrer.include? "remoteurls"
+      authentications_closewindow_path
     else
       admin_sites_path 
     end

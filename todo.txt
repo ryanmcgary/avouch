@@ -95,6 +95,7 @@ x Make sure that uniqueness (sitename,user,etc.)is set on DB
 x admin/site/new
 x weird error where failed site is show until refresh?
 x Direct login links not redirecting after sign_in correctly (broken if not already logged in, works if you are already logged into socialauth provider)
+x add delete site?
 
 ! create homepage
 
@@ -105,8 +106,8 @@ javascript include tag audio/js?
 https?
 
 - find alternative dashboard design?
-- add delete site?
-	- under admin perhapse
+
+	
 Give user direct recordings
 	- still have free account be tied to a site
 	- add for_user column to recordings model/table	
