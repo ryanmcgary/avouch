@@ -1,22 +1,18 @@
-<%= form_for([:admin, @site]) do |f| %>
-  <% if @site.errors.any? %>
-    
-    <div id="error_explanation">
-      <h2><%= pluralize(@site.errors.count, "error") %> prohibited this site from being saved:</h2>
+ <%= form_for([:admin, @site]) do |f| %>
 
-      <ul>
-      <% @site.errors.full_messages.each do |msg| %>
-        <li><%= msg %></li>
+
+  <%= f.label :name, raw("Site URL<span class=\"small\">Url of site</span>") %>
+  <%= f.text_field :name %>
+  <% if @site.errors[:name].present? %>
+    <div class="error">
+      <% @site.errors[:name].each do |msg| %>    
+        <%= msg %><br />
       <% end %>
-      </ul>
     </div>
-  <% end %>
+  <% end %> 
 
-  <div class="field">
-    <%= f.label :name %><br />
-    <%= f.text_field :name %>
-  </div>
-  <div class="actions">
-    <%= f.submit %>
-  </div>
+  
+    <%= f.submit "Create", :class => "btn primary" %>
+  
+
 <% end %>

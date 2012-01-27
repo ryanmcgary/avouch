@@ -18,7 +18,7 @@ class Admin::SitesController < ApplicationController
     if @site.save
       format.html { redirect_to(admin_sites_install_path, :notice => 'Site was successfully created.') }
     else
-      format.html { redirect_to new_admin_site_path }
+      format.html { render :action => "new" }
     end
   end
 end

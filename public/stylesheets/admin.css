@@ -211,12 +211,12 @@ body#splash {
       margin-left: 10px;
       margin-right: 10px;
       width: 220px;
-      -moz-border-radius: 5px;
-      -webkit-border-radius: 5px;
-      -o-border-radius: 5px;
-      -ms-border-radius: 5px;
-      -khtml-border-radius: 5px;
-      border-radius: 5px;
+      -moz-border-radius: 3px;
+      -webkit-border-radius: 3px;
+      -o-border-radius: 3px;
+      -ms-border-radius: 3px;
+      -khtml-border-radius: 3px;
+      border-radius: 3px;
       margin-left: 0;
       background-color: #e2edfe; }
       /* line 98, ../../app/stylesheets/admin.scss */
@@ -224,12 +224,12 @@ body#splash {
         font-weight: bold; }
       /* line 99, ../../app/stylesheets/admin.scss */
       .columns #sidebar #sidebar-menu .showborder {
-        -moz-border-radius: 5px;
-        -webkit-border-radius: 5px;
-        -o-border-radius: 5px;
-        -ms-border-radius: 5px;
-        -khtml-border-radius: 5px;
-        border-radius: 5px; }
+        -moz-border-radius: 3px;
+        -webkit-border-radius: 3px;
+        -o-border-radius: 3px;
+        -ms-border-radius: 3px;
+        -khtml-border-radius: 3px;
+        border-radius: 3px; }
         /* line 103, ../../app/stylesheets/admin.scss */
         .columns #sidebar #sidebar-menu .showborder:last-child {
           padding-bottom: 20px; }
@@ -254,39 +254,53 @@ body#splash {
         margin: -15px 0 0 0; }
         /* line 117, ../../app/stylesheets/admin.scss */
         .columns #sidebar #sidebar-menu .site-list p {
+          font-weight: bold; }
+        /* line 120, ../../app/stylesheets/admin.scss */
+        .columns #sidebar #sidebar-menu .site-list .spanwhat {
+          overflow: hidden;
+          margin: 0px 0px 0px 30px;
+          height: 30px; }
+          /* line 124, ../../app/stylesheets/admin.scss */
+          .columns #sidebar #sidebar-menu .site-list .spanwhat:hover {
+            background-color: #b6d1fc; }
+            /* line 126, ../../app/stylesheets/admin.scss */
+            .columns #sidebar #sidebar-menu .site-list .spanwhat:hover .trash {
+              visibility: visible; }
+        /* line 131, ../../app/stylesheets/admin.scss */
+        .columns #sidebar #sidebar-menu .site-list .what {
+          float: left;
           text-decoration: none;
           color: #000;
           text-shadow: #fff 0 1px;
-          font-weight: bold;
           font-size: 10px;
           line-height: 10px;
           font-size: 12px;
-          text-decoration: none;
-          margin: 0px 0px 0px 30px;
-          padding: 10px 10px 10px 10px; }
-          /* line 128, ../../app/stylesheets/admin.scss */
-          .columns #sidebar #sidebar-menu .site-list p:hover {
+          padding: 10px 0px 10px 10px;
+          margin: 0;
+          width: 146px; }
+        /* line 144, ../../app/stylesheets/admin.scss */
+        .columns #sidebar #sidebar-menu .site-list .trash {
+          visibility: hidden;
+          margin: 7px 5px 0 0;
+          padding: 0;
+          height: 20px;
+          width: 14px;
+          float: right;
+          background: url("/images/icons/trash.png") no-repeat 0 0;
+          background-size: 100%;
+          background-color: #b6d1fc; }
+          /* line 154, ../../app/stylesheets/admin.scss */
+          .columns #sidebar #sidebar-menu .site-list .trash:hover {
+            background: url("/images/icons/trash-selected.png") no-repeat 0 0;
             background-color: #b6d1fc; }
-        /* line 130, ../../app/stylesheets/admin.scss */
-        .columns #sidebar #sidebar-menu .site-list a {
-          font-weight: normal;
-          font-size: 10px;
-          line-height: 10px;
-          font-size: 12px;
-          text-decoration: none;
-          margin: 0px 0px 0px 30px;
-          padding: 10px 10px 10px 10px; }
-          /* line 138, ../../app/stylesheets/admin.scss */
-          .columns #sidebar #sidebar-menu .site-list a:hover {
-            background-color: #b6d1fc; }
-  /* line 143, ../../app/stylesheets/admin.scss */
+  /* line 170, ../../app/stylesheets/admin.scss */
   .columns #main-content {
     display: inline;
     float: left;
     margin-left: 10px;
     margin-right: 10px;
     width: 700px; }
-    /* line 145, ../../app/stylesheets/admin.scss */
+    /* line 172, ../../app/stylesheets/admin.scss */
     .columns #main-content #update-profile {
       height: 300px;
       border: 3px solid #c9defd;
@@ -294,10 +308,10 @@ body#splash {
       -webkit-box-shadow: #1d73f7 1px 1px 8px;
       -o-box-shadow: #1d73f7 1px 1px 8px;
       box-shadow: #1d73f7 1px 1px 8px; }
-    /* line 146, ../../app/stylesheets/admin.scss */
+    /* line 173, ../../app/stylesheets/admin.scss */
     .columns #main-content h3 {
       margin: 10px 0 10px 0; }
-    /* line 148, ../../app/stylesheets/admin.scss */
+    /* line 175, ../../app/stylesheets/admin.scss */
     .columns #main-content .banner-style-embed {
       display: none; }
     /* line 7, ../../app/stylesheets/checkboxes.scss */
@@ -380,18 +394,18 @@ body#splash {
       height: 100%;
       width: 100%;
       background: url('../images/iphone-style-checkboxes/slider_center.png?1312336984'); }
-    /* line 151, ../../app/stylesheets/admin.scss */
+    /* line 178, ../../app/stylesheets/admin.scss */
     .columns #main-content th label {
       margin: 0 10px 0 10px; }
-    /* line 152, ../../app/stylesheets/admin.scss */
+    /* line 179, ../../app/stylesheets/admin.scss */
     .columns #main-content input#pixel-width {
       font-size: 0.9em;
       font-weight: bold;
       text-align: right; }
-    /* line 153, ../../app/stylesheets/admin.scss */
+    /* line 180, ../../app/stylesheets/admin.scss */
     .columns #main-content #px {
       vertical-align: text-bottom; }
-    /* line 156, ../../app/stylesheets/admin.scss */
+    /* line 183, ../../app/stylesheets/admin.scss */
     .columns #main-content #embed-container {
       background-color: #f0f6fe;
       margin: 10px;
@@ -405,7 +419,7 @@ body#splash {
       -ms-border-radius: 2px;
       -khtml-border-radius: 2px;
       border-radius: 2px; }
-    /* line 166, ../../app/stylesheets/admin.scss */
+    /* line 193, ../../app/stylesheets/admin.scss */
     .columns #main-content div#embed-code-container {
       margin: 10px;
       overflow: auto;
@@ -417,23 +431,23 @@ body#splash {
       -ms-border-radius: 2px;
       -khtml-border-radius: 2px;
       border-radius: 2px; }
-      /* line 167, ../../app/stylesheets/admin.scss */
+      /* line 194, ../../app/stylesheets/admin.scss */
       .columns #main-content div#embed-code-container pre#embed-code {
         font-size: 0.8em;
         margin: 30px;
         overflow: visible; }
-    /* line 174, ../../app/stylesheets/admin.scss */
+    /* line 201, ../../app/stylesheets/admin.scss */
     .columns #main-content #site-select-dropdown {
       float: right;
       margin-right: 123px;
       margin-bottom: 15px;
       margin-top: -3px; }
-    /* line 175, ../../app/stylesheets/admin.scss */
+    /* line 202, ../../app/stylesheets/admin.scss */
     .columns #main-content .approve-toggle-link {
       position: absolute;
       margin-left: 580px;
       padding-top: 20px; }
-    /* line 176, ../../app/stylesheets/admin.scss */
+    /* line 203, ../../app/stylesheets/admin.scss */
     .columns #main-content .recording-divider {
       margin-left: -10px;
       padding-top: 20px;
@@ -441,11 +455,14 @@ body#splash {
       padding-left: 15px;
       width: 663px;
       border-bottom: 1px solid #e2edfe; }
-      /* line 183, ../../app/stylesheets/admin.scss */
+      /* line 204, ../../app/stylesheets/admin.scss */
+      .columns #main-content .recording-divider:nth-child(odd) {
+        background-color: #f0f6fe; }
+      /* line 211, ../../app/stylesheets/admin.scss */
       .columns #main-content .recording-divider:hover {
         background-color: #d4e4fe; }
 
-/* line 197, ../../app/stylesheets/admin.scss */
+/* line 225, ../../app/stylesheets/admin.scss */
 .clear {
   clear: both;
   display: block;
@@ -454,32 +471,32 @@ body#splash {
   width: 0;
   height: 0; }
 
-/* line 209, ../../app/stylesheets/admin.scss */
+/* line 237, ../../app/stylesheets/admin.scss */
 .columns {
   font-family: 'Helvetica Neu', sans-serif;
   font: 'Helvetica Neu', sans-serif;
   font-weight: 500;
   font-size: 1.2em; }
 
-/* line 210, ../../app/stylesheets/admin.scss */
+/* line 238, ../../app/stylesheets/admin.scss */
 .columns p {
   font-size: 0.8em;
   margin: 0 0 20px 10px; }
 
-/* line 211, ../../app/stylesheets/admin.scss */
+/* line 239, ../../app/stylesheets/admin.scss */
 .columns b {
   font-weight: 600; }
 
-/* line 214, ../../app/stylesheets/admin.scss */
+/* line 242, ../../app/stylesheets/admin.scss */
 .footer-bottom {
   height: 20px;
   background-color: #1d73f7; }
-  /* line 217, ../../app/stylesheets/admin.scss */
+  /* line 245, ../../app/stylesheets/admin.scss */
   .footer-bottom div {
     margin-left: auto;
     margin-right: auto;
     width: 960px; }
-    /* line 219, ../../app/stylesheets/admin.scss */
+    /* line 247, ../../app/stylesheets/admin.scss */
     .footer-bottom div #footer {
       display: inline;
       float: left;
@@ -488,7 +505,7 @@ body#splash {
       width: 940px;
       background-color: #7fb0fb; }
 
-/* line 225, ../../app/stylesheets/admin.scss */
+/* line 253, ../../app/stylesheets/admin.scss */
 .footer-bottom-bottom {
   height: 20px;
   background-color: #043177; }

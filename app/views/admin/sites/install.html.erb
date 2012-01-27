@@ -1,3 +1,18 @@
+    <% content_for :install_links do -%>
+            <% if user_signed_in? %>
+              <% current_user.sites(:new_record => 'false').each do |sites|  %>
+                <%= link_to_unless_current sites.name, admin_site_install_path(sites.permalink) do |name|
+                    content_tag(:p, "#{name}")
+                    end
+                %>
+                <!-- <#%= link_to 'Destroy', sites, :confirm => 'Are you sure?', :method => :delete %> -->
+              <% end %>
+              <%= link_to "New", new_admin_site_path %>
+            <% end %> 
+    <% end -%>
+
+
+
     <div class="showborder" id="main-content">
       <h2>Universal Install Code</h2>
       <h3>Step 1: Configure</h3>

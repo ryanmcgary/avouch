@@ -94,19 +94,21 @@ x view for moderation if no recordings/sites
 x Make sure that uniqueness (sitename,user,etc.)is set on DB
 x admin/site/new
 x weird error where failed site is show until refresh?
+x Direct login links not redirecting after sign_in correctly (broken if not already logged in, works if you are already logged into socialauth provider)
 
 ! create homepage
 
 ! share and like links should work
-! Direct login links not redirecting after sign_in correctly
+
 javascript include tag audio/js?
-make frame and frame2 ERB
 
 https?
+
 - find alternative dashboard design?
 - add delete site?
 	- under admin perhapse
 Give user direct recordings
+	- still have free account be tied to a site
 	- add for_user column to recordings model/table	
 		- will that break thing currently displaying for sites? prob not
 	- add claimable recordings via E-mail
@@ -123,7 +125,7 @@ Add direct call
 
 
 
-? it would be better if creation of remoteurl occurs in controller/embed before JS is called or on submit.
+? it would be better if creation of remoteurl occurs in controller/embed before JS is called or on submit, or on creation of new recording?
 ? Do I want to add notices to admin area?
 - For Moderation: create virtual remoteurls (adding tag based system)
 ? auto iterate site name cnn.com created a second time would yield cnn.com2

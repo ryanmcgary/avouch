@@ -57,13 +57,17 @@
           <div class="site-list">
             <% if user_signed_in? %>
               <% current_user.sites(:new_record => 'false').each do |sites|  %>
-                <%= link_to_unless_current sites.name, admin_site_install_path(sites.permalink) do |name|
-                    content_tag(:p, "#{name}")
-                    end
-                %>
-                <!-- <#%= link_to 'Destroy', sites, :confirm => 'Are you sure?', :method => :delete %> -->
+                <div class="spanwhat">
+                  <%= link_to_unless_current sites.name, admin_site_install_path(sites.permalink), :class => "what" do |name|
+                      content_tag(:p, "#{name}", :class => "what")
+                      end
+                  %>
+                  <%= link_to "", sites, :confirm => 'Are you sure?', :method => :delete, :class => "trash" %>
+                </div>
               <% end %>
-              <%= link_to "New", new_admin_site_path %>
+              <div class="spanwhat">
+                <%= link_to "New", new_admin_site_path, :class => "what" %>
+              </div>
             <% end %>
           </div>
         </li>

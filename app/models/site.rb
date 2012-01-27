@@ -7,8 +7,8 @@ class Site < ActiveRecord::Base
   
   validates :name,        :presence     => true,
                           :length       => { :maximum  => 50 }
-  validates_uniqueness_of :permalink, :on => :create, :message => "must be unique"
-  validates_uniqueness_of :name, :on => :create, :message => "must be unique"
+  validates_uniqueness_of :permalink, :on => :create, :message => "already taken"
+  validates_uniqueness_of :name, :on => :create, :message => "already taken"
   
   include MakePermalink
   

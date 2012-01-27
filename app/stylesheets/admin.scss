@@ -92,12 +92,12 @@ body#splash{background-color:$grid-color;}
     @include grid(6);
   	#sidebar-menu{
   		@include grid(6); 
-  	  @include border-radius(5px);
+  	  @include border-radius(3px);
   		@include alpha;
   		background-color:$sidebar-color;
       .selected{font-weight:bold;}
   		.showborder{
-  			@include border-radius(5px);   
+  			@include border-radius(3px);   
   			//				border: {top:1px solid $sidebar-color;bottom:1px solid $sidebar-color;}
   			//				&:first-child{border-top:1px solid darken($sidebar-color, 4%);}
   			&:last-child{padding-bottom:20px;}
@@ -114,29 +114,56 @@ body#splash{background-color:$grid-color;}
   		}
   		.site-list{
   			margin:-15px 0 0 0;
-  			p{  
+  			p{
+          font-weight: bold;   
+        }
+        .spanwhat{
+          overflow:hidden;
+          margin: 0px 0px 0px 30px;
+          height:30px;
+          &:hover{
+            background-color:darken($sidebar-color, 9%);
+            .trash{
+              visibility:visible;
+            }
+          }  
+        }
+        .what{ 
+          float:left; 
           text-decoration:none;
           color: #000;
           text-shadow: #fff 0 1px;                     
-          font-weight: bold;
           font-size: 10px;
           line-height:10px;
           font-size:12px;
-          text-decoration:none;
-          margin: 0px 0px 0px 30px;
-          padding: 10px 10px 10px 10px;
-          &:hover{background-color:darken($sidebar-color, 9%);}
+          padding: 10px 0px 10px 10px;
+          margin: 0;
+          width:146px;
         }
-        a{
-          font-weight: normal;
-  				font-size: 10px;
-          line-height:10px;
-  				font-size:12px;
-  				text-decoration:none;
-  				margin: 0px 0px 0px 30px;
-  				padding: 10px 10px 10px 10px;
-  				&:hover{background-color:darken($sidebar-color, 9%);}
-  			}
+        // TODO: rezise the trash image so I don't have to use incompatible backgroud-size:;
+        .trash{
+          visibility:hidden;
+          margin: 7px 5px 0 0;
+          padding: 0;
+          height:20px;
+          width:14px;
+          float: right;
+          background: url('/images/icons/trash.png') no-repeat 0 0;
+          background-size: 100%;
+          background-color:darken($sidebar-color, 9%);
+          &:hover{background: url('/images/icons/trash-selected.png') no-repeat 0 0;background-color:darken($sidebar-color, 9%);}
+        }
+        // .trash{
+        //   visibility:hidden;
+        //   margin: 0;
+        //   padding: 0;
+        //   img{
+        //     background-color:darken($sidebar-color, 9%);
+        //     float: right;
+        //     padding: 9px 10px 9px 10px;
+        //     &:hover{background-color:darken($sidebar-color, 9%);}
+        //   }
+        // }
   		}
     }
   }  
@@ -174,6 +201,7 @@ body#splash{background-color:$grid-color;}
     #site-select-dropdown{float:right;margin-right:123px;margin-bottom:15px;margin-top: -3px;}
     .approve-toggle-link{position: absolute;margin-left:580px;padding-top:20px;}
     .recording-divider{
+      &:nth-child(odd) {background-color:lighten($sidebar-color, 2.9%);}
       margin-left: -10px;
       padding-top:20px;
       padding-bottom:1px;
