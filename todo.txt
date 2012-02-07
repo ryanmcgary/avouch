@@ -101,11 +101,17 @@ x javascript include tag audio/js?
 x create remoteurl occurs in lanyard_controller
 x Add notices to admin area
 
+! add linkedin login
+! add top text for blog review
+! turn audiojs off
 ! create homepage
+
+
+Expierement
  see about using json/jqeury to return reviews
 
 
-
+! preface every class & id with iv- to prevent jquery hook collision for common names like comments (becomes .iv-comments)
 
 	
 Give user direct recordings

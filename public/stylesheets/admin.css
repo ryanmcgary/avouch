@@ -515,9 +515,10 @@ body#splash {
 .close {
   float: right;
   color: #000000;
-  font-size: 16px;
+  font-family: Helvetica,Arial,sans-serif;
+  font-size: 14px;
   font-weight: bold;
-  line-height: 12px;
+  line-height: 10px;
   text-decoration: none;
   text-shadow: 0 1px 0 #ffffff;
   filter: alpha(opacity=25);
@@ -525,7 +526,7 @@ body#splash {
   -moz-opacity: 0.25;
   opacity: 0.25; }
 
-/* line 271, ../../app/stylesheets/admin.scss */
+/* line 272, ../../app/stylesheets/admin.scss */
 .close:hover {
   color: #000000;
   filter: alpha(opacity=40);
@@ -533,7 +534,7 @@ body#splash {
   -moz-opacity: 0.4;
   opacity: 0.4; }
 
-/* line 278, ../../app/stylesheets/admin.scss */
+/* line 279, ../../app/stylesheets/admin.scss */
 .alert-message {
   font-size: 13px;
   font-weight: normal;
@@ -564,44 +565,44 @@ body#splash {
   -moz-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.25);
   box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.25); }
 
-/* line 308, ../../app/stylesheets/admin.scss */
+/* line 309, ../../app/stylesheets/admin.scss */
 .alert-message .close {
   margin-top: 1px;
   *margin-top: 0; }
 
-/* line 312, ../../app/stylesheets/admin.scss */
+/* line 313, ../../app/stylesheets/admin.scss */
 .alert-message a {
   font-weight: bold;
   color: #404040; }
 
-/* line 319, ../../app/stylesheets/admin.scss */
+/* line 320, ../../app/stylesheets/admin.scss */
 .alert-message.danger p a,
 .alert-message.error p a,
 .alert-message.success p a,
 .alert-message.info p a {
   color: #ffffff; }
 
-/* line 322, ../../app/stylesheets/admin.scss */
+/* line 323, ../../app/stylesheets/admin.scss */
 .alert-message h5 {
   line-height: 18px; }
 
-/* line 325, ../../app/stylesheets/admin.scss */
+/* line 326, ../../app/stylesheets/admin.scss */
 .alert-message p {
   margin-bottom: 0; }
 
-/* line 328, ../../app/stylesheets/admin.scss */
+/* line 329, ../../app/stylesheets/admin.scss */
 .alert-message div {
   margin-top: 5px;
   margin-bottom: 2px;
   line-height: 28px; }
 
-/* line 333, ../../app/stylesheets/admin.scss */
+/* line 334, ../../app/stylesheets/admin.scss */
 .alert-message .btn {
   -webkit-box-shadow: 0 1px 0 rgba(255, 255, 255, 0.25);
   -moz-box-shadow: 0 1px 0 rgba(255, 255, 255, 0.25);
   box-shadow: 0 1px 0 rgba(255, 255, 255, 0.25); }
 
-/* line 338, ../../app/stylesheets/admin.scss */
+/* line 339, ../../app/stylesheets/admin.scss */
 .alert-message.block-message {
   background-image: none;
   background-color: #fdf5d9;
@@ -612,43 +613,43 @@ body#splash {
   -moz-box-shadow: none;
   box-shadow: none; }
 
-/* line 348, ../../app/stylesheets/admin.scss */
+/* line 349, ../../app/stylesheets/admin.scss */
 .alert-message.block-message ul, .alert-message.block-message p {
   margin-right: 30px; }
 
-/* line 351, ../../app/stylesheets/admin.scss */
+/* line 352, ../../app/stylesheets/admin.scss */
 .alert-message.block-message ul {
   margin-bottom: 0; }
 
-/* line 354, ../../app/stylesheets/admin.scss */
+/* line 355, ../../app/stylesheets/admin.scss */
 .alert-message.block-message li {
   color: #404040; }
 
-/* line 357, ../../app/stylesheets/admin.scss */
+/* line 358, ../../app/stylesheets/admin.scss */
 .alert-message.block-message .alert-actions {
   margin-top: 5px; }
 
-/* line 360, ../../app/stylesheets/admin.scss */
+/* line 361, ../../app/stylesheets/admin.scss */
 .alert-message.block-message.error, .alert-message.block-message.success, .alert-message.block-message.info {
   color: #404040;
   text-shadow: 0 1px 0 rgba(255, 255, 255, 0.5); }
 
-/* line 364, ../../app/stylesheets/admin.scss */
+/* line 365, ../../app/stylesheets/admin.scss */
 .alert-message.block-message.error {
   background-color: #fddfde;
   border-color: #fbc7c6; }
 
-/* line 368, ../../app/stylesheets/admin.scss */
+/* line 369, ../../app/stylesheets/admin.scss */
 .alert-message.block-message.success {
   background-color: #d1eed1;
   border-color: #bfe7bf; }
 
-/* line 372, ../../app/stylesheets/admin.scss */
+/* line 373, ../../app/stylesheets/admin.scss */
 .alert-message.block-message.info {
   background-color: #ddf4fb;
   border-color: #c6edf9; }
 
-/* line 379, ../../app/stylesheets/admin.scss */
+/* line 380, ../../app/stylesheets/admin.scss */
 .alert-message.block-message.danger p a,
 .alert-message.block-message.error p a,
 .alert-message.block-message.success p a,
