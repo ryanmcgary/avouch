@@ -9,7 +9,7 @@
         <div class="comments-header">
               <!-- TODO: Move this to controller -->
             <div class="grid_6">Showing <%= pluralize @remoteurl.recordings_count, 'review' %></div>
-            <div class="toggle-synopsis">newest first<%#= hide ("transcript").pluralize %></div>
+            <a class="toggle-synopsis" data-toggle="modal" href="#modal_container">newest first<%#= hide ("transcript").pluralize %></a>
         </div>
   	  <div class="comments">
 
@@ -27,7 +27,9 @@
   	<!-- end each recording     -->
   	  </div>  
   	  <div style="clear:both"></div>
-      <div class="modal-container" ></div>
+      <div id="modal_container" class="modal hide fade">
+
+      </div>
   	</div>
 
   	<!-- <#% if user_signed_in? %>
