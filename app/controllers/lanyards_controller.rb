@@ -3,7 +3,6 @@ class LanyardsController < ApplicationController
 #  TODO: Before filter to make embed find permalink_URL
   # before_filter :make_permalink, :except => [:show] 
   include MakePermalink   
-  respond_to :json
   def show
     @site = Site.find_by_permalink(params[:site_id])   
 
@@ -29,17 +28,12 @@ class LanyardsController < ApplicationController
     @site = Site.find_by_permalink(params[:site_id])
     @remoteurl = @site.remoteurls.find_or_create_by_permalink(@pathref, :include => [:recordings => :user ])
 
-    @rt = [42, 8, 17]
+
     
     # maybe change to find by or create? How about I use a single query in the recording.model?
     # maybe use whole url for "remoteurl" and then prevent duplicates?
-    if !params[:callback].nil?
-      @reply = render_to_string(:partial => '/shared/recording.html.erb', :collection => @remoteurl.recordings, :locals => {:v => "1"})
-      render :json => @reply.to_json, :callback => params[:callback], :content_type => 'application/json'  
-    else
-      render :partial => "embed.js.erb", :content_type => 'application/javascript'  
-    end
     
+    render :partial => "embed.js.erb", :content_type => 'application/javascript'
 
     #@site = Site.find_by_permalink(params[:site_id])
     #@remoteurl = @site.remoteurls.find_by_permalink(params[:id])
