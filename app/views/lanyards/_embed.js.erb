@@ -71,30 +71,30 @@ if (remoteurl_id == undefined) {
 
 					$('.toggle-synopsis').click(function() {
 						$.getJSON("http://localhost:3000/sites/" + site_id +"/lanyard/embed?callback=?", function(json) {
-						// render html
-						$('.comments').html(json);
-						// create audiojs
-						var as = audiojs.createAll();
-					  // rezise
-					  $('.audiojs').width(widget_width - 78);  
-			      $('.audiojs .loaded').width(widget_width - 232); 
-			      $('.audiojs .scrubber').width(widget_width - 232);
-			      $('.comments .comments-header').width(widget_width);
-						$('.comments .review-each').width(widget_width - 78);
-					  // popup links
-					  var profiles = {window100:{center:1,status:1}};
-						$(function(){$(".auth_popup").popupwindow(profiles);});
-						// synopsis toggle
-						$('.bold').click(function() {
-							$('.review-each div:hover .bold').toggleClass('toggle');
-							$('.comments-each div:hover .trans').slideToggle('fast');  
-							return false;
-						});  
-					  console.log(json);
-					})
-					.success(function() { console.log("second success"); })
-					.error(function() { console.log("error"); })
-					.complete(function() { console.log("complete"); });
+							// render html
+							$('.comments').html(json);
+							// create audiojs
+							var as = audiojs.createAll();
+						  // rezise
+						  $('.audiojs').width(widget_width - 78);  
+				      $('.audiojs .loaded').width(widget_width - 232); 
+				      $('.audiojs .scrubber').width(widget_width - 232);
+				      $('.comments .comments-header').width(widget_width);
+							$('.comments .review-each').width(widget_width - 78);
+						  // popup links
+						  var profiles = {window100:{center:1,status:1}};
+							$(function(){$(".auth_popup").popupwindow(profiles);});
+							// synopsis toggle
+							$('.bold').click(function() {
+								$('.review-each div:hover .bold').toggleClass('toggle');
+								$('.comments-each div:hover .trans').slideToggle('fast');  
+								return false;
+							});  
+						  console.log(json);
+						})
+						.success(function() { console.log("second success"); })
+						.error(function() { console.log("error"); })
+						.complete(function() { console.log("complete"); });
 					});
 
 
@@ -104,7 +104,10 @@ if (remoteurl_id == undefined) {
 					  $('.audiojs').width(widget_width - 78);  
 			      $('.audiojs .loaded').width(widget_width - 232); 
 			      $('.audiojs .scrubber').width(widget_width - 232);
-					});   
+					}); 
+					
+					$.getScript("<%= root_url %>" + 'javascripts/bootstrap-modal.js', function() 
+					{					});  
 					
 					
 					$.getScript("<%= root_url %>" + 'javascripts/jquery.popupwindow.js', function() 

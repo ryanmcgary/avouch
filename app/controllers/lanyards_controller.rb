@@ -28,8 +28,6 @@ class LanyardsController < ApplicationController
     
     @site = Site.find_by_permalink(params[:site_id])
     @remoteurl = @site.remoteurls.find_or_create_by_permalink(@pathref, :include => [:recordings => :user ])
-
-    
     
     # maybe change to find by or create? How about I use a single query in the recording.model?
     # maybe use whole url for "remoteurl" and then prevent duplicates?
