@@ -3,39 +3,35 @@
 <!-- <p>this</p> -->
 <p style="height:5px;"></p>
 
-<div id='iavouch' class="iavouch_3_reset" style="color:black;">
-		<script id="vouch-script" type='text/javascript'>
-			var remoteurl_id = 'blond_jones_flue';
-			var version = '2';   
-			var widget_width = '450';
-			
-			// var layout_type = 'embed'; // var add_review_bottom = '1';
+		<div id='iavouch' class="iavouch_3_reset" style="color:black;">
+    <script id="vouch-script" type='text/javascript'>
 
-			
-			// On window load, calls function which creates script in header
-		  	(function()	{
-			  	var vjq = document.createElement('script'); // creates 'var s' for addtional elements to be tagged to and creates html tag <script>
-				vjq.type = 'text/javascript';	// sets script type to javascript 
-				vjq.async = false;	// sets script as asynchrounus		
-	    		vjq.src = 'http://stormy-winter-617.heroku.com/javascripts/jquery.js';	// sets URL source of javascript		
-				(document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(vjq);
-			})();
+    /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+    var remoteurl_id = "blond_jones_flue"
+    var version = '2';   
+    var widget_width = '450';
+    
 
-			var scpt = document.getElementById( "vouch-script" );
-	        var vouch_content = scpt.parentNode;
-	       	// this line hides visibility of widget unless load is successful
-	       	scpt.style.visibility = 'hidden';
-	       	console.log("second");
-
-		  	(function()	{
-			  	var s = document.createElement('script'); // creates 'var s' for addtional elements to be tagged to and creates html tag <script>
-				s.type = 'text/javascript';	// sets script type to javascript 
-				s.async = true;	// sets script as asynchrounus		
-	    		s.src = 'http://stormy-winter-617.heroku.com/sites/FirstAttempt/lanyard/embed?v=' + version + '&remoteurl='+ remoteurl_id;	// sets URL source of javascript		
-				(document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(s);
-			})();
-		</script>
-</div> 
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function() {
+    var vjq = document.createElement('script');
+    vjq.type = 'text/javascript';
+    vjq.async = false;  
+    vjq.src = 'http://stormy-winter-617.heroku.com/javascripts/jquery.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(vjq);
+    })();
+    var scpt = document.getElementById( "vouch-script" );
+    var vouch_content = scpt.parentNode;
+    vouch_content.style.visibility = 'hidden';
+    (function() {
+    var s = document.createElement('script'); 
+    s.type = 'text/javascript';
+    s.async = true; 
+    s.src = 'http://stormy-winter-617.heroku.com/sites/FirstAttempt/lanyard/embed?v=' + version + '&remoteurl='+ remoteurl_id;
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(s);
+    })();
+    </script>
+    </div>
 
 </body>
 </html>
