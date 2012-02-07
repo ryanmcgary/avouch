@@ -35,7 +35,7 @@ class LanyardsController < ApplicationController
     # maybe use whole url for "remoteurl" and then prevent duplicates?
 
       render :partial => "embed.js.erb", :content_type => 'application/javascript'  
-    end
+
     
 
     #@site = Site.find_by_permalink(params[:site_id])
