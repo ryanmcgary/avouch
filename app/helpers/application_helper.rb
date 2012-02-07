@@ -23,7 +23,18 @@ def wtf_devise #  This is horrible monkey patch just so I can get registration f
 	  end 
 	  session.delete(:wtf) 
   end 
-	
+end
+
+def url_escape(string)
+  string.gsub(/([^ a-zA-Z0-9_-]+)/n) do
+  '%' + $1.unpack('H2' * $1.size).join('%').upcase
+  end.tr(' ', '+')
+end
+
+def url_unescape(string)
+  string.tr('+', ' ').gsub(/((?:%[0-9a-fA-F]{2})+)/n) do
+  [$1.delete('%')].pack('H*')
+  end
 end
 
 

@@ -1,19 +1,4 @@
-    <% content_for :install_links do -%>
-            <% if user_signed_in? %>
-              <% current_user.sites(:new_record => 'false').each do |sites|  %>
-                <%= link_to_unless_current sites.name, admin_site_install_path(sites.permalink) do |name|
-                    content_tag(:p, "#{name}")
-                    end
-                %>
-                <!-- <#%= link_to 'Destroy', sites, :confirm => 'Are you sure?', :method => :delete %> -->
-              <% end %>
-              <%= link_to "New", new_admin_site_path %>
-            <% end %> 
-    <% end -%>
-
-
-
-    <div class="showborder" id="main-content">
+    
       <h2>Universal Install Code</h2>
       <h3>Step 1: Configure</h3>
       <table>
@@ -49,8 +34,6 @@
           &lt;script id=&quot;vouch-script&quot; type='text/javascript'&gt;
 
           /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
-          var remoteurl_id = '<b style="font-weight:600;">replace this with unique name</b>'; // required: replace "remoteurl_id" with a unique identifier for each page  
-          var site_id = '<%= params[:site_id] %>';
           var version = '<span class="var-embed-type">1</span><span class="var-embed-type" style="display:none;">2</span>';   
           var widget_width = '<span id="var-review-width">450</span>';
           <span id="var-review-bottom" style="display:none;">var add_review_bottom = '1';</span>
@@ -65,12 +48,12 @@
           })();
           var scpt = document.getElementById( "vouch-script" );
           var vouch_content = scpt.parentNode;
-          scpt.style.visibility = 'hidden';
+          vouch_content.style.visibility = 'hidden';
           (function() {
           var s = document.createElement('script'); 
           s.type = 'text/javascript';
           s.async = true; 
-          s.src = '<%= root_url %>sites/7/lanyard/embed?v=' + version + '&amp;remoteurl='+ remoteurl_id; 
+          s.src = '<%= root_url %>sites/<%= params[:site_id] %>/lanyard/embed?v=' + version; 
           (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(s);
           })();
           &lt;/script&gt;
@@ -78,6 +61,7 @@
       </pre>
       </div> 
 
+<!--  + '&amp;remoteurl='+ remoteurl_id -->
 
 
 
@@ -87,5 +71,4 @@
 
 
 
-
-    </div>
+    

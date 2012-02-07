@@ -21,6 +21,14 @@ class RecordingsController < ApplicationController
     before_filter :authorized_user, :only => :destroy  
     respond_to :html, :xml  
     
+
+    def index
+      # TODO: make this only pull from current remoteurl
+
+      @remoteurl = Remoteurl.find_by_permalink(params[:remoteurl_id])
+      @recordings = @remoteurl.recordings
+    end
+    
     def create
       @recording = current_user.recordings.build(params[:recording])
              if @recording.save
@@ -37,7 +45,10 @@ class RecordingsController < ApplicationController
     end
     
     def show
-      @recording = Recording.find(params[:id])  
+      # TODO: This works. If you try to use remoteurl/permalink it will break unless you first specify site.
+      # @remoteurl = Remoteurl.find_by_permalink(params[:remoteurl_id])
+      # @recording = @remoteurl.recordings.find_by_id(params[:id])  
+      @recording = Recording.find_by_id_and_remoteurl_id(params[:id], params[:remoteurl_id])  
       
       respond_to do |format|
         format.html # show.html.erb

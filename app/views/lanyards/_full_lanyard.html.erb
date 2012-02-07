@@ -5,17 +5,19 @@
   	<div class="iavouch_lanyard_wrapper"> 
   	   
   	<% if !@remoteurl.nil? %>   
+      <% if @remoteurl.recordings.present? %>
+        <div class="comments-header">
+              <!-- TODO: Move this to controller -->
+            <div class="grid_6">Showing <%= pluralize @remoteurl.recordings_count, 'review' %></div>
+            <div class="toggle-synopsis">newest first<%#= hide ("transcript").pluralize %></div>
+        </div>
   	  <div class="comments">
-  	    <div class="comments-header">
-  	    											<!-- TODO: Move this to controller -->
-  	        <div class="grid_6">Showing <%= @remoteurl.recordings.call_completed.count %> <%= ("review").pluralize %></div>
-  	        <div class="toggle-synopsis">hide <%= ("transcript").pluralize %></div>
-  	    </div>
-  	    <div class="clear"></div>          
-    	<!-- start each recording -->
 
-    	<% if @remoteurl.recordings.present? %> 
-    		<%= render :partial => 'shared/recording', :collection => @remoteurl.recordings %>
+  	    
+    	  <!-- start each recording -->
+
+    	
+        <%= render :partial => 'shared/recording', :collection => @remoteurl.recordings %>
     	<% end -%>
 
   	<% end %> 
@@ -41,7 +43,7 @@
 <% elsif params[:v] == "2" %>
 <div id="iavouch-container" class="iavouch-clear-format">
 
-  <p class="avouchlogo"><%= link_to "Powered by Avouch", logout_url, :class => "vouch-popup", :rel => "window800" %></p>
+  <p class="avouchlogo"><%= link_to "Powered by Avouch", root_url, :target => "_blank" %></p>
   <!-- element with overflow applied -->
   <div class="iavouch-scroll-container">
     <!-- the element that will be scrolled during the effect -->
@@ -65,7 +67,7 @@
      <a class="iavouch-nav-prev" href="#">Previous</a>   
        <ul class="iavouch-navigation-list">
 
-        <% @recording.each_with_index do |c, i| %>
+        <% @remoteurl.recordings.each_with_index do |c, i| %>
             <li><a href="#<%= c.created_at.to_i %>"><%= i + 1 %></a></li>
         <% end %>
 

@@ -1,4 +1,4 @@
-$(".comments").html("<%= escape_javascript(render :partial => 'shared/recording', :collection => @recordings) %>");
+$(".comments").html("<%= escape_javascript(render :partial => 'recording', :collection => @recordings) %>");
 // var as = audiojs.createAll();
 audiojs.events.ready(function() {
     var as = audiojs.createAll();

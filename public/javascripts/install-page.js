@@ -1,7 +1,9 @@
 $(document).ready(function() {  
 	// change location of comment box
 	
-
+	$('.comment-style :checkbox').iphoneStyle({ checkedLabel: 'Blog', uncheckedLabel: 'Banner' });
+	$('.comment-location :checkbox').iphoneStyle({ checkedLabel: 'Top', uncheckedLabel: 'Bottom' });   
+	
 // oh gosh this was a pain
 	$(".comment-location :checkbox").change(function() {
 		var jones = $(this).data('count', 1 + ( $(this).data('count') || 0 ) );
@@ -44,6 +46,7 @@ $(document).ready(function() {
 		$("#blog-frame").contents().find('.audiojs .scrubber').width(widget_width - 232);
 		$("#blog-frame").contents().find('.iavouch_3').width(widget_width);  
 		$("#blog-frame").contents().find('.comments').width(widget_width);
+		$("#blog-frame").contents().find('#iavouch_mast').width(widget_width);
 		$("#blog-frame").contents().find('.comments .comments-header').width(widget_width);
 		$("#blog-frame").contents().find('.comments .review-each').width(widget_width - 78);
 		$("#blog-frame").contents().find('#coolframe').width(widget_width);

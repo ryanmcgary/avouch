@@ -1,13 +1,24 @@
+// remoteurl_id = request.referrer.url if remoteurl_id not defined
+// site_id = request.referrer.domain_url if site_id not defined
+
+if (site_id == undefined) {
+ var site_id = "<%= @domainref %>";
+}
+if (remoteurl_id == undefined) {
+ var remoteurl_id = "<%= @remoteurl.id %>";
+} 
+
 <% if !params[:v].nil? %>
 	<% if params[:v] == "1" %>	// same as version on embed code
 		// makes embed content visible 
-
+		
 		vouch_content.style.width = widget_width;   
-		// vouch_content.style.visibility = 'visible';
-
+		vouch_content.style.visibility = 'visible';
+	
 		// create iframe for adding new review
 		var ifrm = document.createElement("IFRAME");
 		ifrm.setAttribute('src', "<%= sites_url %>/" + site_id + '/remoteurls/'+ remoteurl_id + '?layout=' + version);
+		// ifrm.setAttribute('src', "about:blank");
 		ifrm.style.width = 100+"%";   
 		ifrm.style.width = widget_width + "px";   
 		ifrm.style.height = "150px";
@@ -18,8 +29,20 @@
 		// Puts ADD NEW REVIEW IFRAME ON TOP OF OR BELOW REVIEWS
 		vouch_content.insertBefore(ifrm, null);  // Actually this just injects IFRM into DOM
 
+// var content = "text";
+	// var doc = ifrm.document;
+ //    if(ifrm.contentDocument)
+ //        doc = ifrm.contentDocument; // For NS6
+ //    else if(ifrm.contentWindow)
+ //        doc = ifrm.contentWindow.document; // For IE5.5 and IE6
+ //    // Put the content in the iframe
+ //    doc.open();
+ //    doc.writeln(content);
+ //    doc.close();
+
 		// creates var sw_3 or sw_2 and fills it with content from lanyard/lanyards, also escapse javascript
 		var lanyard = document.createElement("div");
+		lanyard.style.visibility = 'hidden';
 		lanyard.innerHTML =	"<%= escape_javascript(render :partial => "lanyards/full_lanyard", :locals => {:v => params[:v]}) %>"; 
 		if (typeof add_review_bottom === 'undefined') {
 				vouch_content.insertBefore(lanyard, null);  
@@ -29,7 +52,96 @@
 				vouch_content.insertBefore(lanyard, ifrm); 		
 			}       
 
-		
+	jQuery(document).ready(function($) {
+					
+					// $.fn.reverseChildren = function() {
+					//   return this.each(function(){
+					//     var $this = $(this);
+					//     $this.children().each(function(){
+					//       $this.prepend(this);
+					//     });
+					//   });
+					// };
+					// $('.toggle-synopsis').click(function() {
+					// 	$('.comments').reverseChildren();
+					// 	$(this).text($(this).text() == 'newest first' ? 'oldest first' : 'newest first');
+					// });
+
+
+
+					$('.toggle-synopsis').click(function() {
+						$.getJSON("http://localhost:3000/sites/" + site_id +"/lanyard/embed?callback=?", function(json) {
+						// render html
+						$('.comments').html(json);
+						// create audiojs
+						var as = audiojs.createAll();
+					  // rezise
+					  $('.audiojs').width(widget_width - 78);  
+			      $('.audiojs .loaded').width(widget_width - 232); 
+			      $('.audiojs .scrubber').width(widget_width - 232);
+			      $('.comments .comments-header').width(widget_width);
+						$('.comments .review-each').width(widget_width - 78);
+					  // popup links
+					  var profiles = {window100:{center:1,status:1}};
+						$(function(){$(".auth_popup").popupwindow(profiles);});
+						// synopsis toggle
+						$('.bold').click(function() {
+							$('.review-each div:hover .bold').toggleClass('toggle');
+							$('.comments-each div:hover .trans').slideToggle('fast');  
+							return false;
+						});  
+					  console.log(json);
+					})
+					.success(function() { console.log("second success"); })
+					.error(function() { console.log("error"); })
+					.complete(function() { console.log("complete"); });
+					});
+
+
+					$.getScript("<%= root_url %>" + 'audiojs/audio.js', function() 
+					{
+					  var as = audiojs.createAll();
+					  $('.audiojs').width(widget_width - 78);  
+			      $('.audiojs .loaded').width(widget_width - 232); 
+			      $('.audiojs .scrubber').width(widget_width - 232);
+					});   
+					
+					
+					$.getScript("<%= root_url %>" + 'javascripts/jquery.popupwindow.js', function() 
+					{
+						var profiles = {window100:{center:1,status:1}};
+						$(function(){$(".auth_popup").popupwindow(profiles);});
+						// function unloadcallback(){
+						// 	alert("Time to check if your loggedin or not, if so, change dom, if not don't");
+						// 	};
+					});
+
+					//  toggle synopsis
+					// $('.toggle-synopsis').click(function() {
+					// 	$('.bold').removeClass('toggle');
+					// 	$('.trans').hide('fast'); 
+					// 	$(this).toggleClass('toggle-synopsis').toggleClass('toggle-synopsis-off');
+					// 	return false;
+					// });
+					      
+					$('.bold').click(function() {
+						$('.review-each div:hover .bold').toggleClass('toggle');
+						$('.comments-each div:hover .trans').slideToggle('fast');  
+						return false;
+					});                  
+					
+		// TODO: make resizing work
+					$(vouch_content).width(widget_width);
+					$('.comments').width(widget_width);
+					$('.comments .comments-header').width(widget_width);
+					$('.comments .review-each').width(widget_width - 78);
+
+		// TODO: UNCOMENT FOR PRODUCTION RELOCATE MAKE ENTIRE DOCUMENT VISIBLE
+					lanyard.style.visibility = 'visible';					
+
+
+		});
+			
 		// // this creates rules for include(file-name) 
 		// function include(file)
 		// {
@@ -51,46 +163,7 @@
 					// });         
 
 
-					$.getScript("<%= root_url %>" + 'audiojs/audio.js', function() 
-					{
-					  var as = audiojs.createAll();
-					  $('.audiojs').width(widget_width - 78);  
-						      $('.audiojs .loaded').width(widget_width - 232); 
-						      $('.audiojs .scrubber').width(widget_width - 232);
-					});   
-					
-					
-					$.getScript("<%= root_url %>" + 'javascripts/jquery.popupwindow.js', function() 
-					{
-						var profiles = {window800:{height:400,width:400,center:1,status:1,onUnload:unloadcallback}};
-						$(function(){$(".toggle-button").popupwindow(profiles);});
-						function unloadcallback(){
-							alert("Time to check if your loggedin or not, if so, change dom, if not don't");
-							};
-					});
 
-					//  toggle synopsis
-					$('.toggle-synopsis').click(function() {
-						$('.bold').removeClass('toggle');
-						$('.trans').hide('fast'); 
-						$(this).toggleClass('toggle-synopsis').toggleClass('toggle-synopsis-off');
-						return false;
-					});
-					      
-					$('.bold').click(function() {
-						$('.review-each div:hover .bold').toggleClass('toggle');
-						$('.comments-each div:hover .trans').slideToggle('fast');  
-						return false;
-					});                  
-					
-		// TODO: make resizing work
-					$(vouch_content).width(widget_width);
-					$('.comments').width(widget_width);
-					$('.comments .comments-header').width(widget_width);
-					$('.comments .review-each').width(widget_width - 78);
-
-		// TODO: UNCOMENT FOR PRODUCTION RELOCATE MAKE ENTIRE DOCUMENT VISIBLE
-					vouch_content.style.visibility = 'visible';
 					
 		//     })}
 		//     document.getElementsByTagName('head').item(0).appendChild(script);
@@ -98,29 +171,29 @@
 		// }
 		// //add jQuery
 		// include('http://code.jquery.com/jquery-1.5.min.js');
-		  
+		  // ifrm.src = ifrm.src;
 	<% elsif params[:v] == "2" %>
 
 	vouch_content.style.width = widget_width;   
 	
 	var lanyard = "<%= escape_javascript(render :partial => "lanyards/full_lanyard", :locals => {:v => params[:v]}) %>"; 
 	vouch_content.innerHTML=lanyard;    
-		
-	$(document).ready(function() {
-		
-		var ifrm = document.createElement("IFRAME");
-		ifrm.setAttribute('src', "<%= sites_url %>/" + site_id + '/remoteurls/'+ remoteurl_id + '?layout=' + version);
-		ifrm.style.width = 100+"%";   
-		ifrm.style.width = widget_width + "px";   
-		ifrm.style.height = "73px";
-		ifrm.style.border ="0";
-		ifrm.style.overflow ="none";    
-		ifrm.id = "coolframe"
+			
+	var ifrm = document.createElement("IFRAME");
+	ifrm.setAttribute('src', "<%= sites_url %>/" + site_id + '/remoteurls/'+ remoteurl_id + '?layout=' + version);
+	ifrm.style.width = 100+"%";   
+	ifrm.style.width = widget_width + "px";   
+	ifrm.style.height = "73px";
+	ifrm.style.border ="0";
+	ifrm.style.overflow ="none";    
+	ifrm.id = "coolframe"
 
-		document.getElementById("leavereview").appendChild(ifrm); 		
+	document.getElementById("leavereview").appendChild(ifrm); 		
+	
+	var mydiv = document.getElementById('iavouch-container');
+	mydiv.style.width = widget_width + "px";
 		
-		var mydiv = document.getElementById('iavouch-container');
-		mydiv.style.width = widget_width + "px";
+	jQuery(document).ready(function($) {
 		
 		// makes scroll navigation show & hide correctly
 		var timeOut;
@@ -161,14 +234,14 @@
 		});   
 		
 		// not sure if this is needed for slider, probably not 
-		$.getScript("<%= root_url %>" + 'javascripts/jquery.popupwindow.js', function() 
-		{
-			var profiles = {window800:{height:400,width:400,center:1,status:1,onUnload:unloadcallback}};
-			$(function(){$(".vouch-popup").popupwindow(profiles);});
-			function unloadcallback(){
-				location.reload();
-				};
-		});
+		// $.getScript("<%= root_url %>" + 'javascripts/jquery.popupwindow.js', function() 
+		// {
+		// 	var profiles = {window100:{center:1,status:1}};
+		// 	$(function(){$(".auth_popup").popupwindow(profiles);});
+		// 	// function unloadcallback(){
+		// 	// 	alert("Time to check if your loggedin or not, if so, change dom, if not don't");
+		// 	// 	};
+		// });
 
 		//  call scripts for slider
 		$.getScript("<%= root_url %>" + 'javascripts/jquery.scrollTo-min.js', function() 
@@ -277,10 +350,7 @@
 				});
 			});
 		});
-
-
-
-
+		vouch_content.style.visibility = 'visible';
 	});
 
 	<% end %>

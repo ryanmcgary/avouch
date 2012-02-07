@@ -1,8 +1,8 @@
  <%= form_for([:admin, @site]) do |f| %>
 
 
-  <%= f.label :name, raw("Site URL<span class=\"small\">Url of site</span>") %>
-  <%= f.text_field :name %>
+  <%= f.label :name, raw("Site URL<span class=\"small\">http://</span>") %>
+  <%= f.text_field :name, :placeholder => "yoursite.com" %>
   <% if @site.errors[:name].present? %>
     <div class="error">
       <% @site.errors[:name].each do |msg| %>    

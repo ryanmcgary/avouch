@@ -11,17 +11,17 @@ class Admin::SitesController < ApplicationController
     @site = Site.new
 	end	
 
-  def create
-  @site = current_user.sites.build(params[:site])
+	def create
+	  @site = current_user.sites.build(params[:site])
 
-  respond_to do |format|
-    if @site.save
-      format.html { redirect_to(admin_sites_install_path, :notice => 'Site was successfully created.') }
-    else
-      format.html { render :action => "new" }
-    end
-  end
-end
+	  respond_to do |format|
+	    if @site.save
+	      format.html { redirect_to(admin_sites_install_path, :notice => 'Site was successfully created.') }
+	    else
+	      format.html { render :action => "new" }
+	    end
+	  end
+	end
 
 	def index
 		#@recordings = current_user.sites

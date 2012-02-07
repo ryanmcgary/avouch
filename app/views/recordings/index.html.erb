@@ -4,7 +4,7 @@
       <div class="comments">
         
         
-				<%= render :partial => 'shared/recording', :object => @recording %>
+				<%= render :partial => 'shared/recording', :collection => @remoteurl.recordings %>
              
         
       </div>  
@@ -12,6 +12,3 @@
     </div>
   </div> 
 </div>
-
-
-<!-- <#%= render :text => @recording.site_name %> -->

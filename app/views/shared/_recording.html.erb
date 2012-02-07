@@ -11,7 +11,15 @@
 	          <div class="review-each">
 	           <audio src="<%= recording.audio_file + ".mp3" %>" preload="none"></audio>                
 	           <div class="review-left">posted <%= time_ago_in_words(recording.created_at) %> ago.</div>
-	           <div class="review-right">share / like / <b class="bold toggle">synopsis</b></div>
+	           <div class="review-right">
+	           <a href="http://twitter.com/?status=[<%=u "#{request.referrer}##{recording.created_at.to_i} URL encoded tweet text" %>]." class="auth_popup" rel="window100">
+	           tweet</a> 
+	           / 
+	           <a href="http://www.facebook.com/sharer.php?u= <%=u "#{request.referrer}##{recording.created_at.to_i} hello" %>" class="auth_popup" rel="window100">
+	           like</a> 
+	           / 
+	           <b class="bold toggle">synopsis</b></div>
+	           
 	           <div class="clear"></div>
 	           <div class="trans">
 	            <%= recording.synopsis.empty? ? recording.transcription : recording.synopsis %>
@@ -35,7 +43,14 @@
 		          <div class="iavouch-review-details">
 		           <audio src="<%= recording.audio_file + ".mp3" %>" preload="auto"></audio>
 		           <div class="iavouch-review-date">posted <%= time_ago_in_words(recording.created_at) %> days ago</div>
-		           <div class="iavouch-review-sharing">share / like / reply </div>
+		           <div class="iavouch-review-sharing">
+ 		           <a href="http://twitter.com/?status=<%=u "#{request.referrer}##{recording.created_at.to_i} listen to my review #referenceletterssuck" %>" class="auth_popup" target="_blank">
+		           tweet</a> 
+		           / 
+		           <a href="http://www.facebook.com/sharer.php?u= <%=u "#{request.referrer}##{recording.created_at.to_i}" %>" class="auth_popup" target="_blank">
+		           	like</a> 
+		           <!-- / read  -->
+		           </div>
 		           <div class="clear"></div>
 		          </div>
 		      </tr>
@@ -43,32 +58,36 @@
 	  	</div>
 	<% end %>
 <% elsif %>
-	<% if !recording.audio_file.nil? %>
-		<div class="recording-divider">
-			<div class="clear"></div> 
-			<%= link_to approve_link_text(recording), toggle_approve_admin_site_path(recording.recordid), :remote => true, :id => "approve_link_#{recording.recordid}", :class => "approve-toggle-link" %> 
-			<div class="clear"></div> 
-		  <div class="comments-each">
-		    <table class="review-container">
-		      <tr>
-		        <td width="64 !important">       <%# # TODO: delete this line and handle in DB  %>
-		          <img class="profile_pic" src="<%= recording.profile_pic.nil? ? "/images/blankprofilepic.png" : recording.profile_pic %>" width="54 !important" height="54 !important"> 
-		        </td>
-		        <td class="table-rightside">
-		          <p><%= recording.full_name %> / <%= recording.title %>  @ <%= recording.company %> </p>                        
-		          <div class="review-each">
-		           <audio src="<%= recording.audio_file + ".mp3" %>" preload="none"></audio>                
-		           <div class="review-left">posted <%= time_ago_in_words(recording.created_at) %> ago. <%= recording.recordid %> </div>
-		           <div class="review-right"><b class="bold toggle">site:<%= recording.site_permalink %> <%= recording.site_id %> link:<%= recording.permalink %> </b></div>
-		           <div class="clear"></div>
-		           <div class="trans">   
-		           <%= recording.synopsis.empty? ? recording.transcription : recording.synopsis %>
-		           </div>
-		          </div>
-		      </tr>
-		    </table>  
-		  </div>
-		</div>
+	<% if recording.call_completed? %>
+	  <div class="comments-each">
+	    <table class="review-container">
+	      <tr>
+	        <td width="64 !important">       <%# # TODO: delete this line and handle in DB  %>
+	          <img class="profile_pic" src="<%= recording.user.profile_pic.nil? ? "/images/blankprofilepic.png" : recording.user.profile_pic %>" width="54 !important" height="54 !important"> 
+	        </td>
+	        <td class="table-rightside">
+	          <p><%= recording.user.full_name %> / <%= recording.user.title %>  @ <%= recording.user.company %> </p>                        
+	          <div class="review-each">
+	           <audio src="<%= recording.audio_file + ".mp3" %>" preload="none"></audio>                
+	           <div class="review-left">posted <%= time_ago_in_words(recording.created_at) %> ago.</div>
+	           <div class="review-right">
+	           <a href="http://twitter.com/?status=[<%=u "#{request.referrer}##{recording.created_at.to_i} URL encoded tweet text" %>]." class="auth_popup" rel="window100">
+	           tweet</a> 
+	           / 
+	           <a href="http://www.facebook.com/sharer.php?u= <%=u "#{request.referrer}##{recording.created_at.to_i} hello" %>" class="auth_popup" rel="window100">
+	           like</a> 
+	           / 
+	           <b class="bold toggle">synopsis</b></div>
+	           
+	           <div class="clear"></div>
+	           <div class="trans">
+	            <%= recording.synopsis.empty? ? recording.transcription : recording.synopsis %>
+	           </div>
+	          </div>
+	      </tr>
+	    </table>  
+	  </div>
+
 	<% end %>
 	
 <% end %>

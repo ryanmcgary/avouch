@@ -100,29 +100,28 @@ html, body {
       width: 35px; }
   /* line 41, ../../app/stylesheets/screen.scss */
   .devise #stylized {
-    background: #ebf4fb;
     overflow: hidden; }
     /* line 42, ../../app/stylesheets/screen.scss */
     .devise #stylized .error {
       margin-left: 151px;
       margin-bottom: 20px;
       width: 200px; }
-    /* line 49, ../../app/stylesheets/screen.scss */
+    /* line 48, ../../app/stylesheets/screen.scss */
     .devise #stylized div.field_with_errors {
       color: #8B0000; }
-  /* line 51, ../../app/stylesheets/screen.scss */
+  /* line 50, ../../app/stylesheets/screen.scss */
   .devise #stylized h1 {
     font-size: 14px;
     font-weight: bold;
     margin-bottom: 8px; }
-  /* line 56, ../../app/stylesheets/screen.scss */
+  /* line 55, ../../app/stylesheets/screen.scss */
   .devise #stylized p {
     font-size: 11px;
     color: #666666;
     margin-bottom: 20px;
     border-bottom: solid 1px #b7ddf2;
     padding-bottom: 10px; }
-  /* line 63, ../../app/stylesheets/screen.scss */
+  /* line 62, ../../app/stylesheets/screen.scss */
   .devise #stylized label {
     display: block;
     font-weight: bold;
@@ -130,7 +129,7 @@ html, body {
     width: 140px;
     float: left;
     font-size: 16px; }
-  /* line 71, ../../app/stylesheets/screen.scss */
+  /* line 70, ../../app/stylesheets/screen.scss */
   .devise #stylized .small {
     color: #666666;
     display: block;
@@ -138,7 +137,7 @@ html, body {
     font-weight: normal;
     text-align: right;
     width: 140px; }
-  /* line 79, ../../app/stylesheets/screen.scss */
+  /* line 78, ../../app/stylesheets/screen.scss */
   .devise #stylized input {
     float: left;
     font-size: 12px;
@@ -146,15 +145,15 @@ html, body {
     border: solid 1px #aacfe4;
     width: 200px;
     margin: 2px 0 20px 10px; }
-  /* line 87, ../../app/stylesheets/screen.scss */
+  /* line 86, ../../app/stylesheets/screen.scss */
   .devise #stylized div.field_with_errors input {
     margin: 2px 0 0px 10px;
     border: solid 2px #CD5C5C; }
-  /* line 91, ../../app/stylesheets/screen.scss */
+  /* line 90, ../../app/stylesheets/screen.scss */
   .devise #stylized div#first div.field_with_errors input {
     margin: 2px 0 20px 10px;
     border: solid 1px #aacfe4; }
-  /* line 95, ../../app/stylesheets/screen.scss */
+  /* line 94, ../../app/stylesheets/screen.scss */
   .devise #stylized input[type="submit"] {
     clear: both;
     margin-left: 150px;
@@ -165,7 +164,7 @@ html, body {
     color: #FFFFFF;
     font-size: 11px;
     font-weight: bold; }
-  /* line 107, ../../app/stylesheets/screen.scss */
+  /* line 106, ../../app/stylesheets/screen.scss */
   .devise .btn {
     cursor: pointer;
     display: inline-block;
@@ -196,15 +195,15 @@ html, body {
     -ms-transition: 0.1s linear all;
     -o-transition: 0.1s linear all;
     transition: 0.1s linear all; }
-  /* line 138, ../../app/stylesheets/screen.scss */
+  /* line 137, ../../app/stylesheets/screen.scss */
   .devise .btn:hover {
     background-position: 0 -15px;
     color: #333;
     text-decoration: none; }
-  /* line 143, ../../app/stylesheets/screen.scss */
+  /* line 142, ../../app/stylesheets/screen.scss */
   .devise .btn:focus {
     outline: 1px dotted #666; }
-  /* line 146, ../../app/stylesheets/screen.scss */
+  /* line 145, ../../app/stylesheets/screen.scss */
   .devise .btn.primary {
     color: #ffffff;
     background-color: #0064cd;
@@ -220,28 +219,28 @@ html, body {
     text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
     border-color: #0064cd #0064cd #003f81;
     border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25); }
-  /* line 162, ../../app/stylesheets/screen.scss */
+  /* line 161, ../../app/stylesheets/screen.scss */
   .devise .btn.active, .devise .btn:active {
     -webkit-box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.25), 0 1px 2px rgba(0, 0, 0, 0.05);
     -moz-box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.25), 0 1px 2px rgba(0, 0, 0, 0.05);
     box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.25), 0 1px 2px rgba(0, 0, 0, 0.05); }
 
-/* line 171, ../../app/stylesheets/screen.scss */
+/* line 170, ../../app/stylesheets/screen.scss */
 .actions {
   margin-bottom: 10px; }
 
-/* line 172, ../../app/stylesheets/screen.scss */
+/* line 171, ../../app/stylesheets/screen.scss */
 #sucker {
   width: 98%;
   position: absolute;
   top: 4px;
   left: 4px; }
-  /* line 177, ../../app/stylesheets/screen.scss */
+  /* line 176, ../../app/stylesheets/screen.scss */
   #sucker p {
     text-decoration: underline;
     padding-bottom: 3px; }
 
-/* line 182, ../../app/stylesheets/screen.scss */
+/* line 181, ../../app/stylesheets/screen.scss */
 .social-login {
   display: table;
   position: relative;
@@ -250,25 +249,25 @@ html, body {
   width: 100%;
   overflow: hidden;
   text-align: center; }
-  /* line 190, ../../app/stylesheets/screen.scss */
+  /* line 189, ../../app/stylesheets/screen.scss */
   .social-login p {
     visibility: hidden;
     position: fixed;
     margin-top: 3px;
     margin-left: 3px;
     color: white; }
-  /* line 197, ../../app/stylesheets/screen.scss */
+  /* line 196, ../../app/stylesheets/screen.scss */
   .social-login:hover p {
     visibility: visible; }
-  /* line 198, ../../app/stylesheets/screen.scss */
+  /* line 197, ../../app/stylesheets/screen.scss */
   .social-login ul {
     display: table-cell;
     vertical-align: middle; }
-  /* line 202, ../../app/stylesheets/screen.scss */
+  /* line 201, ../../app/stylesheets/screen.scss */
   .social-login li {
     padding-top: 15px;
     display: inline-block; }
-  /* line 203, ../../app/stylesheets/screen.scss */
+  /* line 202, ../../app/stylesheets/screen.scss */
   .social-login:hover {
     /* Fallback for web browsers that doesn't support RGBa */
     background: black transparent;
@@ -278,7 +277,7 @@ html, body {
     filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#99000000, endColorstr=#99000000);
     /* For IE 8*/
     -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#99000000, endColorstr=#99000000)"; }
-  /* line 214, ../../app/stylesheets/screen.scss */
+  /* line 213, ../../app/stylesheets/screen.scss */
   .social-login:hover a.auth_popup {
     position: relative;
     margin: 0px auto;
@@ -290,39 +289,39 @@ html, body {
     -moz-box-shadow: 1px 1px 8px rgba(0, 0, 0, 0.3);
     -o-box-shadow: 1px 1px 8px rgba(0, 0, 0, 0.3);
     box-shadow: 1px 1px 8px rgba(0, 0, 0, 0.3); }
-  /* line 224, ../../app/stylesheets/screen.scss */
+  /* line 223, ../../app/stylesheets/screen.scss */
   .social-login a#sign-in {
     background: url("../images/authbuttons/login-buttons.png") no-repeat 0 -2px; }
-    /* line 226, ../../app/stylesheets/screen.scss */
+    /* line 225, ../../app/stylesheets/screen.scss */
     .social-login a#sign-in:hover {
       background-position: 0px -33px; }
-    /* line 227, ../../app/stylesheets/screen.scss */
+    /* line 226, ../../app/stylesheets/screen.scss */
     .social-login a#sign-in:active {
       background-position: 0px -64px; }
-  /* line 229, ../../app/stylesheets/screen.scss */
+  /* line 228, ../../app/stylesheets/screen.scss */
   .social-login a#facebook {
     background: url("../images/authbuttons/login-buttons.png") no-repeat -111px -2px; }
-    /* line 231, ../../app/stylesheets/screen.scss */
+    /* line 230, ../../app/stylesheets/screen.scss */
     .social-login a#facebook:hover {
       background-position: -111px -33px; }
-    /* line 232, ../../app/stylesheets/screen.scss */
+    /* line 231, ../../app/stylesheets/screen.scss */
     .social-login a#facebook:active {
       background-position: -111px -64px; }
-  /* line 234, ../../app/stylesheets/screen.scss */
+  /* line 233, ../../app/stylesheets/screen.scss */
   .social-login a#twitter {
     background: url("../images/authbuttons/login-buttons.png") no-repeat -222px -2px; }
-    /* line 236, ../../app/stylesheets/screen.scss */
+    /* line 235, ../../app/stylesheets/screen.scss */
     .social-login a#twitter:hover {
       background-position: -222px -33px; }
-    /* line 237, ../../app/stylesheets/screen.scss */
+    /* line 236, ../../app/stylesheets/screen.scss */
     .social-login a#twitter:active {
       background-position: -222px -64px; }
 
-/* line 242, ../../app/stylesheets/screen.scss */
+/* line 241, ../../app/stylesheets/screen.scss */
 .authentications {
   margin-bottom: 30px; }
 
-/* line 246, ../../app/stylesheets/screen.scss */
+/* line 245, ../../app/stylesheets/screen.scss */
 .authentication {
   width: 130px;
   float: left;
@@ -334,7 +333,7 @@ html, body {
   position: relative;
   margin-right: 10px; }
 
-/* line 258, ../../app/stylesheets/screen.scss */
+/* line 257, ../../app/stylesheets/screen.scss */
 .authentication .remove {
   text-decoration: none;
   position: absolute;
@@ -344,32 +343,32 @@ html, body {
   padding: 2px 4px;
   font-size: 10px; }
 
-/* line 268, ../../app/stylesheets/screen.scss */
+/* line 267, ../../app/stylesheets/screen.scss */
 .authentication .remove:hover {
   color: #CCC;
   background-color: #777;
   -moz-border-radius: 6px;
   -webkit-border-radius: 6px; }
 
-/* line 275, ../../app/stylesheets/screen.scss */
+/* line 274, ../../app/stylesheets/screen.scss */
 .authentication img {
   float: left;
   margin-right: 10px; }
 
-/* line 280, ../../app/stylesheets/screen.scss */
+/* line 279, ../../app/stylesheets/screen.scss */
 .authentication .provider {
   font-weight: bold; }
 
-/* line 284, ../../app/stylesheets/screen.scss */
+/* line 283, ../../app/stylesheets/screen.scss */
 .authentication .uid {
   color: #666;
   font-size: 11px; }
 
-/* line 290, ../../app/stylesheets/screen.scss */
+/* line 289, ../../app/stylesheets/screen.scss */
 .auth_provider img {
   display: block; }
 
-/* line 294, ../../app/stylesheets/screen.scss */
+/* line 293, ../../app/stylesheets/screen.scss */
 .auth_provider {
   float: left;
   text-decoration: none;
@@ -377,12 +376,12 @@ html, body {
   text-align: center;
   margin-bottom: 10px; }
 
-/* line 303, ../../app/stylesheets/screen.scss */
+/* line 302, ../../app/stylesheets/screen.scss */
 .embed {
   margin: 0px 0px;
   width: 100%;
   overflow: hidden; }
-  /* line 307, ../../app/stylesheets/screen.scss */
+  /* line 306, ../../app/stylesheets/screen.scss */
   .embed .profile_pic {
     overflow: hidden;
     border: 1px solid #c1c1c1;
@@ -392,22 +391,22 @@ html, body {
     -webkit-box-shadow: inset 0 1px 4px rgba(0, 0, 0, 0.16);
     -moz-box-shadow: inset 0 1px 4px rgba(0, 0, 0, 0.16);
     box-shadow: inset 0 1px 4px rgba(0, 0, 0, 0.16); }
-  /* line 317, ../../app/stylesheets/screen.scss */
+  /* line 316, ../../app/stylesheets/screen.scss */
   .embed .left-bar {
     margin: -4px 0px 0px 2px;
     color: grey;
     font-size: 0.9em; }
-  /* line 322, ../../app/stylesheets/screen.scss */
+  /* line 321, ../../app/stylesheets/screen.scss */
   .embed .table-rightside {
     vertical-align: top;
     padding-left: 4px; }
-    /* line 325, ../../app/stylesheets/screen.scss */
+    /* line 324, ../../app/stylesheets/screen.scss */
     .embed .table-rightside p {
       margin: -2px 0px 1px 0px;
       font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
       font-weight: 500;
       font-size: 1.2em; }
-  /* line 332, ../../app/stylesheets/screen.scss */
+  /* line 331, ../../app/stylesheets/screen.scss */
   .embed .optional-text {
     overflow: hidden;
     background: white url("/images/backgrounds-sprite.png") 0 -480px repeat-x;
@@ -419,7 +418,7 @@ html, body {
     -webkit-box-shadow: inset 0 1px 4px rgba(0, 0, 0, 0.16);
     -moz-box-shadow: inset 0 1px 4px rgba(0, 0, 0, 0.16);
     box-shadow: inset 0 1px 4px rgba(0, 0, 0, 0.16); }
-  /* line 344, ../../app/stylesheets/screen.scss */
+  /* line 343, ../../app/stylesheets/screen.scss */
   .embed textarea {
     width: 99.2%;
     height: 6em;
@@ -428,22 +427,22 @@ html, body {
     background: transparent;
     overflow: hidden;
     resize: none; }
-    /* line 352, ../../app/stylesheets/screen.scss */
+    /* line 351, ../../app/stylesheets/screen.scss */
     .embed textarea:focus {
       outline: 0; }
-  /* line 358, ../../app/stylesheets/screen.scss */
+  /* line 357, ../../app/stylesheets/screen.scss */
   .embed .expand-bottom {
     border-top: dotted;
     border-width: 1px;
     border-color: grey;
     display: none; }
-  /* line 364, ../../app/stylesheets/screen.scss */
+  /* line 363, ../../app/stylesheets/screen.scss */
   .embed .link {
     margin-left: 2px;
     font-size: 12px;
     line-height: 32px;
     vertical-align: sub; }
-  /* line 370, ../../app/stylesheets/screen.scss */
+  /* line 369, ../../app/stylesheets/screen.scss */
   .embed .vouch-button {
     float: right;
     margin: -1px -1px -1px 0px;
@@ -465,10 +464,10 @@ html, body {
     top: -1px;
     z-index: 2;
     height: 34px; }
-    /* line 391, ../../app/stylesheets/screen.scss */
+    /* line 390, ../../app/stylesheets/screen.scss */
     .embed .vouch-button:hover {
       background: url("/images/backgrounds-sprite.png") 0 -310px repeat-x; }
-    /* line 392, ../../app/stylesheets/screen.scss */
+    /* line 391, ../../app/stylesheets/screen.scss */
     .embed .vouch-button:active {
       background: url("/images/backgrounds-sprite.png") 0 -370px repeat-x;
       -webkit-box-shadow: 0 1px 0 rgba(255, 255, 255, 0.8);
@@ -477,16 +476,16 @@ html, body {
       padding-top: 9px;
       padding-bottom: 7px; }
 
-/* line 403, ../../app/stylesheets/screen.scss */
+/* line 402, ../../app/stylesheets/screen.scss */
 .embed-banner {
   overflow: hidden;
   font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; }
-  /* line 406, ../../app/stylesheets/screen.scss */
+  /* line 405, ../../app/stylesheets/screen.scss */
   .embed-banner table {
     margin: 0px 0px;
     width: 100%;
     overflow: hidden; }
-  /* line 412, ../../app/stylesheets/screen.scss */
+  /* line 411, ../../app/stylesheets/screen.scss */
   .embed-banner .profile_pic {
     margin-top: 4px;
     margin-left: 5px;
@@ -498,24 +497,24 @@ html, body {
     -webkit-box-shadow: inset 0 1px 4px rgba(0, 0, 0, 0.16);
     -moz-box-shadow: inset 0 1px 4px rgba(0, 0, 0, 0.16);
     box-shadow: inset 0 1px 4px rgba(0, 0, 0, 0.16); }
-  /* line 425, ../../app/stylesheets/screen.scss */
+  /* line 424, ../../app/stylesheets/screen.scss */
   .embed-banner .left-bar {
-    margin: -4px 0px 0px 6px;
+    margin: -4px 0px 2px 6px;
     color: grey;
     font-size: 0.9em; }
-  /* line 431, ../../app/stylesheets/screen.scss */
+  /* line 430, ../../app/stylesheets/screen.scss */
   .embed-banner .table-rightside {
     padding-top: 4px;
     vertical-align: top;
     padding-left: 4px;
     width: 100%; }
-    /* line 436, ../../app/stylesheets/screen.scss */
+    /* line 435, ../../app/stylesheets/screen.scss */
     .embed-banner .table-rightside p {
       margin: -2px 4px 1px 0px;
       font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
       font-weight: 500;
       font-size: 0.9em; }
-  /* line 444, ../../app/stylesheets/screen.scss */
+  /* line 443, ../../app/stylesheets/screen.scss */
   .embed-banner .optional-text {
     overflow: hidden;
     background: white url("/images/backgrounds-sprite.png") 0 -480px repeat-x;
@@ -529,19 +528,19 @@ html, body {
     -webkit-box-shadow: inset 0 1px 4px rgba(0, 0, 0, 0.16);
     -moz-box-shadow: inset 0 1px 4px rgba(0, 0, 0, 0.16);
     box-shadow: inset 0 1px 4px rgba(0, 0, 0, 0.16); }
-  /* line 459, ../../app/stylesheets/screen.scss */
+  /* line 458, ../../app/stylesheets/screen.scss */
   .embed-banner .text-area {
     height: 34px; }
-    /* line 461, ../../app/stylesheets/screen.scss */
+    /* line 460, ../../app/stylesheets/screen.scss */
     .embed-banner .text-area textarea {
       background: transparent;
       border: none;
       overflow: hidden;
       resize: none; }
-      /* line 466, ../../app/stylesheets/screen.scss */
+      /* line 465, ../../app/stylesheets/screen.scss */
       .embed-banner .text-area textarea:focus {
         outline: 0; }
-  /* line 472, ../../app/stylesheets/screen.scss */
+  /* line 471, ../../app/stylesheets/screen.scss */
   .embed-banner .short-text {
     /* TODO: Required to change width */
     width: 67%;
@@ -551,7 +550,7 @@ html, body {
     border: none;
     overflow: none;
     resize: none; }
-  /* line 483, ../../app/stylesheets/screen.scss */
+  /* line 482, ../../app/stylesheets/screen.scss */
   .embed-banner .vouch-button {
     width: 30%;
     float: right;
@@ -572,10 +571,10 @@ html, body {
     font-weight: 300;
     z-index: 2;
     height: 35px; }
-    /* line 507, ../../app/stylesheets/screen.scss */
+    /* line 506, ../../app/stylesheets/screen.scss */
     .embed-banner .vouch-button:hover {
       background: url("/images/backgrounds-sprite.png") 0 -310px repeat-x; }
-    /* line 510, ../../app/stylesheets/screen.scss */
+    /* line 509, ../../app/stylesheets/screen.scss */
     .embed-banner .vouch-button:active {
       background: url("/images/backgrounds-sprite.png") 0 -370px repeat-x;
       -webkit-box-shadow: 0 1px 0 rgba(255, 255, 255, 0.8);
@@ -583,18 +582,18 @@ html, body {
       box-shadow: 0 1px 0 rgba(255, 255, 255, 0.8);
       padding-top: 9px;
       padding-bottom: 7px; }
-  /* line 520, ../../app/stylesheets/screen.scss */
+  /* line 519, ../../app/stylesheets/screen.scss */
   .embed-banner .expand-bottom {
     border-top: dotted;
     border-width: 1px;
     border-color: grey;
     display: none; }
-    /* line 525, ../../app/stylesheets/screen.scss */
+    /* line 524, ../../app/stylesheets/screen.scss */
     .embed-banner .expand-bottom a {
       margin-left: 2px;
       font-size: 12px;
       line-height: 12px; }
 
-/* line 536, ../../app/stylesheets/screen.scss */
+/* line 535, ../../app/stylesheets/screen.scss */
 .bold {
   font-weight: bold; }

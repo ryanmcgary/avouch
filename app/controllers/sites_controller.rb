@@ -86,7 +86,7 @@ class SitesController < ApplicationController
     @site.destroy
 
     respond_to do |format|
-      format.html { redirect_to(admin_sites_url) }
+      format.html { redirect_to(admin_sites_url, :notice => 'Site was successfully deleted.') }
       format.xml  { head :ok }
     end
   end

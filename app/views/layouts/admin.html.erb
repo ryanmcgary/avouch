@@ -5,15 +5,8 @@
   <title>Avouch</title>
   <%= stylesheet_link_tag :all %>
   <%= stylesheet_link_tag "embeds/blog-embed" %>
-  
-  <%= javascript_include_tag :defaults, 'jquery.popupwindow', 'iphone-style-checkboxes', 'install-page.js', 'http://stormy-winter-617.heroku.com/audiojs/audio.js' %>
 
-  <script type="text/javascript">
-      $(document).ready(function() {
-        $('.comment-style :checkbox').iphoneStyle({ checkedLabel: 'Blog', uncheckedLabel: 'Banner' });
-        $('.comment-location :checkbox').iphoneStyle({ checkedLabel: 'Top', uncheckedLabel: 'Bottom' });   
-      });
-  </script>
+  <%= javascript_include_tag :defaults, 'jquery.popupwindow', 'iphone-style-checkboxes', 'install-page.js', 'http://stormy-winter-617.heroku.com/audiojs/audio.js', 'bootstrap-alerts' %>
 
   <%= csrf_meta_tag %>
 </head>
@@ -57,26 +50,33 @@
           <div class="site-list">
             <% if user_signed_in? %>
               <% current_user.sites(:new_record => 'false').each do |sites|  %>
-                <div class="spanwhat">
-                  <%= link_to_unless_current sites.name, admin_site_install_path(sites.permalink), :class => "what" do |name|
-                      content_tag(:p, "#{name}", :class => "what")
+                <div class="site-wrapper">
+                  <%= link_to_unless_current sites.name, admin_site_install_path(sites.permalink), :class => "site" do |name|
+                      content_tag(:p, "#{name}", :class => "site")
                       end
                   %>
                   <%= link_to "", sites, :confirm => 'Are you sure?', :method => :delete, :class => "trash" %>
                 </div>
               <% end %>
-              <div class="spanwhat">
-                <%= link_to "New", new_admin_site_path, :class => "what" %>
+              <div class="site-wrapper">
+                <%= link_to "New", new_admin_site_path, :class => "site" %>
               </div>
             <% end %>
           </div>
         </li>
       </ul>
     </div>
-  
-    <!-- content -->
-    <%= yield %>
-    
+
+    <div class="showborder" id="main-content">
+      <% flash.each do |key, value| %>
+        <div class="alert-message <%= key %>" data-alert="alert"><%= value %><a href="#" class="close">x</a></div>
+      <% end %> 
+
+      
+      <!-- content -->
+      <%= yield %>
+    </div>  
+
     <div id="footer">
       
     </div>

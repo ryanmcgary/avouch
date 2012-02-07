@@ -2,7 +2,6 @@ class RemoteurlsController < ApplicationController
   before_filter :authenticate_user!, :except => [:show]
 
   layout 'remotelayout'
-  
 
   
   def index # GET /remoteurls # GET /remoteurls.xml
@@ -15,23 +14,26 @@ class RemoteurlsController < ApplicationController
   end
 
   def show
-    @site = Site.find_by_permalink(params[:site_id])
+    # so basically all that is needed here is the remoteurl[:id] as part of the param, if a number or string is used then you don't have to hit the DB
+    # So I might just grab everything in the lanyard controller and use #ID's from there
     session[:return_to] = params
-    if @site.remoteurls.find_by_permalink(params[:id]).nil? 
-      @remoteurl = @site.remoteurls.build(params[:remoteurl])
-      @remoteurl.name = (params[:id])
-      respond_to do |format|
-        if @remoteurl.save
-          format.html { redirect_to "/sites/#{@site.permalink}/remoteurls/#{@remoteurl.permalink}?layout=#{params[:layout]}"}
-          format.xml  { render :xml => @site, :status => :created, :location => @remoteurl }
-        else
-          format.html { render :action => "new" }
-          format.xml  { render :xml => [@site, @remoteurl].errors, :status => :unprocessable_entity }
-        end
-      end
-    else
-    @remoteurl = @site.remoteurls.find_by_permalink(params[:id])
-    end 
+    
+    # @site = Site.find_by_permalink(params[:site_id])
+          # if @site.remoteurls.find_by_permalink(params[:id]).nil? 
+          #   @remoteurl = @site.remoteurls.build(params[:remoteurl])
+          #   @remoteurl.name = (params[:id])
+          #   respond_to do |format|
+          #     if @remoteurl.save
+          #       format.html { redirect_to "/sites/#{@site.permalink}/remoteurls/#{@remoteurl.permalink}?layout=#{params[:layout]}"}
+          #       format.xml  { render :xml => @site, :status => :created, :location => @remoteurl }
+          #     else
+          #       format.html { render :action => "new" }
+          #       format.xml  { render :xml => [@site, @remoteurl].errors, :status => :unprocessable_entity }
+          #     end
+          #   end
+          # else
+    # @remoteurl = @site.remoteurls.find_by_permalink(params[:id])
+    # end 
     
   end
 

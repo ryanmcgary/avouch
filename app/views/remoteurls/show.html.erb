@@ -9,7 +9,7 @@
       <div class="left-bar">
         <% if user_signed_in? %> 
         <%= link_to "Settings", "#{edit_user_registration_path}", :rel => "window800", :class => "auth_popup" %>
-    		<%= link_to "Logout", destroy_user_session_path, :method => :delete %>
+    		<%= params[:layout] != "2" ? (link_to "Logout", destroy_user_session_path, :method => :delete): "" %>
         <% end %>
       </div>  
     </td>
@@ -18,8 +18,10 @@
       <!-- <p>John Carter / President @ Planet Mars</p>                         -->
       
       <div class="optional-text">
+      <%# render :text => params[:id].to_s %>
           <%= form_for("recording", :url => recordings_makecall_path, :html => { :class => "edit_user" } ) do |f| %>
-          	<%= f.hidden_field :remoteurl_id, :value => @remoteurl.id  %>
+            <%# was  @remoteurl.id instead of params[:id] %>
+          	<%= f.hidden_field :remoteurl_id, :value => params[:id] %>
             <div class="text-area">
             	<%= f.text_area :synopsis, :class => "short-text" %>
               <!-- insert submit button here if layout is 2 -->
@@ -61,7 +63,7 @@
       
       <div class="optional-text">
           <% form_for("recording", :url => recordings_makecall_path, :html => { :class => "edit_user" } ) do |f| -%>
-            <%= f.hidden_field :remoteurl_id, :value => @remoteurl.id  %>
+            <%= f.hidden_field :remoteurl_id, :value => params[:id]  %>
             <div class="text-area">
               <%= f.text_area :synopsis, :class => "short-text" %>
               <!-- insert submit button here if layout is 2 -->

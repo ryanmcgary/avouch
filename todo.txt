@@ -96,16 +96,16 @@ x admin/site/new
 x weird error where failed site is show until refresh?
 x Direct login links not redirecting after sign_in correctly (broken if not already logged in, works if you are already logged into socialauth provider)
 x add delete site?
+x share and like links should work
+x javascript include tag audio/js?
+x create remoteurl occurs in lanyard_controller
+x Add notices to admin area
 
 ! create homepage
+ see about using json/jqeury to return reviews
 
-! share and like links should work
 
-javascript include tag audio/js?
 
-https?
-
-- find alternative dashboard design?
 
 	
 Give user direct recordings
@@ -123,14 +123,14 @@ Add direct call
 
 
 
+- find alternative dashboard design?
+
+- add "log out" to registration edit, remove logout link
 
 
-
-? it would be better if creation of remoteurl occurs in controller/embed before JS is called or on submit, or on creation of new recording?
-? Do I want to add notices to admin area?
 - For Moderation: create virtual remoteurls (adding tag based system)
 ? auto iterate site name cnn.com created a second time would yield cnn.com2
-? Add additional / authentications in edit "settings"
+? Add additional site authentication in lanyard/controller
 
 
 ? Jquery loading
