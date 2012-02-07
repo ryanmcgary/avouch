@@ -33,10 +33,7 @@ class LanyardsController < ApplicationController
     
     # maybe change to find by or create? How about I use a single query in the recording.model?
     # maybe use whole url for "remoteurl" and then prevent duplicates?
-    if !params[:callback].nil?
-      @reply = render_to_string(:partial => '/shared/recording.html.erb', :collection => @remoteurl.recordings, :locals => {:v => "1"})
-      render :json => @reply.to_json, :callback => params[:callback], :content_type => 'application/json'  
-    else
+
       render :partial => "embed.js.erb", :content_type => 'application/javascript'  
     end
     
