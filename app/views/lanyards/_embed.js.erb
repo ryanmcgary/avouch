@@ -54,17 +54,47 @@ if (remoteurl_id == undefined) {
 
 	jQuery(document).ready(function($) {
 					
-					$.fn.reverseChildren = function() {
-					  return this.each(function(){
-					    var $this = $(this);
-					    $this.children().each(function(){
-					      $this.prepend(this);
-					    });
-					  });
-					};
+					// $.fn.reverseChildren = function() {
+					//   return this.each(function(){
+					//     var $this = $(this);
+					//     $this.children().each(function(){
+					//       $this.prepend(this);
+					//     });
+					//   });
+					// };
+					// $('.toggle-synopsis').click(function() {
+					// 	$('.comments').reverseChildren();
+					// 	$(this).text($(this).text() == 'newest first' ? 'oldest first' : 'newest first');
+					// });
+
+
+
 					$('.toggle-synopsis').click(function() {
-						$('.comments').reverseChildren();
-						$(this).text($(this).text() == 'newest first' ? 'oldest first' : 'newest first');
+						$.getJSON("http://localhost:3000/sites/" + site_id +"/lanyard/embed?callback=?", function(json) {
+						// render html
+						$('.comments').html(json);
+						// create audiojs
+						var as = audiojs.createAll();
+					  // rezise
+					  $('.audiojs').width(widget_width - 78);  
+			      $('.audiojs .loaded').width(widget_width - 232); 
+			      $('.audiojs .scrubber').width(widget_width - 232);
+			      $('.comments .comments-header').width(widget_width);
+						$('.comments .review-each').width(widget_width - 78);
+					  // popup links
+					  var profiles = {window100:{center:1,status:1}};
+						$(function(){$(".auth_popup").popupwindow(profiles);});
+						// synopsis toggle
+						$('.bold').click(function() {
+							$('.review-each div:hover .bold').toggleClass('toggle');
+							$('.comments-each div:hover .trans').slideToggle('fast');  
+							return false;
+						});  
+					  console.log(json);
+					})
+					.success(function() { console.log("second success"); })
+					.error(function() { console.log("error"); })
+					.complete(function() { console.log("complete"); });
 					});
 
 
