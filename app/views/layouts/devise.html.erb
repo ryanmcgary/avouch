@@ -6,13 +6,15 @@
 
   
    
-  <%= javascript_include_tag :defaults, 'jquery.popupwindow' %>
+  <%= javascript_include_tag :defaults, 'jquery.popupwindow', 'bootstrap-alerts' %>
   
   
   <%= csrf_meta_tag %>
 </head>
 <body class="devise" id="devise">
-
+<% flash.each do |key, value| %>
+  <div class="alert-message <%= key %>" data-alert="alert"><%= value %><a href="#" class="close">x</a></div>
+<% end %> 
 <%= yield %>
 
 </body>
