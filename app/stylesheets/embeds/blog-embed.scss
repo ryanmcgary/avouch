@@ -15,12 +15,15 @@
 
 #iavouch_mast { //  this is for embed style 
 	.bold{ font-weight:400; }
-	.comments{ .comments-each{ table.review-container{ width:100%; }}}
 	.toggle{ 
 		font-weight: bold;
 		background-color:lightgrey;
 		padding-bottom:2px;
 		line-height:20px; 
+	}
+	.comments{ 
+		margin-bottom: 20px;
+		.comments-each{ table.review-container{ width:100%; }}
 	}
 	.comments-header{ padding-bottom:40px; }
 	.toggle-synopsis{ 
