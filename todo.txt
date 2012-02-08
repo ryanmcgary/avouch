@@ -103,7 +103,6 @@ x Add notices to admin area
 
 ! add linkedin login
 ! add top text for blog review
-! turn audiojs off
 ! create homepage
 
 

@@ -20,7 +20,6 @@ $(document).ready(function() {
  // $(".alert-message").alert()
 
 });
-
 audiojs.events.ready(function() {
     var as = audiojs.createAll();
 });
