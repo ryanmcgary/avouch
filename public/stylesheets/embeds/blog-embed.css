@@ -314,7 +314,7 @@ html body * dd.clear {
   line-height: 20px; }
 /* line 24, ../../../app/stylesheets/embeds/blog-embed.scss */
 #iavouch_mast .comments {
-  margin-bottom: 20px; }
+  margin-bottom: 50px; }
   /* line 26, ../../../app/stylesheets/embeds/blog-embed.scss */
   #iavouch_mast .comments .comments-each table.review-container {
     width: 100%; }
