@@ -23,7 +23,7 @@
             <%# was  @remoteurl.id instead of params[:id] %>
           	<%= f.hidden_field :remoteurl_id, :value => params[:id] %>
             <div class="text-area">
-            	<%= f.text_area :synopsis, :class => "short-text" %>
+            	<%= f.text_area :synopsis, :class => "short-text", :placeholder => "write & record your review" %>
               <!-- insert submit button here if layout is 2 -->
               <%= params[:layout] == "2" ? (f.submit "Call Now!", :class => "vouch-button"): "" %>
               
@@ -65,7 +65,7 @@
           <% form_for("recording", :url => recordings_makecall_path, :html => { :class => "edit_user" } ) do |f| -%>
             <%= f.hidden_field :remoteurl_id, :value => params[:id]  %>
             <div class="text-area">
-              <%= f.text_area :synopsis, :class => "short-text" %>
+              <%= f.text_area :synopsis, :class => "short-text", :placeholder => "write & record your review" %>
               <!-- insert submit button here if layout is 2 -->
               <%= params[:layout] == "2" ? (f.submit "Call Now!", :class => "vouch-button"): "" %>
               
