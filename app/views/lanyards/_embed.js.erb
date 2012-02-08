@@ -41,6 +41,12 @@ if (remoteurl_id == undefined) {
  //    doc.close();
 
 		// creates var sw_3 or sw_2 and fills it with content from lanyard/lanyards, also escapse javascript
+		var leaveheader = document.createElement("div");
+			leaveheader.className = "poweredby";
+			leaveheader.innerHTML = "Powered by iAvouch";
+		vouch_content.insertBefore(leaveheader, ifrm);
+
+
 		var lanyard = document.createElement("div");
 		lanyard.style.visibility = 'hidden';
 		lanyard.innerHTML =	"<%= escape_javascript(render :partial => "lanyards/full_lanyard", :locals => {:v => params[:v]}) %>"; 
