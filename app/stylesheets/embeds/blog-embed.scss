@@ -1,29 +1,15 @@
 @import "embed-clear";
 @import "compass/css3";
 
-#iavouch{
-	.poweredby{
-		color: black;
-		font-family: HelveticaNeue-Light, 'Helvetica Neue Light', 'Helvetica Neue', Helvetica, Arial, 'Lucida Grande', sans-serif;
-		font-size: 15px;
-		font-weight: 600;
-		height: 15px;
-		line-height: 15px;
-		padding-bottom:40px;
-	}
-}
 
-#iavouch_mast { //  this is for embed style 
+#iavouch_mast { //  this is for embed style 3
+	.comments{ .comments-each{ table.review-container{ width:100%; }}}
 	.bold{ font-weight:400; }
 	.toggle{ 
 		font-weight: bold;
 		background-color:lightgrey;
 		padding-bottom:2px;
 		line-height:20px; 
-	}
-	.comments{ 
-		margin-bottom: 40px;
-		.comments-each{ table.review-container{ width:100%; }}
 	}
 	.comments-header{ padding-bottom:40px; }
 	.toggle-synopsis{ 

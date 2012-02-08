@@ -41,12 +41,6 @@ if (remoteurl_id == undefined) {
  //    doc.close();
 
 		// creates var sw_3 or sw_2 and fills it with content from lanyard/lanyards, also escapse javascript
-		var leaveheader = document.createElement("div");
-			leaveheader.className = "poweredby";
-			leaveheader.innerHTML = "Powered by iAvouch";
-		vouch_content.insertBefore(leaveheader, ifrm);
-
-
 		var lanyard = document.createElement("div");
 		lanyard.style.visibility = 'hidden';
 		lanyard.innerHTML =	"<%= escape_javascript(render :partial => "lanyards/full_lanyard", :locals => {:v => params[:v]}) %>"; 
@@ -75,17 +69,33 @@ if (remoteurl_id == undefined) {
 
 
 
-					// $('.toggle-synopsis').click(function() {
-					// 	$.getJSON("http://localhost:3000/sites/" + site_id +"/lanyard/embed?callback=?", function(json) {
-					// 		// render html
-					// 		$('.modal_container').html(json);
-		
-					// 	  console.log(json);
-					// 	})
-					// 	.success(function() { console.log("second success"); })
-					// 	.error(function() { console.log("error"); })
-					// 	.complete(function() { console.log("complete"); });
-					// });
+					$('.toggle-synopsis').click(function() {
+						$.getJSON("http://localhost:3000/sites/" + site_id +"/lanyard/embed?callback=?", function(json) {
+							// render html
+							$('.comments').html(json);
+							// create audiojs
+							var as = audiojs.createAll();
+						  // rezise
+						  $('.audiojs').width(widget_width - 78);  
+				      $('.audiojs .loaded').width(widget_width - 232); 
+				      $('.audiojs .scrubber').width(widget_width - 232);
+				      $('.comments .comments-header').width(widget_width);
+							$('.comments .review-each').width(widget_width - 78);
+						  // popup links
+						  var profiles = {window100:{center:1,status:1}};
+							$(function(){$(".auth_popup").popupwindow(profiles);});
+							// synopsis toggle
+							$('.bold').click(function() {
+								$('.review-each div:hover .bold').toggleClass('toggle');
+								$('.comments-each div:hover .trans').slideToggle('fast');  
+								return false;
+							});  
+						  console.log(json);
+						})
+						.success(function() { console.log("second success"); })
+						.error(function() { console.log("error"); })
+						.complete(function() { console.log("complete"); });
+					});
 
 
 					$.getScript("<%= root_url %>" + 'audiojs/audio.js', function() 
@@ -96,18 +106,8 @@ if (remoteurl_id == undefined) {
 			      $('.audiojs .scrubber').width(widget_width - 232);
 					}); 
 					
-					$.getScript("<%= root_url %>" + 'javascripts/bootstrap-modal.js', function() {
-						$('#modal_container').one('show', function () {
-  						$.getJSON("http://localhost:3000/sites/" + site_id +"/lanyard/embed?callback=?", function(json) {
-								// render html
-								$('#modal_container').html(json);
-							  console.log(json);
-							})
-						})
-						$('#modal_container').on('hidden', function () {
-						  ifrm.src = ifrm.src;
-						})
-					});  
+					$.getScript("<%= root_url %>" + 'javascripts/bootstrap-modal.js', function() 
+					{					});  
 					
 					
 					$.getScript("<%= root_url %>" + 'javascripts/jquery.popupwindow.js', function() 
