@@ -2,3 +2,17 @@
 db/*.sqlite3
 log/*.log
 tmp/
+
+.DS_Store
+
+.gitignore
+
+public/.DS_Store
+
+public/audiojs/.DS_Store
+
+public/.DS_Store
+
+public/audiojs/.DS_Store
+
+app/views/lanyards/_full_lanyard.html.erb
