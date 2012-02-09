@@ -43,7 +43,7 @@ if (remoteurl_id == undefined) {
 		// creates var sw_3 or sw_2 and fills it with content from lanyard/lanyards, also escapse javascript
 		var leaveheader = document.createElement("div");
 			leaveheader.className = "poweredby";
-			leaveheader.innerHTML = "Powered by iAvouch";
+			leaveheader.innerHTML = "<a class='iav-power' data-toggle='modal' href='#modal_container'>Powered by iAvouch</a>";
 		vouch_content.insertBefore(leaveheader, ifrm);
 
 
@@ -60,20 +60,6 @@ if (remoteurl_id == undefined) {
 
 	jQuery(document).ready(function($) {
 					
-					// $.fn.reverseChildren = function() {
-					//   return this.each(function(){
-					//     var $this = $(this);
-					//     $this.children().each(function(){
-					//       $this.prepend(this);
-					//     });
-					//   });
-					// };
-					// $('.toggle-synopsis').click(function() {
-					// 	$('.comments').reverseChildren();
-					// 	$(this).text($(this).text() == 'newest first' ? 'oldest first' : 'newest first');
-					// });
-
-
 
 					$('.toggle-synopsis').click(function() {
 						$.getJSON("http://localhost:3000/sites/" + site_id +"/lanyard/embed?callback=?", function(json) {
@@ -108,8 +94,8 @@ if (remoteurl_id == undefined) {
 					{
 					  var as = audiojs.createAll();
 					  $('.audiojs').width(widget_width - 78);  
-			      $('.audiojs .loaded').width(widget_width - 232); 
-			      $('.audiojs .scrubber').width(widget_width - 232);
+				      $('.audiojs .loaded').width(widget_width - 232); 
+				      $('.audiojs .scrubber').width(widget_width - 232);
 					}); 
 					
 					$.getScript("<%= root_url %>" + 'javascripts/bootstrap-modal.js', function() 

@@ -3,6 +3,7 @@
 
 #iavouch{
 	.poweredby{
+		.iav-power{text-decoration: none;}
 		color: black;
 		font-family: HelveticaNeue-Light, 'Helvetica Neue Light', 'Helvetica Neue', Helvetica, Arial, 'Lucida Grande', sans-serif;
 		font-size: 15px;
@@ -172,7 +173,8 @@
 	  top: 50%;
 	}
 	.modal-header {
-	  padding: 9px 15px;
+	  h3{margin:8px 0;}
+	  padding: 0px 15px;
 	  border-bottom: 1px solid #eee;
 	}
 	.modal-header .close {
@@ -182,7 +184,7 @@
 	  padding: 15px;
 	}
 	.modal-footer {
-	  padding: 14px 15px 15px;
+	  padding: 5px 15px 10px;
 	  margin-bottom: 0;
 	  background-color: #f5f5f5;
 	  border-top: 1px solid #ddd;
