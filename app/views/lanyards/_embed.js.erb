@@ -218,6 +218,74 @@ if (remoteurl_id == undefined) {
 		// 	// 	alert("Time to check if your loggedin or not, if so, change dom, if not don't");
 		// 	// 	};
 		// });
+		$.getScript("<%= root_url %>" + 'javascripts/bootstrap-tooltip.js', function() 
+		{
+			$.getScript("<%= root_url %>" + 'javascripts/bootstrap-popover.js', function() 
+			{
+				var isVisible = false;
+				console.log("is visible " + isVisible)
+				var clickedAway = false;
+				console.log("clicked away " + clickedAway)
+
+				$('.wha').each(function() {
+				    $(this).popover({
+				        html: true,
+				        trigger: 'manual',
+				        placement: 'bottom'
+				    }).click(function(e) {
+				    		console.log("at click is visible " + isVisible)
+				  			console.log("at click clicked away " + clickedAway)
+				        if(isVisible & clickedAway)
+				        {
+				        $(this).popover('hide');
+				        $(this).toggleClass('bold')
+				        isVisible = clickedAway = false;
+				        }
+				        else
+				        {
+				        $(this).popover('show');
+				        $(this).toggleClass('bold')
+				        isVisible = true;
+				        clickedAway = true;
+				        console.log("after click is visible " + isVisible)
+				  			console.log("after click clicked away " + clickedAway)
+				        return false;
+				        }
+				        //e.preventDefault();
+				    });
+				});
+
+				$(document).click(function(e) {
+				  	console.log("on call of click is visible " + isVisible)
+				  	console.log("on call of click clicked away " + clickedAway)
+				  if(isVisible & clickedAway)
+				  {
+				  	console.log("before hide is visible " + isVisible)
+				  	console.log("before hide clicked away " + clickedAway)
+				     $('.wha').each(function() {
+				          $(this).popover('hide');
+				          $(this).toggleClass('bold')
+				     });
+				    isVisible = clickedAway = false;
+				    console.log("after hide is visible " + isVisible)
+				  	console.log("after hide clicked away " + clickedAway)
+				  }
+				  else
+				  {
+				    clickedAway = true;
+				  }
+				});
+
+
+
+
+
+				// $('.wha').popover({
+				// 	trigger: 'manual',
+				// 	placement: 'bottom'
+				// })
+			});
+		});
 
 		//  call scripts for slider
 		$.getScript("<%= root_url %>" + 'javascripts/jquery.scrollTo-min.js', function() 
