@@ -412,10 +412,13 @@
 		vertical-align:top;
 		padding-left:4px;
 		p{
-			margin: -2px 0px 1px 0px;
-			font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
-			font-weight: 500;
-			font-size:1.2em;
+				margin: 0px 0px 5px 0px;
+				font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+				font-weight: 500;
+				font-size: 1.2em;
+				text-overflow: ellipsis;
+				white-space: nowrap;
+				overflow: hidden;
 		}	
 	}
 	#leaveareview{ 
@@ -551,9 +554,10 @@
 		-webkit-box-shadow: inset 1px 1px 5px rgba(0, 0, 0, 0.15); -moz-box-shadow: inset 1px 1px 5px rgba(0, 0, 0, 0.15); }
 	.track-details:before { content: '♬ '; }
 	.track-details em { font-style: normal; color: #999; }
-	.iavouch-review-date{ float:left; }            
+	.iavouch-review-date{ float:left; margin-top: 3px; }            
 	.iavouch-review-sharing{ 
 		float:right; 
+		margin-top: 3px;
 		.bold{font-weight: bold;}
 	}
 	// scroll container info

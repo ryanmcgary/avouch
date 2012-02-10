@@ -39,12 +39,12 @@
 		          <img class="profile-pic" src="<%= recording.user.profile_pic.nil? ? "/images/blankprofilepic.png" : recording.user.profile_pic %>" width="64" height="64" alt="Linkedin"> 
 		        </td>
 		        <td class="iavouch-review-rightside">
-		          <p><%= recording.user.full_name %> / <%= recording.user.title %>  @ <%= recording.user.company %> </p>                        
+		          <p title="<%= recording.user.full_name %> / <%= recording.user.title %>  @ <%= recording.user.company %>"><%= recording.user.full_name %> / <%= recording.user.title %>  @ <%= recording.user.company %> </p>                        
 		          <div class="iavouch-review-details">
 		           <audio src="<%= recording.audio_file + ".mp3" %>" preload="auto"></audio>
 		           <div class="iavouch-review-date">posted <%= time_ago_in_words(recording.created_at) %> ago.</div>
 		           <div class="iavouch-review-sharing">
-		           <a href="#" class="wha" rel="popover" data-content="<%= recording.synopsis.empty? ? recording.transcription : recording.synopsis %>" data-original-title="Transcript/Synopsis">read <%= recording.synopsis.empty? ? "transcript" : "synopsis" %></a> /
+		           <a href="#" class="wha" rel="popover" data-content="<%= recording.synopsis.empty? ? simple_format(recording.transcription) : simple_format(recording.synopsis) %>" data-original-title="Transcript/Synopsis">read <%= recording.synopsis.empty? ? "transcript" : "synopsis" %></a> /
  		           <a href="http://twitter.com/?status=<%=u "#{request.referrer}##{recording.created_at.to_i} listen to my review #referenceletterssuck" %>" class="auth_popup" target="_blank">
 		           tweet</a> 
 		           / 
