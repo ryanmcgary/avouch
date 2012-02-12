@@ -2,7 +2,8 @@
 
 <% if !request.referrer.include? "users" or request.referrer.include? "remoteurls" or params['layout'] == 'embed' %>
   <div class="devise_form" id="stylized">
-  <%= image_tag (what.nil? ? "" : what['image']), :title => "title", :class => "profile_pic" %>      
+  <%#= render :text => what.to_hash %>
+  <%= image_tag (what['image'].nil? ? "/images/blankprofilepic.png" : what['image']), :title => "title", :class => "profile_pic" %>      
   <h1>Sign up</h1>
   <p>Complete account creation</p> 
 
@@ -39,7 +40,7 @@
   </div> 
 <% else %>
   <div class="devise_form" id="stylized">
-  <%= image_tag (what.nil? ? "" : what['image']), :title => "title", :class => "profile_pic" %>      
+  <%= image_tag (what['image'].nil? ? "/images/blankprofilepic.png" : what['image']), :title => "title", :class => "profile_pic" %>      
   <h1>Sign up</h1>
   <p>Complete account creation</p> 
 

@@ -192,6 +192,7 @@ Devise.setup do |config|
   # up on your models and hooks.
   config.omniauth :twitter, 'lWhC1EGhIfKBvoq2UF8NYA', 'wIKOVMZx9GhRGZ6Cq5JNAXSGhoJ80yVTaBlL6rt9kvI'
   config.omniauth :facebook, '191045274269033', 'db353dc235f31970c72e3df132f61993'
+  config.omniauth :linked_in, 'gx16187vo8c8', 'S0eOHLXVA1EGOkUr'
 
   # ==> Warden configuration
   # If you want to use other strategies, that are not supported by Devise, or

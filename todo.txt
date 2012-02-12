@@ -101,8 +101,14 @@ x javascript include tag audio/js?
 x create remoteurl occurs in lanyard_controller
 x Add notices to admin area
 
+x add top text for blog review
+
+! show/hide synopsis on blog
+	.trans{
+		display:none;
+	}
+	.bold remove toggle
 ! add linkedin login
-! add top text for blog review
 ! create homepage
 
 

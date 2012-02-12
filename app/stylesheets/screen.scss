@@ -220,7 +220,7 @@ html,body{
 			-webkit-box-shadow: 1px 1px 8px rgba(0, 0, 0, 0.3); -moz-box-shadow: 1px 1px 8px rgba(0, 0, 0, 0.3);
 			-o-box-shadow: 1px 1px 8px rgba(0, 0, 0, 0.3); box-shadow: 1px 1px 8px rgba(0, 0, 0, 0.3); 
 		}
-		a#sign-in{
+		a#twitter{
 			background: url("../images/authbuttons/login-buttons.png") no-repeat 0 -2px;
 			&:hover{background-position: 0px -33px;}
 			&:active{background-position: 0px -64px;}
@@ -230,7 +230,7 @@ html,body{
 			&:hover{background-position: -111px -33px;}
 			&:active{background-position: -111px -64px;}
 		}
-		a#twitter{
+		a#linkedin{
 			background: url("../images/authbuttons/login-buttons.png") no-repeat -222px -2px;			
 			&:hover{background-position: -222px -33px;}
 			&:active{background-position: -222px -64px;}

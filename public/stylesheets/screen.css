@@ -290,13 +290,13 @@ html, body {
     -o-box-shadow: 1px 1px 8px rgba(0, 0, 0, 0.3);
     box-shadow: 1px 1px 8px rgba(0, 0, 0, 0.3); }
   /* line 223, ../../app/stylesheets/screen.scss */
-  .social-login a#sign-in {
+  .social-login a#twitter {
     background: url("../images/authbuttons/login-buttons.png") no-repeat 0 -2px; }
     /* line 225, ../../app/stylesheets/screen.scss */
-    .social-login a#sign-in:hover {
+    .social-login a#twitter:hover {
       background-position: 0px -33px; }
     /* line 226, ../../app/stylesheets/screen.scss */
-    .social-login a#sign-in:active {
+    .social-login a#twitter:active {
       background-position: 0px -64px; }
   /* line 228, ../../app/stylesheets/screen.scss */
   .social-login a#facebook {
@@ -308,13 +308,13 @@ html, body {
     .social-login a#facebook:active {
       background-position: -111px -64px; }
   /* line 233, ../../app/stylesheets/screen.scss */
-  .social-login a#twitter {
+  .social-login a#linkedin {
     background: url("../images/authbuttons/login-buttons.png") no-repeat -222px -2px; }
     /* line 235, ../../app/stylesheets/screen.scss */
-    .social-login a#twitter:hover {
+    .social-login a#linkedin:hover {
       background-position: -222px -33px; }
     /* line 236, ../../app/stylesheets/screen.scss */
-    .social-login a#twitter:active {
+    .social-login a#linkedin:active {
       background-position: -222px -64px; }
 
 /* line 241, ../../app/stylesheets/screen.scss */

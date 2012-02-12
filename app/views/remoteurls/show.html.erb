@@ -45,7 +45,7 @@
 <div class="social-login">
   <p>Login with Social Media</p>
   <ul>
-    <li><%= link_to "", authentications_closewindowprotected_path, :rel => "window800", :class => "auth_popup", :id => "sign-in" %></li>
+    <li><%= link_to "", user_omniauth_authorize_path(:linked_in), :rel => "window800", :class => "auth_popup", :id => "linkedin" %></li> 
     <li><%= link_to "", user_omniauth_authorize_path(:facebook), :rel => "window800", :class => "auth_popup", :id => "facebook" %></li> 
     <li><%= link_to "", user_omniauth_authorize_path(:twitter), :rel => "window800", :class => "auth_popup", :id => "twitter" %></li> 
   </ul>
