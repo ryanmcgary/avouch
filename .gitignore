@@ -16,3 +16,7 @@ public/.DS_Store
 public/audiojs/.DS_Store
 
 app/views/lanyards/_full_lanyard.html.erb
+
+todo.txt
+
+.gitignore

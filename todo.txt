@@ -108,9 +108,11 @@ x add top text for blog review
 		display:none;
 	}
 	.bold remove toggle
-! add linkedin login
+x add linkedin login
 ! create homepage
-
+- Bind: at end of page do: ajax call unbind page
+	- at success of ajax call rebind end of page
+		- at end of list unbind end of page
 
 Expierement
  see about using json/jqeury to return reviews
