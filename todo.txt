@@ -101,12 +101,17 @@ x javascript include tag audio/js?
 x create remoteurl occurs in lanyard_controller
 x Add notices to admin area
 
-! add linkedin login
+x add linkedin login
 x add top text for blog review
 	- logged out would be fake iframe
 	- login would inject create new iframe
 	- move login outside of iframe and into modal or fame iframe
 ! create homepage
+- bind end of page to call $.getJSON page 2
+	- unbind end of page til json content displays 
+		- loop to page 3, rebind to end of page
+		- at end of list perma unbind end of page call
+		
 
 
 Expierement
