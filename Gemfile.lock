@@ -154,6 +154,7 @@ GEM
     tzinfo (0.3.29)
     warden (1.0.4)
       rack (>= 1.0)
+    will_paginate (3.0.3)
 
 PLATFORMS
   ruby
@@ -168,3 +169,4 @@ DEPENDENCIES
   sqlite3-ruby (= 1.2.5)
   taps
   twiliolib
+  will_paginate (~> 3.0)

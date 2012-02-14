@@ -1,4 +1,5 @@
 <% if !recording.audio_file.nil? %>
+	<%= recording_counter == 0 ? (will_paginate @recordings) : "" %>
 	<div class="recording-divider">
 		<div class="clear"></div> 
 		<%= link_to approve_link_text(recording), toggle_approve_admin_site_path(recording.recordid), :remote => true, :id => "approve_link_#{recording.recordid}", :class => "approve-toggle-link" %> 
@@ -12,12 +13,12 @@
 	        <td class="table-rightside">
 	          <p><%= recording.full_name %> / <%= recording.title %>  @ <%= recording.company %> </p>                        
 	          <div class="review-each">
-	           <audio src="<%= recording.audio_file + ".mp3" %>" preload="none"></audio>                
-	           <div class="review-left">posted <%= time_ago_in_words(recording.created_at) %> ago. <%= recording.recordid %> </div>
+	           <audio src="<%= recording.audio_file + ".mp3" %>" preload="auto"></audio>                
+	           <div class="review-left">posted <%= time_ago_in_words(recording.created_at) %> ago.</div>
 	           <div class="review-right"><b class="bold toggle">site: <%= recording.site_permalink %><%= url_unescape(recording.permalink) %> </b></div>
 	           <div class="clear"></div>
 	           <div class="trans">   
-	           <%= recording.synopsis.empty? ? recording.transcription : recording.synopsis %>
+	           <%= recording.synopsis.empty? ? simple_format(recording.transcription) : simple_format(recording.synopsis) %>
 	           </div>
 	          </div>
 	      </tr>

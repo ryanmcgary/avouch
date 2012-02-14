@@ -16,7 +16,7 @@
       <% else %>
         <span class="banner">Moderate Recordings</span>
         <%= form_tag admin_sites_path, :id => "site-select-dropdown", :method => :get, :remote => true do %>
-            <%= collection_select :site, :site_id, @recordings.uniq_by{ |l| l.site_permalink}, :site_id, :site_permalink, {:include_blank => "All Sites"}, {:onchange => ("$('#site-select-dropdown').submit()")} %>
+            <%= collection_select :site, :id, @sites.uniq_by{ |l| l.permalink}, :id, :permalink, {:include_blank => "All Sites"}, {:onchange => ("$('#site-select-dropdown').submit()")} %>
         <% end %>
       <% end %>
 
@@ -26,8 +26,8 @@
           <div class="iavouch_lanyard_wrapper"> 
             <div class="comments">
               
-              
-                <%= render :partial => 'recording', :collection => @recordings %>
+                
+                <%= render :partial => 'recording', :collection => (@recordings) || "No Recordings" %>
                    
               
             </div>  

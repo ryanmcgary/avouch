@@ -27,12 +27,14 @@ class Admin::SitesController < ApplicationController
 		#@recordings = current_user.sites
 		#@recordings = Recording.get_user_sites_recordings(current_user.id).sortdesc#.call_completed
 		if params[:site].nil? || params[:site].value?("")
-			@recordings = Recording.get_user_sites_recordings(current_user.id).sortdesc.audio_saved#.call_completed
+			@recordings = Recording.get_user_sites_recordings(current_user.id).sortdesc.audio_saved.paginate :page => params[:page], :per_page => 5
+			#.call_completed
 		else
-			@recordings = Recording.get_user_sites_recordings(current_user.id).sortdesc.sites_id(params[:site].values).audio_saved#call_completed
+			@recordings = Recording.get_user_sites_recordings(current_user.id).sortdesc.sites_id(params[:site].values).audio_saved.paginate :page => params[:page], :per_page => 5
+			#call_completed
 		end
 
-		@sites = Site.all
+		@sites = Site.where(:user_id => current_user)
 	  respond_to do |format|
        	format.html
         format.js
