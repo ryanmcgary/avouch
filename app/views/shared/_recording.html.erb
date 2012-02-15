@@ -50,7 +50,7 @@
 		           <a href="http://www.facebook.com/sharer.php?u= <%=u "#{request.referrer}##{recording.created_at.to_i}" %>" class="auth_popup" target="_blank">
 		           	like</a> /
 		           <!-- / read  -->
-		           <a href="#" class="iavouch-review-read" rel="popover" data-content="<%= recording.synopsis.empty? ? simple_format(recording.transcription) : simple_format(recording.synopsis) %>" data-original-title="Transcript/Synopsis">read <%= recording.synopsis.empty? ? "transcript" : "synopsis" %></a>
+		           <a href="#" class="iavouch-review-read" rel="popover" data-content="<%= recording.synopsis.empty? ? simple_format(recording.transcription) : simple_format(recording.synopsis) %>" data-original-title="Transcript/Synopsis">read</a>
 		           </div>
 		           <div class="clear"></div>
 		          </div>

@@ -19,6 +19,14 @@ $(document).ready(function() {
  
  // $(".alert-message").alert()
 
+$(function () {
+  $('.pagination a').live('click', function () {
+      $.getScript(this.href);
+      return false;
+    }
+  );
+});
+
 });
 audiojs.events.ready(function() {
     var as = audiojs.createAll();

@@ -100,19 +100,16 @@ x share and like links should work
 x javascript include tag audio/js?
 x create remoteurl occurs in lanyard_controller
 x Add notices to admin area
-
 x add top text for blog review
-
-! show/hide synopsis on blog
-	.trans{
-		display:none;
-	}
-	.bold remove toggle
 x add linkedin login
+
+x show/hide synopsis on blog (this just needs to be help file really, just figure it out)
+x pagination
+
+
 ! create homepage
-- Bind: at end of page do: ajax call unbind page
-	- at success of ajax call rebind end of page
-		- at end of list unbind end of page
+
+
 
 Expierement
  see about using json/jqeury to return reviews
@@ -120,6 +117,7 @@ Expierement
 
 ! preface every class & id with iv- to prevent jquery hook collision for common names like comments (becomes .iv-comments)
 
+update everything to rails 3.2 ruby 1.9.3
 	
 Give user direct recordings
 	- still have free account be tied to a site
@@ -252,3 +250,10 @@ if var = blog
 #avouch-embed-banner.avouch-reset
 	@reset-mix-in(banner)
 	#avouch-banner-container
+
+
+? Secret Settings
+	<style type="text/css" media="screen">
+	.comments-header, #coolframe, .poweredby{display:none}
+	</style>	
+	var review_text = 'hide';

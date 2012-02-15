@@ -103,7 +103,11 @@
 	.track-details:before{ content: '♬ '; }
 	.track-details em{ font-style: normal; color: #999; }	
 	//	end audiojs related styles
-	.review-left{ float:left; }
+	.review-left{ 
+		float:left; 
+		margin-top: 3px;
+		font-size:12px;
+	}
 	.review-right{ float:right; }
 	.trans{ 
 		
@@ -561,7 +565,7 @@
 		-webkit-box-shadow: inset 1px 1px 5px rgba(0, 0, 0, 0.15); -moz-box-shadow: inset 1px 1px 5px rgba(0, 0, 0, 0.15); }
 	.track-details:before { content: '♬ '; }
 	.track-details em { font-style: normal; color: #999; }
-	.iavouch-review-date{ float:left; margin-top: 3px; }            
+	.iavouch-review-date{ float:left; margin-top: 4px; font-size:12px;}            
 	.iavouch-review-sharing{ 
 		float:right; 
 		margin-top: 3px;

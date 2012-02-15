@@ -60,6 +60,16 @@ if (remoteurl_id == undefined) {
 
 	jQuery(document).ready(function($) {
 					
+					// don't show review text
+					if (typeof review_text !== 'undefined'){
+						$('b.bold').removeClass('toggle');
+						$('.trans').css('display', 'none');	
+					}
+					
+					// $('.comments-header, #coolframe, .poweredby').css('display', 'none');
+
+					
+					// reverse order of reviews
 					$.fn.reverseChildren = function() {
 					  return this.each(function(){
 					    var $this = $(this);
@@ -73,7 +83,7 @@ if (remoteurl_id == undefined) {
 						$(this).text($(this).text() == 'newest first' ? 'oldest first' : 'newest first');
 					});
 
-
+					//  render audio player
 					$.getScript("<%= root_url %>" + 'audiojs/audio.js', function() 
 					{
 					  var as = audiojs.createAll();
@@ -82,7 +92,7 @@ if (remoteurl_id == undefined) {
 			      $('.audiojs .scrubber').width(widget_width - 232);
 					});   
 					
-					
+					// popup 
 					$.getScript("<%= root_url %>" + 'javascripts/jquery.popupwindow.js', function() 
 					{
 						var profiles = {window100:{center:1,status:1}};
