@@ -3,7 +3,7 @@
 <html>
 <head>
   <title>Avouch</title>
-  <%= stylesheet_link_tag :all %>
+  <%= stylesheet_link_tag "screen" %>
   <%= stylesheet_link_tag "embeds/blog-embed" %>
     
    
@@ -14,19 +14,55 @@
   
   <%= csrf_meta_tag %>
 </head>
-<body>
-  <% if user_signed_in? %>
-    <%= current_user.email %>
-    <%= link_to "Sign out", destroy_user_session_path, :method => :delete %>
-  <% else %>
-    <%= link_to "Sign in with Facebook", user_omniauth_authorize_path(:facebook) %>
-    <%= link_to "Sign in with Twitter", user_omniauth_authorize_path(:twitter) %>
-  <% end %>
-  <p class="notice"><%= notice %></p>
-  <p class="alert"><%= alert %></p>
+<%= content_for?(:body) ? yield(:body) : raw("<body>") %>
+  <% flash.each do |key, value| %>
+    <div class="alert-message <%= key %>" data-alert="alert"><%= value %><a href="#" class="close">x</a></div>
+  <% end %> 
 
+  <div class="top-spacer">  
+    <div>
+      <p>
+        <% if user_signed_in? %>
+          <%= current_user.email %>
+          <%= link_to "Sign out", destroy_user_session_path, :method => :delete %>
+        <% else %>
+          <%= link_to "Sign in with Facebook", user_omniauth_authorize_path(:facebook) %>
+          <%= link_to "Sign in with Twitter", user_omniauth_authorize_path(:twitter) %>
+          <%= link_to "Sign in with Linked In", user_omniauth_authorize_path(:linked_in) %>
+        <% end %>
+      </p>
+    </div>
+  </div>
 
-<%= yield %>
+  <!-- main container -->
+  <div class="columns"> 
+    <!-- header -->
+    <div class="showborder" id="header">
+      <p class="showborder" id="logo">iAvouch</p> 
+      <p class="showborder" id="logo-tagline">references redefined</p>
+    </div>
+    
+    <!-- content -->
+    <div class="showborder" id="main-content">
+      Your most compelling business references. Anywhere. Everywhere.
+      <%= yield %>
+
+    </div>  
+
+    <div id="footer">
+      
+    </div>
+  </div>
+    
+  <div class="clear"></div>
+  <div class="footer-bottom">
+    <div>
+      <div id="footer">
+           sdfsd
+      </div>
+    </div>
+  </div>   
+  <div class="footer-bottom-bottom"></div>
 
 </body>
 </html>

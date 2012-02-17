@@ -7,6 +7,15 @@
 @import "960/grid";
 @import "compass/css3";
 
+// colors & variables
+$sidebar-color:#E2EDFE; //background color
+$flip-color:invert(darken($sidebar-color, 70%));
+$flip-color-wheel-left:adjust-hue($flip-color, 20deg);
+$grid-color:white; //background color
+
+$ninesixty-columns: 24;  
+
+
 html,body{
 	height:100%;
 	font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
@@ -536,4 +545,75 @@ html,body{
 	font-weight: bold;
 }
 
+// homepage
+body#home{
+
+	.top-spacer{
+	  height:1.2em;
+	  background-color:darken($sidebar-color, 70%);
+	  color:#FFFFFF;
+	  div{
+	    height:1.2em;
+	    width:960px;
+	    margin-left:auto;
+	    margin-right:auto;
+	    p{
+	      margin-right:10px;
+	      margin-left:10px;
+	      float:right;
+	      color:#FFFFFF;
+	      a{color:inherit;}
+	    }  
+	  }
+	}  
+
+	.columns {
+		@include grid-container;
+		font-family:'Helvetica Neu', sans-serif;font: 'Helvetica Neu', sans-serif; font-weight:500;font-size:1.2em;
+	 	p{font-size:0.8em;margin:0 0 20px 10px;}
+		b{font-weight:600;}
+		h2{font-size:2em;margin-bottom:30px;} 
+		background-color:$grid-color;   
+
+		#header {
+	    @include grid(24);
+			margin-bottom:20px;
+			#logo{
+				@include grid(3);
+				margin:20px 20px 0px 0px; 
+				font-size:1.5em;
+			}
+			#logo-tagline{
+				@include grid(5);
+				margin:31px 0 0px 0px; 
+				font-size:0.8em;
+			}
+		} 
+
+	  #main-content {
+	    @include grid(18);
+	    @include grid-prefix(3,24);
+	  	@include grid-suffix(3,24);
+	  	h3{margin:10px 0 10px 0;}
+	  	
+	  } 
+
+		.footer-bottom{
+			height:20px;
+			background-color:darken($sidebar-color, 40%);    
+		  div{
+		    @include grid-container;
+		    #footer {
+		      @include grid(24);
+		      background-color:darken($sidebar-color, 20%);
+		    }
+			}
+		}
+		.footer-bottom-bottom{
+			height:20px;
+			background-color:darken($sidebar-color, 70%);   
+		}
+
+	} //end 	
+}
 
