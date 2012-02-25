@@ -23,7 +23,44 @@ html,body{
 		overflow: hidden;	
 	}
 }
-
+// at some point make this safer by putting it in a different container
+#social-login{
+	padding:20px 30px 0 30px;
+	display:table;
+	position: relative;
+	z-index: 10;
+	p{  
+		margin-top: 3px;
+		margin-left: 3px;
+		color:white;
+	}
+	li{padding-top:15px;display:inline-block;}
+	a{
+		position:relative;
+		margin:0px auto;
+		width: 227px;
+		height: 40px;
+		display: block;
+		text-indent: -9999px;
+		-webkit-box-shadow: 1px 1px 8px rgba(0, 0, 0, 0.3); -moz-box-shadow: 1px 1px 8px rgba(0, 0, 0, 0.3);
+		-o-box-shadow: 1px 1px 8px rgba(0, 0, 0, 0.3); box-shadow: 1px 1px 8px rgba(0, 0, 0, 0.3); 
+	}
+	a#twitter{
+		background: url("../images/authbuttons/large-auth-buttons.png") no-repeat 0px 0px;
+		&:hover{background-position: 0px -40px;}
+		&:active{background-position: 0px -80px;}
+	}
+	a#facebook{
+		background: url("../images/authbuttons/large-auth-buttons.png") no-repeat -228px 0px;	
+		&:hover{background-position: -228px -40px;}
+		&:active{background-position: -228px -80px;}
+	}
+	a#linkedin{
+		background: url("../images/authbuttons/large-auth-buttons.png") no-repeat -456px 0px;			
+		&:hover{background-position: -456px -40px;}
+		&:active{background-position: -456px -80px;}
+	}
+}	
 
 // devise login/edit pages/forms
 #devise{background:#ebf4fb;}
@@ -57,40 +94,40 @@ html,body{
 		div.field_with_errors{color:#8B0000;}
 	}
 	#stylized h1 {
-	font-size:14px;
-	font-weight:bold;
-	margin-bottom:8px;
+		font-size:14px;
+		font-weight:bold;
+		margin-bottom:8px;
 	}
 	#stylized p{
-	font-size:11px;
-	color:#666666;
-	margin-bottom:20px;
-	border-bottom:solid 1px #b7ddf2;
-	padding-bottom:10px;
+		font-size:11px;
+		color:#666666;
+		margin-bottom:20px;
+		border-bottom:solid 1px #b7ddf2;
+		padding-bottom:10px;
 	}
 	#stylized label{
-	display:block;
-	font-weight:bold;
-	text-align:right;
-	width:140px;
-	float:left;
-	font-size: 16px;
+		display:block;
+		font-weight:bold;
+		text-align:right;
+		width:140px;
+		float:left;
+		font-size: 16px;
 	}
 	#stylized .small{
-	color:#666666;
-	display:block;
-	font-size:11px;
-	font-weight:normal;
-	text-align:right;
-	width:140px;
+		color:#666666;
+		display:block;
+		font-size:11px;
+		font-weight:normal;
+		text-align:right;
+		width:140px;
 	}
 	#stylized input{
-	float:left;
-	font-size:12px;
-	padding:4px 2px;
-	border:solid 1px #aacfe4;
-	width:200px;
-	margin:2px 0 20px 10px;
+		float:left;
+		font-size:12px;
+		padding:4px 2px;
+		border:solid 1px #aacfe4;
+		width:200px;
+		margin:2px 0 20px 10px;
 	}
 	#stylized div.field_with_errors input{
 		margin:2px 0 0px 10px;
@@ -101,15 +138,15 @@ html,body{
 		border:solid 1px #aacfe4;
 	}
 	#stylized input[type="submit"]{
-	clear:both;
-	margin-left:150px;
-	width:125px;
-	height:31px;
-	text-align:center;
-	line-height:15px;
-	color:#FFFFFF;
-	font-size:11px;
-	font-weight:bold;
+		clear:both;
+		margin-left:150px;
+		width:125px;
+		height:31px;
+		text-align:center;
+		line-height:15px;
+		color:#FFFFFF;
+		font-size:11px;
+		font-weight:bold;
 	}
 	// stuff from bootstrap
 	.btn {
@@ -176,131 +213,135 @@ html,body{
 
 
 // remoteurl/show/not logged in/_form
-	.actions {margin-bottom: 10px;}
-	#sucker{
-		width: 98%;
-		position: absolute;
-		top:4px;
-		left:4px;
-		p{
-			text-decoration:underline;
-			padding-bottom:3px;
-		}
+.actions {margin-bottom: 10px;}
+#sucker{
+	width: 98%;
+	position: absolute;
+	top:4px;
+	left:4px;
+	p{
+		text-decoration:underline;
+		padding-bottom:3px;
 	}
-		display:table;
-		position: relative;
-		z-index: 10;
-		height:100%;
-		overflow:hidden;
-		text-align: center;
-		p{  
-			visibility: hidden;
-			position:fixed;
-			margin-top: 3px;
-			margin-left: 3px;
-			color:white;
-		}
-		&:hover p{visibility:visible;}
-		ul{
-			display:table-cell;
-			vertical-align:middle;
-		}
-		li{padding-top:15px;display:inline-block;}
-		&:hover{
-		    /* Fallback for web browsers that doesn't support RGBa */
-			background: rgb(0, 0, 0) transparent;
-			/* RGBa with 0.6 opacity */
-			background: rgba(0, 0, 0, 0.8);
-			/* For IE 5.5 - 7*/
-			filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#99000000, endColorstr=#99000000);
-			/* For IE 8*/
-			-ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#99000000, endColorstr=#99000000)";
-		}
-		&:hover a.auth_popup{
-			position:relative;
-			width: 110px;
-			height: 30px;
-			display: block;
-			text-indent: -9999px;
-			-webkit-box-shadow: 1px 1px 8px rgba(0, 0, 0, 0.3); -moz-box-shadow: 1px 1px 8px rgba(0, 0, 0, 0.3);
-			-o-box-shadow: 1px 1px 8px rgba(0, 0, 0, 0.3); box-shadow: 1px 1px 8px rgba(0, 0, 0, 0.3); 
-		}
-		a#twitter{
-			&:hover{background-position: 0px -33px;}
-			&:active{background-position: 0px -64px;}
-		}
-		a#facebook{
-			background: url("../images/authbuttons/login-buttons.png") no-repeat -111px -2px;	
-			&:hover{background-position: -111px -33px;}
-			&:active{background-position: -111px -64px;}
-		}
-		a#linkedin{
-			background: url("../images/authbuttons/login-buttons.png") no-repeat -222px -2px;			
-			&:hover{background-position: -222px -33px;}
-			&:active{background-position: -222px -64px;}
-		}
+}
+.social-login{
+	display:table;
+	position: relative;
+	z-index: 10;
+	height:100%;
+	width:100%;
+	overflow:hidden;
+	text-align: center;
+	p{  
+		visibility: hidden;
+		position:fixed;
+		margin-top: 3px;
+		margin-left: 3px;
+		color:white;
 	}
+	&:hover p{visibility:visible;}
+	ul{
+		display:table-cell;
+		vertical-align:middle;
+	}
+	li{padding-top:15px;display:inline-block;}
+	&:hover{
+	   /* Fallback for web browsers that doesn't support RGBa */
+		background: rgb(0, 0, 0) transparent;
+		/* RGBa with 0.6 opacity */
+		background: rgba(0, 0, 0, 0.8);
+		/* For IE 5.5 - 7*/
+		filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#99000000, endColorstr=#99000000);
+		/* For IE 8*/
+		-ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#99000000, endColorstr=#99000000)";
+	}
+	&:hover a.auth_popup{
+		position:relative;
+		margin:0px auto;
+		width: 110px;
+		height: 30px;
+		display: block;
+		text-indent: -9999px;
+		-webkit-box-shadow: 1px 1px 8px rgba(0, 0, 0, 0.3); -moz-box-shadow: 1px 1px 8px rgba(0, 0, 0, 0.3);
+		-o-box-shadow: 1px 1px 8px rgba(0, 0, 0, 0.3); box-shadow: 1px 1px 8px rgba(0, 0, 0, 0.3); 
+	}
+	a#twitter{
+		background: url("../images/authbuttons/login-buttons.png") no-repeat 0 -2px;
+		&:hover{background-position: 0px -33px;}
+		&:active{background-position: 0px -64px;}
+	}
+	a#facebook{
+		background: url("../images/authbuttons/login-buttons.png") no-repeat -111px -2px;	
+		&:hover{background-position: -111px -33px;}
+		&:active{background-position: -111px -64px;}
+	}
+	a#linkedin{
+		background: url("../images/authbuttons/login-buttons.png") no-repeat -222px -2px;			
+		&:hover{background-position: -222px -33px;}
+		&:active{background-position: -222px -64px;}
+	}
+}
 
 // authentications/index.html
-	.authentications {
-	  margin-bottom: 30px;
-	}
+.authentications {
+  margin-bottom: 30px;
+}
 
-	.authentication {
-	  width: 130px;
-	  float: left;
-	  background-color: #EEE;
-	  border: solid 1px #999;
-	  padding: 5px 10px;
-	  -moz-border-radius: 8px;
-	  -webkit-border-radius: 8px;
-	  position: relative;
-	  margin-right: 10px;
-	}
+.authentication {
+  width: 130px;
+  float: left;
+  background-color: #EEE;
+  border: solid 1px #999;
+  padding: 5px 10px;
+  -moz-border-radius: 8px;
+  -webkit-border-radius: 8px;
+  position: relative;
+  margin-right: 10px;
+}
 
-	.authentication .remove {
-	  text-decoration: none;
-	  position: absolute;
-	  top: 3px;
-	  right: 3px;
-	  color: #333;
-	  padding: 2px 4px;
-	  font-size: 10px;
-	}
+.authentication .remove {
+  text-decoration: none;
+  position: absolute;
+  top: 3px;
+  right: 3px;
+  color: #333;
+  padding: 2px 4px;
+  font-size: 10px;
+}
 
-	.authentication .remove:hover {
-	  color: #CCC;
-	  background-color: #777;
-	  -moz-border-radius: 6px;
-	  -webkit-border-radius: 6px;
-	}
+.authentication .remove:hover {
+  color: #CCC;
+  background-color: #777;
+  -moz-border-radius: 6px;
+  -webkit-border-radius: 6px;
+}
 
-	.authentication img {
-	  float: left;
-	  margin-right: 10px;
-	}
+.authentication img {
+  float: left;
+  margin-right: 10px;
+}
 
-	.authentication .provider {
-	  font-weight: bold;
-	}
+.authentication .provider {
+  font-weight: bold;
+}
 
-	.authentication .uid {
-	  color: #666;
-	  font-size: 11px;
-	}
+.authentication .uid {
+  color: #666;
+  font-size: 11px;
+}
 
 // authentications/index & sessions/new
-	.auth_provider img {
-	  display: block;
-	}
+.auth_provider img {
+  display: block;
+}
 
-	.auth_provider {
-	  float: left;
-	  text-decoration: none;
-	  margin-right: 20px;
-	  text-align: center;
-	  margin-bottom: 10px;
-	}
+.auth_provider {
+  float: left;
+  text-decoration: none;
+  margin-right: 20px;
+  text-align: center;
+  margin-bottom: 10px;
+}
 
 // CSS for form submit embed from remoteurls/show.html
 .embed { // for blog-style
@@ -540,75 +581,135 @@ html,body{
 	font-weight: bold;
 }
 
+.clear {
+  clear: both;
+  display: block;
+  overflow: hidden;
+  visibility: hidden;
+  width: 0;
+  height: 0;
+}
 // homepage
-body#home{
 
+body#home{
+	background-image: url("../images/bg3b.png");
+	background-color:darken($sidebar-color, 70%);
+	background-size: 400px 400px;
 	.top-spacer{
 	  height:1.2em;
-	  background-color:darken($sidebar-color, 70%);
+	  background-color:darken($sidebar-color, 99%);
+	  opacity:0.5;
 	  color:#FFFFFF;
-	  div{
-	    height:1.2em;
-	    width:960px;
-	    margin-left:auto;
-	    margin-right:auto;
-	    p{
-	      margin-right:10px;
-	      margin-left:10px;
-	      float:right;
-	      color:#FFFFFF;
-	      a{color:inherit;}
-	    }  
-	  }
 	}  
-
+	color:white;
 	.columns {
+		text-rendering: optimizeLegibility;
 		@include grid-container;
-		font-family:'Helvetica Neu', sans-serif;font: 'Helvetica Neu', sans-serif; font-weight:500;font-size:1.2em;
-	 	p{font-size:0.8em;margin:0 0 20px 10px;}
+		font-family:'Helvetica Neu', sans-serif;
+		font: 'Helvetica Neu', sans-serif; font-weight:500;font-size:1.2em;
+		p{font-size:0.8em;margin:0 0 20px 10px;}
 		b{font-weight:600;}
 		h2{font-size:2em;margin-bottom:30px;} 
 		background-color:$grid-color;   
-
+		.bg{
+			background-image: url("../images/bg3c.png");
+			height:640px; // width: 940px
+			@include grid(24);
+		}
 		#header {
 	    @include grid(24);
 			margin-bottom:20px;
 			#logo{
 				@include grid(3);
-				margin:20px 20px 0px 0px; 
-				font-size:1.5em;
+				text-shadow: black 1px 2px 10px;
+				margin:20px 25px 0px 0px; 
+				font-size:1.6em;
 			}
 			#logo-tagline{
 				@include grid(5);
-				margin:31px 0 0px 0px; 
-				font-size:0.8em;
+				text-shadow: black 1px 2px 10px;
+				margin:32px 0 0px 0px; 
+				font-size:0.9em;
 			}
 		} 
 
 	  #main-content {
-	    @include grid(18);
-	    @include grid-prefix(3,24);
-	  	@include grid-suffix(3,24);
-	  	h3{margin:10px 0 10px 0;}
-	  	
-	  } 
-
-		.footer-bottom{
-			height:20px;
-			background-color:darken($sidebar-color, 40%);    
-		  div{
-		    @include grid-container;
-		    #footer {
-		      @include grid(24);
-		      background-color:darken($sidebar-color, 20%);
-		    }
+	    @include grid(20);
+	    @include grid-prefix(2,24);
+	  	@include grid-suffix(2,24);
+	  	padding-top: 60px;
+	  	.slogan{margin: 10px 0 30px 0;}
+	  	h3{
+	  		text-shadow: #222 1px 4px 6px;
+				font-size: 37px;
+				line-height: 1.35;
+				-webkit-mask-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0,0,0,1)), color-stop(70%, rgba(0,0,0,.9)), to(rgba(0,0,0,1)));  
+		  }
+			#social-login{
+				padding-top:30px;
+				display:table;
+				position: relative;
+				z-index: 10;
+				height:100%;
+				width:100%;
+				text-align: center;
+				p{  
+					margin-top: 3px;
+					margin-left: 3px;
+					color:white;
+				}
+				ul{
+					display:table-cell;
+					vertical-align:middle;
+				}
+				li{padding-top:15px;display:inline-block;}
+				// everything to the right is for auto expanding login buttons based on embed width // &:hover absolute positioning// .spacer{// 	float:left;// 	padding-top:60px;// 	width:1px;// 	background-color:transparent;// }// &:hover .middle{// 	margin:0px auto;// 	display:table;// 	a#sign-in2{// 		position:absolute;// 		margin:0px auto;// 		margin-left:-107px;// 		background: url("../images/authbuttons/auth-login.png") no-repeat 0 0;// 		width: 52px;// 		height: 39px;// 		display: block;// 		&:hover{background-position: 0 -40px;}// 		&:active{background-position: 0 -80px;}// 	}// 	a#facebook2{// 		position:absolute;// 		margin:0px auto;// 		margin-left:-24px;// 		background: url("../images/authbuttons/auth-login.png") no-repeat 0 0;// 		width: 52px;// 		height: 39px;// 		display: block;// 		&:hover{background-position: 0 -40px;}// 		&:active{background-position: 0 -80px;}// 	}				// 	a#twitter2{// 		position:absolute;// 		margin:0px auto;// 		margin-left: 60px;// 		background: url("../images/authbuttons/auth-login.png") no-repeat 0 0;// 		width: 52px;// 		height: 39px;// 		display: block;// 		&:hover{background-position: 0 -40px;}// 		&:active{background-position: 0 -80px;}// 	}		// }
+				a{
+					position:relative;
+					margin:0px auto;
+					width: 226px;
+					height: 40px;
+					display: block;
+					text-indent: -9999px;
+					-webkit-box-shadow: 1px 1px 8px rgba(0, 0, 0, 0.3); -moz-box-shadow: 1px 1px 8px rgba(0, 0, 0, 0.3);
+					-o-box-shadow: 1px 1px 8px rgba(0, 0, 0, 0.3); box-shadow: 1px 1px 8px rgba(0, 0, 0, 0.3); 
+				}
+				a#twitter{
+					background: url("../images/authbuttons/large-auth-buttons.png") no-repeat 0px 0px;
+					&:hover{background-position: 0px -40px;}
+					&:active{background-position: 0px -80px;}
+				}
+				a#facebook{
+					background: url("../images/authbuttons/large-auth-buttons.png") no-repeat -228px 0px;	
+					&:hover{background-position: -228px -40px;}
+					&:active{background-position: -228px -80px;}
+				}
+				a#linkedin{
+					background: url("../images/authbuttons/large-auth-buttons.png") no-repeat -456px 0px;			
+					&:hover{background-position: -456px -40px;}
+					&:active{background-position: -456px -80px;}
+				}
+			}	
+			#features{
+				text-align:center;
+				p{
+					margin-top:10px;
+					font-size: 10px;
+					color:grey;
+				}
 			}
-		}
-		.footer-bottom-bottom{
-			height:20px;
-			background-color:darken($sidebar-color, 70%);   
-		}
-
+	  } 
 	} //end 	
+			.footer-bottom{
+				height:20px;
+				background-color:darken($sidebar-color, 40%);    
+				background-size:400px 400px;
+			  div{
+			    @include grid-container;
+			    #footer {
+			      @include grid(24);
+			      
+			    }
+				}
+		}
 }
-
