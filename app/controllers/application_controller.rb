@@ -25,8 +25,8 @@ class ApplicationController < ActionController::Base
   end
   
   def after_sign_in_path_for(resource_or_scope)
-    if !session[:return_to].nil? # || request.referrer.include? "remoteurls"
-      authentications_closewindow_path
+    if !session[:return_to].nil? # || request.referrer.include? "remoteurls" 
+      authentications_closewindow_path # uncomment if api.iavouch ends up being used
     elsif request.referrer.include? "remoteurls"
       authentications_closewindow_path
     else
@@ -39,6 +39,8 @@ class ApplicationController < ActionController::Base
   def after_sign_up_path_for(resource)
     if request.referrer.include? "remoteurls"
       authentications_closewindow_path
+    # elsif !session[:return_to].nil? # uncomment if api.iavouch ends up being used
+    #   authentications_closewindow_path
     else
       admin_sites_path 
     end

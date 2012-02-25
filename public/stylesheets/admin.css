@@ -60,44 +60,200 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
 
 /* line 21, ../../app/stylesheets/admin.scss */
 body {
-  background-color: white; }
+  background-color: white;
+  background-image: url("../images/cross_scratches.png");
+  height: 100%;
+  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; }
 
-/* line 22, ../../app/stylesheets/admin.scss */
-body#splash {
-  background-color: white; }
+/* line 27, ../../app/stylesheets/admin.scss */
+.bold {
+  font-weight: bold; }
 
-/* line 24, ../../app/stylesheets/admin.scss */
+/* line 31, ../../app/stylesheets/admin.scss */
+.devise {
+  /* ----------- My Form ----------- */
+  /* ----------- stylized ----------- */ }
+  /* line 34, ../../app/stylesheets/admin.scss */
+  .devise .devise_form {
+    margin: 0 auto;
+    width: 400px;
+    padding: 14px; }
+    /* line 35, ../../app/stylesheets/admin.scss */
+    .devise .devise_form .spacer {
+      clear: both;
+      height: 1px; }
+    /* line 36, ../../app/stylesheets/admin.scss */
+    .devise .devise_form p, .devise .devise_form h1, .devise .devise_form form, .devise .devise_form button {
+      border: 0;
+      margin: 0;
+      padding: 0; }
+    /* line 40, ../../app/stylesheets/admin.scss */
+    .devise .devise_form img.profile_pic {
+      float: left;
+      margin: 0px 10px 0 0;
+      max-height: 50px;
+      max-width: 50px;
+      height: 35px;
+      width: 35px; }
+  /* line 51, ../../app/stylesheets/admin.scss */
+  .devise #stylized {
+    overflow: hidden; }
+    /* line 52, ../../app/stylesheets/admin.scss */
+    .devise #stylized .error {
+      margin-left: 151px;
+      margin-bottom: 20px;
+      width: 200px; }
+    /* line 58, ../../app/stylesheets/admin.scss */
+    .devise #stylized div.field_with_errors {
+      color: #8B0000; }
+  /* line 60, ../../app/stylesheets/admin.scss */
+  .devise #stylized h1 {
+    font-size: 14px;
+    font-weight: bold;
+    margin-bottom: 8px; }
+  /* line 65, ../../app/stylesheets/admin.scss */
+  .devise #stylized p {
+    font-size: 11px;
+    color: #666666;
+    margin-bottom: 20px;
+    border-bottom: solid 1px #b7ddf2;
+    padding-bottom: 10px; }
+  /* line 72, ../../app/stylesheets/admin.scss */
+  .devise #stylized label {
+    display: block;
+    font-weight: bold;
+    text-align: right;
+    width: 140px;
+    float: left;
+    font-size: 16px; }
+  /* line 80, ../../app/stylesheets/admin.scss */
+  .devise #stylized .small {
+    color: #666666;
+    display: block;
+    font-size: 11px;
+    font-weight: normal;
+    text-align: right;
+    width: 140px; }
+  /* line 88, ../../app/stylesheets/admin.scss */
+  .devise #stylized input {
+    float: left;
+    font-size: 12px;
+    padding: 4px 2px;
+    border: solid 1px #aacfe4;
+    width: 200px;
+    margin: 2px 0 20px 10px; }
+  /* line 96, ../../app/stylesheets/admin.scss */
+  .devise #stylized div.field_with_errors input {
+    margin: 2px 0 0px 10px;
+    border: solid 2px #CD5C5C; }
+  /* line 100, ../../app/stylesheets/admin.scss */
+  .devise #stylized div#first div.field_with_errors input {
+    margin: 2px 0 20px 10px;
+    border: solid 1px #aacfe4; }
+  /* line 104, ../../app/stylesheets/admin.scss */
+  .devise #stylized input[type="submit"] {
+    clear: both;
+    margin-left: 150px;
+    width: 125px;
+    height: 31px;
+    text-align: center;
+    line-height: 15px;
+    color: #FFFFFF;
+    font-size: 11px;
+    font-weight: bold; }
+  /* line 116, ../../app/stylesheets/admin.scss */
+  .devise .btn {
+    cursor: pointer;
+    display: inline-block;
+    background-color: #e6e6e6;
+    background-repeat: no-repeat;
+    background-image: -webkit-gradient(linear, 0 0, 0 100%, from(white), color-stop(25%, white), to(#e6e6e6));
+    background-image: -webkit-linear-gradient(white, white 25%, #e6e6e6);
+    background-image: -moz-linear-gradient(top, white, white 25%, #e6e6e6);
+    background-image: -ms-linear-gradient(white, white 25%, #e6e6e6);
+    background-image: -o-linear-gradient(white, white 25%, #e6e6e6);
+    background-image: linear-gradient(#ffffff, #ffffff 25%, #e6e6e6);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffff', endColorstr='#e6e6e6', GradientType=0);
+    padding: 5px 14px 6px;
+    text-shadow: 0 1px 1px rgba(255, 255, 255, 0.75);
+    color: #333;
+    font-size: 13px;
+    line-height: normal;
+    border: 1px solid #ccc;
+    border-bottom-color: #bbb;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+    -webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.05);
+    -moz-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.05);
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.05);
+    -webkit-transition: 0.1s linear all;
+    -moz-transition: 0.1s linear all;
+    -ms-transition: 0.1s linear all;
+    -o-transition: 0.1s linear all;
+    transition: 0.1s linear all; }
+  /* line 147, ../../app/stylesheets/admin.scss */
+  .devise .btn:hover {
+    background-position: 0 -15px;
+    color: #333;
+    text-decoration: none; }
+  /* line 152, ../../app/stylesheets/admin.scss */
+  .devise .btn:focus {
+    outline: 1px dotted #666; }
+  /* line 155, ../../app/stylesheets/admin.scss */
+  .devise .btn.primary {
+    color: #ffffff;
+    background-color: #0064cd;
+    background-repeat: repeat-x;
+    background-image: -khtml-gradient(linear, left top, left bottom, from(#049cdb), to(#0064cd));
+    background-image: -moz-linear-gradient(top, #049cdb, #0064cd);
+    background-image: -ms-linear-gradient(top, #049cdb, #0064cd);
+    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #049cdb), color-stop(100%, #0064cd));
+    background-image: -webkit-linear-gradient(top, #049cdb, #0064cd);
+    background-image: -o-linear-gradient(top, #049cdb, #0064cd);
+    background-image: linear-gradient(top, #049cdb, #0064cd);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#049cdb', endColorstr='#0064cd', GradientType=0);
+    text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
+    border-color: #0064cd #0064cd #003f81;
+    border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25); }
+  /* line 171, ../../app/stylesheets/admin.scss */
+  .devise .btn.active, .devise .btn:active {
+    -webkit-box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.25), 0 1px 2px rgba(0, 0, 0, 0.05);
+    -moz-box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.25), 0 1px 2px rgba(0, 0, 0, 0.05);
+    box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.25), 0 1px 2px rgba(0, 0, 0, 0.05); }
+
+/* line 178, ../../app/stylesheets/admin.scss */
 .top-spacer {
   height: 1.2em;
   background-color: #043177;
   color: #FFFFFF; }
-  /* line 28, ../../app/stylesheets/admin.scss */
+  /* line 182, ../../app/stylesheets/admin.scss */
   .top-spacer div {
     height: 1.2em;
     width: 960px;
     margin-left: auto;
     margin-right: auto; }
-    /* line 33, ../../app/stylesheets/admin.scss */
+    /* line 187, ../../app/stylesheets/admin.scss */
     .top-spacer div p {
       margin-right: 10px;
       margin-left: 10px;
       float: right;
       color: #FFFFFF; }
-      /* line 38, ../../app/stylesheets/admin.scss */
+      /* line 192, ../../app/stylesheets/admin.scss */
       .top-spacer div p a {
         color: inherit; }
 
-/* line 43, ../../app/stylesheets/admin.scss */
+/* line 197, ../../app/stylesheets/admin.scss */
 .columns {
   background-color: white;
   margin-left: auto;
   margin-right: auto;
   width: 960px; }
-  /* line 44, ../../app/stylesheets/admin.scss */
+  /* line 198, ../../app/stylesheets/admin.scss */
   .columns h2 {
     font-size: 2em;
     margin-bottom: 30px; }
-  /* line 48, ../../app/stylesheets/admin.scss */
+  /* line 202, ../../app/stylesheets/admin.scss */
   .columns #home-splash {
     display: inline;
     float: left;
@@ -106,7 +262,7 @@ body#splash {
     width: 700px;
     padding-left: 120px;
     padding-right: 120px; }
-    /* line 52, ../../app/stylesheets/admin.scss */
+    /* line 206, ../../app/stylesheets/admin.scss */
     .columns #home-splash #home-box {
       background-color: white;
       height: 400px;
@@ -115,10 +271,10 @@ body#splash {
       -webkit-box-shadow: #b1cefc 0px 0px 10px;
       -o-box-shadow: #b1cefc 0px 0px 10px;
       box-shadow: #b1cefc 0px 0px 10px; }
-      /* line 57, ../../app/stylesheets/admin.scss */
+      /* line 211, ../../app/stylesheets/admin.scss */
       .columns #home-splash #home-box div {
         text-align: center; }
-      /* line 58, ../../app/stylesheets/admin.scss */
+      /* line 212, ../../app/stylesheets/admin.scss */
       .columns #home-splash #home-box #splash-content {
         font-family: "Cochin";
         display: inline;
@@ -128,17 +284,17 @@ body#splash {
         width: 700px;
         margin-left: 0;
         margin-right: 0; }
-        /* line 59, ../../app/stylesheets/admin.scss */
+        /* line 213, ../../app/stylesheets/admin.scss */
         .columns #home-splash #home-box #splash-content #logo {
           font-size: 3em;
           font-weight: bold;
           text-decoration: none;
           color: #000;
           padding: 23px 25px 23px 25px; }
-          /* line 65, ../../app/stylesheets/admin.scss */
+          /* line 219, ../../app/stylesheets/admin.scss */
           .columns #home-splash #home-box #splash-content #logo:first-letter {
             color: #075ada; }
-        /* line 67, ../../app/stylesheets/admin.scss */
+        /* line 221, ../../app/stylesheets/admin.scss */
         .columns #home-splash #home-box #splash-content form {
           margin: 0 180px 50px 180px;
           height: 3em;
@@ -153,7 +309,7 @@ body#splash {
           -webkit-box-shadow: #b1cefc 0px 0px 5px;
           -o-box-shadow: #b1cefc 0px 0px 5px;
           box-shadow: #b1cefc 0px 0px 5px; }
-        /* line 68, ../../app/stylesheets/admin.scss */
+        /* line 222, ../../app/stylesheets/admin.scss */
         .columns #home-splash #home-box #splash-content input#email-text {
           width: 250px;
           margin-top: 15px;
@@ -165,21 +321,21 @@ body#splash {
           -webkit-box-shadow: #b1cefc 0px 0px 5px;
           -o-box-shadow: #b1cefc 0px 0px 5px;
           box-shadow: #b1cefc 0px 0px 5px; }
-        /* line 69, ../../app/stylesheets/admin.scss */
+        /* line 223, ../../app/stylesheets/admin.scss */
         .columns #home-splash #home-box #splash-content input#email-invite {
           margin-left: 5px; }
-        /* line 71, ../../app/stylesheets/admin.scss */
+        /* line 225, ../../app/stylesheets/admin.scss */
         .columns #home-splash #home-box #splash-content p {
           font-size: 1em; }
-        /* line 72, ../../app/stylesheets/admin.scss */
+        /* line 226, ../../app/stylesheets/admin.scss */
         .columns #home-splash #home-box #splash-content .splash-login {
           font-size: 1.5em;
           font-weight: bold; }
-          /* line 73, ../../app/stylesheets/admin.scss */
+          /* line 227, ../../app/stylesheets/admin.scss */
           .columns #home-splash #home-box #splash-content .splash-login a {
             text-decoration: none;
             color: black; }
-  /* line 81, ../../app/stylesheets/admin.scss */
+  /* line 235, ../../app/stylesheets/admin.scss */
   .columns #header {
     display: inline;
     float: left;
@@ -187,7 +343,7 @@ body#splash {
     margin-right: 10px;
     width: 940px;
     margin-bottom: 20px; }
-    /* line 84, ../../app/stylesheets/admin.scss */
+    /* line 238, ../../app/stylesheets/admin.scss */
     .columns #header #logo {
       display: inline;
       float: left;
@@ -196,7 +352,7 @@ body#splash {
       width: 140px;
       margin: 20px 0 0px 0px;
       font-size: 1.5em; }
-  /* line 90, ../../app/stylesheets/admin.scss */
+  /* line 244, ../../app/stylesheets/admin.scss */
   .columns #sidebar {
     padding-bottom: 20px;
     display: inline;
@@ -204,7 +360,7 @@ body#splash {
     margin-left: 10px;
     margin-right: 10px;
     width: 220px; }
-    /* line 93, ../../app/stylesheets/admin.scss */
+    /* line 247, ../../app/stylesheets/admin.scss */
     .columns #sidebar #sidebar-menu {
       display: inline;
       float: left;
@@ -219,10 +375,10 @@ body#splash {
       border-radius: 3px;
       margin-left: 0;
       background-color: #e2edfe; }
-      /* line 98, ../../app/stylesheets/admin.scss */
+      /* line 252, ../../app/stylesheets/admin.scss */
       .columns #sidebar #sidebar-menu .selected {
         font-weight: bold; }
-      /* line 99, ../../app/stylesheets/admin.scss */
+      /* line 253, ../../app/stylesheets/admin.scss */
       .columns #sidebar #sidebar-menu .showborder {
         -moz-border-radius: 3px;
         -webkit-border-radius: 3px;
@@ -230,17 +386,17 @@ body#splash {
         -ms-border-radius: 3px;
         -khtml-border-radius: 3px;
         border-radius: 3px; }
-        /* line 103, ../../app/stylesheets/admin.scss */
+        /* line 257, ../../app/stylesheets/admin.scss */
         .columns #sidebar #sidebar-menu .showborder:last-child {
           padding-bottom: 20px; }
-        /* line 104, ../../app/stylesheets/admin.scss */
+        /* line 258, ../../app/stylesheets/admin.scss */
         .columns #sidebar #sidebar-menu .showborder:hover {
           background-color: #d3e4fd;
           -moz-box-shadow: #b1cefc 0px 0px 5px;
           -webkit-box-shadow: #b1cefc 0px 0px 5px;
           -o-box-shadow: #b1cefc 0px 0px 5px;
           box-shadow: #b1cefc 0px 0px 5px; }
-      /* line 106, ../../app/stylesheets/admin.scss */
+      /* line 260, ../../app/stylesheets/admin.scss */
       .columns #sidebar #sidebar-menu a {
         text-decoration: none;
         color: #000;
@@ -249,24 +405,24 @@ body#splash {
         font-size: 16px;
         line-height: 16px;
         display: block; }
-      /* line 115, ../../app/stylesheets/admin.scss */
+      /* line 269, ../../app/stylesheets/admin.scss */
       .columns #sidebar #sidebar-menu .site-list {
         margin: -15px 0 0 0; }
-        /* line 117, ../../app/stylesheets/admin.scss */
+        /* line 271, ../../app/stylesheets/admin.scss */
         .columns #sidebar #sidebar-menu .site-list p {
           font-weight: bold; }
-        /* line 120, ../../app/stylesheets/admin.scss */
+        /* line 274, ../../app/stylesheets/admin.scss */
         .columns #sidebar #sidebar-menu .site-list .site-wrapper {
           overflow: hidden;
           margin: 0px 0px 0px 30px;
           height: 30px; }
-          /* line 124, ../../app/stylesheets/admin.scss */
+          /* line 278, ../../app/stylesheets/admin.scss */
           .columns #sidebar #sidebar-menu .site-list .site-wrapper:hover {
             background-color: #b6d1fc; }
-            /* line 126, ../../app/stylesheets/admin.scss */
+            /* line 280, ../../app/stylesheets/admin.scss */
             .columns #sidebar #sidebar-menu .site-list .site-wrapper:hover .trash {
               visibility: visible; }
-          /* line 130, ../../app/stylesheets/admin.scss */
+          /* line 284, ../../app/stylesheets/admin.scss */
           .columns #sidebar #sidebar-menu .site-list .site-wrapper .site {
             float: left;
             text-decoration: none;
@@ -278,7 +434,7 @@ body#splash {
             padding: 10px 0px 10px 10px;
             margin: 0;
             width: 146px; }
-          /* line 143, ../../app/stylesheets/admin.scss */
+          /* line 297, ../../app/stylesheets/admin.scss */
           .columns #sidebar #sidebar-menu .site-list .site-wrapper .trash {
             visibility: hidden;
             margin: 7px 5px 0 0;
@@ -289,18 +445,18 @@ body#splash {
             background: url("/images/icons/trash.png") no-repeat 0 0;
             background-size: 100%;
             background-color: #b6d1fc; }
-            /* line 153, ../../app/stylesheets/admin.scss */
+            /* line 307, ../../app/stylesheets/admin.scss */
             .columns #sidebar #sidebar-menu .site-list .site-wrapper .trash:hover {
               background: url("/images/icons/trash-selected.png") no-repeat 0 0;
               background-color: #b6d1fc; }
-  /* line 170, ../../app/stylesheets/admin.scss */
+  /* line 324, ../../app/stylesheets/admin.scss */
   .columns #main-content {
     display: inline;
     float: left;
     margin-left: 10px;
     margin-right: 10px;
     width: 700px; }
-    /* line 172, ../../app/stylesheets/admin.scss */
+    /* line 326, ../../app/stylesheets/admin.scss */
     .columns #main-content #update-profile {
       height: 300px;
       border: 3px solid #c9defd;
@@ -308,10 +464,10 @@ body#splash {
       -webkit-box-shadow: #1d73f7 1px 1px 8px;
       -o-box-shadow: #1d73f7 1px 1px 8px;
       box-shadow: #1d73f7 1px 1px 8px; }
-    /* line 173, ../../app/stylesheets/admin.scss */
+    /* line 327, ../../app/stylesheets/admin.scss */
     .columns #main-content h3 {
       margin: 10px 0 10px 0; }
-    /* line 175, ../../app/stylesheets/admin.scss */
+    /* line 329, ../../app/stylesheets/admin.scss */
     .columns #main-content .banner-style-embed {
       display: none; }
     /* line 7, ../../app/stylesheets/checkboxes.scss */
@@ -394,20 +550,20 @@ body#splash {
       height: 100%;
       width: 100%;
       background: url('../images/iphone-style-checkboxes/slider_center.png?1312336984'); }
-    /* line 178, ../../app/stylesheets/admin.scss */
+    /* line 332, ../../app/stylesheets/admin.scss */
     .columns #main-content th label {
       margin: 0 10px 0 10px;
       vertical-align: super; }
-    /* line 179, ../../app/stylesheets/admin.scss */
+    /* line 333, ../../app/stylesheets/admin.scss */
     .columns #main-content input#pixel-width {
       font-size: 0.9em;
       font-weight: bold;
       text-align: right;
       vertical-align: super; }
-    /* line 180, ../../app/stylesheets/admin.scss */
+    /* line 334, ../../app/stylesheets/admin.scss */
     .columns #main-content #px {
       vertical-align: super; }
-    /* line 183, ../../app/stylesheets/admin.scss */
+    /* line 337, ../../app/stylesheets/admin.scss */
     .columns #main-content #embed-container {
       background-color: #f0f6fe;
       margin: 10px;
@@ -421,7 +577,7 @@ body#splash {
       -ms-border-radius: 2px;
       -khtml-border-radius: 2px;
       border-radius: 2px; }
-    /* line 193, ../../app/stylesheets/admin.scss */
+    /* line 347, ../../app/stylesheets/admin.scss */
     .columns #main-content div#embed-code-container {
       margin: 10px;
       overflow: auto;
@@ -433,37 +589,37 @@ body#splash {
       -ms-border-radius: 2px;
       -khtml-border-radius: 2px;
       border-radius: 2px; }
-      /* line 194, ../../app/stylesheets/admin.scss */
+      /* line 348, ../../app/stylesheets/admin.scss */
       .columns #main-content div#embed-code-container pre#embed-code {
         font-size: 0.8em;
         margin: 30px;
         overflow: visible; }
-    /* line 201, ../../app/stylesheets/admin.scss */
+    /* line 355, ../../app/stylesheets/admin.scss */
     .columns #main-content #site-select-dropdown {
       float: right;
       margin-right: 113px;
       margin-bottom: 15px;
       margin-top: -3px; }
-    /* line 202, ../../app/stylesheets/admin.scss */
+    /* line 356, ../../app/stylesheets/admin.scss */
     .columns #main-content .approve-toggle-link {
       position: absolute;
       margin-left: 580px;
       padding-top: 20px; }
-    /* line 203, ../../app/stylesheets/admin.scss */
+    /* line 357, ../../app/stylesheets/admin.scss */
     .columns #main-content .recording-divider {
       padding-top: 20px;
       padding-bottom: 1px;
       padding-left: 15px;
       width: 663px;
       border-bottom: 1px solid #e2edfe; }
-      /* line 204, ../../app/stylesheets/admin.scss */
+      /* line 358, ../../app/stylesheets/admin.scss */
       .columns #main-content .recording-divider:nth-child(odd) {
         background-color: #f0f6fe; }
-      /* line 210, ../../app/stylesheets/admin.scss */
+      /* line 364, ../../app/stylesheets/admin.scss */
       .columns #main-content .recording-divider:hover {
         background-color: #d4e4fe; }
 
-/* line 224, ../../app/stylesheets/admin.scss */
+/* line 378, ../../app/stylesheets/admin.scss */
 .clear {
   clear: both;
   display: block;
@@ -472,32 +628,32 @@ body#splash {
   width: 0;
   height: 0; }
 
-/* line 236, ../../app/stylesheets/admin.scss */
+/* line 390, ../../app/stylesheets/admin.scss */
 .columns {
   font-family: 'Helvetica Neu', sans-serif;
   font: 'Helvetica Neu', sans-serif;
   font-weight: 500;
   font-size: 1.2em; }
 
-/* line 237, ../../app/stylesheets/admin.scss */
+/* line 391, ../../app/stylesheets/admin.scss */
 .columns p {
   font-size: 0.8em;
   margin: 0 0 20px 10px; }
 
-/* line 238, ../../app/stylesheets/admin.scss */
+/* line 392, ../../app/stylesheets/admin.scss */
 .columns b {
   font-weight: 600; }
 
-/* line 241, ../../app/stylesheets/admin.scss */
+/* line 395, ../../app/stylesheets/admin.scss */
 .footer-bottom {
   height: 20px;
   background-color: #1d73f7; }
-  /* line 244, ../../app/stylesheets/admin.scss */
+  /* line 398, ../../app/stylesheets/admin.scss */
   .footer-bottom div {
     margin-left: auto;
     margin-right: auto;
     width: 960px; }
-    /* line 246, ../../app/stylesheets/admin.scss */
+    /* line 400, ../../app/stylesheets/admin.scss */
     .footer-bottom div #footer {
       display: inline;
       float: left;
@@ -506,12 +662,12 @@ body#splash {
       width: 940px;
       background-color: #7fb0fb; }
 
-/* line 252, ../../app/stylesheets/admin.scss */
+/* line 406, ../../app/stylesheets/admin.scss */
 .footer-bottom-bottom {
   height: 20px;
   background-color: #043177; }
 
-/* line 258, ../../app/stylesheets/admin.scss */
+/* line 412, ../../app/stylesheets/admin.scss */
 .close {
   float: right;
   color: #000000;
@@ -526,7 +682,7 @@ body#splash {
   -moz-opacity: 0.25;
   opacity: 0.25; }
 
-/* line 272, ../../app/stylesheets/admin.scss */
+/* line 426, ../../app/stylesheets/admin.scss */
 .close:hover {
   color: #000000;
   filter: alpha(opacity=40);
@@ -534,7 +690,7 @@ body#splash {
   -moz-opacity: 0.4;
   opacity: 0.4; }
 
-/* line 279, ../../app/stylesheets/admin.scss */
+/* line 433, ../../app/stylesheets/admin.scss */
 .alert-message {
   font-size: 13px;
   font-weight: normal;
@@ -565,44 +721,44 @@ body#splash {
   -moz-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.25);
   box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.25); }
 
-/* line 309, ../../app/stylesheets/admin.scss */
+/* line 463, ../../app/stylesheets/admin.scss */
 .alert-message .close {
   margin-top: 1px;
   *margin-top: 0; }
 
-/* line 313, ../../app/stylesheets/admin.scss */
+/* line 467, ../../app/stylesheets/admin.scss */
 .alert-message a {
   font-weight: bold;
   color: #404040; }
 
-/* line 320, ../../app/stylesheets/admin.scss */
+/* line 474, ../../app/stylesheets/admin.scss */
 .alert-message.danger p a,
 .alert-message.error p a,
 .alert-message.success p a,
 .alert-message.info p a {
   color: #ffffff; }
 
-/* line 323, ../../app/stylesheets/admin.scss */
+/* line 477, ../../app/stylesheets/admin.scss */
 .alert-message h5 {
   line-height: 18px; }
 
-/* line 326, ../../app/stylesheets/admin.scss */
+/* line 480, ../../app/stylesheets/admin.scss */
 .alert-message p {
   margin-bottom: 0; }
 
-/* line 329, ../../app/stylesheets/admin.scss */
+/* line 483, ../../app/stylesheets/admin.scss */
 .alert-message div {
   margin-top: 5px;
   margin-bottom: 2px;
   line-height: 28px; }
 
-/* line 334, ../../app/stylesheets/admin.scss */
+/* line 488, ../../app/stylesheets/admin.scss */
 .alert-message .btn {
   -webkit-box-shadow: 0 1px 0 rgba(255, 255, 255, 0.25);
   -moz-box-shadow: 0 1px 0 rgba(255, 255, 255, 0.25);
   box-shadow: 0 1px 0 rgba(255, 255, 255, 0.25); }
 
-/* line 339, ../../app/stylesheets/admin.scss */
+/* line 493, ../../app/stylesheets/admin.scss */
 .alert-message.block-message {
   background-image: none;
   background-color: #fdf5d9;
@@ -613,43 +769,43 @@ body#splash {
   -moz-box-shadow: none;
   box-shadow: none; }
 
-/* line 349, ../../app/stylesheets/admin.scss */
+/* line 503, ../../app/stylesheets/admin.scss */
 .alert-message.block-message ul, .alert-message.block-message p {
   margin-right: 30px; }
 
-/* line 352, ../../app/stylesheets/admin.scss */
+/* line 506, ../../app/stylesheets/admin.scss */
 .alert-message.block-message ul {
   margin-bottom: 0; }
 
-/* line 355, ../../app/stylesheets/admin.scss */
+/* line 509, ../../app/stylesheets/admin.scss */
 .alert-message.block-message li {
   color: #404040; }
 
-/* line 358, ../../app/stylesheets/admin.scss */
+/* line 512, ../../app/stylesheets/admin.scss */
 .alert-message.block-message .alert-actions {
   margin-top: 5px; }
 
-/* line 361, ../../app/stylesheets/admin.scss */
+/* line 515, ../../app/stylesheets/admin.scss */
 .alert-message.block-message.error, .alert-message.block-message.success, .alert-message.block-message.info {
   color: #404040;
   text-shadow: 0 1px 0 rgba(255, 255, 255, 0.5); }
 
-/* line 365, ../../app/stylesheets/admin.scss */
+/* line 519, ../../app/stylesheets/admin.scss */
 .alert-message.block-message.error {
   background-color: #fddfde;
   border-color: #fbc7c6; }
 
-/* line 369, ../../app/stylesheets/admin.scss */
+/* line 523, ../../app/stylesheets/admin.scss */
 .alert-message.block-message.success {
   background-color: #d1eed1;
   border-color: #bfe7bf; }
 
-/* line 373, ../../app/stylesheets/admin.scss */
+/* line 527, ../../app/stylesheets/admin.scss */
 .alert-message.block-message.info {
   background-color: #ddf4fb;
   border-color: #c6edf9; }
 
-/* line 380, ../../app/stylesheets/admin.scss */
+/* line 534, ../../app/stylesheets/admin.scss */
 .alert-message.block-message.danger p a,
 .alert-message.block-message.error p a,
 .alert-message.block-message.success p a,

@@ -105,11 +105,26 @@ x add linkedin login
 
 x show/hide synopsis on blog (this just needs to be help file really, just figure it out)
 x pagination
+x test:
+	x new account from homepage
+	x login from homepage
+	x new account from embed
+	x login from embed
+	x embed breaks homepage login
+
+x create homepage
+What do I want to do?
+	Check app
+	Work on my resume some
+	Add/research a new feature (profile reviews or mp3 checksum)
+	Upgrade to 3.1/2
 
 
-! create homepage
 
-mp3 checksum service
+
+x devise login routing: home if logged in should be admin
+x first time redirect/alert?
+
 
 Expierement
  see about using json/jqeury to return reviews
@@ -133,11 +148,13 @@ Add direct call
 		- model: call user controller/views
 
 
+mp3 checksum service
 
 - find alternative dashboard design?
 
 - add "log out" to registration edit, remove logout link
 
+- alerts & notices in top-spacer in admin close button on left
 
 - For Moderation: create virtual remoteurls (adding tag based system)
 ? auto iterate site name cnn.com created a second time would yield cnn.com2

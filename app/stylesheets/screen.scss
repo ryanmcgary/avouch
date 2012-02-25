@@ -187,12 +187,10 @@ html,body{
 			padding-bottom:3px;
 		}
 	}
-	.social-login{
 		display:table;
 		position: relative;
 		z-index: 10;
 		height:100%;
-		width:100%;
 		overflow:hidden;
 		text-align: center;
 		p{  
@@ -218,10 +216,8 @@ html,body{
 			/* For IE 8*/
 			-ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#99000000, endColorstr=#99000000)";
 		}
-		// everything to the right is for auto expanding login buttons based on embed width // &:hover absolute positioning// .spacer{// 	float:left;// 	padding-top:60px;// 	width:1px;// 	background-color:transparent;// }// &:hover .middle{// 	margin:0px auto;// 	display:table;// 	a#sign-in2{// 		position:absolute;// 		margin:0px auto;// 		margin-left:-107px;// 		background: url("../images/authbuttons/auth-login.png") no-repeat 0 0;// 		width: 52px;// 		height: 39px;// 		display: block;// 		&:hover{background-position: 0 -40px;}// 		&:active{background-position: 0 -80px;}// 	}// 	a#facebook2{// 		position:absolute;// 		margin:0px auto;// 		margin-left:-24px;// 		background: url("../images/authbuttons/auth-login.png") no-repeat 0 0;// 		width: 52px;// 		height: 39px;// 		display: block;// 		&:hover{background-position: 0 -40px;}// 		&:active{background-position: 0 -80px;}// 	}				// 	a#twitter2{// 		position:absolute;// 		margin:0px auto;// 		margin-left: 60px;// 		background: url("../images/authbuttons/auth-login.png") no-repeat 0 0;// 		width: 52px;// 		height: 39px;// 		display: block;// 		&:hover{background-position: 0 -40px;}// 		&:active{background-position: 0 -80px;}// 	}		// }
 		&:hover a.auth_popup{
 			position:relative;
-			margin:0px auto;
 			width: 110px;
 			height: 30px;
 			display: block;
@@ -230,7 +226,6 @@ html,body{
 			-o-box-shadow: 1px 1px 8px rgba(0, 0, 0, 0.3); box-shadow: 1px 1px 8px rgba(0, 0, 0, 0.3); 
 		}
 		a#twitter{
-			background: url("../images/authbuttons/login-buttons.png") no-repeat 0 -2px;
 			&:hover{background-position: 0px -33px;}
 			&:active{background-position: 0px -64px;}
 		}

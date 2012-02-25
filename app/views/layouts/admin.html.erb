@@ -2,8 +2,8 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Avouch</title>
-  <%= stylesheet_link_tag :all %>
+  <title>iAvouch</title>
+  <%= stylesheet_link_tag "admin" %>
   <%= stylesheet_link_tag "embeds/blog-embed" %>
 
   <%= javascript_include_tag :defaults, 'jquery.popupwindow', 'iphone-style-checkboxes', 'install-page.js', '/audiojs/audio.js', 'bootstrap-alerts' %>
@@ -33,7 +33,7 @@
   <div class="columns"> 
     <!-- header -->
     <div class="showborder" id="header">
-      <p class="showborder" id="logo">Avouch</p> 
+      <p class="showborder" id="logo">iAvouch</p> 
     </div>
     <!-- sidebar -->
     <div class="showborder" id="sidebar">
@@ -45,7 +45,7 @@
           <%= current_page?(admin_sites_path) ? link_to("Moderation", admin_sites_path, :class => "bold") : link_to("Moderation", admin_sites_path) %>
         </li>
         <li class="showborder">
-          <%= ( controller.action_name == "show" || controller.action_name == "install") ? link_to("Install", "/admin/sites/install", :class => "bold") : link_to("Install", "/admin/sites/install") %>
+          <%= ( controller.action_name == "show" || controller.action_name == "install" || controller.action_name == "new") ? link_to("Install", "/admin/sites/install", :class => "bold") : link_to("Install", "/admin/sites/install") %>
           <%# TODO: this whole thing sucks, will cause massive problems  %>
           <div class="site-list">
             <% if user_signed_in? %>
@@ -59,7 +59,7 @@
                 </div>
               <% end %>
               <div class="site-wrapper">
-                <%= link_to "New", new_admin_site_path, :class => "site" %>
+                <%= current_page?(new_admin_site_path) ? link_to("New", new_admin_site_path, :class => "site bold") : link_to("New", new_admin_site_path, :class => "site") %>
               </div>
             <% end %>
           </div>
@@ -83,14 +83,14 @@
   </div>
     
   <div class="clear"></div>
-  <div class="footer-bottom">
+<!--   <div class="footer-bottom">
     <div>
       <div id="footer">
            sdfsd
       </div>
     </div>
   </div>   
-  <div class="footer-bottom-bottom"></div>
+  <div class="footer-bottom-bottom"></div> -->
 
 
 </body>

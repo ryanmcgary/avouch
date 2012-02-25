@@ -68,29 +68,84 @@ html, body {
   html #embeded, body #embeded {
     overflow: hidden; }
 
-/* line 29, ../../app/stylesheets/screen.scss */
+/* line 27, ../../app/stylesheets/screen.scss */
+#social-login {
+  padding: 20px 30px 0 30px;
+  display: table;
+  position: relative;
+  z-index: 10; }
+  /* line 32, ../../app/stylesheets/screen.scss */
+  #social-login p {
+    margin-top: 3px;
+    margin-left: 3px;
+    color: white; }
+  /* line 37, ../../app/stylesheets/screen.scss */
+  #social-login li {
+    padding-top: 15px;
+    display: inline-block; }
+  /* line 38, ../../app/stylesheets/screen.scss */
+  #social-login a {
+    position: relative;
+    margin: 0px auto;
+    width: 227px;
+    height: 40px;
+    display: block;
+    text-indent: -9999px;
+    -webkit-box-shadow: 1px 1px 8px rgba(0, 0, 0, 0.3);
+    -moz-box-shadow: 1px 1px 8px rgba(0, 0, 0, 0.3);
+    -o-box-shadow: 1px 1px 8px rgba(0, 0, 0, 0.3);
+    box-shadow: 1px 1px 8px rgba(0, 0, 0, 0.3); }
+  /* line 48, ../../app/stylesheets/screen.scss */
+  #social-login a#twitter {
+    background: url("../images/authbuttons/large-auth-buttons.png") no-repeat 0px 0px; }
+    /* line 50, ../../app/stylesheets/screen.scss */
+    #social-login a#twitter:hover {
+      background-position: 0px -40px; }
+    /* line 51, ../../app/stylesheets/screen.scss */
+    #social-login a#twitter:active {
+      background-position: 0px -80px; }
+  /* line 53, ../../app/stylesheets/screen.scss */
+  #social-login a#facebook {
+    background: url("../images/authbuttons/large-auth-buttons.png") no-repeat -228px 0px; }
+    /* line 55, ../../app/stylesheets/screen.scss */
+    #social-login a#facebook:hover {
+      background-position: -228px -40px; }
+    /* line 56, ../../app/stylesheets/screen.scss */
+    #social-login a#facebook:active {
+      background-position: -228px -80px; }
+  /* line 58, ../../app/stylesheets/screen.scss */
+  #social-login a#linkedin {
+    background: url("../images/authbuttons/large-auth-buttons.png") no-repeat -456px 0px; }
+    /* line 60, ../../app/stylesheets/screen.scss */
+    #social-login a#linkedin:hover {
+      background-position: -456px -40px; }
+    /* line 61, ../../app/stylesheets/screen.scss */
+    #social-login a#linkedin:active {
+      background-position: -456px -80px; }
+
+/* line 66, ../../app/stylesheets/screen.scss */
 #devise {
   background: #ebf4fb; }
 
-/* line 30, ../../app/stylesheets/screen.scss */
+/* line 67, ../../app/stylesheets/screen.scss */
 .devise {
   /* ----------- My Form ----------- */
   /* ----------- stylized ----------- */ }
-  /* line 33, ../../app/stylesheets/screen.scss */
+  /* line 70, ../../app/stylesheets/screen.scss */
   .devise .devise_form {
     margin: 0 auto;
     width: 400px;
     padding: 14px; }
-    /* line 34, ../../app/stylesheets/screen.scss */
+    /* line 71, ../../app/stylesheets/screen.scss */
     .devise .devise_form .spacer {
       clear: both;
       height: 1px; }
-    /* line 35, ../../app/stylesheets/screen.scss */
+    /* line 72, ../../app/stylesheets/screen.scss */
     .devise .devise_form p, .devise .devise_form h1, .devise .devise_form form, .devise .devise_form button {
       border: 0;
       margin: 0;
       padding: 0; }
-    /* line 39, ../../app/stylesheets/screen.scss */
+    /* line 76, ../../app/stylesheets/screen.scss */
     .devise .devise_form img.profile_pic {
       float: left;
       margin: 0px 10px 0 0;
@@ -98,30 +153,30 @@ html, body {
       max-width: 50px;
       height: 35px;
       width: 35px; }
-  /* line 50, ../../app/stylesheets/screen.scss */
+  /* line 87, ../../app/stylesheets/screen.scss */
   .devise #stylized {
     overflow: hidden; }
-    /* line 51, ../../app/stylesheets/screen.scss */
+    /* line 88, ../../app/stylesheets/screen.scss */
     .devise #stylized .error {
       margin-left: 151px;
       margin-bottom: 20px;
       width: 200px; }
-    /* line 57, ../../app/stylesheets/screen.scss */
+    /* line 94, ../../app/stylesheets/screen.scss */
     .devise #stylized div.field_with_errors {
       color: #8B0000; }
-  /* line 59, ../../app/stylesheets/screen.scss */
+  /* line 96, ../../app/stylesheets/screen.scss */
   .devise #stylized h1 {
     font-size: 14px;
     font-weight: bold;
     margin-bottom: 8px; }
-  /* line 64, ../../app/stylesheets/screen.scss */
+  /* line 101, ../../app/stylesheets/screen.scss */
   .devise #stylized p {
     font-size: 11px;
     color: #666666;
     margin-bottom: 20px;
     border-bottom: solid 1px #b7ddf2;
     padding-bottom: 10px; }
-  /* line 71, ../../app/stylesheets/screen.scss */
+  /* line 108, ../../app/stylesheets/screen.scss */
   .devise #stylized label {
     display: block;
     font-weight: bold;
@@ -129,7 +184,7 @@ html, body {
     width: 140px;
     float: left;
     font-size: 16px; }
-  /* line 79, ../../app/stylesheets/screen.scss */
+  /* line 116, ../../app/stylesheets/screen.scss */
   .devise #stylized .small {
     color: #666666;
     display: block;
@@ -137,7 +192,7 @@ html, body {
     font-weight: normal;
     text-align: right;
     width: 140px; }
-  /* line 87, ../../app/stylesheets/screen.scss */
+  /* line 124, ../../app/stylesheets/screen.scss */
   .devise #stylized input {
     float: left;
     font-size: 12px;
@@ -145,15 +200,15 @@ html, body {
     border: solid 1px #aacfe4;
     width: 200px;
     margin: 2px 0 20px 10px; }
-  /* line 95, ../../app/stylesheets/screen.scss */
+  /* line 132, ../../app/stylesheets/screen.scss */
   .devise #stylized div.field_with_errors input {
     margin: 2px 0 0px 10px;
     border: solid 2px #CD5C5C; }
-  /* line 99, ../../app/stylesheets/screen.scss */
+  /* line 136, ../../app/stylesheets/screen.scss */
   .devise #stylized div#first div.field_with_errors input {
     margin: 2px 0 20px 10px;
     border: solid 1px #aacfe4; }
-  /* line 103, ../../app/stylesheets/screen.scss */
+  /* line 140, ../../app/stylesheets/screen.scss */
   .devise #stylized input[type="submit"] {
     clear: both;
     margin-left: 150px;
@@ -164,7 +219,7 @@ html, body {
     color: #FFFFFF;
     font-size: 11px;
     font-weight: bold; }
-  /* line 115, ../../app/stylesheets/screen.scss */
+  /* line 152, ../../app/stylesheets/screen.scss */
   .devise .btn {
     cursor: pointer;
     display: inline-block;
@@ -195,15 +250,15 @@ html, body {
     -ms-transition: 0.1s linear all;
     -o-transition: 0.1s linear all;
     transition: 0.1s linear all; }
-  /* line 146, ../../app/stylesheets/screen.scss */
+  /* line 183, ../../app/stylesheets/screen.scss */
   .devise .btn:hover {
     background-position: 0 -15px;
     color: #333;
     text-decoration: none; }
-  /* line 151, ../../app/stylesheets/screen.scss */
+  /* line 188, ../../app/stylesheets/screen.scss */
   .devise .btn:focus {
     outline: 1px dotted #666; }
-  /* line 154, ../../app/stylesheets/screen.scss */
+  /* line 191, ../../app/stylesheets/screen.scss */
   .devise .btn.primary {
     color: #ffffff;
     background-color: #0064cd;
@@ -219,28 +274,28 @@ html, body {
     text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
     border-color: #0064cd #0064cd #003f81;
     border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25); }
-  /* line 170, ../../app/stylesheets/screen.scss */
+  /* line 207, ../../app/stylesheets/screen.scss */
   .devise .btn.active, .devise .btn:active {
     -webkit-box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.25), 0 1px 2px rgba(0, 0, 0, 0.05);
     -moz-box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.25), 0 1px 2px rgba(0, 0, 0, 0.05);
     box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.25), 0 1px 2px rgba(0, 0, 0, 0.05); }
 
-/* line 179, ../../app/stylesheets/screen.scss */
+/* line 216, ../../app/stylesheets/screen.scss */
 .actions {
   margin-bottom: 10px; }
 
-/* line 180, ../../app/stylesheets/screen.scss */
+/* line 217, ../../app/stylesheets/screen.scss */
 #sucker {
   width: 98%;
   position: absolute;
   top: 4px;
   left: 4px; }
-  /* line 185, ../../app/stylesheets/screen.scss */
+  /* line 222, ../../app/stylesheets/screen.scss */
   #sucker p {
     text-decoration: underline;
     padding-bottom: 3px; }
 
-/* line 190, ../../app/stylesheets/screen.scss */
+/* line 227, ../../app/stylesheets/screen.scss */
 .social-login {
   display: table;
   position: relative;
@@ -249,25 +304,25 @@ html, body {
   width: 100%;
   overflow: hidden;
   text-align: center; }
-  /* line 198, ../../app/stylesheets/screen.scss */
+  /* line 235, ../../app/stylesheets/screen.scss */
   .social-login p {
     visibility: hidden;
     position: fixed;
     margin-top: 3px;
     margin-left: 3px;
     color: white; }
-  /* line 205, ../../app/stylesheets/screen.scss */
+  /* line 242, ../../app/stylesheets/screen.scss */
   .social-login:hover p {
     visibility: visible; }
-  /* line 206, ../../app/stylesheets/screen.scss */
+  /* line 243, ../../app/stylesheets/screen.scss */
   .social-login ul {
     display: table-cell;
     vertical-align: middle; }
-  /* line 210, ../../app/stylesheets/screen.scss */
+  /* line 247, ../../app/stylesheets/screen.scss */
   .social-login li {
     padding-top: 15px;
     display: inline-block; }
-  /* line 211, ../../app/stylesheets/screen.scss */
+  /* line 248, ../../app/stylesheets/screen.scss */
   .social-login:hover {
     /* Fallback for web browsers that doesn't support RGBa */
     background: black transparent;
@@ -277,7 +332,7 @@ html, body {
     filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#99000000, endColorstr=#99000000);
     /* For IE 8*/
     -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#99000000, endColorstr=#99000000)"; }
-  /* line 222, ../../app/stylesheets/screen.scss */
+  /* line 258, ../../app/stylesheets/screen.scss */
   .social-login:hover a.auth_popup {
     position: relative;
     margin: 0px auto;
@@ -289,39 +344,39 @@ html, body {
     -moz-box-shadow: 1px 1px 8px rgba(0, 0, 0, 0.3);
     -o-box-shadow: 1px 1px 8px rgba(0, 0, 0, 0.3);
     box-shadow: 1px 1px 8px rgba(0, 0, 0, 0.3); }
-  /* line 232, ../../app/stylesheets/screen.scss */
+  /* line 268, ../../app/stylesheets/screen.scss */
   .social-login a#twitter {
     background: url("../images/authbuttons/login-buttons.png") no-repeat 0 -2px; }
-    /* line 234, ../../app/stylesheets/screen.scss */
+    /* line 270, ../../app/stylesheets/screen.scss */
     .social-login a#twitter:hover {
       background-position: 0px -33px; }
-    /* line 235, ../../app/stylesheets/screen.scss */
+    /* line 271, ../../app/stylesheets/screen.scss */
     .social-login a#twitter:active {
       background-position: 0px -64px; }
-  /* line 237, ../../app/stylesheets/screen.scss */
+  /* line 273, ../../app/stylesheets/screen.scss */
   .social-login a#facebook {
     background: url("../images/authbuttons/login-buttons.png") no-repeat -111px -2px; }
-    /* line 239, ../../app/stylesheets/screen.scss */
+    /* line 275, ../../app/stylesheets/screen.scss */
     .social-login a#facebook:hover {
       background-position: -111px -33px; }
-    /* line 240, ../../app/stylesheets/screen.scss */
+    /* line 276, ../../app/stylesheets/screen.scss */
     .social-login a#facebook:active {
       background-position: -111px -64px; }
-  /* line 242, ../../app/stylesheets/screen.scss */
+  /* line 278, ../../app/stylesheets/screen.scss */
   .social-login a#linkedin {
     background: url("../images/authbuttons/login-buttons.png") no-repeat -222px -2px; }
-    /* line 244, ../../app/stylesheets/screen.scss */
+    /* line 280, ../../app/stylesheets/screen.scss */
     .social-login a#linkedin:hover {
       background-position: -222px -33px; }
-    /* line 245, ../../app/stylesheets/screen.scss */
+    /* line 281, ../../app/stylesheets/screen.scss */
     .social-login a#linkedin:active {
       background-position: -222px -64px; }
 
-/* line 250, ../../app/stylesheets/screen.scss */
+/* line 286, ../../app/stylesheets/screen.scss */
 .authentications {
   margin-bottom: 30px; }
 
-/* line 254, ../../app/stylesheets/screen.scss */
+/* line 290, ../../app/stylesheets/screen.scss */
 .authentication {
   width: 130px;
   float: left;
@@ -333,7 +388,7 @@ html, body {
   position: relative;
   margin-right: 10px; }
 
-/* line 266, ../../app/stylesheets/screen.scss */
+/* line 302, ../../app/stylesheets/screen.scss */
 .authentication .remove {
   text-decoration: none;
   position: absolute;
@@ -343,32 +398,32 @@ html, body {
   padding: 2px 4px;
   font-size: 10px; }
 
-/* line 276, ../../app/stylesheets/screen.scss */
+/* line 312, ../../app/stylesheets/screen.scss */
 .authentication .remove:hover {
   color: #CCC;
   background-color: #777;
   -moz-border-radius: 6px;
   -webkit-border-radius: 6px; }
 
-/* line 283, ../../app/stylesheets/screen.scss */
+/* line 319, ../../app/stylesheets/screen.scss */
 .authentication img {
   float: left;
   margin-right: 10px; }
 
-/* line 288, ../../app/stylesheets/screen.scss */
+/* line 324, ../../app/stylesheets/screen.scss */
 .authentication .provider {
   font-weight: bold; }
 
-/* line 292, ../../app/stylesheets/screen.scss */
+/* line 328, ../../app/stylesheets/screen.scss */
 .authentication .uid {
   color: #666;
   font-size: 11px; }
 
-/* line 298, ../../app/stylesheets/screen.scss */
+/* line 334, ../../app/stylesheets/screen.scss */
 .auth_provider img {
   display: block; }
 
-/* line 302, ../../app/stylesheets/screen.scss */
+/* line 338, ../../app/stylesheets/screen.scss */
 .auth_provider {
   float: left;
   text-decoration: none;
@@ -376,12 +431,12 @@ html, body {
   text-align: center;
   margin-bottom: 10px; }
 
-/* line 311, ../../app/stylesheets/screen.scss */
+/* line 347, ../../app/stylesheets/screen.scss */
 .embed {
   margin: 0px 0px;
   width: 100%;
   overflow: hidden; }
-  /* line 315, ../../app/stylesheets/screen.scss */
+  /* line 351, ../../app/stylesheets/screen.scss */
   .embed .profile_pic {
     overflow: hidden;
     border: 1px solid #c1c1c1;
@@ -391,22 +446,22 @@ html, body {
     -webkit-box-shadow: inset 0 1px 4px rgba(0, 0, 0, 0.16);
     -moz-box-shadow: inset 0 1px 4px rgba(0, 0, 0, 0.16);
     box-shadow: inset 0 1px 4px rgba(0, 0, 0, 0.16); }
-  /* line 325, ../../app/stylesheets/screen.scss */
+  /* line 361, ../../app/stylesheets/screen.scss */
   .embed .left-bar {
     margin: -4px 0px 0px 2px;
     color: grey;
     font-size: 0.9em; }
-  /* line 330, ../../app/stylesheets/screen.scss */
+  /* line 366, ../../app/stylesheets/screen.scss */
   .embed .table-rightside {
     vertical-align: top;
     padding-left: 4px; }
-    /* line 333, ../../app/stylesheets/screen.scss */
+    /* line 369, ../../app/stylesheets/screen.scss */
     .embed .table-rightside p {
       margin: -2px 0px 1px 0px;
       font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
       font-weight: 500;
       font-size: 1.2em; }
-  /* line 340, ../../app/stylesheets/screen.scss */
+  /* line 376, ../../app/stylesheets/screen.scss */
   .embed .optional-text {
     overflow: hidden;
     background: white url("/images/backgrounds-sprite.png") 0 -480px repeat-x;
@@ -418,7 +473,7 @@ html, body {
     -webkit-box-shadow: inset 0 1px 4px rgba(0, 0, 0, 0.16);
     -moz-box-shadow: inset 0 1px 4px rgba(0, 0, 0, 0.16);
     box-shadow: inset 0 1px 4px rgba(0, 0, 0, 0.16); }
-  /* line 352, ../../app/stylesheets/screen.scss */
+  /* line 388, ../../app/stylesheets/screen.scss */
   .embed textarea {
     width: 99.2%;
     height: 6em;
@@ -427,22 +482,22 @@ html, body {
     background: transparent;
     overflow: hidden;
     resize: none; }
-    /* line 360, ../../app/stylesheets/screen.scss */
+    /* line 396, ../../app/stylesheets/screen.scss */
     .embed textarea:focus {
       outline: 0; }
-  /* line 366, ../../app/stylesheets/screen.scss */
+  /* line 402, ../../app/stylesheets/screen.scss */
   .embed .expand-bottom {
     border-top: dotted;
     border-width: 1px;
     border-color: grey;
     display: none; }
-  /* line 372, ../../app/stylesheets/screen.scss */
+  /* line 408, ../../app/stylesheets/screen.scss */
   .embed .link {
     margin-left: 2px;
     font-size: 12px;
     line-height: 32px;
     vertical-align: sub; }
-  /* line 378, ../../app/stylesheets/screen.scss */
+  /* line 414, ../../app/stylesheets/screen.scss */
   .embed .vouch-button {
     float: right;
     margin: -1px -1px -1px 0px;
@@ -464,10 +519,10 @@ html, body {
     top: -1px;
     z-index: 2;
     height: 34px; }
-    /* line 399, ../../app/stylesheets/screen.scss */
+    /* line 435, ../../app/stylesheets/screen.scss */
     .embed .vouch-button:hover {
       background: url("/images/backgrounds-sprite.png") 0 -310px repeat-x; }
-    /* line 400, ../../app/stylesheets/screen.scss */
+    /* line 436, ../../app/stylesheets/screen.scss */
     .embed .vouch-button:active {
       background: url("/images/backgrounds-sprite.png") 0 -370px repeat-x;
       -webkit-box-shadow: 0 1px 0 rgba(255, 255, 255, 0.8);
@@ -476,16 +531,16 @@ html, body {
       padding-top: 9px;
       padding-bottom: 7px; }
 
-/* line 411, ../../app/stylesheets/screen.scss */
+/* line 447, ../../app/stylesheets/screen.scss */
 .embed-banner {
   overflow: hidden;
   font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; }
-  /* line 414, ../../app/stylesheets/screen.scss */
+  /* line 450, ../../app/stylesheets/screen.scss */
   .embed-banner table {
     margin: 0px 0px;
     width: 100%;
     overflow: hidden; }
-  /* line 420, ../../app/stylesheets/screen.scss */
+  /* line 456, ../../app/stylesheets/screen.scss */
   .embed-banner .profile_pic {
     margin-top: 4px;
     margin-left: 5px;
@@ -497,24 +552,24 @@ html, body {
     -webkit-box-shadow: inset 0 1px 4px rgba(0, 0, 0, 0.16);
     -moz-box-shadow: inset 0 1px 4px rgba(0, 0, 0, 0.16);
     box-shadow: inset 0 1px 4px rgba(0, 0, 0, 0.16); }
-  /* line 433, ../../app/stylesheets/screen.scss */
+  /* line 469, ../../app/stylesheets/screen.scss */
   .embed-banner .left-bar {
     margin: -4px 0px 2px 6px;
     color: grey;
     font-size: 0.9em; }
-  /* line 439, ../../app/stylesheets/screen.scss */
+  /* line 475, ../../app/stylesheets/screen.scss */
   .embed-banner .table-rightside {
     padding-top: 4px;
     vertical-align: top;
     padding-left: 4px;
     width: 100%; }
-    /* line 444, ../../app/stylesheets/screen.scss */
+    /* line 480, ../../app/stylesheets/screen.scss */
     .embed-banner .table-rightside p {
       margin: -2px 4px 1px 0px;
       font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
       font-weight: 500;
       font-size: 0.9em; }
-  /* line 452, ../../app/stylesheets/screen.scss */
+  /* line 488, ../../app/stylesheets/screen.scss */
   .embed-banner .optional-text {
     overflow: hidden;
     background: white url("/images/backgrounds-sprite.png") 0 -480px repeat-x;
@@ -528,19 +583,19 @@ html, body {
     -webkit-box-shadow: inset 0 1px 4px rgba(0, 0, 0, 0.16);
     -moz-box-shadow: inset 0 1px 4px rgba(0, 0, 0, 0.16);
     box-shadow: inset 0 1px 4px rgba(0, 0, 0, 0.16); }
-  /* line 467, ../../app/stylesheets/screen.scss */
+  /* line 503, ../../app/stylesheets/screen.scss */
   .embed-banner .text-area {
     height: 34px; }
-    /* line 469, ../../app/stylesheets/screen.scss */
+    /* line 505, ../../app/stylesheets/screen.scss */
     .embed-banner .text-area textarea {
       background: transparent;
       border: none;
       overflow: hidden;
       resize: none; }
-      /* line 474, ../../app/stylesheets/screen.scss */
+      /* line 510, ../../app/stylesheets/screen.scss */
       .embed-banner .text-area textarea:focus {
         outline: 0; }
-  /* line 480, ../../app/stylesheets/screen.scss */
+  /* line 516, ../../app/stylesheets/screen.scss */
   .embed-banner .short-text {
     /* TODO: Required to change width */
     width: 67%;
@@ -550,7 +605,7 @@ html, body {
     border: none;
     overflow: none;
     resize: none; }
-  /* line 491, ../../app/stylesheets/screen.scss */
+  /* line 527, ../../app/stylesheets/screen.scss */
   .embed-banner .vouch-button {
     width: 30%;
     float: right;
@@ -571,10 +626,10 @@ html, body {
     font-weight: 300;
     z-index: 2;
     height: 35px; }
-    /* line 515, ../../app/stylesheets/screen.scss */
+    /* line 551, ../../app/stylesheets/screen.scss */
     .embed-banner .vouch-button:hover {
       background: url("/images/backgrounds-sprite.png") 0 -310px repeat-x; }
-    /* line 518, ../../app/stylesheets/screen.scss */
+    /* line 554, ../../app/stylesheets/screen.scss */
     .embed-banner .vouch-button:active {
       background: url("/images/backgrounds-sprite.png") 0 -370px repeat-x;
       -webkit-box-shadow: 0 1px 0 rgba(255, 255, 255, 0.8);
@@ -582,119 +637,204 @@ html, body {
       box-shadow: 0 1px 0 rgba(255, 255, 255, 0.8);
       padding-top: 9px;
       padding-bottom: 7px; }
-  /* line 528, ../../app/stylesheets/screen.scss */
+  /* line 564, ../../app/stylesheets/screen.scss */
   .embed-banner .expand-bottom {
     border-top: dotted;
     border-width: 1px;
     border-color: grey;
     display: none; }
-    /* line 533, ../../app/stylesheets/screen.scss */
+    /* line 569, ../../app/stylesheets/screen.scss */
     .embed-banner .expand-bottom a {
       margin-left: 2px;
       font-size: 12px;
       line-height: 12px; }
 
-/* line 544, ../../app/stylesheets/screen.scss */
+/* line 580, ../../app/stylesheets/screen.scss */
 .bold {
   font-weight: bold; }
 
-/* line 551, ../../app/stylesheets/screen.scss */
-body#home .top-spacer {
-  height: 1.2em;
+/* line 584, ../../app/stylesheets/screen.scss */
+.clear {
+  clear: both;
+  display: block;
+  overflow: hidden;
+  visibility: hidden;
+  width: 0;
+  height: 0; }
+
+/* line 594, ../../app/stylesheets/screen.scss */
+body#home {
+  background-image: url("../images/bg3b.png");
   background-color: #043177;
-  color: #FFFFFF; }
-  /* line 555, ../../app/stylesheets/screen.scss */
-  body#home .top-spacer div {
+  background-size: 400px 400px;
+  color: white; }
+  /* line 598, ../../app/stylesheets/screen.scss */
+  body#home .top-spacer {
     height: 1.2em;
-    width: 960px;
+    background-color: black;
+    opacity: 0.5;
+    color: #FFFFFF; }
+  /* line 605, ../../app/stylesheets/screen.scss */
+  body#home .columns {
+    text-rendering: optimizeLegibility;
     margin-left: auto;
-    margin-right: auto; }
-    /* line 560, ../../app/stylesheets/screen.scss */
-    body#home .top-spacer div p {
-      margin-right: 10px;
-      margin-left: 10px;
-      float: right;
-      color: #FFFFFF; }
-      /* line 565, ../../app/stylesheets/screen.scss */
-      body#home .top-spacer div p a {
-        color: inherit; }
-/* line 570, ../../app/stylesheets/screen.scss */
-body#home .columns {
-  margin-left: auto;
-  margin-right: auto;
-  width: 960px;
-  font-family: 'Helvetica Neu', sans-serif;
-  font: 'Helvetica Neu', sans-serif;
-  font-weight: 500;
-  font-size: 1.2em;
-  background-color: white; }
-  /* line 573, ../../app/stylesheets/screen.scss */
-  body#home .columns p {
-    font-size: 0.8em;
-    margin: 0 0 20px 10px; }
-  /* line 574, ../../app/stylesheets/screen.scss */
-  body#home .columns b {
-    font-weight: 600; }
-  /* line 575, ../../app/stylesheets/screen.scss */
-  body#home .columns h2 {
-    font-size: 2em;
-    margin-bottom: 30px; }
-  /* line 578, ../../app/stylesheets/screen.scss */
-  body#home .columns #header {
-    display: inline;
-    float: left;
-    margin-left: 10px;
-    margin-right: 10px;
-    width: 940px;
-    margin-bottom: 20px; }
-    /* line 581, ../../app/stylesheets/screen.scss */
-    body#home .columns #header #logo {
+    margin-right: auto;
+    width: 960px;
+    font-family: 'Helvetica Neu', sans-serif;
+    font: 'Helvetica Neu', sans-serif;
+    font-weight: 500;
+    font-size: 1.2em;
+    background-color: white; }
+    /* line 610, ../../app/stylesheets/screen.scss */
+    body#home .columns p {
+      font-size: 0.8em;
+      margin: 0 0 20px 10px; }
+    /* line 611, ../../app/stylesheets/screen.scss */
+    body#home .columns b {
+      font-weight: 600; }
+    /* line 612, ../../app/stylesheets/screen.scss */
+    body#home .columns h2 {
+      font-size: 2em;
+      margin-bottom: 30px; }
+    /* line 614, ../../app/stylesheets/screen.scss */
+    body#home .columns .bg {
+      background-image: url("../images/bg3c.png");
+      height: 640px;
       display: inline;
       float: left;
       margin-left: 10px;
       margin-right: 10px;
-      width: 100px;
-      margin: 20px 20px 0px 0px;
-      font-size: 1.5em; }
-    /* line 586, ../../app/stylesheets/screen.scss */
-    body#home .columns #header #logo-tagline {
+      width: 940px; }
+    /* line 619, ../../app/stylesheets/screen.scss */
+    body#home .columns #header {
       display: inline;
       float: left;
       margin-left: 10px;
       margin-right: 10px;
-      width: 180px;
-      margin: 31px 0 0px 0px;
-      font-size: 0.8em; }
-  /* line 593, ../../app/stylesheets/screen.scss */
-  body#home .columns #main-content {
-    display: inline;
-    float: left;
-    margin-left: 10px;
-    margin-right: 10px;
-    width: 700px;
-    padding-left: 120px;
-    padding-right: 120px; }
-    /* line 597, ../../app/stylesheets/screen.scss */
-    body#home .columns #main-content h3 {
-      margin: 10px 0 10px 0; }
-  /* line 601, ../../app/stylesheets/screen.scss */
-  body#home .columns .footer-bottom {
-    height: 20px;
-    background-color: #1d73f7; }
-    /* line 604, ../../app/stylesheets/screen.scss */
-    body#home .columns .footer-bottom div {
-      margin-left: auto;
-      margin-right: auto;
-      width: 960px; }
-      /* line 606, ../../app/stylesheets/screen.scss */
-      body#home .columns .footer-bottom div #footer {
+      width: 940px;
+      margin-bottom: 20px; }
+      /* line 622, ../../app/stylesheets/screen.scss */
+      body#home .columns #header #logo {
         display: inline;
         float: left;
         margin-left: 10px;
         margin-right: 10px;
-        width: 940px;
-        background-color: #7fb0fb; }
-  /* line 612, ../../app/stylesheets/screen.scss */
-  body#home .columns .footer-bottom-bottom {
+        width: 100px;
+        text-shadow: black 1px 2px 10px;
+        margin: 20px 25px 0px 0px;
+        font-size: 1.6em; }
+      /* line 628, ../../app/stylesheets/screen.scss */
+      body#home .columns #header #logo-tagline {
+        display: inline;
+        float: left;
+        margin-left: 10px;
+        margin-right: 10px;
+        width: 180px;
+        text-shadow: black 1px 2px 10px;
+        margin: 32px 0 0px 0px;
+        font-size: 0.9em; }
+    /* line 636, ../../app/stylesheets/screen.scss */
+    body#home .columns #main-content {
+      display: inline;
+      float: left;
+      margin-left: 10px;
+      margin-right: 10px;
+      width: 780px;
+      padding-left: 80px;
+      padding-right: 80px;
+      padding-top: 60px; }
+      /* line 641, ../../app/stylesheets/screen.scss */
+      body#home .columns #main-content .slogan {
+        margin: 10px 0 30px 0; }
+      /* line 642, ../../app/stylesheets/screen.scss */
+      body#home .columns #main-content h3 {
+        text-shadow: #222 1px 4px 6px;
+        font-size: 37px;
+        line-height: 1.35;
+        -webkit-mask-image: -webkit-gradient(linear, left top, left bottom, from(black), color-stop(70%, rgba(0, 0, 0, 0.9)), to(black)); }
+      /* line 648, ../../app/stylesheets/screen.scss */
+      body#home .columns #main-content #social-login {
+        padding-top: 30px;
+        display: table;
+        position: relative;
+        z-index: 10;
+        height: 100%;
+        width: 100%;
+        text-align: center; }
+        /* line 656, ../../app/stylesheets/screen.scss */
+        body#home .columns #main-content #social-login p {
+          margin-top: 3px;
+          margin-left: 3px;
+          color: white; }
+        /* line 661, ../../app/stylesheets/screen.scss */
+        body#home .columns #main-content #social-login ul {
+          display: table-cell;
+          vertical-align: middle; }
+        /* line 665, ../../app/stylesheets/screen.scss */
+        body#home .columns #main-content #social-login li {
+          padding-top: 15px;
+          display: inline-block; }
+        /* line 667, ../../app/stylesheets/screen.scss */
+        body#home .columns #main-content #social-login a {
+          position: relative;
+          margin: 0px auto;
+          width: 226px;
+          height: 40px;
+          display: block;
+          text-indent: -9999px;
+          -webkit-box-shadow: 1px 1px 8px rgba(0, 0, 0, 0.3);
+          -moz-box-shadow: 1px 1px 8px rgba(0, 0, 0, 0.3);
+          -o-box-shadow: 1px 1px 8px rgba(0, 0, 0, 0.3);
+          box-shadow: 1px 1px 8px rgba(0, 0, 0, 0.3); }
+        /* line 677, ../../app/stylesheets/screen.scss */
+        body#home .columns #main-content #social-login a#twitter {
+          background: url("../images/authbuttons/large-auth-buttons.png") no-repeat 0px 0px; }
+          /* line 679, ../../app/stylesheets/screen.scss */
+          body#home .columns #main-content #social-login a#twitter:hover {
+            background-position: 0px -40px; }
+          /* line 680, ../../app/stylesheets/screen.scss */
+          body#home .columns #main-content #social-login a#twitter:active {
+            background-position: 0px -80px; }
+        /* line 682, ../../app/stylesheets/screen.scss */
+        body#home .columns #main-content #social-login a#facebook {
+          background: url("../images/authbuttons/large-auth-buttons.png") no-repeat -228px 0px; }
+          /* line 684, ../../app/stylesheets/screen.scss */
+          body#home .columns #main-content #social-login a#facebook:hover {
+            background-position: -228px -40px; }
+          /* line 685, ../../app/stylesheets/screen.scss */
+          body#home .columns #main-content #social-login a#facebook:active {
+            background-position: -228px -80px; }
+        /* line 687, ../../app/stylesheets/screen.scss */
+        body#home .columns #main-content #social-login a#linkedin {
+          background: url("../images/authbuttons/large-auth-buttons.png") no-repeat -456px 0px; }
+          /* line 689, ../../app/stylesheets/screen.scss */
+          body#home .columns #main-content #social-login a#linkedin:hover {
+            background-position: -456px -40px; }
+          /* line 690, ../../app/stylesheets/screen.scss */
+          body#home .columns #main-content #social-login a#linkedin:active {
+            background-position: -456px -80px; }
+      /* line 693, ../../app/stylesheets/screen.scss */
+      body#home .columns #main-content #features {
+        text-align: center; }
+        /* line 695, ../../app/stylesheets/screen.scss */
+        body#home .columns #main-content #features p {
+          margin-top: 10px;
+          font-size: 10px;
+          color: grey; }
+  /* line 703, ../../app/stylesheets/screen.scss */
+  body#home .footer-bottom {
     height: 20px;
-    background-color: #043177; }
+    background-color: #1d73f7;
+    background-size: 400px 400px; }
+    /* line 707, ../../app/stylesheets/screen.scss */
+    body#home .footer-bottom div {
+      margin-left: auto;
+      margin-right: auto;
+      width: 960px; }
+      /* line 709, ../../app/stylesheets/screen.scss */
+      body#home .footer-bottom div #footer {
+        display: inline;
+        float: left;
+        margin-left: 10px;
+        margin-right: 10px;
+        width: 940px; }

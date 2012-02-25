@@ -1,5 +1,5 @@
 <div class="devise_form" id="stylized">
-<%= image_tag current_user.profile_pic, :title => "title", :class => "profile_pic" %>
+<img class="profile_pic" src="<%= current_user.profile_pic.nil? ? "/images/blankprofilepic.png" : current_user.profile_pic %>" width="50" height="50" title="title">
 <h1>Edit Profile</h1>
 <p>Update Account Info</p>    
 
@@ -56,7 +56,7 @@
       </div>
     <% end %>
 
-    <%= f.submit "Update" %>
+    <%= f.submit "Update", :class => "btn primary" %>
     <% end %>
 <% else %>
   
@@ -114,7 +114,7 @@
        
     
   
-    <%= f.submit "Update" %>
+    <%= f.submit "Update", :class => "btn primary" %>
     <% end %>
 <% end %>
 

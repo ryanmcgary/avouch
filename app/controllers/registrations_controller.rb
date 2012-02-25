@@ -34,13 +34,13 @@ class RegistrationsController < Devise::RegistrationsController
   # end    
   # in a helper if remoteurl save request.referrer
 
-  def after_sign_up_path_for(resource_or_scope)
-    if !session[:return_to].nil?
-      authentications_closewindow_path
-    else   
-      admin_registration_path
-    end      
-  end
+  # def after_sign_up_path_for(resource_or_scope)
+  #   if !session[:return_to].nil?
+  #     authentications_closewindow_path
+  #   else   
+  #     admin_sites_path
+  #   end      
+  # end
   
   private
   

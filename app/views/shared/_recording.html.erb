@@ -7,12 +7,7 @@
 	          <img class="profile_pic" src="<%= recording.user.profile_pic.nil? ? "/images/blankprofilepic.png" : recording.user.profile_pic %>" width="54 !important" height="54 !important"> 
 	        </td>
 	        <td class="table-rightside">
-	          <p><%= recording.user.full_name %> / <%= recording.user.title %>  @ <%= recording.user.company %> </p>      
-	          
-	          Listen to this: No robot reviews.
-Trust. Confirmed: We handle reference confirmation.
-Totally Portable: Embed your references anywhere.
-Word of Mouth: Now searchable.                  
+	          <p><%= recording.user.full_name %> / <%= recording.user.title %>  @ <%= recording.user.company %> </p>                        
 	          <div class="review-each">
 	           <audio src="<%= recording.audio_file + ".mp3" %>" preload="none"></audio>                
 	           <div class="review-left">posted <%= time_ago_in_words(recording.created_at) %> ago.</div>
