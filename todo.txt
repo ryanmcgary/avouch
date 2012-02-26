@@ -112,27 +112,25 @@ x test:
 	x login from embed
 	x embed breaks homepage login
 
+x devise login routing: home if logged in should be admin
+x first time redirect/alert?
+
 x create homepage
+
 What do I want to do?
-	Check app
+	x Check app
 	Work on my resume some
 	Add/research a new feature (profile reviews or mp3 checksum)
 	Upgrade to 3.1/2
 
 
-
-
-x devise login routing: home if logged in should be admin
-x first time redirect/alert?
-
-
-Expierement
- see about using json/jqeury to return reviews
-
+! Launch. bitches.
 
 ! preface every class & id with iv- to prevent jquery hook collision for common names like comments (becomes .iv-comments)
 
-update everything to rails 3.2 ruby 1.9.3
+Experiment
+	see about using json/jqeury to return reviews
+	update everything to rails 3.2 ruby 1.9.3
 	
 Give user direct recordings
 	- still have free account be tied to a site
@@ -147,8 +145,10 @@ Add direct call
 		- model: credits belongs to users add/spend
 		- model: call user controller/views
 
-
-mp3 checksum service
+The 3 pillars
+	! disqus style embed
+	! mp3 checksum service
+	! Employee finding service
 
 - find alternative dashboard design?
 
