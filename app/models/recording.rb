@@ -9,7 +9,7 @@ class Recording < ActiveRecord::Base
 
   scope :call_completed, where(:call_completed => true)
   scope :audio_saved, :conditions => [ "audio_file != ''" ]
-  scope :sortdesc, :order => "recordings.created_at DESC"
+  scope :sortdesc, :order => "recordings.id DESC"
   scope :sites_id, lambda { |price| where("site_id = ?", price) }
   scope :groupen, group("site_id")
 

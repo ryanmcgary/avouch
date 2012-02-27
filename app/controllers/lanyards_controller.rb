@@ -33,7 +33,11 @@ class LanyardsController < ApplicationController
     # maybe use whole url for "remoteurl" and then prevent duplicates?
     if !params[:callback].nil?
       if params[:modal].nil?
-        @reply = render_to_string(:partial => '/shared/recording.html.erb', :collection => @remoteurl.recordings, :locals => {:v => "1"})
+        if params[:order].nil?
+          @reply = render_to_string(:partial => '/shared/recording.html.erb', :collection => @remoteurl.recordings, :locals => {:v => "1"})
+        else
+          @reply = render_to_string(:partial => '/shared/recording.html.erb', :collection => @remoteurl.recordings.reorder('id ASC'), :locals => {:v => "1"})
+        end
       else
         @reply = render_to_string(:partial => '/lanyards/modal.html.erb')
       end

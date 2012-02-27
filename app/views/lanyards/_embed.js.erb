@@ -69,8 +69,19 @@ if (remoteurl_id == undefined) {
 				      $('.audiojs .scrubber').width(widget_width - 232);
 					}); 
 
+
+
 					$('.toggle-synopsis').click(function() {
-						$.getJSON("http://localhost:3000/sites/" + site_id +"/lanyard/embed?callback=?", function(json) {
+						if ( $(this).text() == 'newest first'){
+							$(this).text('oldest first');
+							var record_url = "http://localhost:3000/sites/" + site_id +"/lanyard/embed?callback=?&order=bottom"
+						}
+						else{
+							$(this).text('newest first');
+							var record_url = "http://localhost:3000/sites/" + site_id +"/lanyard/embed?callback=?"
+						}
+						// $(this).text($(this).text() == 'newest first' ? 'oldest first' : 'newest first');
+						$.getJSON(record_url, function(json) {
 							// render html
 							$('.comments').html(json);
 							// create audiojs
