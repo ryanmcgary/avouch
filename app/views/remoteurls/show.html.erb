@@ -29,7 +29,7 @@
             <%# was  @remoteurl.id instead of params[:id] %>
           	<%= f.hidden_field :remoteurl_id, :value => params[:id] %>
             <div class="text-area">
-            	<%= f.text_area :synopsis, :class => "short-text", :placeholder => "Part written. Part recorded. 'Call Now!' to record via phone." %>
+            	<%= f.text_area :synopsis, :class => "short-text", :placeholder => "write then record audio for your reference" %>
               <!-- insert submit button here if layout is 2 -->
               <%= params[:layout] == "2" ? (f.submit "Call Now!", :class => "vouch-button"): "" %>
               
@@ -64,7 +64,7 @@
       </div>  
     </td>
     <td class="table-rightside">
-      <p>Login to leave your review</p>
+      <p>Login to leave your reference</p>
       <!-- <p>John Carter / President @ Planet Mars</p>                         -->
       
       <div class="optional-text">
