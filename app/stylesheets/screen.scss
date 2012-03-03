@@ -21,6 +21,10 @@ html,body{
 	font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
 	#embeded{
 		overflow: hidden;	
+		.alerten{
+			position: absolute;width: 100%;background-image:url('/images/parent_bg2.png');
+		}
+		.alert-message{margin: 35px auto;}
 	}
 }
 // at some point make this safer by putting it in a different container
