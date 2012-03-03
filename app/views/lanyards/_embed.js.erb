@@ -4,9 +4,7 @@
 if (site_id == undefined) {
  var site_id = "<%= @domainref %>";
 }
-if (remoteurl_id == undefined) {
- var remoteurl_id = "<%= @remoteurl.id %>";
-} 
+var remoteurl_id = "<%= @remoteurl.id %>";
 
 <% if !params[:v].nil? %>
 	<% if params[:v] == "1" %>	// same as version on embed code

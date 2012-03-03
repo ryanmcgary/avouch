@@ -22,7 +22,7 @@ class Recording < ActiveRecord::Base
   end
 
   def update_counter_cache
-    self.remoteurl.recordings_count = Recording.count( :conditions => ["call_completed = 't' AND remoteurl_id = ?",self.remoteurl.id])
+    self.remoteurl.recordings_count = Recording.count( :conditions => ["call_completed = 't' AND remoteurl_id = ?", self.remoteurl.id])
     self.remoteurl.save
   end
 
