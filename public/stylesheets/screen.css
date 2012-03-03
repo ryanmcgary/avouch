@@ -749,7 +749,7 @@ body#home {
       /* line 642, ../../app/stylesheets/screen.scss */
       body#home .columns #main-content h3 {
         text-shadow: #222 1px 4px 6px;
-        font-size: 37px;
+        font-size: 29px;
         line-height: 1.35;
         -webkit-mask-image: -webkit-gradient(linear, left top, left bottom, from(black), color-stop(70%, rgba(0, 0, 0, 0.9)), to(black)); }
       /* line 648, ../../app/stylesheets/screen.scss */
