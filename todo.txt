@@ -127,7 +127,9 @@ What do I want to do?
 ! Launch. bitches.
 	pay for twilio account
 		record/save voice over audio
-? First 10 log ins, show intro video?
+	? First 10 log ins, show intro video?
+	? powered by should change with review box on blog style embed
+	? 
 
 ! preface every class & id with iv- to prevent jquery hook collision for common names like comments (becomes .iv-comments)
 
