@@ -9,7 +9,7 @@
 	        <td class="table-rightside">
 	          <p><%= recording.user.full_name %> / <%= recording.user.title %>  @ <%= recording.user.company %> </p>                        
 	          <div class="review-each">
-	           <audio src="<%= recording.audio_file + ".mp3" %>" preload="none"></audio>                
+	           <audio src="<%= recording.audio_file + ".mp3" %>" preload="auto"></audio>                
 	           <div class="review-left">posted <%= time_ago_in_words(recording.created_at) %> ago.</div>
 	           <div class="review-right">
 	           <a href="http://twitter.com/?status=[<%=u "#{request.referrer}##{recording.created_at.to_i} URL encoded tweet text" %>]." class="auth_popup" rel="window100">
