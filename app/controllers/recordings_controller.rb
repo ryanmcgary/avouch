@@ -82,7 +82,7 @@ class RecordingsController < ApplicationController
       @recording[:call_id] = resp2
       if @recording.save
         # render :text => @recording.to_yaml              
-        flash[:success] = "Calling #{ current_user.phone_number } for spoken portion of review... "
+        flash[:success] = "Calling #{ current_user.phone_number } for spoken portion of reference... "
         redirect_to :back
       end
     end
