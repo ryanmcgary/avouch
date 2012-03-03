@@ -9,7 +9,7 @@ ACCOUNT_TOKEN = '64e5c64955c6b9e1d68f0a9f58b0944b'
 API_VERSION = '2010-04-01'
 
 # base URL of this application TODO: really need to change this controller to use proper rails routes instead of this BASE_URL nonsense
-BASE_URL = "http://stormy-winter-617.heroku.com/recordings"
+BASE_URL = "http://iavouch.com/recordings"
 # BASE_URL = "http://localhost:3000/recordings"  
 
 # Outgoing Caller ID you have previously validated with Twilio
