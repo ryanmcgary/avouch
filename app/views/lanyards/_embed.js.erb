@@ -8,8 +8,9 @@ var remoteurl_id = "<%= @remoteurl.id %>";
 
 <% if !params[:v].nil? %>
 	<% if params[:v] == "1" %>	// same as version on embed code
+		// render audiojs
+		<%= render 'shared/audiojs' %>
 		// makes embed content visible 
-		
 		vouch_content.style.width = widget_width;   
 		vouch_content.style.visibility = 'visible';
 	
@@ -82,23 +83,10 @@ var remoteurl_id = "<%= @remoteurl.id %>";
 					});
 
 					//  render audio player
-					$.getScript("<%= root_url %>" + 'audiojs/audio.js', function() 
-					{
 					  var as = audiojs.createAll();
 					  $('.audiojs').width(widget_width - 78);  
 			      $('.audiojs .loaded').width(widget_width - 232); 
 			      $('.audiojs .scrubber').width(widget_width - 232);
-					});   
-					
-					// popup 
-					$.getScript("<%= root_url %>" + 'javascripts/jquery.popupwindow.js', function() 
-					{
-						var profiles = {window100:{center:1,status:1}};
-						$(function(){$(".auth_popup").popupwindow(profiles);});
-						// function unloadcallback(){
-						// 	alert("Time to check if your loggedin or not, if so, change dom, if not don't");
-						// 	};
-					});
 
 					//  toggle synopsis
 					// $('.toggle-synopsis').click(function() {
@@ -121,7 +109,17 @@ var remoteurl_id = "<%= @remoteurl.id %>";
 					$('.comments .review-each').width(widget_width - 78);
 
 		// TODO: UNCOMENT FOR PRODUCTION RELOCATE MAKE ENTIRE DOCUMENT VISIBLE
-					lanyard.style.visibility = 'visible';					
+					lanyard.style.visibility = 'visible';
+					
+					// popup 
+					$.getScript("<%= root_url %>" + 'javascripts/jquery.popupwindow.js', function() 
+					{
+						var profiles = {window100:{center:1,status:1}};
+						$(function(){$(".auth_popup").popupwindow(profiles);});
+						// function unloadcallback(){
+						// 	alert("Time to check if your loggedin or not, if so, change dom, if not don't");
+						// 	};
+					});
 
 
 		});
