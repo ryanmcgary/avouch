@@ -6,11 +6,12 @@ if (site_id == undefined) {
 }
 var remoteurl_id = "<%= @remoteurl.id %>";
 
+<%= render 'shared/jquery_min' %>
+
 <% if !params[:v].nil? %>
 	<% if params[:v] == "1" %>	// same as version on embed code
 		// render audiojs
 		<%= render 'shared/audiojs' %>
-		<%= render 'shared/jquery_min' %>
 		// makes embed content visible 
 		vouch_content.style.width = widget_width;   
 		vouch_content.style.visibility = 'visible';

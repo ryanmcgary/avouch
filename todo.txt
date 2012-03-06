@@ -119,9 +119,24 @@ x create homepage
 
 What do I want to do?
 	x Check app
-	Work on my resume some
+	x Work on my resume some
 	Add/research a new feature (profile reviews or mp3 checksum)
 	Upgrade to 3.1/2
+		Make list of people I want as references
+			"John McGary" <johnmcgary@gmail.com>, 
+			"Taylor Brooks" <tbrooks@gmail.com>, 
+			"Elliot Winkler" <elliot.winkler@gmail.com>, 
+			"Cameron Dykes" <yellow5c@gmail.com>, 
+			"Shawn Ellis" <shawn.j.ellis@gmail.com>, 
+			"Briapedia Pedia" <briapedia@gmail.com>, 
+			"Ron Hillhouse" <ron@hillhousepower.com>,
+			"Michael Lynch" <michael_lynch@chs.net>
+		Email those people
+		Make list of jobs to apply for
+			
+		Make list of competitions to enter
+			
+
 
 
 ! Launch. bitches.
@@ -132,6 +147,8 @@ What do I want to do?
 	? look at bootstrap pop-over and see if I can refine bottom alignment
 
 ! preface every class & id with iv- to prevent jquery hook collision for common names like comments (becomes .iv-comments)
+
+! review 1 now injects jquery directly into _embed.js make review 2 do so as well and update install page
 
 Experiment
 	see about using json/jqeury to return reviews
