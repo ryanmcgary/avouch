@@ -34,8 +34,8 @@
       autoplay: false,
       loop: false,
       preload: true,
-      imageLocation: 'http://localhost:3000/audiojs/player-graphics.gif',
-      swfLocation: 'http://localhost:3000/audiojs/audiojs.swf',
+      imageLocation: 'http://iavouch.com/audiojs/player-graphics.gif',
+      swfLocation: 'http://iavouch.com/audiojs/audiojs.swf',
       useFlash: (function() {
         var a = document.createElement('audio');
         return !(a.canPlayType && a.canPlayType('audio/mpeg;').replace(/no/, ''));
