@@ -31,13 +31,13 @@
             <div class="text-area">
             	<%= f.text_area :synopsis, :class => "short-text", :placeholder => "write then record audio for your reference" %>
               <!-- insert submit button here if layout is 2 -->
-              <%= params[:layout] == "2" ? (f.submit "Call Now!", :class => "vouch-button"): "" %>
+              <%= params[:layout] == "2" ? (f.submit "Call Me!", :class => "vouch-button"): "" %>
               
             </div>
             <div class="expand-bottom">
               <%= link_to "How to leave the perfect review", "/example-review.html", :class => "link auth_popup" %>
               <!-- insert submit button here if layout != 2 -->
-              <%= params[:layout] != "2" ? (f.submit "Call Now!", :class => "vouch-button"): "" %>
+              <%= params[:layout] != "2" ? (f.submit "Call Me!", :class => "vouch-button"): "" %>
             </div>
         <% end -%>          
       </div>
@@ -79,7 +79,7 @@
             <div class="expand-bottom">
               <%= link_to "How to leave the perfect review", "/example-review.html", :class => "link auth_popup" %>
               <!-- insert submit button here if layout != 2 -->
-              <%= params[:layout] != "2" ? (f.submit "Call Now!", :class => "vouch-button"): "" %>
+              <%= params[:layout] != "2" ? (f.submit "Call Me!", :class => "vouch-button"): "" %>
             </div>
         <% end -%>          
       </div>
