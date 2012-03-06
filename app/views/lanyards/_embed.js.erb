@@ -112,14 +112,14 @@ var remoteurl_id = "<%= @remoteurl.id %>";
 					lanyard.style.visibility = 'visible';
 					
 					// popup 
-					$.getScript("<%= root_url %>" + 'javascripts/jquery.popupwindow.js', function() 
-					{
-						var profiles = {window100:{center:1,status:1}};
-						$(function(){$(".auth_popup").popupwindow(profiles);});
-						// function unloadcallback(){
-						// 	alert("Time to check if your loggedin or not, if so, change dom, if not don't");
-						// 	};
-					});
+					// $.getScript("<%= root_url %>" + 'javascripts/jquery.popupwindow.js', function() 
+					// {
+					// 	var profiles = {window100:{center:1,status:1}};
+					// 	$(function(){$(".auth_popup").popupwindow(profiles);});
+					// 	// function unloadcallback(){
+					// 	// 	alert("Time to check if your loggedin or not, if so, change dom, if not don't");
+					// 	// 	};
+					// });
 
 
 		});
