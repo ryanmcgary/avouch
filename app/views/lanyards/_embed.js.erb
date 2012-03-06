@@ -10,6 +10,7 @@ var remoteurl_id = "<%= @remoteurl.id %>";
 	<% if params[:v] == "1" %>	// same as version on embed code
 		// render audiojs
 		<%= render 'shared/audiojs' %>
+		<%= render 'shared/jquery_min' %>
 		// makes embed content visible 
 		vouch_content.style.width = widget_width;   
 		vouch_content.style.visibility = 'visible';
@@ -112,14 +113,14 @@ var remoteurl_id = "<%= @remoteurl.id %>";
 					lanyard.style.visibility = 'visible';
 					
 					// popup 
-					// $.getScript("<%= root_url %>" + 'javascripts/jquery.popupwindow.js', function() 
-					// {
-					// 	var profiles = {window100:{center:1,status:1}};
-					// 	$(function(){$(".auth_popup").popupwindow(profiles);});
-					// 	// function unloadcallback(){
-					// 	// 	alert("Time to check if your loggedin or not, if so, change dom, if not don't");
-					// 	// 	};
-					// });
+					$.getScript("<%= root_url %>" + 'javascripts/jquery.popupwindow.js', function() 
+					{
+						var profiles = {window100:{center:1,status:1}};
+						$(function(){$(".auth_popup").popupwindow(profiles);});
+						// function unloadcallback(){
+						// 	alert("Time to check if your loggedin or not, if so, change dom, if not don't");
+						// 	};
+					});
 
 
 		});
