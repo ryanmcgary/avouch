@@ -123,14 +123,14 @@ What do I want to do?
 	Add/research a new feature (profile reviews or mp3 checksum)
 	Upgrade to 3.1/2
 		Make list of people I want as references
-			"John McGary" <johnmcgary@gmail.com>, 
-			"Taylor Brooks" <tbrooks@gmail.com>, 
+			"John McGary" <johnmcgary@gmail.com>, confirmed
+			"Taylor Brooks" <tbrooks@gmail.com>, confirmed
 			"Elliot Winkler" <elliot.winkler@gmail.com>, 
 			"Cameron Dykes" <yellow5c@gmail.com>, 
 			"Shawn Ellis" <shawn.j.ellis@gmail.com>, 
 			"Briapedia Pedia" <briapedia@gmail.com>, 
 			"Ron Hillhouse" <ron@hillhousepower.com>,
-			"Michael Lynch" <michael_lynch@chs.net>
+			"Michael Lynch" <michael_lynch@chs.net>Michael_Lynch@chs.net
 		Email those people
 		Make list of jobs to apply for
 			
