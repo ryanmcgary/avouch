@@ -41,7 +41,7 @@
 		        <td class="iavouch-review-rightside">
 		          <p title="<%= recording.user.full_name %> / <%= recording.user.title %>  @ <%= recording.user.company %>"><%= recording.user.full_name %> / <%= recording.user.title %>  @ <%= recording.user.company %> </p>                        
 		          <div class="iavouch-review-details">
-		           <audio src="<%= recording.audio_file + ".mp3" %>" preload="auto"></audio>
+		           <audio src="<%= recording.audio_file + ".mp3" %>" preload="none"></audio>
 		           <div class="iavouch-review-date">posted <%= time_ago_in_words(recording.created_at) %> ago.</div>
 		           <div class="iavouch-review-sharing">
  		           <a href="http://twitter.com/?status=<%=u "#{request.referrer}##{recording.created_at.to_i} listen to my review #referenceletterssuck" %>" class="auth_popup" target="_blank">

@@ -599,13 +599,13 @@ body#home{
 	background-image: url("../images/bg3b.png");
 	background-color:darken($sidebar-color, 70%);
 	background-size: 400px 400px;
-	.top-spacer{
+	color:white;
+	.top-spacer {
 	  height:1.2em;
 	  background-color:darken($sidebar-color, 99%);
 	  opacity:0.5;
 	  color:#FFFFFF;
 	}  
-	color:white;
 	.columns {
 		text-rendering: optimizeLegibility;
 		@include grid-container;
@@ -617,7 +617,7 @@ body#home{
 		background-color:$grid-color;   
 		.bg{
 			background-image: url("../images/bg3c.png");
-			height:640px; // width: 940px
+			height:620px; // width: 940px
 			@include grid(24);
 		}
 		#header {
@@ -649,8 +649,53 @@ body#home{
 				line-height: 1.35;
 				-webkit-mask-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0,0,0,1)), color-stop(70%, rgba(0,0,0,.9)), to(rgba(0,0,0,1)));  
 		  }
+		  .example{
+		  	@include grid(9);
+		  	background-image: url("../images/embed-example.png");
+		  	height:200px;
+		  	float:right;
+	      z-index: 10;
+	      margin-top:10px;
+				-moz-box-shadow: 0 5px 10px #010101;
+				-webkit-box-shadow:  2px 2px 10px 2px #010101;
+				box-shadow: 2px 2px 10px 2px #010101;
+			  -webkit-border-radius: 1px;
+			  -moz-border-radius: 1px;
+			  border-radius: 1px;
+				&:hover{
+					-moz-box-shadow: 0 5px 10px #FAFAD2;
+					-webkit-box-shadow:  2px 2px 10px 2px #FAFAD2;
+					box-shadow: 2px 2px 10px 2px #FAFAD2;
+					p{
+						visibility: hidden;
+					}
+				}
+				p{
+					margin-right:3px;				
+					visibility: hidden;
+					float:right;
+		    	color:black;
+				}
+		  }
+		  .why{
+		  	@include grid(10);
+		  	float:left;
+	      z-index: 10;
+	      margin-top:10px;
+		    p{
+			    font-size: 20px;
+			    line-height: 1.2;
+			    text-shadow: #222 1px 4px 6px;
+		    	-webkit-mask-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0,0,0,1)), color-stop(70%, rgba(0,0,0,.9)), to(rgba(0,0,0,1)));  
+		    }
+				// border-bottom: 1px solid #121212;
+				// -moz-box-shadow: 0 5px 10px #010101;
+				// -webkit-box-shadow: 0 5px 10px #010101;
+				// box-shadow: 0 5px 10px #010101;
+		  }
 			#social-login{
 				padding-top:30px;
+				margin-top:1px;
 				display:table;
 				position: relative;
 				z-index: 10;
@@ -703,17 +748,24 @@ body#home{
 				}
 			}
 	  } 
-	} //end 	
-			.footer-bottom{
-				height:20px;
-				background-color:darken($sidebar-color, 40%);    
-				background-size:400px 400px;
-			  div{
-			    @include grid-container;
-			    #footer {
-			      @include grid(24);
-			      
-			    }
-				}
+	} //end main content
+	.footer-bottom{
+		width: 100%;
+		background-color:darken($sidebar-color, 80%);
+	  .griid{
+	    @include grid-container;
+	    .footer {
+		    @include grid(20);
+		    @include grid-prefix(2,24);
+		  	@include grid-suffix(2,24);
+		  	margin-top:20px;
+	    	color:white;
+	 //      z-index: 10;
+		// border-bottom: 1px solid #121212;
+		// -moz-box-shadow: 0 5px 10px #010101;
+		// -webkit-box-shadow: 0 5px 10px #010101;
+		// box-shadow: 0 5px 10px #010101;
+	    }
 		}
+	}
 }

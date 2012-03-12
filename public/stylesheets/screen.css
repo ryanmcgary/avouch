@@ -676,7 +676,7 @@ body#home {
   background-color: #043177;
   background-size: 400px 400px;
   color: white; }
-  /* line 602, ../../app/stylesheets/screen.scss */
+  /* line 603, ../../app/stylesheets/screen.scss */
   body#home .top-spacer {
     height: 1.2em;
     background-color: black;
@@ -707,7 +707,7 @@ body#home {
     /* line 618, ../../app/stylesheets/screen.scss */
     body#home .columns .bg {
       background-image: url("../images/bg3c.png");
-      height: 640px;
+      height: 620px;
       display: inline;
       float: left;
       margin-left: 10px;
@@ -761,28 +761,77 @@ body#home {
         line-height: 1.35;
         -webkit-mask-image: -webkit-gradient(linear, left top, left bottom, from(black), color-stop(70%, rgba(0, 0, 0, 0.9)), to(black)); }
       /* line 652, ../../app/stylesheets/screen.scss */
+      body#home .columns #main-content .example {
+        display: inline;
+        float: left;
+        margin-left: 10px;
+        margin-right: 10px;
+        width: 340px;
+        background-image: url("../images/embed-example.png");
+        height: 200px;
+        float: right;
+        z-index: 10;
+        margin-top: 10px;
+        -moz-box-shadow: 0 5px 10px #010101;
+        -webkit-box-shadow: 2px 2px 10px 2px #010101;
+        box-shadow: 2px 2px 10px 2px #010101;
+        -webkit-border-radius: 1px;
+        -moz-border-radius: 1px;
+        border-radius: 1px; }
+        /* line 665, ../../app/stylesheets/screen.scss */
+        body#home .columns #main-content .example:hover {
+          -moz-box-shadow: 0 5px 10px #FAFAD2;
+          -webkit-box-shadow: 2px 2px 10px 2px #FAFAD2;
+          box-shadow: 2px 2px 10px 2px #FAFAD2; }
+          /* line 669, ../../app/stylesheets/screen.scss */
+          body#home .columns #main-content .example:hover p {
+            visibility: hidden; }
+        /* line 673, ../../app/stylesheets/screen.scss */
+        body#home .columns #main-content .example p {
+          margin-right: 3px;
+          visibility: hidden;
+          float: right;
+          color: black; }
+      /* line 680, ../../app/stylesheets/screen.scss */
+      body#home .columns #main-content .why {
+        display: inline;
+        float: left;
+        margin-left: 10px;
+        margin-right: 10px;
+        width: 380px;
+        float: left;
+        z-index: 10;
+        margin-top: 10px; }
+        /* line 685, ../../app/stylesheets/screen.scss */
+        body#home .columns #main-content .why p {
+          font-size: 20px;
+          line-height: 1.2;
+          text-shadow: #222 1px 4px 6px;
+          -webkit-mask-image: -webkit-gradient(linear, left top, left bottom, from(black), color-stop(70%, rgba(0, 0, 0, 0.9)), to(black)); }
+      /* line 696, ../../app/stylesheets/screen.scss */
       body#home .columns #main-content #social-login {
         padding-top: 30px;
+        margin-top: 1px;
         display: table;
         position: relative;
         z-index: 10;
         height: 100%;
         width: 100%;
         text-align: center; }
-        /* line 660, ../../app/stylesheets/screen.scss */
+        /* line 705, ../../app/stylesheets/screen.scss */
         body#home .columns #main-content #social-login p {
           margin-top: 3px;
           margin-left: 3px;
           color: white; }
-        /* line 665, ../../app/stylesheets/screen.scss */
+        /* line 710, ../../app/stylesheets/screen.scss */
         body#home .columns #main-content #social-login ul {
           display: table-cell;
           vertical-align: middle; }
-        /* line 669, ../../app/stylesheets/screen.scss */
+        /* line 714, ../../app/stylesheets/screen.scss */
         body#home .columns #main-content #social-login li {
           padding-top: 15px;
           display: inline-block; }
-        /* line 671, ../../app/stylesheets/screen.scss */
+        /* line 716, ../../app/stylesheets/screen.scss */
         body#home .columns #main-content #social-login a {
           position: relative;
           margin: 0px auto;
@@ -794,55 +843,58 @@ body#home {
           -moz-box-shadow: 1px 1px 8px rgba(0, 0, 0, 0.3);
           -o-box-shadow: 1px 1px 8px rgba(0, 0, 0, 0.3);
           box-shadow: 1px 1px 8px rgba(0, 0, 0, 0.3); }
-        /* line 681, ../../app/stylesheets/screen.scss */
+        /* line 726, ../../app/stylesheets/screen.scss */
         body#home .columns #main-content #social-login a#twitter {
           background: url("../images/authbuttons/large-auth-buttons.png") no-repeat 0px 0px; }
-          /* line 683, ../../app/stylesheets/screen.scss */
+          /* line 728, ../../app/stylesheets/screen.scss */
           body#home .columns #main-content #social-login a#twitter:hover {
             background-position: 0px -40px; }
-          /* line 684, ../../app/stylesheets/screen.scss */
+          /* line 729, ../../app/stylesheets/screen.scss */
           body#home .columns #main-content #social-login a#twitter:active {
             background-position: 0px -80px; }
-        /* line 686, ../../app/stylesheets/screen.scss */
+        /* line 731, ../../app/stylesheets/screen.scss */
         body#home .columns #main-content #social-login a#facebook {
           background: url("../images/authbuttons/large-auth-buttons.png") no-repeat -228px 0px; }
-          /* line 688, ../../app/stylesheets/screen.scss */
+          /* line 733, ../../app/stylesheets/screen.scss */
           body#home .columns #main-content #social-login a#facebook:hover {
             background-position: -228px -40px; }
-          /* line 689, ../../app/stylesheets/screen.scss */
+          /* line 734, ../../app/stylesheets/screen.scss */
           body#home .columns #main-content #social-login a#facebook:active {
             background-position: -228px -80px; }
-        /* line 691, ../../app/stylesheets/screen.scss */
+        /* line 736, ../../app/stylesheets/screen.scss */
         body#home .columns #main-content #social-login a#linkedin {
           background: url("../images/authbuttons/large-auth-buttons.png") no-repeat -456px 0px; }
-          /* line 693, ../../app/stylesheets/screen.scss */
+          /* line 738, ../../app/stylesheets/screen.scss */
           body#home .columns #main-content #social-login a#linkedin:hover {
             background-position: -456px -40px; }
-          /* line 694, ../../app/stylesheets/screen.scss */
+          /* line 739, ../../app/stylesheets/screen.scss */
           body#home .columns #main-content #social-login a#linkedin:active {
             background-position: -456px -80px; }
-      /* line 697, ../../app/stylesheets/screen.scss */
+      /* line 742, ../../app/stylesheets/screen.scss */
       body#home .columns #main-content #features {
         text-align: center; }
-        /* line 699, ../../app/stylesheets/screen.scss */
+        /* line 744, ../../app/stylesheets/screen.scss */
         body#home .columns #main-content #features p {
           margin-top: 10px;
           font-size: 10px;
           color: grey; }
-  /* line 707, ../../app/stylesheets/screen.scss */
+  /* line 752, ../../app/stylesheets/screen.scss */
   body#home .footer-bottom {
-    height: 20px;
-    background-color: #1d73f7;
-    background-size: 400px 400px; }
-    /* line 711, ../../app/stylesheets/screen.scss */
-    body#home .footer-bottom div {
+    width: 100%;
+    background-color: #021d46; }
+    /* line 755, ../../app/stylesheets/screen.scss */
+    body#home .footer-bottom .griid {
       margin-left: auto;
       margin-right: auto;
       width: 960px; }
-      /* line 713, ../../app/stylesheets/screen.scss */
-      body#home .footer-bottom div #footer {
+      /* line 757, ../../app/stylesheets/screen.scss */
+      body#home .footer-bottom .griid .footer {
         display: inline;
         float: left;
         margin-left: 10px;
         margin-right: 10px;
-        width: 940px; }
+        width: 780px;
+        padding-left: 80px;
+        padding-right: 80px;
+        margin-top: 20px;
+        color: white; }
