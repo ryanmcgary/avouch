@@ -100,26 +100,63 @@ x share and like links should work
 x javascript include tag audio/js?
 x create remoteurl occurs in lanyard_controller
 x Add notices to admin area
-
-x add linkedin login
 x add top text for blog review
-	- logged out would be fake iframe
-	- login would inject create new iframe
-	- move login outside of iframe and into modal or fame iframe
-! create homepage
-- bind end of page to call $.getJSON page 2
-	- unbind end of page til json content displays 
-		- loop to page 3, rebind to end of page
-		- at end of list perma unbind end of page call
-		
+x add linkedin login
+
+x show/hide synopsis on blog (this just needs to be help file really, just figure it out)
+x pagination
+x test:
+	x new account from homepage
+	x login from homepage
+	x new account from embed
+	x login from embed
+	x embed breaks homepage login
+
+x devise login routing: home if logged in should be admin
+x first time redirect/alert?
+
+x create homepage
+
+What do I want to do?
+	x Check app
+	x Work on my resume some
+	Add/research a new feature (profile reviews or mp3 checksum)
+	Upgrade to 3.1/2
+		Make list of people I want as references
+		Need 4 references
+		x	"John McGary" <johnmcgary@gmail.com>, confirmed
+		x	"Taylor Brooks" <tbrooks@gmail.com>, confirmed
+			"Elliot Winkler" <elliot.winkler@gmail.com>, sent
+		x	"Cameron Dykes" <yellow5c@gmail.com>, confirmed
+			"Shawn Ellis" <shawn.j.ellis@gmail.com>, sent 
+			"Briapedia Pedia" <briapedia@gmail.com>, sent
+			"Ron Hillhouse" <ron@hillhousepower.com>, sent
+		x	"Michael Lynch" <michael_lynch@chs.net>, No Prob
+		x Email those people
+		Make list of jobs to apply for
+			! do now
+		Event Machine. Just Do It.
+
+		Make list of competitions to enter
+			ycombinator march 28th
+			
 
 
-Expierement
- see about using json/jqeury to return reviews
 
+! Launch. bitches.
+	pay for twilio account
+		record/save voice over audio put on iavouch server
+	? First 10 log ins, show intro video?
+	? powered by should change with review box on blog style embed
+	? look at bootstrap pop-over and see if I can refine bottom alignment
 
 ! preface every class & id with iv- to prevent jquery hook collision for common names like comments (becomes .iv-comments)
 
+! review 1 now injects jquery directly into _embed.js make review 2 do so as well and update install page
+
+Experiment
+	see about using json/jqeury to return reviews
+	update everything to rails 3.2 ruby 1.9.3
 	
 Give user direct recordings
 	- still have free account be tied to a site
@@ -134,12 +171,16 @@ Add direct call
 		- model: credits belongs to users add/spend
 		- model: call user controller/views
 
-
+The 3 pillars
+	! disqus style embed
+	! mp3 checksum service
+	! Employee finding service
 
 - find alternative dashboard design?
 
 - add "log out" to registration edit, remove logout link
 
+- alerts & notices in top-spacer in admin close button on left
 
 - For Moderation: create virtual remoteurls (adding tag based system)
 ? auto iterate site name cnn.com created a second time would yield cnn.com2
@@ -252,3 +293,10 @@ if var = blog
 #avouch-embed-banner.avouch-reset
 	@reset-mix-in(banner)
 	#avouch-banner-container
+
+
+? Secret Settings
+	<style type="text/css" media="screen">
+	.comments-header, #coolframe, .poweredby{display:none}
+	</style>	
+	var review_text = 'hide';
