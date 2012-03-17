@@ -2,16 +2,16 @@
 // This file is automatically included by javascript_include_tag :defaults
 $(document).ready(function() {
 
-$("a[rel=group1]").fancybox({
-        // 'transitionIn'      : 'none',
-        // 'transitionOut'     : 'none',
-        'autoDimensions'    : false,
-        'width'             : 500,
-        'height'            : 400,
-        'titlePosition'     : 'inside'
-        // 'type'              : 'iframe',
-        // 'hideOnContentClick': false
-    });
+// $("a[rel=group1]").fancybox({
+//         // 'transitionIn'      : 'none',
+//         // 'transitionOut'     : 'none',
+//         'autoDimensions'    : false,
+//         'width'             : 500,
+//         'height'            : 400,
+//         'titlePosition'     : 'inside'
+//         // 'type'              : 'iframe',
+//         // 'hideOnContentClick': false
+//     });
 
  var profiles = {window800:{height:400,width:500,center:1,scrollbars:0,menubar:0,toolbars:0,location:0,status:0,resizable:0,onUnload:unloadcallback}};
  $( function() {
