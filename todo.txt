@@ -126,7 +126,7 @@ What do I want to do?
 		Need 4 references
 		x	"John McGary" <johnmcgary@gmail.com>, confirmed
 		x	"Taylor Brooks" <tbrooks@gmail.com>, confirmed
-			"Elliot Winkler" <elliot.winkler@gmail.com>, sent
+		x	"Elliot Winkler" <elliot.winkler@gmail.com>, confirmed
 		x	"Cameron Dykes" <yellow5c@gmail.com>, confirmed
 			"Shawn Ellis" <shawn.j.ellis@gmail.com>, sent 
 			"Briapedia Pedia" <briapedia@gmail.com>, sent
@@ -141,7 +141,11 @@ What do I want to do?
 			ycombinator march 28th
 			
 
-
+! Add json to iavouch live server to test crossdomain json requests with http://young-sword-9779.herokuapp.com/
+	
+	step 1: Don't load iframe. Load login buttons, that open popup window.
+	step 2: On close window callback load session[:profile_pic]?
+	step 3: On close window show submission form
 
 ! Launch. bitches.
 	pay for twilio account
