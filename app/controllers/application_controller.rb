@@ -25,6 +25,11 @@ class ApplicationController < ActionController::Base
   end
   
   def after_sign_in_path_for(resource_or_scope)
+    session[:profile_pic] = current_user.profile_pic
+    cookies[:profile_pic] = current_user.profile_pic
+    session[:full_name] = current_user.full_name
+    session[:title] = current_user.title
+    session[:company] = current_user.company
     if !session[:return_to].nil? # || request.referrer.include? "remoteurls" 
       authentications_closewindow_path # uncomment if api.iavouch ends up being used
     elsif request.referrer.include? "remoteurls"

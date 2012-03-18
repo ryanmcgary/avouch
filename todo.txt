@@ -123,27 +123,32 @@ What do I want to do?
 	Add/research a new feature (profile reviews or mp3 checksum)
 	Upgrade to 3.1/2
 		Make list of people I want as references
-			"John McGary" <johnmcgary@gmail.com>, confirmed
-			"Taylor Brooks" <tbrooks@gmail.com>, confirmed
-			"Elliot Winkler" <elliot.winkler@gmail.com>, 
-			"Cameron Dykes" <yellow5c@gmail.com>, 
-			"Shawn Ellis" <shawn.j.ellis@gmail.com>, 
-			"Briapedia Pedia" <briapedia@gmail.com>, 
-			"Ron Hillhouse" <ron@hillhousepower.com>,
-			"Michael Lynch" <michael_lynch@chs.net>Michael_Lynch@chs.net
-		Email those people
+		Need 4 references
+		x	"John McGary" <johnmcgary@gmail.com>, confirmed
+		x	"Taylor Brooks" <tbrooks@gmail.com>, confirmed
+		x	"Elliot Winkler" <elliot.winkler@gmail.com>, confirmed
+		x	"Cameron Dykes" <yellow5c@gmail.com>, confirmed
+			"Shawn Ellis" <shawn.j.ellis@gmail.com>, sent 
+			"Briapedia Pedia" <briapedia@gmail.com>, sent
+			"Ron Hillhouse" <ron@hillhousepower.com>, sent
+		x	"Michael Lynch" <michael_lynch@chs.net>, No Prob
+		x Email those people
 		Make list of jobs to apply for
-			
+			! do now
+		Event Machine. Just Do It.
+
 		Make list of competitions to enter
-			techstars march 16th - 10 days
 			ycombinator march 28th
 			
 
-
+! Add json to iavouch live server to test crossdomain json requests with http://young-sword-9779.herokuapp.com/
+	step 1: Don't load iframe. Load login buttons, that open popup window.
+	step 2: On close window callback load session[:profile_pic]?
+	step 3: On close window show submission form
 
 ! Launch. bitches.
 	pay for twilio account
-		record/save voice over audio
+		record/save voice over audio put on iavouch server
 	? First 10 log ins, show intro video?
 	? powered by should change with review box on blog style embed
 	? look at bootstrap pop-over and see if I can refine bottom alignment

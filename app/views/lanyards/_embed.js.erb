@@ -30,17 +30,6 @@ var remoteurl_id = "<%= @remoteurl.id %>";
 		// Puts ADD NEW REVIEW IFRAME ON TOP OF OR BELOW REVIEWS
 		vouch_content.insertBefore(ifrm, null);  // Actually this just injects IFRM into DOM
 
-// var content = "text";
-	// var doc = ifrm.document;
- //    if(ifrm.contentDocument)
- //        doc = ifrm.contentDocument; // For NS6
- //    else if(ifrm.contentWindow)
- //        doc = ifrm.contentWindow.document; // For IE5.5 and IE6
- //    // Put the content in the iframe
- //    doc.open();
- //    doc.writeln(content);
- //    doc.close();
-
 		// creates var sw_3 or sw_2 and fills it with content from lanyard/lanyards, also escapse javascript
 		var leaveheader = document.createElement("div");
 			leaveheader.className = "poweredby";
@@ -85,10 +74,10 @@ var remoteurl_id = "<%= @remoteurl.id %>";
 					});
 
 					//  render audio player
-					  var as = audiojs.createAll();
-					  $('.audiojs').width(widget_width - 78);  
-			      $('.audiojs .loaded').width(widget_width - 232); 
-			      $('.audiojs .scrubber').width(widget_width - 232);
+				  var as = audiojs.createAll();
+				  $('.audiojs').width(widget_width - 78);  
+		      $('.audiojs .loaded').width(widget_width - 232); 
+		      $('.audiojs .scrubber').width(widget_width - 232);
 
 					//  toggle synopsis
 					// $('.toggle-synopsis').click(function() {
@@ -388,3 +377,14 @@ var remoteurl_id = "<%= @remoteurl.id %>";
 
 	<% end %>
 <% end %>
+
+// var content = "text";
+	// var doc = ifrm.document;
+ //    if(ifrm.contentDocument)
+ //        doc = ifrm.contentDocument; // For NS6
+ //    else if(ifrm.contentWindow)
+ //        doc = ifrm.contentWindow.document; // For IE5.5 and IE6
+ //    // Put the content in the iframe
+ //    doc.open();
+ //    doc.writeln(content);
+ //    doc.close();

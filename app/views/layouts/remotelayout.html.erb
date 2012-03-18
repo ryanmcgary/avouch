@@ -6,18 +6,14 @@
 
    
   <%= javascript_include_tag :defaults, 'jquery.popupwindow', 'bootstrap-alerts' %>
-
   
+  <%= content_for :javascript %>
+  	
   
   <%= csrf_meta_tag %>
 </head>
 <%= content_for?(:body) ? yield(:body) : raw("<body>") %>
-  <% if user_signed_in? %>
-  <% else %>
-    <%#= link_to "Sign in", authentications_closewindowprotected_path, :rel => "window800", :class => "auth_popup" id %>
-    <%#= link_to "Sign in with Facebook", user_omniauth_authorize_path(:facebook), :rel => "window800", :class => "auth_popup" %>
-    <%#= link_to "Sign in with Twitter", user_omniauth_authorize_path(:twitter), :rel => "window800", :class => "auth_popup"  %>
-  <% end %>
+
   <p class="notice" style="display:none;"><%= notice %></p>
   <p class="alert" style="display:none;"><%= alert %></p>
 
