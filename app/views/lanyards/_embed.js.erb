@@ -74,11 +74,11 @@ if (remoteurl_id == undefined) {
 					$('.toggle-synopsis').click(function() {
 						if ( $(this).text() == 'newest first'){
 							$(this).text('oldest first');
-							var record_url = "http://localhost:3000/sites/" + site_id +"/lanyard/embed?callback=?&order=bottom"
+							var record_url = "<%= root_url %>sites/" + site_id +"/lanyard/embed?callback=?&order=bottom"
 						}
 						else{
 							$(this).text('newest first');
-							var record_url = "http://localhost:3000/sites/" + site_id +"/lanyard/embed?callback=?"
+							var record_url = "<%= root_url %>sites/" + site_id +"/lanyard/embed?callback=?"
 						}
 						// $(this).text($(this).text() == 'newest first' ? 'oldest first' : 'newest first');
 						$.getJSON(record_url, function(json) {
@@ -110,7 +110,7 @@ if (remoteurl_id == undefined) {
 					
 					$.getScript("<%= root_url %>" + 'javascripts/bootstrap-modal.js', function() {
 						$('#modal_container').one('show', function () {
-  						$.getJSON("http://localhost:3000/sites/" + site_id +"/lanyard/embed?callback=?&modal=1", function(json) {
+  						$.getJSON("<%= root_url %>/sites/" + site_id +"/lanyard/embed?callback=?&modal=1", function(json) {
 								// render html
 								$('#modal_container').html(json);
 							  console.log(json);
