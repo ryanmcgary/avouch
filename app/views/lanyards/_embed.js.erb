@@ -74,11 +74,11 @@ if (remoteurl_id == undefined) {
 					$('.toggle-synopsis').click(function() {
 						if ( $(this).text() == 'newest first'){
 							$(this).text('oldest first');
-							var record_url = "<%= root_url %>sites/" + "FirstAttempt" +"/lanyard/embed?callback=?&order=bottom"
+							var record_url = "<%= root_url %>sites/" + "FirstAttempt" +"/lanyard/embed?callback=?&order=bottom&remoteurl=blond_jones_flue"
 						}
 						else{
 							$(this).text('newest first');
-							var record_url = "<%= root_url %>sites/" + "FirstAttempt" +"/lanyard/embed?callback=?"
+							var record_url = "<%= root_url %>sites/" + "FirstAttempt" +"/lanyard/embed?callback=?&remoteurl=blond_jones_flue"
 						}
 						// $(this).text($(this).text() == 'newest first' ? 'oldest first' : 'newest first');
 						$.getJSON(record_url, function(json) {
