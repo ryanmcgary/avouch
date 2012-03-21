@@ -1,0 +1,43 @@
+<div class="iconsholder btn btn-primary">
+  <%= image_tag "http://a0.twimg.com/profile_images/1159303481/Sloths_normal.jpg", :title => "title", :class => "av-profile-image" %>
+  <a class="av-button">
+  
+    Leave a review
+  
+  </a>  
+  <%= image_tag "icons/phone_2.png", :title => "title", :class => "av-phone" %>
+</div>
+
+<div class="social_login_container btn">
+  
+<!--   <div id="social-login">
+    <ul>
+      <li><a href="/users/auth/linked_in" id="linkedin"></a></li> 
+      <li><a href="/users/auth/facebook" id="facebook"></a></li>
+      <li><a href="/users/auth/twitter" id="twitter"></a></li> 
+    </ul>
+  </div> -->
+  <div>
+    First write written portion of review (optional)
+    <textarea></textarea>
+    <label>Phone # to call right now.</label>
+    <div class="input-append av_phone_form" style="margin-bottom: 20px">
+      <input type="text" size="20" class="span2">
+      <button class="btn" type="button">Call Me Now!</button>
+      <br /><input type="checkbox"> Remember my phone number
+    </div>
+   
+   <p>Calling now...</p>
+
+   <p>Press 1 to start recording message...</p>
+   Press 9 at any time to abort review. 
+  </div>
+</div>
+
+<% if !session[:profile_pic].nil? %> 
+
+
+<% else %>
+
+
+<% end %>

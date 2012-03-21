@@ -27,6 +27,8 @@ Avouch::Application.routes.draw do
   match '/recordings/record'        => 'recordings#record'
   match '/recordings/hangup'        => 'recordings#hangup'
   
+  match '/remoteurls/remote'      => 'remoteurls#remote'
+
   # devise_scope :user do 
   #   match "/admin/edit" => "registrations#edit" 
   # end

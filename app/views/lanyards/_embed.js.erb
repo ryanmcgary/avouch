@@ -17,14 +17,10 @@ var remoteurl_id = "<%= @remoteurl.id %>";
 		vouch_content.style.visibility = 'visible';
 	
 		// create iframe for adding new review
-		var ifrm = document.createElement("IFRAME");
-		ifrm.setAttribute('src', "<%= sites_url %>/" + site_id + '/remoteurls/'+ remoteurl_id + '?layout=' + version);
+		var ifrm = document.createElement("div");
+		ifrm.innerHTML = "<%= escape_javascript(render :partial => "remoteurls/form") %>"; 
 		// ifrm.setAttribute('src', "about:blank");
-		ifrm.style.width = 100+"%";   
-		ifrm.style.width = widget_width + "px";   
-		ifrm.style.height = "150px";
-		ifrm.style.border ="0";  
-		ifrm.id = "coolframe"
+		
 
 		// vouch.content is div id=iavouch
 		// Puts ADD NEW REVIEW IFRAME ON TOP OF OR BELOW REVIEWS
@@ -49,6 +45,11 @@ var remoteurl_id = "<%= @remoteurl.id %>";
 			}       
 
 	jQuery(document).ready(function($) {
+	
+    $('.iconsholder').click(function() {
+      $('.social_login_container').toggle();
+      $('.iconsholder').toggleClass('bottom_radius');
+    });
 					
 					// don't show review text
 					if (typeof review_text !== 'undefined'){
