@@ -57,7 +57,7 @@ class RecordingsController < ApplicationController
     end
     
     def makecall  #New
-    
+    logger.info { request.params }
       # parameters sent to Twilio REST API
       d = {
           'From' => CALLER_ID,
@@ -81,9 +81,12 @@ class RecordingsController < ApplicationController
       @recording = current_user.recordings.build(params[:recording])
       @recording[:call_id] = resp2
       if @recording.save
-        # render :text => @recording.to_yaml              
-        flash[:success] = "Calling #{ current_user.phone_number } for spoken portion of reference... "
-        redirect_to :back
+        if params[:callback].nil?
+          flash[:success] = "Calling #{ current_user.phone_number } for spoken portion of reference... "
+          redirect_to :back
+        else
+          render :json => ("After you answer your phone:").to_json, :callback => params[:callback], :content_type => 'application/json' 
+        end
       end
     end
     

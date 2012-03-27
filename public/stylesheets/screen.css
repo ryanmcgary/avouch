@@ -816,7 +816,6 @@ select,
 .uneditable-input {
   display: inline-block;
   width: 210px;
-  height: 18px;
   padding: 4px;
   margin-bottom: 9px;
   font-size: 13px;
@@ -4639,7 +4638,7 @@ a.thumbnail:hover {
   visibility: hidden; }
 
 /* line 18, ../../app/stylesheets/screen.scss */
-.iconsholder.bottom_radius {
+.av-iconsholder.av-bottom_radius {
   -webkit-border-bottom-left-radius: 4px;
   -moz-border-bottom-left-radius: 4px;
   border-bottom-left-radius: 4px;
@@ -4648,7 +4647,7 @@ a.thumbnail:hover {
   border-bottom-right-radius: 4px; }
 
 /* line 26, ../../app/stylesheets/screen.scss */
-.iconsholder {
+.av-iconsholder {
   z-index: 1;
   position: relative;
   width: 450px;
@@ -4710,7 +4709,7 @@ a.thumbnail:hover {
   background-color: #0074cc; }
 
 /* line 86, ../../app/stylesheets/screen.scss */
-.social_login_container {
+.av-social_login_container {
   display: block;
   width: 450px;
   margin-left: 20px;
@@ -4724,11 +4723,11 @@ a.thumbnail:hover {
   -moz-border-top-left-radius: 0px;
   border-top-left-radius: 0px; }
   /* line 93, ../../app/stylesheets/screen.scss */
-  .social_login_container:hover {
+  .av-social_login_container:hover {
     background-image: none;
     background-color: whiteSmoke; }
   /* line 97, ../../app/stylesheets/screen.scss */
-  .social_login_container:active {
+  .av-social_login_container:active {
     -webkit-box-shadow: 0px 0px 0px;
     -moz-box-shadow: 0px 0px 0px;
     -o-box-shadow: 0px 0px 0px;
@@ -4736,7 +4735,7 @@ a.thumbnail:hover {
     background-image: none;
     background-color: whiteSmoke; }
   /* line 109, ../../app/stylesheets/screen.scss */
-  .social_login_container textarea {
+  .av-social_login_container textarea {
     padding: 0;
     margin-left: 0px;
     margin-right: 0px;
@@ -4746,23 +4745,23 @@ a.thumbnail:hover {
     height: 93px;
     resize: none; }
   /* line 112, ../../app/stylesheets/screen.scss */
-  .social_login_container .span2 {
+  .av-social_login_container .av-span2 {
     width: 80%;
     max-width: 100px; }
   /* line 116, ../../app/stylesheets/screen.scss */
-  .social_login_container #social-login {
+  .av-social_login_container #social-login {
     margin-left: auto;
     margin-right: auto;
     padding-left: 0px;
     padding-right: 0px;
     padding-top: 0px; }
     /* line 122, ../../app/stylesheets/screen.scss */
-    .social_login_container #social-login ul {
+    .av-social_login_container #social-login ul {
       margin-left: 0px;
       padding-left: 0px; }
 
 /* line 127, ../../app/stylesheets/screen.scss */
-.av_phone_form .btn {
+.av-phone_form .btn {
   margin-left: -5px;
   margin-top: -9px; }
 
@@ -5060,7 +5059,7 @@ html, body {
     box-shadow: 1px 1px 8px rgba(0, 0, 0, 0.3); }
   /* line 387, ../../app/stylesheets/screen.scss */
   .social-login a#twitter {
-    background: url("../images/authbuttons/login-buttons.png") no-repeat 0 -2px; }
+    background: url("/images/authbuttons/login-buttons.png") no-repeat 0 -2px; }
     /* line 389, ../../app/stylesheets/screen.scss */
     .social-login a#twitter:hover {
       background-position: 0px -33px; }
@@ -5069,7 +5068,7 @@ html, body {
       background-position: 0px -64px; }
   /* line 392, ../../app/stylesheets/screen.scss */
   .social-login a#facebook {
-    background: url("../images/authbuttons/login-buttons.png") no-repeat -111px -2px; }
+    background: url("/images/authbuttons/login-buttons.png") no-repeat -111px -2px; }
     /* line 394, ../../app/stylesheets/screen.scss */
     .social-login a#facebook:hover {
       background-position: -111px -33px; }
@@ -5078,7 +5077,7 @@ html, body {
       background-position: -111px -64px; }
   /* line 397, ../../app/stylesheets/screen.scss */
   .social-login a#linkedin {
-    background: url("../images/authbuttons/login-buttons.png") no-repeat -222px -2px; }
+    background: url("/images/authbuttons/login-buttons.png") no-repeat -222px -2px; }
     /* line 399, ../../app/stylesheets/screen.scss */
     .social-login a#linkedin:hover {
       background-position: -222px -33px; }

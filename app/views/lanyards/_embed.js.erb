@@ -7,6 +7,9 @@ if (site_id == undefined) {
 var remoteurl_id = "<%= @remoteurl.id %>";
 
 <%= render 'shared/jquery_min' %>
+<%= render 'shared/popupwindow' %>
+
+
 
 <% if !params[:v].nil? %>
 	<% if params[:v] == "1" %>	// same as version on embed code
@@ -18,8 +21,9 @@ var remoteurl_id = "<%= @remoteurl.id %>";
 	
 		// create iframe for adding new review
 		var ifrm = document.createElement("div");
-		ifrm.innerHTML = "<%= escape_javascript(render :partial => "remoteurls/form") %>"; 
-		// ifrm.setAttribute('src', "about:blank");
+		ifrm.style.width = widget_width - 6
+		ifrm.innerHTML = "<%= escape_javascript(render :partial => 'remoteurls/form', :locals => {:site_id => @domainref, :remoteurl_id => @remoteurl.id}) %>"; 
+		
 		
 
 		// vouch.content is div id=iavouch
@@ -46,10 +50,57 @@ var remoteurl_id = "<%= @remoteurl.id %>";
 
 	jQuery(document).ready(function($) {
 	
-    $('.iconsholder').click(function() {
-      $('.social_login_container').toggle();
-      $('.iconsholder').toggleClass('bottom_radius');
+		// popup 
+	 var profiles = {window800:{height:400,width:500,center:1,scrollbars:0,menubar:0,toolbars:0,location:0,status:0,resizable:0,onUnload:unloadcallback}};
+	 $(function(){
+		 $(".auth_popup").popupwindow(profiles); 
+			});
+	 // callback for above function
+		function unloadcallback(){
+			console.log("did it work?")
+			$('#social-login').attr('style', 'display:none;');
+			$('#av-embed-form').removeAttr('style');
+		};
+	
+
+		// round corners of blue "leave review" button
+    $('.av-iconsholder').click(function() {
+      $('.av-social_login_container').toggle();
+      $('.av-iconsholder').toggleClass('av-bottom_radius');
     });
+  	
+  	// form submission logic
+	  $('#av-form').submit(function() {
+	    // disable button
+	    $('#recording_submit').addClass('disabled').attr('disabled', 'disabled');    
+	    $('.av-status').empty();
+	    $('.av-status').delay(800).append('<p>Calling you now!</p>');
+	    $.getJSON("http://localhost:3000/recordings/makecall?callback=?", 
+	    {
+	      recording: { remoteurl_id: "43", synopsis: "try this on", phone_number: "4157845905" },
+	      site_id: "localhost",
+	    },
+	    function(json) {
+	      // render callback
+	      $('.av-status').delay(800).append("<p>" + json + "</p>");
+	      console.log(json);
+	    })
+	    
+	    .success(function() { 
+	                          console.log("second success");
+	                          setTimeout( "$('.av-status').append('<p>Press <strong>1</strong> to start <strong>recording your reference.</strong></p>').focus()", 500 );
+	                          setTimeout( "$('.av-status').append('<p>Press <strong>9</strong> at any time to <strong>abort</strong> and <strong>delete</strong> your reference.</p>').focus(this)", 3000 );
+	                        })
+	    .error(function() { 
+	                        console.log("error"); 
+	                        $('.av-status').append('<p>Error, Server failed</p>');
+	                        $('#recording_submit').removeClass('disabled').removeAttr('disabled');    
+	                      })
+	    .complete(function() { console.log("complete"); $('#recording_submit').removeClass('disabled').removeAttr('disabled'); });
+
+	    return false;
+	  });
+	
 					
 					// don't show review text
 					if (typeof review_text !== 'undefined'){
@@ -103,15 +154,7 @@ var remoteurl_id = "<%= @remoteurl.id %>";
 		// TODO: UNCOMENT FOR PRODUCTION RELOCATE MAKE ENTIRE DOCUMENT VISIBLE
 					lanyard.style.visibility = 'visible';
 					
-					// popup 
-					$.getScript("<%= root_url %>" + 'javascripts/jquery.popupwindow.js', function() 
-					{
-						var profiles = {window100:{center:1,status:1}};
-						$(function(){$(".auth_popup").popupwindow(profiles);});
-						// function unloadcallback(){
-						// 	alert("Time to check if your loggedin or not, if so, change dom, if not don't");
-						// 	};
-					});
+
 
 
 		});

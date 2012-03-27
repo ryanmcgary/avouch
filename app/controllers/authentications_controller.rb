@@ -8,6 +8,7 @@ class AuthenticationsController < ApplicationController
   def create 
     omniauth = request.env["omniauth.auth"] 
     # render :text => omniauth['uid']
+    logger.info { request.env["omniauth.auth"]["credentials"].each {|key, value| puts "#{key} is #{value}" } }
     authentication = Authentication.find_by_provider_and_uid(omniauth['provider'], omniauth['uid'])
     if authentication
       flash[:notice] = "Signed in successfully."

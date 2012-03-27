@@ -146,6 +146,39 @@ What do I want to do?
 	step 2: On close window callback load session[:profile_pic]?
 	step 3: On close window show submission form
 
+	end of the day 20th.
+		devise controller sets cookie on widget login/signup, callback loads cookie image
+		session also sets data for future use
+		design "leave review partial" dropdown for blog style, modal for banner
+
+		get basic json functionality working, apply to site and test XSS to see if it works.
+
+	work flow for api
+	at login
+		request.env["omniauth.auth"]["credentials"]["token","secret"]
+	http://api.linkedin.com/v1/people/~:(recommendations-received)
+		make list of first/last names
+	http://api.linkedin.com/v1/people/~/connections
+		match each person against first/last names, once a id is selected
+	http://api.linkedin.com/v1/people/id=bdwy_Mhe33:(first-name,last-name,public-profile-url,recommendations-received,positions)
+	
+
+Watch pitch videos
+x E-mail John about "talking points" and "his deck"
+	- no response
+List talking points / create rough script
+
+
+	talking points
+		What do you do when you have hit the a/b test wall?
+		Total reference domination
+		Save token and secret at login
+			exportable as a file
+			checkable through apis
+			embeddable anywhere
+
+
+
 ! Launch. bitches.
 	pay for twilio account
 		record/save voice over audio put on iavouch server

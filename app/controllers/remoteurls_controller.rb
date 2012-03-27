@@ -1,5 +1,5 @@
 class RemoteurlsController < ApplicationController
-  before_filter :authenticate_user!, :except => [:show]
+  before_filter :authenticate_user!, :except => [:show, :remote]
 
   layout 'remotelayout'
 

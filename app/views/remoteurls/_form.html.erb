@@ -1,4 +1,4 @@
-<div class="iconsholder btn btn-primary">
+<div class="av-iconsholder btn btn-primary">
   <%= image_tag "http://a0.twimg.com/profile_images/1159303481/Sloths_normal.jpg", :title => "title", :class => "av-profile-image" %>
   <a class="av-button">
   
@@ -8,36 +8,35 @@
   <%= image_tag "icons/phone_2.png", :title => "title", :class => "av-phone" %>
 </div>
 
-<div class="social_login_container btn">
+<div class="av-social_login_container btn">
   
-<!--   <div id="social-login">
+
+  <div id="social-login" <%= session[:full_name].nil? ? "" : "style='display:none;'" %> >
     <ul>
-      <li><a href="/users/auth/linked_in" id="linkedin"></a></li> 
-      <li><a href="/users/auth/facebook" id="facebook"></a></li>
-      <li><a href="/users/auth/twitter" id="twitter"></a></li> 
+      <li><a href="/users/auth/linked_in" id="linkedin" class="auth_popup" rel="window800"></a></li> 
+      <li><a href="/users/auth/facebook" id="facebook" class="auth_popup"  rel="window800"></a></li>
+      <li><a href="/users/auth/twitter" id="twitter" class="auth_popup" rel="window800"></a></li> 
     </ul>
-  </div> -->
-  <div>
-    First write written portion of review (optional)
-    <textarea></textarea>
-    <label>Phone # to call right now.</label>
-    <div class="input-append av_phone_form" style="margin-bottom: 20px">
-      <input type="text" size="20" class="span2">
-      <button class="btn" type="button">Call Me Now!</button>
-      <br /><input type="checkbox"> Remember my phone number
-    </div>
-   
-   <p>Calling now...</p>
-
-   <p>Press 1 to start recording message...</p>
-   Press 9 at any time to abort review. 
   </div>
+  
+  
+  <div id="av-embed-form" <%= !session[:full_name].nil? ? "" : "style='display:none;'" %> >
+    First write written portion of review (optional)
+    <% remoteurl_id = nil if local_assigns[:remoteurl_id].nil? %>
+    <%= form_for("recording", :url => recordings_makecall_url, :remote => true, :html => { :class => "input-append av_phone_form", :id => "av-form" } ) do |f| %>
+      <%#= f.hidden_field :site_id, :value => params[:site_id] %>
+      <%= f.hidden_field :remoteurl_id, :value => remoteurl_id %>
+      <%= f.text_area :synopsis, :class => "short-text", :placeholder => "write then record audio for your reference" %>
+      <label>Phone # to call right now.</label>
+      
+      <div class="input-append av-phone_form" style="margin-bottom: 20px">
+
+        <%= f.text_field :phone_number, :class =>"av-span2", :size => "20" %>
+        <%= f.submit "Call Me Now!", :class => "av-submit-review btn" %>
+        <br /><%= f.check_box :remember %> Remember my phone number
+      </div>
+    <div class="av-status"></div>
+    <% end -%> 
+  </div>
+
 </div>
-
-<% if !session[:profile_pic].nil? %> 
-
-
-<% else %>
-
-
-<% end %>

@@ -35,7 +35,7 @@ class ApplicationController < ActionController::Base
     elsif request.referrer.include? "remoteurls"
       authentications_closewindow_path
     else
-      admin_sites_path 
+      authentications_closewindow_path
     end
   end
 

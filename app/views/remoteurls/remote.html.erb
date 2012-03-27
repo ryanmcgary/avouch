@@ -3,10 +3,70 @@
  <%= content_for :javascript do -%>
  <script id="vouch-script" type='text/javascript'>
   jQuery(document).ready(function($) {
-    $('.iconsholder').click(function() {
-      $('.social_login_container').toggle();
-      $('.iconsholder').toggleClass('bottom_radius');
+    $('.av-iconsholder').click(function() {
+      $('.av-social_login_container').toggle();
+      $('.av-iconsholder').toggleClass('bottom_radius');
     });
+  
+  $('#av-form').submit(function() {
+    // disable button
+    $('#recording_submit').addClass('disabled').attr('disabled', 'disabled');    
+    $('.av-status').empty();
+    $('.av-status').delay(800).append('<p>Calling you now!</p>');
+    $.getJSON("http://localhost:3000/recordings/makecall?callback=?", 
+    {
+      recording: { remoteurl_id: "43", synopsis: "try this on", phone_number: "4157845905" },
+      site_id: "localhost",
+    },
+    function(json) {
+      // render callback
+      $('.av-status').delay(800).append("<p>" + json + "</p>");
+      console.log(json);
+    })
+    
+    .success(function() { 
+                          console.log("second success");
+                          setTimeout( "$('.av-status').append('<p>Press <strong>1</strong> to start <strong>recording your reference</strong></p>').focus()", 500 );
+                          setTimeout( "$('.av-status').append('<p>Press <strong>9</strong> at any time to <strong>abort</strong> and <strong>delete</strong> your reference.</p>').focus(this)", 3000 );
+                        })
+    .error(function() { 
+                        console.log("error"); 
+                        $('.av-status').append('<p>Error, Server failed</p>');
+                        $('#recording_submit').removeClass('disabled').removeAttr('disabled');    
+                      })
+    .complete(function() { console.log("complete"); $('#recording_submit').removeClass('disabled').removeAttr('disabled'); });
+
+    return false;
+  });
+
+
+
+
+
+  // $("#av-form").click(function() {
+
+  //   $.ajax({
+  //     url: "http://localhost:3000/recordings/makecall",
+  //     dataType: "jsonp",
+  //     success: handleSuccess,
+  //     error: handleError
+  //   });
+
+  //   function handleSuccess(data) {
+  //     display("Call completed successfully");
+  //     display("foo = " + data.foo);
+  //     display("bar = " + data.bar);
+  //   }
+
+  //   function handleError() {
+  //     display("Call failed");
+  //   }
+  // });
+
+  // function display(msg) {
+  // 	$("<p>").html(msg).appendTo(document.body);
+  // }
+
     
   });
  </script>  

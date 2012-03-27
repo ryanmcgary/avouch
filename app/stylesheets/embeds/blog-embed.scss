@@ -1,7 +1,7 @@
 @import "embed-clear";
 @import "compass/css3";
 @import "imports/bootstrap-btn";
-.iconsholder.bottom_radius{
+.av-iconsholder.av-bottom_radius{
 	-webkit-border-bottom-left-radius: 4px;
   	-moz-border-bottom-left-radius: 4px;
   	border-bottom-left-radius: 4px;
@@ -9,22 +9,25 @@
   	-moz-border-bottom-right-radius: 4px;
   	border-bottom-right-radius: 4px;	
 }
-.iconsholder{
+.av-iconsholder{
 	z-index: 1;
 	position: relative;
-	width:450px;
+	width:100%;
 	padding-top:1px;
 	padding-bottom:1px;
 	margin-top:20px;
-	margin-left: 20px;
-	margin-right:20px;
 	overflow:hidden;
+	padding-left:0px;
+	padding-right:0px;
 		-webkit-border-bottom-left-radius: 0px;
 	  	-moz-border-bottom-left-radius: 0px;
 	  	border-bottom-left-radius: 0px;
 	  	-webkit-border-bottom-right-radius: 0px;
 	  	-moz-border-bottom-right-radius: 0px;
 	  	border-bottom-right-radius: 0px;
+}
+#av-embed-form{
+	margin:0 10px;
 }
 .av-button{
 	z-index: 3;
@@ -69,14 +72,22 @@
   	border-bottom-left-radius: 4px;
   	background-color: #0074cc;
 }
-.social_login_container{
+.av-social_login_container{
 	display:block;
-	width: 450px;
-	margin-left: 20px;
+	width: 100%;
 	background-color: whiteSmoke;
 	background-image:none;
 	cursor: auto;
+	padding-bottom:15px;
+	padding-left:0px;
+	padding-right:0px;
 	&:hover{
+		background-image:none;
+		background-color: whiteSmoke;
+	}
+	&:active{
+		-webkit-box-shadow: 0px 0px 0px; -moz-box-shadow: 0px 0px 0px;
+		-o-box-shadow: 0px 0px 0px; box-shadow: 0px 0px 0px; 
 		background-image:none;
 		background-color: whiteSmoke;
 	}
@@ -89,22 +100,68 @@
 	textarea{
 		padding:0;margin-left: 0px; margin-right:0px; width: 100%; margin-top: 1.81818px; margin-bottom: 1.81818px; height: 93px; resize: none;
 	}
+	.av-span2{
+		width: 80%;
+		max-width: 100px;
+	}
+	
 	#social-login{
 		margin-left:auto;
 		margin-right:auto;
 		padding-left:0px;
 		padding-right:0px;
 		padding-top:0px;
-		ul{margin-left:0px;padding-left:0px;}
-		
-	}
+		display:table;
+		text-align: center;
+		p{  
+			margin-top: 3px;
+			margin-left: 3px;
+			color:white;
+		}
+		ul{
+			display:table-cell;
+			vertical-align:middle;
+			margin-left:0px;
+			padding-left:0px;
+		}
+		li{padding-top:15px;margin-left:0px;display:inline-block;}
+		// everything to the right is for auto expanding login buttons based on embed width // &:hover absolute positioning// .spacer{// 	float:left;// 	padding-top:60px;// 	width:1px;// 	background-color:transparent;// }// &:hover .middle{// 	margin:0px auto;// 	display:table;// 	a#sign-in2{// 		position:absolute;// 		margin:0px auto;// 		margin-left:-107px;// 		background: url("../images/authbuttons/auth-login.png") no-repeat 0 0;// 		width: 52px;// 		height: 39px;// 		display: block;// 		&:hover{background-position: 0 -40px;}// 		&:active{background-position: 0 -80px;}// 	}// 	a#facebook2{// 		position:absolute;// 		margin:0px auto;// 		margin-left:-24px;// 		background: url("../images/authbuttons/auth-login.png") no-repeat 0 0;// 		width: 52px;// 		height: 39px;// 		display: block;// 		&:hover{background-position: 0 -40px;}// 		&:active{background-position: 0 -80px;}// 	}				// 	a#twitter2{// 		position:absolute;// 		margin:0px auto;// 		margin-left: 60px;// 		background: url("../images/authbuttons/auth-login.png") no-repeat 0 0;// 		width: 52px;// 		height: 39px;// 		display: block;// 		&:hover{background-position: 0 -40px;}// 		&:active{background-position: 0 -80px;}// 	}		// }
+		a{
+			position:relative;
+			margin:0px auto;
+			width: 227px;
+			height: 40px;
+			display: block;
+			text-indent: -9999px;
+			-webkit-box-shadow: 1px 1px 8px rgba(0, 0, 0, 0.3); -moz-box-shadow: 1px 1px 8px rgba(0, 0, 0, 0.3);
+			-o-box-shadow: 1px 1px 8px rgba(0, 0, 0, 0.3); box-shadow: 1px 1px 8px rgba(0, 0, 0, 0.3); 
+		}
+		a#twitter{
+			background: url("../images/authbuttons/large-auth-buttons.png") no-repeat 0px 0px;
+			&:hover{background-position: 0px -40px;}
+			&:active{background-position: 0px -80px;}
+		}
+		a#facebook{
+			background: url("../images/authbuttons/large-auth-buttons.png") no-repeat -228px 0px;	
+			&:hover{background-position: -228px -40px;}
+			&:active{background-position: -228px -80px;}
+		}
+		a#linkedin{
+			background: url("../images/authbuttons/large-auth-buttons.png") no-repeat -456px 0px;			
+			&:hover{background-position: -456px -40px;}
+			&:active{background-position: -456px -80px;}
+		}
+	}	
+
 }
-.av_phone_form{
+.av-phone_form{
 	.btn{
 		margin-left: -5px;
 		margin-top: -9px;
 	}
 }
+
+
 
 #iavouch{
 	.poweredby{

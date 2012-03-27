@@ -33,11 +33,8 @@
   	<#%= render :text => request.env["HTTP_REFERER"] %>
   	<#% end %>     -->
   	  
-  	<style type="text/css" media="screen" id="sw_css_<%= v %>">
-  	#sw_<%= v %> .toggle-popup{text-decoration: underline;}   
-  	#sw_<%= v %> {overflow: visible;height: auto;background-color: white}  
-  	</style>             
-  	<%= render 'shared/everything_css' %>    
+    <%= render 'shared/everything_css' %>      
+  	   
 	</div> 
 
 <% elsif params[:v] == "2" %>

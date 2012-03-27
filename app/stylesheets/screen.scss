@@ -15,7 +15,7 @@ $flip-color-wheel-left:adjust-hue($flip-color, 20deg);
 $grid-color:white; //background color
 
 $ninesixty-columns: 24;  
-.iconsholder.bottom_radius{
+.av-iconsholder.av-bottom_radius{
 	-webkit-border-bottom-left-radius: 4px;
   	-moz-border-bottom-left-radius: 4px;
   	border-bottom-left-radius: 4px;
@@ -23,7 +23,7 @@ $ninesixty-columns: 24;
   	-moz-border-bottom-right-radius: 4px;
   	border-bottom-right-radius: 4px;	
 }
-.iconsholder{
+.av-iconsholder{
 	z-index: 1;
 	position: relative;
 	width:450px;
@@ -83,7 +83,7 @@ $ninesixty-columns: 24;
   	border-bottom-left-radius: 4px;
   	background-color: #0074cc;
 }
-.social_login_container{
+.av-social_login_container{
 	display:block;
 	width: 450px;
 	margin-left: 20px;
@@ -109,7 +109,7 @@ $ninesixty-columns: 24;
 	textarea{
 		padding:0;margin-left: 0px; margin-right:0px; width: 100%; margin-top: 1.81818px; margin-bottom: 1.81818px; height: 93px; resize: none;
 	}
-	.span2{
+	.av-span2{
 		width: 80%;
 		max-width: 100px;
 	}
@@ -123,7 +123,7 @@ $ninesixty-columns: 24;
 		
 	}
 }
-.av_phone_form{
+.av-phone_form{
 	.btn{
 		margin-left: -5px;
 		margin-top: -9px;
@@ -385,17 +385,17 @@ html,body{
 		-o-box-shadow: 1px 1px 8px rgba(0, 0, 0, 0.3); box-shadow: 1px 1px 8px rgba(0, 0, 0, 0.3); 
 	}
 	a#twitter{
-		background: url("../images/authbuttons/login-buttons.png") no-repeat 0 -2px;
+		background: url("/images/authbuttons/login-buttons.png") no-repeat 0 -2px;
 		&:hover{background-position: 0px -33px;}
 		&:active{background-position: 0px -64px;}
 	}
 	a#facebook{
-		background: url("../images/authbuttons/login-buttons.png") no-repeat -111px -2px;	
+		background: url("/images/authbuttons/login-buttons.png") no-repeat -111px -2px;	
 		&:hover{background-position: -111px -33px;}
 		&:active{background-position: -111px -64px;}
 	}
 	a#linkedin{
-		background: url("../images/authbuttons/login-buttons.png") no-repeat -222px -2px;			
+		background: url("/images/authbuttons/login-buttons.png") no-repeat -222px -2px;			
 		&:hover{background-position: -222px -33px;}
 		&:active{background-position: -222px -64px;}
 	}
