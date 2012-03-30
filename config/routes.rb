@@ -8,6 +8,7 @@ Avouch::Application.routes.draw do
   #   end
   # end
   
+  resources :token_authentications, :only => [:create, :destroy]
   
   namespace :admin do |admin|
     match '/sites/install' => 'sites#show' 
